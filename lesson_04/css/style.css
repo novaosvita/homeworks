@@ -1,0 +1,120 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+
+/*ВАРІАНТ підключення шрифтів до файлу CSS */
+/* Підключення шрифтів в css можливе - якщо шрифти на різних сторінках занадто різняться, використовується РІДКО, ліпше в html. 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400;700;800&display=swap");*/
+
+/* !ЛОКАЛЬНЕ підключення спец-шрифтів */
+@import url("fonts.css");
+
+/*Шрифти за замовчуванням - найбільш застосований на сторінці*/
+body {
+  font-family: "Montserrat", sans-serif; /*sans-serif-це тип схожого шрифта "рубленного" для запасного завантаження, 
+  Serif — від англійського serif = “засічка, хвостик”.
+  Sans — французьке слово, що означає “без”, тобто без хвостиків, рівний */
+  font-size: 18px;
+}
+
+.menu {
+  font-size: 30px;
+  color: brown;
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline; /*нижнє підкреслення*/
+}
+h1 {
+  font-size: 50px;
+  color: rgb(30, 30, 124);
+  font-weight: 800;
+  text-align: center;
+}
+
+h2 {
+  font-family: "PraysireDemo", serif; /*ЛОКАЛЬНИЙ шрифт*/
+  font-size: 32px;
+  color: rgb(57, 1, 31);
+}
+
+.starting {
+  font-family: "Open Sans", sans-serif; /*сімейство шрифта рівний*/
+  font-size: 35px; /*розмір шрифту*/
+  /*font-style: italic; - шрифт нахилений, рідко використовується*/
+  font-weight: 400; /*насиченність, вага шрифта*/
+  color: rgb(2, 160, 57);
+  text-shadow: 2px 2px 2px #8a8a8a; /*ефект тіні: значення величини по горизонталі, по вертика, та ширина*/
+  letter-spacing: 10px;
+}
+
+.decor {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center; /*вирівнювання тексту по центру*/
+  color: blue;
+  text-decoration: underline; /*нижнє підкреслення*/
+  text-decoration-style: dotted;
+  line-height: 2; /*значення вказувати в "частинах"- як співвідношення: значення  line-height до розміру шрифта 28рх/20рх=1,4*/
+}
+
+.decor-one {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(139, 79, 1);
+  font-size: 34px;
+  text-align: justify; /*вирівнювання на всю ширину, рідко використовується*/
+  text-decoration: line-through; /*перекреслення*/
+  text-decoration-color: rgb(222, 80, 80);
+  font-weight: 800;
+}
+
+.decor-two {
+  font-size: 40px;
+  color: rgb(1, 110, 113);
+  text-decoration: overline; /*верхнє підкреслення*/
+  text-decoration-color: rgb(60, 217, 188);
+  text-shadow: 1px 1px 1px #8a8a8a;
+  text-align: right; /*вирівнювання по правому краю*/
+  text-decoration-style: dashed;
+  text-transform: capitalize;
+  word-spacing: 20px; /*відстань між словами*/
+}
+
+.decor-line {
+  font-family: "Satoshi", sans-serif; /*Шрифт локальний*/
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  color: rgb(113, 36, 1);
+  text-decoration: underline; /*нижнє підкреслення*/
+  text-decoration-color: rgb(211, 33, 1);
+  text-shadow: 1px 1px 1px #8a8a8a;
+  text-decoration-style: wavy;
+  letter-spacing: 5px;
+}
+
+.decor-line-one {
+  font-family: "Antic Slab", serif;
+  font-weight: 500;
+  color: rgb(84, 49, 3);
+  font-size: 26px;
+  text-decoration: underline; /*підкреслення*/
+  text-decoration-color: rgb(0, 167, 56);
+  text-decoration-style: double;
+  text-align: right;
+  /*text-shadow: 2px 2px 2px rgba(1, 1, 1, 0.5); тінь з елементом прозорості*/
+  text-transform: uppercase; /*всі літери великі*/
+  line-height: 2; /*значення вказувати в "частинах"- як співвідношення: значення  line-height до розміру шрифта 28рх/20рх=1,4*/
+}
+
+.font-default {
+  /*розмір шрифта - за замовчування і не вказується*/
+  color: crimson;
+  font-weight: 700;
+  white-space: normal; /*"Білий простір, пробіл" - корисно використовується при розробці адаптивності - зі значенням "nowrap"*/
+}
+
+.local-fonts {
+  font-family: "Panchang", sans-serif;
+  color: rgb(53, 105, 1);
+  font-size: 30px;
+}
