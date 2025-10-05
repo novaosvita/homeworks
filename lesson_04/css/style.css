@@ -118,3 +118,10 @@ h2 {
   color: rgb(53, 105, 1);
   font-size: 30px;
 }
+.letter-capital {
+  text-transform: capitalize;
+  font-style: oblique;
+  font-size: 28px;
+  text-shadow: -2px -2px 2px rgba(80, 82, 80, 0.5);
+  /*text-shadow: 3px 3px 3px rgba(52, 176, 7, 0.5);*/
+}
