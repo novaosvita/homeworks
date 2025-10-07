@@ -117,7 +117,7 @@ p {
   font-weight: 700;
   white-space: normal; /*"Білий простір, пробіл" - 
   корисно використовується при розробці адаптивності - зі значенням "nowrap"*/
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .tunnel {
@@ -135,5 +135,5 @@ p {
   font-size: 32px;
   text-shadow: -2px -2px 2px rgba(3, 128, 3, 0.5);
   /*text-shadow: 3px 3px 3px rgba(52, 176, 7, 0.5);*/
-  line-height: 2;
+  line-height: 1.5;
 }
