@@ -22,6 +22,7 @@ body {
 h1 {
   font-size: 50px;
   color: rgb(30, 30, 124);
+  /*color: rgba(181, 68, 5, 0.8); колір з 80% прозорості */
   font-weight: 800;
   text-align: center;
   text-transform: uppercase; /*всі літери великі*/
@@ -137,3 +138,4 @@ p {
   /*text-shadow: 3px 3px 3px rgba(52, 176, 7, 0.5);*/
   line-height: 1.5;
 }
+
