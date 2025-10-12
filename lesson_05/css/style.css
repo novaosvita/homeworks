@@ -6,7 +6,6 @@
 body {
   /*Шрифти за замовчуванням - найбільш застосований на сторінці*/
   font-family: "Lato-Medium", sans-serif; /*Шрифт підключений локально*/
-  /*Вказуємо загальний найбільш використаний шрифт*/
   /*sans-serif-це тип схожого шрифта "рубленного" для запасного завантаження, 
   Serif — від англійського serif = “засічка, хвостик”.
   Sans — французьке слово, що означає “без”, тобто без хвостиків, рівний */
@@ -16,26 +15,26 @@ body {
 header {
   max-width: 1920px; /*максимально-можлива ширина блоку (зменшуватися може)*/
   margin: 0 auto; /*центрування блоку*/
-  margin-bottom: 82px; /*відступ зовнішний між блоками по схемі: "зверху-вниз"*/
-  /*background-color: beige;*/
+  margin-bottom: 82px; /*зовнішній відступ між блоками по схемі: "зверху-вниз"*/
+  background-color: rgb(243, 235, 225);
 }
+
 h1 {
-  font-family: "Lato-ExtraBold", sans-serif; /*Шрифт підключений локально*/
-  font-weight: 800; /*Насиченність шрифту*/
-  font-size: 30px;
-  color: rgb(26, 8, 162);
+  font-family: "Lato", sans-serif; /*шрифт Google fonts*/
+  font-weight: 700; /*Насиченність шрифту*/
+  font-size: 45px;
+  color: rgb(17, 17, 103);
   text-align: center; /*Вирівнювання тексту по центру*/
-  /*text-transform: uppercase;всі літери - великі*/
   text-decoration-line: underline; /*підкреслення*/
-  text-decoration-color: rgb(178, 178, 240); /*колір підкреслення*/
-  margin-top: 3%; /*відступ зовнішній зверху*/
-  margin-bottom: 1%; /*відступ зовнішній знизу*/
+  text-decoration-color: rgb(122, 122, 209); /*колір підкреслення*/
+  margin-bottom: 2%; /*відступ зовнішній знизу, выд ширини батькывського блоку*/
+  /*background-color: rgb(254, 254, 254);*/
 }
 ul {
   /*max-width: 500px;*/
   font-size: 30px;
   margin: 0 auto; /*центрування блоку*/
-  color: blue;
+  color: rgb(91, 91, 93);
 }
 
 li {
@@ -44,20 +43,22 @@ li {
 }
 
 .hero-img {
-  margin: 0 auto;
-  max-width: 1900px; /*блок має бути меншим за батьківський блок, 
+  /*margin: 0 auto; центрування блоку з зображенням*/
+  /*max-width: 1900px; блок має бути меншим за батьківський блок, 
 для можливості центрування*/
 }
 
+/*=== ГОЛОВНА частина контенту === */
 main {
-  background-color: rgb(254, 254, 254);
   max-width: 1920px; /*загальна ширина полотна сторінки*/
   margin: 0 auto;
-  margin-bottom: 82px; /*відступ зовнішний вниз між футером, по схемі: "зверху-вниз"*/
+  margin-bottom: 14px; /*відступ зовнішний вниз до футера, по схемі: "зверху-вниз"*/
 }
 
 /* ПОБУДОВА БЛОКУ З КАРТКАМИ  */
+
 .section {
+  /*окрема секція сторінки */
   /*background-color: rgb(249, 248, 169);*/
   max-width: 1200px; /*задана максимальна ширина з макету*/
   margin: 0 auto; /*ЦЕНТРУВАННЯ БЛОКУ*/
@@ -68,11 +69,11 @@ h2 {
   font-weight: 800; /*Насиченність шрифту*/
   font-size: 32px;
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 72px; /*зовнішній відступ до блоку карток*/
 }
 
+/*=== Блок карток ===*/
 .wrapper-box {
-  /*Блок карток*/
   /*background-color: cadetblue;*/
   font-size: 0; /*виключення "нульових" пробілів, 
 	щоб елементи вибудувалися в ряд*/
@@ -80,19 +81,20 @@ h2 {
   margin-right: -15px; /*від*ємний мержин, що розширює блок справа*/
 }
 
+/* === КАРТОЧКА === */
 .card {
-  /*КАРТОЧКА*/
   /*background-color: chartreuse;*/
-  display: inline-block; /*переведення в формат блочно-рядкового
-елементу для побудови в рядок*/
-  width: 33.33%; /*задаємо відсоток (від бальківського блоку) місця, 
-що займатиме кожна карточка*/
-  font-size: 20px;
+  display: inline-block; /*тренувально: переведення блоку в формат блочно-рядкового
+  елементу для побудови в рядок*/
+  width: 33.33%; /*задаємо відсоток (від бальківського блоку), місце,
+  що займатиме кожна карточка*/
+  font-size: 16px; /*цей розмір шрифта пов*язанний з font-size: 0; батьківського блоку, 
+  якщо його прибрати (згідно 16px в body), то зникає текстова частина карточки */
   vertical-align: top; /*вирівнювання елементів по вертикалі зверху*/
-  padding-left: 15px;
+  padding-left: 15px; /*внутрішній відступ і компенсація від*ємного маржіна, -15рх, в батьківському блоці*/
   padding-right: 15px;
-  text-align: center;
-  margin-bottom: 68px;
+  text-align: center; /*центрування текстової (рядкової) частини карточки*/
+  margin-bottom: 68px; /*нижній зовнішній відступ карточки*/
 }
 
 .card-content {
@@ -103,28 +105,49 @@ h3 {
   /*Заголовок карточки*/
   font-family: "Lato", sans-serif; /*шрифт з Goodle fonts*/
   font-weight: 700;
+  line-height: 1.25;
   /*font-size: 16px;*/ /*значення розміру шрифта вказано в body*/
   margin-bottom: 24px;
+  /*text-transform: capitalize; Кожне слово починається з великої літери.*/
 }
 
-.icon-centering {
-  max-width: 52px;
+.icon {
+  max-width: 52px; /*максимальна ширина зображення з макету, висота пропорційна*/
   /*background-color: aquamarine;*/
-  margin-bottom: 28px;
+  margin-bottom: 24px; /*зовнішній відступ до блоку назви карточки <Н2>*/
 }
 
 p {
   font-family: "Lato-Medium", sans-serif; /*Шрифт підключений локально*/
   font-weight: 500; /*Насиченність шрифту*/
-  color: #7E7F7C;
+  color: #7e7f7c;
+  line-height: 1.25; /*висота рядка виражена в частинах, для гнучкості*/
+  /*font-size: 16px;*/ /*значення розміру шрифта вказано в body*/
+  /*text-transform: capitalize; Кожне слово починається з великої літери, але в макеті не кожна частинка*/
 }
+
+/* ====== Ф У Т Е Р ====== */
 footer {
-  /*background-color: bisque;*/
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  background-color: rgb(243, 235, 225);
+  max-width: 1920px;
+  text-align: center; /*центрування текстової (рядкової) частини футера*/
   font-size: 30px;
   font-weight: 700;
   color: rgb(49, 50, 52);
-  /*margin-bottom: 20px;*/
+  margin: 0 auto; /*центрування блочного об*єкту*/
+}
+
+.description {
+  color: rgb(49, 50, 52);
+  font-size: 18px;
+}
+
+a {
+  display: block; /* Треновочно: переведення рядкового тегу - в блочний, 
+	для надання властивостей блоку*/
+  font-size: 18px;
+  color: rgb(0, 26, 255);
+  text-decoration-line: underline; /*підкреслення*/
+  margin-top: 5px; /*верхній зовнішній відступ*/
+  margin-bottom: 10px; /*нижній зовнішній відступ*/
 }
