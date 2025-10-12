@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<!-- ==Налаштування перегляду (адаптивності) ==== -->
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- ====== Підключення шрифтів ==== -->
 		<!-- rel означає “relationship” — тип зв’язку. 
@@ -16,12 +16,131 @@
 			rel="stylesheet">
 		<!-- ====== Файл  стилів ==== -->
 		<link rel="stylesheet" href="css/style.css">
-		<title>Lesson_05 page 2</title>
+		<title>Lesson_05</title>
 	</head>
 
 	<body>
-		<p>Друга сторінка "Контакти"</p>
-	 <a href="index.html">На головну сторінку</a>
+		<!-- ХЕРЕД - верхня частина сторінки -->
+		<header>
+			<h1 id="top">Lesson №5:</h1>
+			<ul>
+				<li>Paddind</li>
+				<li>Margin</li>
+				<li>Width</li>
+				<li>Height</li>
+				<li>Box-sizing</li>
+				<li>Overflow</li>
+				<li>Vertical-align</li>
+				<li>Display</li>
+				<li>Centering</li>
+			</ul>
+			<div class="hero-img">
+				<img src="img/Hero_banner.jpg" alt="Hero banner">
+			</div>
+		</header>
+
+		<!-- === ГОЛОВНА частина контенту === -->
+		<main>
+			<!-- Конструкція тренувальна -->
+			<div class="section">
+				<h2>WHY CHOOSE US?</h2>
+				<div class="wrapper-box"> <!-- Блок для всих карток -->
+					<div class="card"> <!-- Картка 1_Обгортка -->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/planet-earth.svg"
+								alt="Planet Earth">
+							<h3>GLOBAL DELIVERY</h3>
+							<p> Experience Hassle-Free Shipping and Seamless Global Connectivity with
+								Our Trustworthy and Efficient Delivery Service, Bringing the World to
+								Your Fingertips!</p>
+						</div>
+					</div>
+
+					<div class="card"> <!-- Картка 2_ Обгортка-->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/package-box.svg"
+								alt="Package box">
+							<h3>FREE SHIPPING</h3>
+							<p> Shop to Your Heart's Content Without Worrying About Shipping Costs:
+								Our Free Shipping Service Delivers Your Purchases with a Smile, Straight
+								to Your Doorstep!</p>
+						</div>
+					</div>
+
+					<div class="card"> <!-- Картка 3_Обгортка -->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/phone.svg"
+								alt="Phone">
+							<h3>24/7 SUPPORTING</h3>
+
+							<p> Shop with Confidence Anytime, Anywhere: Our Free Shipping Service
+								Comes with 24/7 Support to Ensure Your Packages Arrive Safely and On
+								Time!</p>
+						</div>
+					</div>
+
+					<div class="card"> <!-- Картка 4_Обгортка -->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/email.svg"
+								alt="Envelope">
+							<h3>DAILY EMAIL</h3>
+
+							<p> Stay Up-to-Date with Your Deliveries: Enjoy the Convenience of Daily
+								Email Updates with Our Free Shipping Service, Making Your Online
+								Shopping
+								Experience Even More Enjoyable!</p>
+						</div>
+					</div>
+
+					<div class="card"> <!-- Картка 5_Обгортка -->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/credit-card.svg"
+								alt="Credit card">
+							<h3>EASY PAYMENT</h3>
+
+							<p> Shop and Pay with Ease: Our Free Shipping Service Not Only Delivers
+								Your Packages for Free, but Also Offers Easy Payment Options, Making
+								Your
+								Shopping Experience a Breeze!</p>
+						</div>
+					</div>
+
+					<div class="card"> <!-- Картка 6_Обгортка -->
+						<div class="card-content"> <!-- Зміст контенту -->
+							<img class="icon" src="icons/badge.svg"
+								alt="Badge">
+							<h3>MONTHLY VOUCHER</h3>
+
+							<p> More Than Just Free Shipping: Our Service Rewards Your Loyalty with
+								Monthly Vouchers, Giving You More Reasons to Shop and Save on Your
+								Favorite Products!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- ====== Ф У Т Е Р ====== -->
+		<footer>
+			<p class="description">Bottom of the page:
+				<br>
+				Lesson №5:
+				<br>
+				CSS properties:
+				<br>
+				padding outside and inside,
+				<br> width and height, block overflow "overflow",
+				<br> vertical alignment, multifunctional "display" property,
+				<br> block centering..
+				<br>
+				<a href="#top"
+					class="link-to-top">Upstairs</a>
+				<a title="Go to the second page"
+					href="contacts.html">Go to the second page "Contacts"</a>
+				October, 2025
+			</p>
+
+		</footer>
 	</body>
 
 </html>
