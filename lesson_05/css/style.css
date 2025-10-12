@@ -1,0 +1,130 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+
+/* !ЛОКАЛЬНЕ підключення спец-шрифтів */
+@import url("fonts.css");
+
+body {
+  /*Шрифти за замовчуванням - найбільш застосований на сторінці*/
+  font-family: "Lato-Medium", sans-serif; /*Шрифт підключений локально*/
+  /*Вказуємо загальний найбільш використаний шрифт*/
+  /*sans-serif-це тип схожого шрифта "рубленного" для запасного завантаження, 
+  Serif — від англійського serif = “засічка, хвостик”.
+  Sans — французьке слово, що означає “без”, тобто без хвостиків, рівний */
+  font-size: 16px; /*найбільша кількість використаних шрифтів в макеті*/
+  /*background-color: rgb(95, 97, 94);*/
+}
+header {
+  max-width: 1920px; /*максимально-можлива ширина блоку (зменшуватися може)*/
+  margin: 0 auto; /*центрування блоку*/
+  margin-bottom: 82px; /*відступ зовнішний між блоками по схемі: "зверху-вниз"*/
+  /*background-color: beige;*/
+}
+h1 {
+  font-family: "Lato-ExtraBold", sans-serif; /*Шрифт підключений локально*/
+  font-weight: 800; /*Насиченність шрифту*/
+  font-size: 30px;
+  color: rgb(26, 8, 162);
+  text-align: center; /*Вирівнювання тексту по центру*/
+  /*text-transform: uppercase;всі літери - великі*/
+  text-decoration-line: underline; /*підкреслення*/
+  text-decoration-color: rgb(178, 178, 240); /*колір підкреслення*/
+  margin-top: 3%; /*відступ зовнішній зверху*/
+  margin-bottom: 1%; /*відступ зовнішній знизу*/
+}
+ul {
+  /*max-width: 500px;*/
+  font-size: 30px;
+  margin: 0 auto; /*центрування блоку*/
+  color: blue;
+}
+
+li {
+  margin-bottom: 10px; /*нижній відступ між пунктами*/
+  text-align: center;
+}
+
+.hero-img {
+  margin: 0 auto;
+  max-width: 1900px; /*блок має бути меншим за батьківський блок, 
+для можливості центрування*/
+}
+
+main {
+  background-color: rgb(254, 254, 254);
+  max-width: 1920px; /*загальна ширина полотна сторінки*/
+  margin: 0 auto;
+  margin-bottom: 82px; /*відступ зовнішний вниз між футером, по схемі: "зверху-вниз"*/
+}
+
+/* ПОБУДОВА БЛОКУ З КАРТКАМИ  */
+.section {
+  /*background-color: rgb(249, 248, 169);*/
+  max-width: 1200px; /*задана максимальна ширина з макету*/
+  margin: 0 auto; /*ЦЕНТРУВАННЯ БЛОКУ*/
+}
+
+h2 {
+  font-family: "Lato-ExtraBold", sans-serif; /*Шрифт підключений локально*/
+  font-weight: 800; /*Насиченність шрифту*/
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.wrapper-box {
+  /*Блок карток*/
+  /*background-color: cadetblue;*/
+  font-size: 0; /*виключення "нульових" пробілів, 
+	щоб елементи вибудувалися в ряд*/
+  margin-left: -15px; /*від*ємний мержин, що розширює блок зліва*/
+  margin-right: -15px; /*від*ємний мержин, що розширює блок справа*/
+}
+
+.card {
+  /*КАРТОЧКА*/
+  /*background-color: chartreuse;*/
+  display: inline-block; /*переведення в формат блочно-рядкового
+елементу для побудови в рядок*/
+  width: 33.33%; /*задаємо відсоток (від бальківського блоку) місця, 
+що займатиме кожна карточка*/
+  font-size: 20px;
+  vertical-align: top; /*вирівнювання елементів по вертикалі зверху*/
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  margin-bottom: 68px;
+}
+
+.card-content {
+  /*background-color: rgb(110, 242, 240);*/
+}
+
+h3 {
+  /*Заголовок карточки*/
+  font-family: "Lato", sans-serif; /*шрифт з Goodle fonts*/
+  font-weight: 700;
+  /*font-size: 16px;*/ /*значення розміру шрифта вказано в body*/
+  margin-bottom: 24px;
+}
+
+.icon-centering {
+  max-width: 52px;
+  /*background-color: aquamarine;*/
+  margin-bottom: 28px;
+}
+
+p {
+  font-family: "Lato-Medium", sans-serif; /*Шрифт підключений локально*/
+  font-weight: 500; /*Насиченність шрифту*/
+  color: #7E7F7C;
+}
+footer {
+  /*background-color: bisque;*/
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(49, 50, 52);
+  /*margin-bottom: 20px;*/
+}
