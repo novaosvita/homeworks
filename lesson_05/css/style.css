@@ -124,14 +124,14 @@ li {
 }
 
 /* ======= ПРАКТИЧНІ роботи з уроку: "overflow" ======= */
-.training {
+.training-scroll {
   background-color: #f1f0f0;
   max-width: 1920px;
   margin: 0 auto;
 }
 
 /* ===== Властивість overflow - "переповнення" ====== */
-.test-overflow-scroll {
+.training-scroll p {
   max-width: 1200px;
   color: #161616;
   font-size: 20px;
@@ -145,7 +145,7 @@ li {
 
 /* ====== Ф У Т Е Р ====== */
 footer {
-  background-color: rgb(255, 243, 227);
+  background-color: rgb(126, 125, 125);
 }
 .wrapper-description p {
   max-width: 1920px;
@@ -153,7 +153,7 @@ footer {
   font-size: 18px;
   font-weight: 500; /*шрифт підключений локально*/
   line-height: 1.5;
-  color: rgb(49, 50, 52);
+  color: rgb(203, 203, 203);
   margin: 0 auto;
   padding-top: 20px; /*внутрішній відступ зверху додає простору між тексом*/
   padding-bottom: 20px; /*внутрішній відступ знизу додає візуального простору*/
