@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"ПРЕ", тобто заздалегідь встанови мережеве з’єднання», 
+		 це пришвидчує завантаження шрифтів -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap"
+			rel="stylesheet">
+
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Lesson_06</title>
+	</head>
+
+	<body>
+		<!-- ХЕДЕР - верхня частина сторінки -->
+		<header>
+			<div class="header-container">
+				<!-- Фоном тексту є зображення* -->
+				<h1 class="title-blocks">ВЛАСТИВОСТІ <br>
+					для блокових елементів</h1>
+
+			</div>
+		</header>
+
+		<!-- ===== ГОЛОВНА ЧАСТИНА СТОРІНКИ ===== -->
+		<main>
+			<div class="main-container">
+
+				<!-- ====== СЕКЦІЯ ТРЕНУВАЛЬНА ПЕРША, згідно уроку ===== -->
+				<section class="training-lesson">
+					<h2 class="subtitle-border">Це властивості BORDER для блокових та рядкових
+						елементів</h2>
+
+					<!--БЛОК з обводкою та розмитою тінню-->
+					<div class="test-border">
+						=== 1 - ЦЕ БЛОК з обводкою та розмитою тінню === <br />
+						CSS властивість border використовується для встановлення стилю, ширини та
+						кольору межі навколо елемента.
+						<!--Рядковий елнмент - обводка-->
+						<span class="test-outline">виділене слово</span>CSS властивість border
+						використовується для встановлення стилю, ширини та кольору межі навколо
+						елемента.
+					</div>
+
+					<!-- Обводка зображення  -->
+					<div class="border-around"><img class="photo-border"
+							src="img/background_blue.jpg" alt="Фонове зображення синє">
+
+					</div>
+					<!--БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline -->
+					<span class="span-test">=== 2 - Це БЛОК рядковий з ЗОВНІШНЬОЮ обводкою
+						outline
+						===
+						<br />
+						Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Velit consequuntur accusantium, pariatur in quis ex
+						nostrum quasi maiores. Deleniti commodi dicta facere excepturi aut ab
+						architecto maxime sunt est a.
+					</span>
+
+					<!--БЛОК з зовнішньою обводкою outline -->
+					<div class="test-border-outline">
+						=== 3 - Це БЛОК з ЗОВНІШНЬОЮ обводкою outline та декільками видами тіней
+						===
+						<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+						reprehenderit autem officia
+						<span class="test-outline">виділене слово</span>similique in ipsum aperiam
+						illum, dicta quia recusandae, facilis molestiae sunt? Modi consectetur
+						velit eum quas deleniti est?
+					</div>
+
+					<!--БЛОК з побудовою геометричної фігури - КОЛО-->
+					<div class="circle">
+						=== 4 - ЦЕ геометрична фігура - коло, зроблена в CSS ===
+					</div>
+
+					<!-- Блок з побудовою 3d-кнопки-->
+					<a href="#" class="button">ЦЕ КНОПКА</a>
+
+					<!--БЛОК з ефектом прозорсті-->
+					<div class="block-opacity">
+						=== 5 - Це БЛОК з "прозорою" властивістю === <br>
+						Lorem ipsum dolor sit amet
+						consectetur, adipisicing elit. Hic quae officia eos atque sint doloremque
+						quos aperiam aut exercitationem! Dolorem placeat itaque ab perspiciatis
+						iure veritatis pariatur velit autem facere!
+					</div>
+
+					<!--БЛОК  ФОНУ заднього для блокових елементів-->
+					<h2 class="subtitle-background"> Властивості ФОНУ для блокових
+						елементів</h2>
+
+					<!--БЛОК з заднім фоном - зображенням-->
+					<div class="block-image">=== 6 - Це блок з заднім фоном - ЗОБРАЖЕННЯм та
+						варіант заданного розміщення по координатах X Y=== <br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus,
+						nostrum
+						molestiae distinctio eligendi reprehenderit similique. Sapiente explicabo
+						dolorum, aperiam iste debitis sit dolorem quisquam, fugit ex earum
+						distinctio
+						ea!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis hic
+						voluptate ex minus dolores, molestiae in. Sed veritatis quo laborum
+						sapiente
+						eius accusamus similique sunt eaque. Consectetur perspiciatis iste neque?
+					</div>
+
+					<!--БЛОК зі складним градієнтом-->
+					<div class="block-image-gradient">=== 7 - Це блок з заднім фоном - складний
+						ГРАДІЄНТ
+						===
+						<br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus,
+						nostrum
+						molestiae distinctio eligendi reprehenderit similique. Sapiente explicabo
+						dolorum, aperiam iste debitis sit dolorem quisquam, fugit ex earum
+						distinctio
+						ea!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis hic
+						voluptate ex minus dolores, molestiae in. Sed veritatis quo laborum
+						sapiente
+						eius accusamus similique sunt eaque. Consectetur perspiciatis iste neque?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus,
+						nostrum
+						molestiae distinctio eligendi reprehenderit similique. Sapiente explicabo
+						dolorum, aperiam iste debitis sit dolorem quisquam, fugit ex earum
+						distinctio
+						ea!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis hic
+						voluptate ex minus dolores, molestiae in. Sed veritatis quo laborum
+						sapiente
+						eius accusamus similique sunt eaque. Consectetur perspiciatis iste neque?
+					</div>
+
+					<!--БЛОК зі складним градієнтом, що взаємодіє з текстом-->
+					<div class="block-image-gradient-text">=== 8 - Це блок з заднім фоном -
+						ГРАДІЄНТНИМ, де TЕКСТ - приховується градієнтом === <br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus,
+						nostrum
+						molestiae distinctio eligendi reprehenderit similique. Sapiente explicabo
+						dolorum, aperiam iste debitis sit dolorem quisquam, fugit ex earum
+						distinctio
+						ea!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis hic
+						voluptate ex minus dolores, molestiae in. Sed veritatis quo laborum
+						sapiente
+						eius accusamus similique sunt eaque. Consectetur perspiciatis iste neque?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus,
+						nostrum
+						molestiae distinctio eligendi reprehenderit similique. Sapiente explicabo
+						dolorum, aperiam iste debitis sit dolorem quisquam, fugit ex earum
+						distinctio
+						ea!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis hic
+						voluptate ex minus dolores, molestiae in. Sed veritatis quo laborum
+						sapiente
+						eius accusamus similique sunt eaque. Consectetur perspiciatis iste neque?
+					</div>
+
+					<!-- В цьому блоці використовується зображення, як приклад повторюванності -->
+					<div class="block-background-repear">
+						9 - Це блок де є повторюванність зображення - ПАТЕРНИ
+					</div>
+
+					<!--БЛОК з фіксацією зображення до в*юпорта-->
+					<div class="block-background-attachment">
+						10 - ЦЕЙ блок, де є фонове зображення, яке зафіксоване, відносно вікна
+						в*юпорта (не скролиться).
+						<br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta atque
+						pariatur eveniet nulla, quis mollitia nisi omnis culpa animi harum odio a
+						voluptatum voluptatem nam velit consequuntur dicta. Quas, delectus.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsa
+						consectetur unde omnis, amet accusamus? Suscipit maxime dolorem nesciunt
+						quaerat, nam laborum eius! Odit cum exercitationem sapiente voluptatibus
+						alias rem!
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+						quisquam
+						aliquam eligendi tenetur repellat reiciendis suscipit odit aut, modi
+						accusamus libero incidunt dolores dicta at blanditiis, sequi error
+						deleniti?
+						Obcaecati iure non similique omnis ipsa inventore tenetur, ab asperiores
+						doloremque accusamus ullam, perferendis explicabo. Eius reprehenderit quis
+						itaque laborum perferendis.
+					</div>
+
+					<!-- Блок з показом керування зображення через розміри -->
+					<div class="block-background-size"> 11 - Це блок з властивістю, що керує
+						розмірами зображення "background-size"</div>
+
+					<!-- Побудова стрілочок через CSS -->
+					<div class="arrow-contain">
+						<div class="arrow-left"></div>
+						<div class="arrow-right"></div>
+						<div class="arrow-top"></div>
+						<div class="arrow-battom"></div>
+					</div>
+				</section>
+
+				<!-- ====== СЕКЦІЯ ТРЕНУВАЛЬНА ДРУГА, згідно завдання з макету ===== -->
+				<section class="training-layout">
+
+					<div class="hero-trainihg">
+						<div class="hero-training-container">
+							<div class="hero-training-content">
+
+							</div>
+						</div>
+					</div>
+
+					<!-- СТИЛІЗАЦІЯ списку через CSS -->
+					<h2 class="subtitle-training-layout">БЛОК виконання завдання, згідно
+						макету</h2>
+					<ul class="list">
+						<li class="list-item">
+							ПО МАКЕту дивитися шрифт та колір СТИЛІЗАЦІЯ СПИСКУ
+							СТИЛІЗАЦІЯ СПИСКУ СТИЛІЗАЦІЯ СПИСКУ
+						</li>
+						<li class="list-item">
+							СТИЛІЗАЦІЯ СПИСКУ
+						</li>
+						<li class="list-item">
+							СТИЛІЗАЦІЯ СПИСКУ СТИЛІЗАЦІЯ СПИСКУ
+							СТИЛІЗАЦІЯ СПИСКУ СТИЛІЗАЦІЯ СПИСКУ
+						</li>
+						<li class="list-item">
+							СТИЛІЗАЦІЯ СПИСКУ СТИЛІЗАЦІЯ СПИСКУ
+							СТИЛІЗАЦІЯ СПИСКУ СТИЛІЗАЦІЯ СПИСКУ
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+
+		<!-- ===== ФУРЕТ =======  -->
+		<footer>
+
+			<div class="footer-container">
+				<div class="wrapper-description">
+					<p>Bottom of the page:
+						<br>
+						Lesson №6
+						<br>
+						CSS properties
+						<br> October, 2025
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
