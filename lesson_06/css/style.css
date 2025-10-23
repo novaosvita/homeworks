@@ -4,6 +4,7 @@ body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
   font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий та локально*/
   font-size: 30px; /*найбільша кількість використаних шрифтів в макеті*/
+  background-color: #c5c5c5;
 }
 
 /* ===== ХЕДЕР ====== */
@@ -12,142 +13,141 @@ header {
 }
 
 .header-container {
-  background-color: #c4be9b;
+  background-color: #f2eed6;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* Фоном тексту є зображення* */
 .title-blocks {
   font-size: 70px;
   font-weight: 800;
-  margin-bottom: 70px;
+  /*margin-bottom: 70px;*/
   text-decoration-line: underline;
   background-image: url("../img/background_curve.jpg");
   background-size: cover;
   background-clip: text; /*фоном тексту - є зображення*/
   color: transparent; /*прозорий колір*/
   background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
+  background-position: center;  
 }
+
 
 /* ====== ГОЛОВНА ЧАСТИНА СТОРІНКИ =======  */
 
+main{
+	background-color: #177202;
+}
+
+/* Огортка для готовного контенту */
 .main-container {
-  /*background-color: #95b7ee; Фон для наглядності області головного контенту*/
   max-width: 1280px;
   margin: 0 auto;
-  /*padding-left: 50px;*/
 }
 
 /* =======  СЕКЦІЯ ТРЕНУВАЛЬНА ПЕРША, згідно уроку =====*/
-
 .training-lesson {
-  background-color: #c3e2b5;
+  background-color: #f8f5e4;
   max-width: 1280px;
+  text-align: center;
 }
 
 .subtitle-border {
   font-weight: 700;
   font-size: 40px;
   color: brown;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   text-decoration-line: underline;
+  padding-top: 40px;
 }
 
-/* БЛОК з обводкою та розмитою тінню- */
+/* 1- БЛОК з обводкою та розмитою тінню- */
 .test-border {
-  margin-top: 50px;
-  max-width: 500px;
-  font-size: 35px;
+  font-size: 25px;
   outline: 10px solid red;
-  outline-offset: 2px;
+  outline-offset: 5px; /*зовнішня обводка з офсетуванням*/
   box-shadow: 10px 10px 50px 30px royalblue;
   background-color: bisque;
-  margin-bottom: 50px;
-  max-width: 1000px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-left: 50px; /*відступи зовнішні для наочності тіні*/
+  margin-right: 50px; /*відступи зовнішні для наочності тіні*/
 }
 
-/* Рядковий елнмент - обводка */
+/* Рядковий елемент - обводка */
 .test-outline {
-  outline: 7px dashed green;
+  outline: 7px dashed green; /*обводка елементу*/
 }
 
 /* Обводка зображення */
 .border-around {
-  max-width: 1000px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   background-color: #33f198;
+  text-align: center;
 }
 .photo-border {
-  border: 10px dashed #0446b0;
+  border: 10px dashed #2402ad;
 }
 
 /* БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline */
 .span-test {
   margin-top: 50px;
   font-size: 40px;
-  /*border: 5px solid #112;*/
   outline: 10px solid #1115eb;
-  /*box-shadow: 10px 10px 50px 30px green;*/
 }
 
-/* БЛОК з зовнішньою обводкою outline */
+/* 3 - БЛОК з зовнішньою обводкою outline, виходить за рамки */
 .test-border-outline {
   margin-top: 50px;
-  max-width: 1000px;
   font-size: 30px;
-  margin-left: 20px;
+  padding: 10px;
   outline: 10px solid red;
-  outline-offset: 2px;
+  outline-offset: 10px;
   /* "inset"  внутрішня тінь.  Можливе задання декількох тіней і звнішніх та внутрішніш*/
   box-shadow: inset 5px 5px 30px 10px rgb(144, 225, 163),
     5px 5px 30px 10px rgb(3, 6, 159), 5px 5px 30px 10px rgb(4, 155, 39);
   background-color: bisque;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 
 /*БЛОК з побудовою геометричної фігури - КОЛО*/
 .circle {
-  margin-top: 100px;
   width: 500px;
   height: 500px;
   background-color: rgb(0, 255, 38);
   border-radius: 50%;
-  border: 5px solid #1115eb;
+  border: 7px dotted #1115eb;
   /*різні види тіней: зовнішті та внутрішні*/
-  box-shadow: inset 5px 5px 30px 10px rgb(214, 190, 8),
-    5px 5px 30px 10px rgb(125, 127, 229), 5px 5px 30px 10px rgb(4, 155, 39);
-  text-align: center;
+  box-shadow: inset 5px 5px 40px 15px rgb(235, 224, 140),
+    5px 5px 30px 10px rgb(119, 121, 252), 5px 5px 30px 10px rgb(4, 155, 39);
   font-size: 35px;
-  padding-top: 200px;
-  margin-bottom: 70px;
-  margin-left: 60px;
+  padding-top: 200px; /*текст опустився до середини кола*/
+  margin: 0 auto;
 }
 
 /* Блок з побудовою 3d-кнопки */
 
 .button {
-  margin-left: 170px;
+  display: inline-block;
   padding: 25px;
-  background-color: #07755b;
+  background-color: #037f4f;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 5px;
   box-shadow: 0 10px 0px 0px rgb(1, 52, 76);
 }
 
-/* БЛОК з ефектом прозорсті*/
+/* 5 - БЛОК з ефектом прозорсті*/
 .block-opacity {
-  max-width: 1000px;
+  display: block;
   margin-top: 50px;
   background-color: rgb(35, 136, 168);
-  outline: 10px solid rgb(66, 66, 117);
+  outline: 10px solid rgb(66, 66, 117); /*зовнішня обводка зображення*/
   opacity: 0.7; /*весь об*єкт напівпрозорий, якщо прозорий повністю, то можна взвємодіяти*/
-  /*visibility: hidden; обєкт прихований і не взаємодіяний*/
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 /* БЛОК  ФОНУ заднього для блокових елементів */
@@ -155,26 +155,23 @@ header {
   font-size: 40px;
   font-weight: 500;
   color: rgb(16, 0, 134);
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   text-decoration-line: underline;
 }
 
-/* БЛОК з заднім фоном - зображенням та позиціонуванням*/
+/* 6 - БЛОК з заднім фоном - зображенням та позиціонуванням*/
 .block-image {
   background-image: url("../img/background_yellow.jpg");
-  background-color: #e28989;
-  max-width: 1000px;
+  background-color: #23eebe;
   margin-bottom: 40px;
   min-height: 500px; /*параметри задані для наглядності зображення*/
-  /*height: 1000px; якщо збільшити блок по висоті та ширині,
-   то побачимо, що по замовчуванню - зображження повторюються по горизонталі та вертикалі*/
   background-position: 30px 50px; /*позиціонування зображення по x y*/
   background-repeat: no-repeat; /*не повторювати*/
+  padding-top: 20px;
 }
 
-/* БЛОК зі складним градієнтом */
+/* 7 - БЛОК зі складним градієнтом */
 .block-image-gradient {
-  max-width: 1000px;
   background: linear-gradient(
     143deg,
     rgba(55, 3, 87, 1) 0%,
@@ -184,72 +181,71 @@ header {
   );
   margin-bottom: 40px;
   color: #6c613e;
+  border: 8px dotted #1115eb;
+  padding: 30px;
 }
 
-/* 8-БЛОК зі складним градієнтом, що взаємодіє з текстом */
+/* 8 - БЛОК зі складним градієнтом, що взаємодіє з текстом */
 .block-image-gradient-text {
   color: #cccccc;
-  max-width: 1000px;
-  padding: 20px;
+  padding: 30px;
   background: linear-gradient(
     180deg,
     rgb(0, 96, 67) 0%,
     rgba(204, 204, 204, 1) 100%
   );
   margin-bottom: 50px;
+  border: 7px dashed #1115eb;
 }
 
 /* 9- В цьому блоці використовується зображення, 
 як приклад повторюванності */
 .block-background-repear {
   background-image: url("../img/pattern.jpg");
-  max-width: 1000px;
   min-height: 600px; /*ця висота вказана, для видимості повторюванності
 	  зображення - патернів*/
   text-align: center;
   margin-bottom: 40px;
   padding-top: 20px;
   color: #ffffff;
+  border: 7px solid #1115eb;
 }
 
 /* 10 - БЛОК з фіксацією зображення до в*юпорта */
 .block-background-attachment {
-  background-image: url("../img/texture-background.jpg");
-  /*background-attachment: scroll;  за замовчуванням*/
+  background-image: url("../img/weather.jpg");
+  /*background-attachment - scroll;  за замовчуванням*/
   background-attachment: fixed; /*зображення "прилипає" до вікна в*юпорта , фіксується і 
   прокручується разом зі сторінккою*/
   background-color: rgb(238, 218, 191);
-  max-width: 1000px;
-  min-height: 600px;
+  min-height: 800px; /*висота задана для наочності прикладу*/
   background-repeat: no-repeat;
   background-position: center;
-  padding: 10px;
+  padding-top: 50px;
   margin-bottom: 50px;
   background-size: contain; /*зображення займає весь простір блоку*/
-  color: #8d8c8c;
+  color: #c5c5c5;
+  line-height: 1.5; /*міжрядкова відстань*/
 }
 
 /* Блок з показом керування зображення через розміри */
 .block-background-size {
-  background-color: #f4e3ac;
   background-image: url("../img/background_green.jpg");
-  /*background-size: auto auto; за замовчуванням, показує фактичні розміри зображення*/
-  /*background-size: contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
+  /*background-size - auto auto; за замовчуванням, показує фактичні розміри зображення*/
+  /*background-size - contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
   background-size: cover; /*зображення покриваэ весь блок пропорційно*/
   background-repeat: no-repeat;
-  max-width: 1000px;
   min-height: 700px;
-  border: 10px dashed #f13359;
-  text-align: center;
+  border: 10px dashed #177202;
   background-position: center;
   background-clip: padding-box;
   margin-bottom: 40px;
+  padding-top: 80px;
 }
 
 /* Побудова стрілочок через CSS */
 .arrow-contain {
   background-color: #c0b264;
-  max-width: 1000px;
   margin-bottom: 40px;
 }
 
@@ -289,22 +285,51 @@ header {
 
 /* ====== СЕКЦІЯ ТРЕНУВАЛЬНА ДРУГА, згідно завдання з макету =====  */
 
-.subtitle-training-layout {
+.hero-training {
+	max-width: 1920px;
+	width: 100%;
+	min-height: 612px;
+  background-image: url("../img/hero_funiture.jpg");
+}
+
+/*ЛІНІЯ - побудова за допомогою html css*/
+.span-line {
+  display: inline-block; /*щоб додати висоту та ширину*/
+  width: 200px;
+  height: 5px;
+  background-color: #1115eb;
+}
+
+.hero-training {
+  width: 100%;
+  background-color: #177202;
+}
+
+.hero-subtitle-training {
+  /*h2*/
   color: #5d3102;
   font-size: 40px;
   font-weight: 500;
   text-align: center;
 }
-.training_layout {
-  max-width: 1280px;
-  background-color: #f4e9ad;
+
+.hero-training-container {
+  background-color: #037f4f;
+
+
+
 }
-.list {
+/* СТИЛІЗАЦІЯ списку через CSS */
+
+.subtitle-training {
+  background-color: #ccc8b3;
+}
+
+.list-check {
   color: #1115eb;
   font-size: 35px;
 }
 
-/* СТИЛІЗАЦІЯ списку через CSS */
 .list-item {
   background-image: url("../icons/Check_badge_green.svg"); /*додаю "птичку",
 	як фонове зображення*/
@@ -318,16 +343,16 @@ header {
 }
 
 /* ===== ФУРЕТ ======= */
-
 .footer-container {
   max-width: 1280px;
   background-color: #5a5858;
   margin: 0 auto;
 }
+
 .wrapper-description p {
   text-align: center; /*властивість наслідується для всих рівнів тексту та рядкових елементів (плюс img)*/
   font-size: 18px;
-  font-weight: 500; /*шрифт підключений локально*/
+  font-weight: 500;
   line-height: 1.5;
   color: rgb(203, 203, 203);
   padding-top: 20px; /*внутрішній відступ зверху додає простору між тексом*/
