@@ -28,6 +28,7 @@ body {
   font-size: 70px;
   font-weight: 800;
   background-image: url("../img/background_curve.jpg"); /*Це зображення для фону тексту*/
+
   background-size: cover; /*Покриває фоном простір блоку, може частково обрізатися*/
   background-repeat: no-repeat;
   color: #ffffff;
