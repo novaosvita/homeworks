@@ -1,56 +1,59 @@
 @import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+@import url("fonts.css"); /* Підключення шрифта локально Lato 500 */
 
 body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
-  font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий та локально*/
+  font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий та локально lato*/
   font-size: 30px; /*найбільша кількість використаних шрифтів в макеті*/
-  background-color: #c5c5c5;
+  background-color: #d5d3d3;
 }
 
 /* ===== ХЕДЕР ====== */
-header {
-  background-color: #f4e3ac; /*Фон для наочності області*/
+.header-content {
+  background-color: rgb(200, 200, 200) 3; /*Фон для наочності області*/
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header-container {
-  background-color: #f2eed6;
-  max-width: 1280px;
+  max-width: 1390px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
 }
 
 /* Фоном тексту є зображення* */
 .title-blocks {
   font-size: 70px;
   font-weight: 800;
-  /*margin-bottom: 70px;*/
   text-decoration-line: underline;
-  background-image: url("../img/background_curve.jpg");
-  background-size: cover;
-  background-clip: text; /*фоном тексту - є зображення*/
-  color: transparent; /*прозорий колір*/
+  background-image: url("../img/background_curve.jpg"); /*Це зображення для фону тексту*/
+  background-size: cover; /*Покриває фоном простір блоку*/
+  background-clip: text; /*фон тексту - є зображення*/
+  color: transparent; /*Прозорий колір тексту*/
   background-repeat: no-repeat;
-  background-position: center;  
+  background-position: center;
 }
 
-
-/* ====== ГОЛОВНА ЧАСТИНА СТОРІНКИ =======  */
-
-main{
-	background-color: #177202;
-}
+/* ====== MAIN - ГОЛОВНА ЧАСТИНА СТОРІНКИ =======  */
 
 /* Огортка для готовного контенту */
 .main-container {
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
-/* =======  СЕКЦІЯ ТРЕНУВАЛЬНА ПЕРША, згідно уроку =====*/
-.training-lesson {
-  background-color: #f8f5e4;
-  max-width: 1280px;
+/* =======  СЕКЦІЯ ПЕРША ТРЕНУВАЛЬНА, згідно уроку =====*/
+.lesson-container {
+  max-width: 1390px;
   text-align: center;
+  margin: 0 auto;
+}
+
+.homework-training {
+  background-color: #d0d1d0;
 }
 
 .subtitle-border {
@@ -62,7 +65,7 @@ main{
   padding-top: 40px;
 }
 
-/* 1- БЛОК з обводкою та розмитою тінню- */
+/* 1- БЛОК з обводкою та розмитою тінню */
 .test-border {
   font-size: 25px;
   outline: 10px solid red;
@@ -85,7 +88,7 @@ main{
 .border-around {
   width: 100%;
   margin-bottom: 100px;
-  background-color: #33f198;
+  background-color: rgb(197, 182, 164);
   text-align: center;
 }
 .photo-border {
@@ -100,13 +103,13 @@ main{
 }
 
 /* 3 - БЛОК з зовнішньою обводкою outline, виходить за рамки */
+/* "inset"  внутрішня тінь.  Можливе задання декількох тіней і зовнішніх та внутрішніх*/
 .test-border-outline {
   margin-top: 50px;
   font-size: 30px;
   padding: 10px;
   outline: 10px solid red;
   outline-offset: 10px;
-  /* "inset"  внутрішня тінь.  Можливе задання декількох тіней і звнішніх та внутрішніш*/
   box-shadow: inset 5px 5px 30px 10px rgb(144, 225, 163),
     5px 5px 30px 10px rgb(3, 6, 159), 5px 5px 30px 10px rgb(4, 155, 39);
   background-color: bisque;
@@ -114,22 +117,22 @@ main{
 }
 
 /*БЛОК з побудовою геометричної фігури - КОЛО*/
+/*різні види тіней: зовнішті та внутрішні*/
 .circle {
   width: 500px;
   height: 500px;
   background-color: rgb(0, 255, 38);
   border-radius: 50%;
   border: 7px dotted #1115eb;
-  /*різні види тіней: зовнішті та внутрішні*/
   box-shadow: inset 5px 5px 40px 15px rgb(235, 224, 140),
     5px 5px 30px 10px rgb(119, 121, 252), 5px 5px 30px 10px rgb(4, 155, 39);
   font-size: 35px;
   padding-top: 200px; /*текст опустився до середини кола*/
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 
 /* Блок з побудовою 3d-кнопки */
-
 .button {
   display: inline-block;
   padding: 25px;
@@ -146,11 +149,12 @@ main{
   margin-top: 50px;
   background-color: rgb(35, 136, 168);
   outline: 10px solid rgb(66, 66, 117); /*зовнішня обводка зображення*/
-  opacity: 0.7; /*весь об*єкт напівпрозорий, якщо прозорий повністю, то можна взвємодіяти*/
+  opacity: 0.7; /*весь об*єкт напівпрозорий, якщо навіть прозорий повністю, то можна взаємодіяти*/
   margin-bottom: 100px;
+  padding: 20px;
 }
 
-/* БЛОК  ФОНУ заднього для блокових елементів */
+/* БЛОК  ТЕКСТУ  */
 .subtitle-background {
   font-size: 40px;
   font-weight: 500;
@@ -162,10 +166,10 @@ main{
 /* 6 - БЛОК з заднім фоном - зображенням та позиціонуванням*/
 .block-image {
   background-image: url("../img/background_yellow.jpg");
-  background-color: #23eebe;
+  background-color: rgb(197, 182, 164);
   margin-bottom: 40px;
   min-height: 500px; /*параметри задані для наглядності зображення*/
-  background-position: 30px 50px; /*позиціонування зображення по x y*/
+  background-position: 120px 80px; /*позиціонування зображення по x y*/
   background-repeat: no-repeat; /*не повторювати*/
   padding-top: 20px;
 }
@@ -202,8 +206,7 @@ main{
 як приклад повторюванності */
 .block-background-repear {
   background-image: url("../img/pattern.jpg");
-  min-height: 600px; /*ця висота вказана, для видимості повторюванності
-	  зображення - патернів*/
+  min-height: 600px; /*ця висота вказана, для видимості повторюванності зображення - патернів*/
   text-align: center;
   margin-bottom: 40px;
   padding-top: 20px;
@@ -214,8 +217,7 @@ main{
 /* 10 - БЛОК з фіксацією зображення до в*юпорта */
 .block-background-attachment {
   background-image: url("../img/weather.jpg");
-  /*background-attachment - scroll;  за замовчуванням*/
-  background-attachment: fixed; /*зображення "прилипає" до вікна в*юпорта , фіксується і 
+  background-attachment: fixed; /*зображення "прилипає" до вікна в*юпорта , фіксується і не
   прокручується разом зі сторінккою*/
   background-color: rgb(238, 218, 191);
   min-height: 800px; /*висота задана для наочності прикладу*/
@@ -223,16 +225,16 @@ main{
   background-position: center;
   padding-top: 50px;
   margin-bottom: 50px;
-  background-size: contain; /*зображення займає весь простір блоку*/
+  background-size: contain; /*зображення показано повністю, але можуть бути на закриті поля блоку*/
   color: #c5c5c5;
   line-height: 1.5; /*міжрядкова відстань*/
 }
 
 /* Блок з показом керування зображення через розміри */
+/*background-size - auto auto; за замовчуванням, показує фактичні розміри зображення*/
+/*background-size - contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
 .block-background-size {
   background-image: url("../img/background_green.jpg");
-  /*background-size - auto auto; за замовчуванням, показує фактичні розміри зображення*/
-  /*background-size - contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
   background-size: cover; /*зображення покриваэ весь блок пропорційно*/
   background-repeat: no-repeat;
   min-height: 700px;
@@ -245,12 +247,16 @@ main{
 
 /* Побудова стрілочок через CSS */
 .arrow-contain {
-  background-color: #c0b264;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  border-top: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
+  border-bottom: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
+  padding: 50px;
+  font-weight: 700;
+  color: #1115eb;
 }
 
+/* стрілка вліво*/
 .arrow-left {
-  /* стрілка вліво*/
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -283,75 +289,145 @@ main{
   border-top: 100px solid #1115eb;
 }
 
-/* ====== СЕКЦІЯ ТРЕНУВАЛЬНА ДРУГА, згідно завдання з макету =====  */
+/*===============================================================================*/
+/* ====== СЕКЦІЯ ДРУГА, згідно завдання з макету =====  */
 
-.hero-training {
-	max-width: 1920px;
-	width: 100%;
-	min-height: 612px;
+/*НАЗВА блоку h2*/
+.homework-subtitle {
+  color: #110d86;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  text-decoration-line: underline;
+}
+
+.homework-block-training {
+  width: 100%; /* Ширина блоку відповідає ширині батьківського блоку, тобто "main-container" */
+  min-height: 612px;
   background-image: url("../img/hero_funiture.jpg");
+  margin-bottom: 50px;
+}
+
+.homework-training-container {
+  opacity: 0.8;
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+.homework-training-text {
+  max-width: 520px;
+  margin-left: 743px;
+  padding-right: 130px;
+  padding: 114px 0px 110px; /*верх 114, ліво/право - 0, знизу 110*/
+}
+
+.text-top {
+  color: #2f302c;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700; /*шрифт підключений в html*/
+  line-height: 1.4; /*висота рядка виражена в частинах, для гнучкості*/
+  margin-bottom: 20px;
+}
+
+/*СПІЛЬНА запис для двох однакових елементів*/
+.text-title,
+.text-subtitle {
+  color: #2f302c;
+  font-size: 96px;
+  line-height: 1.04;
+  margin-bottom: 16px;
+}
+
+/*окремо вказати відмінність*/
+.text-title {
+  font-weight: 800; /*шрифт підключений в html*/
+}
+/*окремо вказати відмінність*/
+.text-subtitle {
+  font-weight: 700; /*шрифт підключений в html*/
 }
 
 /*ЛІНІЯ - побудова за допомогою html css*/
-.span-line {
-  display: inline-block; /*щоб додати висоту та ширину*/
-  width: 200px;
-  height: 5px;
-  background-color: #1115eb;
+.line {
+  width: 308px;
+  height: 1px;
+  background-color: #2f302c;
+  margin-bottom: 36px;
 }
 
-.hero-training {
-  width: 100%;
-  background-color: #177202;
+.text-slogan {
+  color: #2f302c;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
-.hero-subtitle-training {
-  /*h2*/
-  color: #5d3102;
-  font-size: 40px;
+.text-description {
+  color: #7e7f7c;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
-  text-align: center;
+  line-height: 1.25;
 }
 
-.hero-training-container {
-  background-color: #037f4f;
+/* ==== СТИЛІЗАЦІЯ списку через CSS ==== */
 
-
-
+.training-list {
+  max-width: 1390px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
-/* СТИЛІЗАЦІЯ списку через CSS */
 
-.subtitle-training {
-  background-color: #ccc8b3;
+.list-container {
+  max-width: 350px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .list-check {
-  color: #1115eb;
-  font-size: 35px;
+  max-width: 270px;
+  margin: 0 auto;
 }
 
-.list-item {
-  background-image: url("../icons/Check_badge_green.svg"); /*додаю "птичку",
-	як фонове зображення*/
+.list-item-green,
+.list-item-gray {
+  background-image: url("../icons/Check_badge_green.svg"); /*додаю "іконку", як фонове зображення*/
   background-repeat: no-repeat; /*не повторювати*/
-  background-position: 0 0; /*позицонування відносно лівого верхнього кута (0, 0)*/
-  margin-bottom: 10px; /**відстань між пунктами*/
-  min-height: 32px; /*! необхідно вказувати мінімальну висоту іконки - для коректного
-	відображення списку при додавання тексту*/
-  padding-left: 40px; /*для зміщення тексту вправо від зображення*/
-  line-height: 1.5;
+  /*background-position: 0 0; позицонування відносно лівого верхнього кута (0, 0)*/
+  margin-bottom: 15px; /*відстань між пунктами*/
+  min-height: 32px; /*! необхідно вказувати мінімальну висоту іконки - для коректного 	відображення списку при додавання тексту*/
+  padding-left: 42px; /*для зміщення тексту вправо від зображення*/
+  line-height: 1.71; /*частина, як співвідношення бажаної висоти рядка до висоти шрифту */
+  color: #252b42;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; /*підключено в html*/
+  letter-spacing: 0.2px;
+  padding-top: 4px;
+}
+
+.list-item-gray {
+  /*ВІДМІННІСТЬ іконки тільки в кольорі*/
+  background-image: url("../icons/Check_badge_gray.svg"); /*додаю "іконку",
+	як фонове зображення*/
 }
 
 /* ===== ФУРЕТ ======= */
 .footer-container {
-  max-width: 1280px;
+  max-width: 1920px;
   background-color: #5a5858;
   margin: 0 auto;
 }
 
 .wrapper-description p {
   text-align: center; /*властивість наслідується для всих рівнів тексту та рядкових елементів (плюс img)*/
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: rgb(203, 203, 203);
