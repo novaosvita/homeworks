@@ -5,12 +5,11 @@ body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
   font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий та локально lato*/
   font-size: 30px; /*найбільша кількість використаних шрифтів в макеті*/
-  background-color: #d5d3d3;
+  background-color: #e4e3e3;
 }
 
 /* ===== ХЕДЕР ====== */
 .header-content {
-  background-color: rgb(200, 200, 200) 3; /*Фон для наочності області*/
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -20,21 +19,23 @@ body {
   margin: 0 auto;
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 50px;
-  border-bottom: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
+  padding-bottom: 40px;
+  border-bottom: 10px dotted #bfbfc0; /*декоративна лінія розподілу простру*/
 }
 
 /* Фоном тексту є зображення* */
 .title-blocks {
   font-size: 70px;
   font-weight: 800;
-  text-decoration-line: underline;
   background-image: url("../img/background_curve.jpg"); /*Це зображення для фону тексту*/
-  background-size: cover; /*Покриває фоном простір блоку*/
-  background-clip: text; /*фон тексту - є зображення*/
-  color: transparent; /*Прозорий колір тексту*/
+  background-size: cover; /*Покриває фоном простір блоку, може частково обрізатися*/
   background-repeat: no-repeat;
+  color: #ffffff;
+  box-shadow: 10px 10px 40px 20px rgb(122, 191, 255);
+  text-shadow: 5px 5px 10px rgb(69, 70, 71);
   background-position: center;
+  padding: 50px 0px;
+  line-height: 1.5;
 }
 
 /* ====== MAIN - ГОЛОВНА ЧАСТИНА СТОРІНКИ =======  */
@@ -52,10 +53,6 @@ body {
   margin: 0 auto;
 }
 
-.homework-training {
-  background-color: #d0d1d0;
-}
-
 .subtitle-border {
   font-weight: 700;
   font-size: 40px;
@@ -70,7 +67,7 @@ body {
   font-size: 25px;
   outline: 10px solid red;
   outline-offset: 5px; /*зовнішня обводка з офсетуванням*/
-  box-shadow: 10px 10px 50px 30px royalblue;
+  box-shadow: 10px 10px 50px 30px rgb(225, 161, 65);
   background-color: bisque;
   margin-bottom: 100px;
   border-radius: 10px;
@@ -88,7 +85,7 @@ body {
 .border-around {
   width: 100%;
   margin-bottom: 100px;
-  background-color: rgb(197, 182, 164);
+  background-color: rgb(217, 216, 215);
   text-align: center;
 }
 .photo-border {
@@ -103,7 +100,7 @@ body {
 }
 
 /* 3 - БЛОК з зовнішньою обводкою outline, виходить за рамки */
-/* "inset"  внутрішня тінь.  Можливе задання декількох тіней і зовнішніх та внутрішніх*/
+/* "inset"  внутрішня тінь.  Можливе задання декількох тіней: зовнішніх та внутрішніх*/
 .test-border-outline {
   margin-top: 50px;
   font-size: 30px;
@@ -117,7 +114,7 @@ body {
 }
 
 /*БЛОК з побудовою геометричної фігури - КОЛО*/
-/*різні види тіней: зовнішті та внутрішні*/
+/*Різні види тіней: зовнішті та внутрішні*/
 .circle {
   width: 500px;
   height: 500px;
@@ -149,7 +146,7 @@ body {
   margin-top: 50px;
   background-color: rgb(35, 136, 168);
   outline: 10px solid rgb(66, 66, 117); /*зовнішня обводка зображення*/
-  opacity: 0.7; /*весь об*єкт напівпрозорий, якщо навіть прозорий повністю, то можна взаємодіяти*/
+  opacity: 0.7; /*весь об'єкт напівпрозорий, якщо навіть прозорий повністю, то можна взаємодіяти*/
   margin-bottom: 100px;
   padding: 20px;
 }
@@ -209,15 +206,15 @@ body {
   min-height: 600px; /*ця висота вказана, для видимості повторюванності зображення - патернів*/
   text-align: center;
   margin-bottom: 40px;
-  padding-top: 20px;
+  padding-top: 50px;
   color: #ffffff;
   border: 7px solid #1115eb;
 }
 
-/* 10 - БЛОК з фіксацією зображення до в*юпорта */
+/* 10 - БЛОК з фіксацією зображення до в'юпорта */
 .block-background-attachment {
   background-image: url("../img/weather.jpg");
-  background-attachment: fixed; /*зображення "прилипає" до вікна в*юпорта , фіксується і не
+  background-attachment: fixed; /*зображення "прилипає" до вікна в'юпорта , фіксується і не
   прокручується разом зі сторінккою*/
   background-color: rgb(238, 218, 191);
   min-height: 800px; /*висота задана для наочності прикладу*/
@@ -225,17 +222,17 @@ body {
   background-position: center;
   padding-top: 50px;
   margin-bottom: 50px;
-  background-size: contain; /*зображення показано повністю, але можуть бути на закриті поля блоку*/
+  background-size: contain; /*зображення показано повністю, але частково можуть бути не закриті поля блоку*/
   color: #c5c5c5;
   line-height: 1.5; /*міжрядкова відстань*/
 }
 
-/* Блок з показом керування зображення через розміри */
+/* 11 - Блок з показом керування зображення через розміри */
 /*background-size - auto auto; за замовчуванням, показує фактичні розміри зображення*/
 /*background-size - contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
 .block-background-size {
   background-image: url("../img/background_green.jpg");
-  background-size: cover; /*зображення покриваэ весь блок пропорційно*/
+  background-size: cover; /*зображення покриває весь блок пропорційно*/
   background-repeat: no-repeat;
   min-height: 700px;
   border: 10px dashed #177202;
@@ -243,13 +240,14 @@ body {
   background-clip: padding-box;
   margin-bottom: 40px;
   padding-top: 80px;
+  line-height: 1.5;
 }
 
 /* Побудова стрілочок через CSS */
 .arrow-contain {
   margin-bottom: 60px;
-  border-top: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
-  border-bottom: 10px dotted #ababab; /*декоративна лінія розподілу простру*/
+  border-top: 10px dotted #ababab; /*декоративна лінія розподілу простору*/
+  border-bottom: 10px dotted #ababab; /*декоративна лінія розподілу простору*/
   padding: 50px;
   font-weight: 700;
   color: #1115eb;
@@ -281,7 +279,7 @@ body {
   margin-bottom: 30px;
 }
 /* стрілка вниз*/
-.arrow-battom {
+.arrow-bottom {
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
@@ -318,7 +316,6 @@ body {
 .homework-training-text {
   max-width: 520px;
   margin-left: 743px;
-  padding-right: 130px;
   padding: 114px 0px 110px; /*верх 114, ліво/право - 0, знизу 110*/
 }
 
@@ -340,16 +337,16 @@ body {
   margin-bottom: 16px;
 }
 
-/*окремо вказати відмінність*/
+/*Окремо вказати відмінність*/
 .text-title {
   font-weight: 800; /*шрифт підключений в html*/
 }
-/*окремо вказати відмінність*/
+/*Окремо вказати відмінність*/
 .text-subtitle {
   font-weight: 700; /*шрифт підключений в html*/
 }
 
-/*ЛІНІЯ - побудова за допомогою html css*/
+/*ЛІНІЯ - побудова за допомогою html  / css*/
 .line {
   width: 308px;
   height: 1px;
@@ -399,7 +396,6 @@ body {
 .list-item-gray {
   background-image: url("../icons/Check_badge_green.svg"); /*додаю "іконку", як фонове зображення*/
   background-repeat: no-repeat; /*не повторювати*/
-  /*background-position: 0 0; позицонування відносно лівого верхнього кута (0, 0)*/
   margin-bottom: 15px; /*відстань між пунктами*/
   min-height: 32px; /*! необхідно вказувати мінімальну висоту іконки - для коректного 	відображення списку при додавання тексту*/
   padding-left: 42px; /*для зміщення тексту вправо від зображення*/
