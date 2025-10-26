@@ -41,13 +41,13 @@ body {
 /* ====== MAIN - ГОЛОВНА ЧАСТИНА СТОРІНКИ =======  */
 
 /* Огортка для готовного контенту */
-.main-container {
+.lesson-container {
   max-width: 1920px;
   margin: 0 auto;
 }
 
 /* =======  СЕКЦІЯ ПЕРША ТРЕНУВАЛЬНА, згідно уроку =====*/
-.lesson-container {
+.lesson-learning {
   max-width: 1390px;
   text-align: center;
   margin: 0 auto;
@@ -65,20 +65,15 @@ body {
 /* 1- БЛОК з обводкою та розмитою тінню */
 .test-border {
   font-size: 25px;
-  outline: 10px solid red;
-  outline-offset: 5px; /*зовнішня обводка з офсетуванням*/
-  box-shadow: 10px 10px 50px 30px rgb(225, 161, 65);
-  background-color: bisque;
+  outline: 7px solid rgb(0, 155, 169);
+  outline-offset: 10px; /*зовнішня обводка з офсетуванням*/
+  box-shadow: 10px 10px 40px 20px rgb(65, 201, 225);
+  background-color: rgb(249, 229, 205);
   margin-bottom: 100px;
   border-radius: 10px;
   padding: 30px;
   margin-left: 50px; /*відступи зовнішні для наочності тіні*/
   margin-right: 50px; /*відступи зовнішні для наочності тіні*/
-}
-
-/* Рядковий елемент - обводка */
-.test-outline {
-  outline: 7px dashed green; /*обводка елементу*/
 }
 
 /* Обводка зображення */
@@ -102,15 +97,22 @@ body {
 /* 3 - БЛОК з зовнішньою обводкою outline, виходить за рамки */
 /* "inset"  внутрішня тінь.  Можливе задання декількох тіней: зовнішніх та внутрішніх*/
 .test-border-outline {
-  margin-top: 50px;
+  margin-top: 100px; /*Верхній відступ від рядкового елементу*/
   font-size: 30px;
-  padding: 10px;
-  outline: 10px solid red;
-  outline-offset: 10px;
+  padding: 50px;
+  outline: 10px solid rgb(1, 166, 133);
+  border-radius: 10px;
+  outline-offset: 15px; /*відступ зовнішній обводки*/
   box-shadow: inset 5px 5px 30px 10px rgb(144, 225, 163),
-    5px 5px 30px 10px rgb(3, 6, 159), 5px 5px 30px 10px rgb(4, 155, 39);
+    5px 5px 30px 20px rgb(2, 123, 142), 5px 5px 30px 10px rgb(4, 155, 39);
   background-color: bisque;
   margin-bottom: 100px;
+  line-height: 1.5;
+}
+
+/* Рядковий елемент - обводка */
+.test-outline {
+  outline: 5px dashed rgb(227, 66, 2); /*обводка елементу*/
 }
 
 /*БЛОК з побудовою геометричної фігури - КОЛО*/
@@ -166,9 +168,9 @@ body {
   background-color: rgb(197, 182, 164);
   margin-bottom: 40px;
   min-height: 500px; /*параметри задані для наглядності зображення*/
-  background-position: 120px 80px; /*позиціонування зображення по x y*/
+  background-position: 250px 100px; /*позиціонування зображення по x y*/
   background-repeat: no-repeat; /*не повторювати*/
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 /* 7 - БЛОК зі складним градієнтом */
@@ -183,7 +185,8 @@ body {
   margin-bottom: 40px;
   color: #6c613e;
   border: 8px dotted #1115eb;
-  padding: 30px;
+  padding: 150px 0px;
+  line-height: 1.5;
 }
 
 /* 8 - БЛОК зі складним градієнтом, що взаємодіє з текстом */
@@ -197,6 +200,7 @@ body {
   );
   margin-bottom: 50px;
   border: 7px dashed #1115eb;
+  line-height: 1.5;
 }
 
 /* 9- В цьому блоці використовується зображення, 
@@ -220,7 +224,7 @@ body {
   min-height: 800px; /*висота задана для наочності прикладу*/
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 50px;
+  padding-top: 110px;
   margin-bottom: 50px;
   background-size: contain; /*зображення показано повністю, але частково можуть бути не закриті поля блоку*/
   color: #c5c5c5;
@@ -290,6 +294,9 @@ body {
 /*===============================================================================*/
 /* ====== СЕКЦІЯ ДРУГА, згідно завдання з макету =====  */
 
+.lesson-practicing {
+  margin-bottom: 40px;
+}
 /*НАЗВА блоку h2*/
 .homework-subtitle {
   color: #110d86;
@@ -371,12 +378,11 @@ body {
   line-height: 1.25;
 }
 
-/* ==== СТИЛІЗАЦІЯ списку через CSS ==== */
+/* =============СТИЛІЗАЦІЯ списку через CSS ============== */
 
 .training-list {
   max-width: 1390px;
   margin: 0 auto;
-  margin-bottom: 40px;
 }
 
 .list-container {
@@ -419,10 +425,11 @@ body {
   max-width: 1920px;
   background-color: #5a5858;
   margin: 0 auto;
+  text-align: center; /*властивість наслідується для всих рівнів тексту та рядкових елементів (плюс img)*/
 }
 
+/*Комбіновані селектори для Р, що вкладений тільки в "wrapper-description"*/
 .wrapper-description p {
-  text-align: center; /*властивість наслідується для всих рівнів тексту та рядкових елементів (плюс img)*/
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
