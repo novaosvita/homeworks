@@ -20,7 +20,7 @@ body {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 40px;
-  border-bottom: 10px dotted #bfbfc0; /*декоративна лінія розподілу простру*/
+  border-bottom: 10px dotted #999999; /*декоративна лінія розподілу простру*/
 }
 
 /* Фоном тексту є зображення* */
@@ -28,10 +28,9 @@ body {
   font-size: 70px;
   font-weight: 800;
   background-image: url("../img/background_curve.jpg"); /*Це зображення для фону тексту*/
-
   background-size: cover; /*Покриває фоном простір блоку, може частково обрізатися*/
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: #dddddd;
   box-shadow: 10px 10px 40px 20px rgb(122, 191, 255);
   text-shadow: 5px 5px 10px rgb(69, 70, 71);
   background-position: center;
