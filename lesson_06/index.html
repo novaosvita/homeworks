@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="uk">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8">
 		<!-- === Налаштування перегляду (адаптивності) ==== -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- ====== Підключення шрифтів ==== -->
 		<!-- rel означає “relationship” — тип зв’язку. 
 		 "preconnect" каже браузеру: «"ПРЕ", тобто заздалегідь встанови мережеве з’єднання», 
 		 це пришвидчує завантаження шрифтів -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet">
 
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet">
 
 		<!-- ====== Файл  стилів ==== -->
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style.css">
 		<title>Lesson_06</title>
 	</head>
 
@@ -29,7 +29,7 @@
 			<div class="header-container">
 				<!-- Фоном тексту є зображення* -->
 				<h1 class="title-blocks">
-					ВЛАСТИВОСТІ <br />
+					ВЛАСТИВОСТІ <br>
 					блокових елементів
 				</h1>
 			</div>
@@ -44,9 +44,9 @@
 						Властивості BORDER та BACKGROUND для блокових та рядкових елементів
 					</h2>
 
-					<!-- 1- БЛОК з обводкою та розмитою тінню-->
+					<!-- 1 - БЛОК з обводкою та розмитою тінню-->
 					<div class="test-border">
-						=== 1 - БЛОК з обводкою та розмитою тінню === <br />
+						=== 1 - БЛОК з обводкою та розмитою тінню === <br>
 						CSS властивість border використовується для встановлення стилю,
 						ширини та кольору межі навколо елемента.
 						<!--Рядковий елнмент - обводка-->
@@ -55,18 +55,18 @@
 						межі навколо елемента.
 					</div>
 
-					<!-- Обводка зображення  -->
+					<!-- 1-1 Обводка зображення  -->
 					<div class="border-around">
 						<img
 							class="photo-border"
 							src="img/background_blue.jpg"
-							alt="Зображення з лінійною абстракцією" />
+							alt="Зображення з лінійною абстракцією">
 					</div>
 
 					<!-- 2 - БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline -->
 					<span class="span-test">=== 2 - БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline
 						===
-						<br />
+						<br>
 						Обводка (outline) — це лінія, яка малюється навколо елемента поза його
 						рамкою (border), не впливаючи на його розмір та положення на сторінці. Її
 						використовують для візуального виділення, наприклад, для фокусування на
@@ -78,7 +78,7 @@
 					<div class="test-border-outline">
 						== 3 - БЛОК з ЗОВНІШНЬОЮ обводкою outline та декільками формами
 						тіней ==
-						<br />
+						<br>
 						Також виділяє <span class="test-outline">окреме слово</span> серед
 						текстової
 						частини
@@ -112,13 +112,13 @@
 					<!-- 6 -БЛОК з заднім фоном - зображенням-->
 					<div class="block-image">
 						=== 6 - БЛОК з заднім ФОНОМ-ЗОБРАЖЕННЯМ,
-						<br> яке позиціонується, згідно заданних координат X / Y === <br />
+						<br> яке позиціонується, згідно заданних координат X / Y === <br>
 					</div>
 
 					<!-- 7 - БЛОК зі складним градієнтом-->
 					<div class="block-image-gradient">
 						=== 7 - Блок з заднім фоном - складний ГРАДІЄНТ ===
-						<br />
+						<br>
 						background зі значенням linear-gradient — це властивість CSS, яка
 						використовується
 						для створення плавного переходу між двома або більше кольорами вздовж
@@ -129,7 +129,7 @@
 					<!-- 8 - БЛОК зі складним градієнтом, що взаємодіє з текстом-->
 					<div class="block-image-gradient-text">
 						=== 8 - БЛОК з заднім фоном - ГРАДІЄНТОМ, який має м'який перехід
-						<br> де TЕКСТ - поступово приховується кольором градієнтом === <br />
+						<br> де TЕКСТ - поступово приховується кольором градієнтом === <br>
 						background: linear-gradient — це властивість CSS, яка використовується
 						для створення плавного переходу між двома або більше кольорами вздовж
 						прямої лінії, формуючи лінійний градієнт як фонове зображення.
@@ -146,7 +146,7 @@
 					<div class="block-background-attachment">
 						10 - БЛОК, де є фонове зображення, яке зафіксоване,
 						<br> відносно вікна в'юпорта (не скролиться).
-						<br />
+						<br>
 						background-attachment зі значенням fixed; – це CSS-властивість, яка фіксує
 						фонове зображення елемента, щоб воно залишалося нерухомим під час
 						прокручування
@@ -194,7 +194,7 @@
 								<div class="line"></div>
 								<p class="text-slogan">BROWSE OUR SELECTIONS</p>
 								<p class="text-description">
-									Featuring sleek designs and innovative materials that <br />
+									Featuring sleek designs and innovative materials that <br>
 									seamlessly blend form and function.
 								</p>
 							</div>
@@ -213,7 +213,7 @@
 								<li class="list-item-gray">1GB Cloud storage</li>
 								<li class="list-item-gray">
 									Email and community
-									<br />
+									<br>
 									support
 								</li>
 							</ul>
@@ -229,9 +229,9 @@
 				<div class="wrapper-description">
 					<p>
 						Bottom of the page:
-						<br />
+						<br>
 						Lesson №6: CSS properties
-						<br />
+						<br>
 						October, 2025
 					</p>
 				</div>
