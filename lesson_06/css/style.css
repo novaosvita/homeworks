@@ -341,22 +341,17 @@ body {
 }
 
 /*СПІЛЬНА запис для двох однакових елементів*/
-.text-title,
-.text-subtitle {
+.text-title {
   color: #2f302c;
   font-size: 96px;
   line-height: 1.04;
   margin-bottom: 16px;
+  font-weight: 700; /*спільна запис, як початкова*/
 }
 
-/*Окремо вказана відмінність*/
-.text-title {
-  font-weight: 800; /*шрифт підключений в html*/
-}
-
-/*Окремо вказана відмінність*/
-.text-subtitle {
-  font-weight: 700; /*шрифт підключений в html*/
+/*Окремо вказана відмінність виділенного, збільшенного,  слова*/
+.text-title span {
+  font-weight: 800;
 }
 
 /*ЛІНІЯ - побудова за допомогою html  / css*/
@@ -377,7 +372,7 @@ body {
   margin-bottom: 20px;
 }
 
-.text-description {
+.text-description p {
   color: #7e7f7c;
   font-size: 16px;
   font-family: "Lato", sans-serif;
