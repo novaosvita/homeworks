@@ -220,7 +220,7 @@ body {
 /* 10 - БЛОК з фіксацією зображення до в'юпорта */
 .block-background-attachment {
   background-image: url("../img/weather.jpg");
-  background-attachment: fixed; /*зображення "прилипає" до вікна в'юпорта , фіксується і не
+  background-attachment: fixed; /*зображення "прилипає" до вікна в'юпорта, фіксується і не
   прокручується разом зі сторінккою*/
   background-color: rgb(238, 218, 191);
   min-height: 800px; /*висота задана для наочності прикладу*/
@@ -235,7 +235,7 @@ body {
 
 /* 11 - Блок з показом керування зображення через розміри */
 /*background-size - auto auto; за замовчуванням, показує фактичні розміри зображення*/
-/*background-size - contain;*/ /*зображення зберігає цілісність та поміщається в блок*/
+/*background-size - contain; зображення зберігає цілісність та поміщається в блок*/
 .block-background-size {
   background-image: url("../img/background_green.jpg");
   background-size: cover; /*зображення покриває весь блок пропорційно*/
@@ -346,11 +346,12 @@ body {
   margin-bottom: 16px;
 }
 
-/*Окремо вказати відмінність*/
+/*Окремо вказана відмінність*/
 .text-title {
   font-weight: 800; /*шрифт підключений в html*/
 }
-/*Окремо вказати відмінність*/
+
+/*Окремо вказана відмінність*/
 .text-subtitle {
   font-weight: 700; /*шрифт підключений в html*/
 }
