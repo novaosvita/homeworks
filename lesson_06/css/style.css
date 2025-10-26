@@ -87,7 +87,7 @@ body {
   border: 10px dashed #2402ad;
 }
 
-/* БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline */
+/* 2 - БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline */
 .span-test {
   margin-top: 50px;
   font-size: 25px;
@@ -323,7 +323,7 @@ body {
 }
 
 .homework-training-text {
-  max-width: 520px;
+  max-width: 518px;
   margin-left: 743px;
   padding: 114px 0px 110px; /*верх 114, ліво/право - 0, знизу 110*/
 }
