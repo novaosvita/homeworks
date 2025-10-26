@@ -240,9 +240,9 @@ body {
   background-image: url("../img/background_green.jpg");
   background-size: cover; /*зображення покриває весь блок пропорційно*/
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 700px;
   border: 10px dashed #177202;
-  background-position: center;
   background-clip: padding-box;
   margin-bottom: 40px;
   padding-top: 80px;
@@ -313,6 +313,9 @@ body {
   width: 100%; /* Ширина блоку відповідає ширині батьківського блоку, тобто "main-container" */
   min-height: 612px;
   background-image: url("../img/hero_funiture.jpg");
+  background-size: cover; /*зображення покриває весь блок пропорційно*/
+  background-repeat: no-repeat;
+  background-position: center;
   margin-bottom: 50px;
 }
 
@@ -323,8 +326,8 @@ body {
 }
 
 .homework-training-text {
-  max-width: 518px;
-  margin-left: 743px;
+  max-width: 650px;
+  margin-left: auto;
   padding: 114px 0px 110px; /*верх 114, ліво/право - 0, знизу 110*/
 }
 
@@ -358,7 +361,8 @@ body {
 
 /*ЛІНІЯ - побудова за допомогою html  / css*/
 .line {
-  width: 308px;
+  max-width: 308px;
+  max-width: 100%;
   height: 1px;
   background-color: #2f302c;
   margin-bottom: 36px;
