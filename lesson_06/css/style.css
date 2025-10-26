@@ -74,11 +74,11 @@ body {
   padding: 30px;
   margin-left: 50px; /*відступи зовнішні для наочності тіні*/
   margin-right: 50px; /*відступи зовнішні для наочності тіні*/
+  line-height: 1.5;
 }
 
-/* Обводка зображення */
+/* 1-1 Обводка зображення */
 .border-around {
-  width: 100%;
   margin-bottom: 100px;
   background-color: rgb(217, 216, 215);
   text-align: center;
@@ -90,8 +90,9 @@ body {
 /* БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline */
 .span-test {
   margin-top: 50px;
-  font-size: 40px;
+  font-size: 25px;
   outline: 10px solid #1115eb;
+  line-height: 1.7;
 }
 
 /* 3 - БЛОК з зовнішньою обводкою outline, виходить за рамки */
@@ -160,6 +161,7 @@ body {
   color: rgb(16, 0, 134);
   margin-bottom: 100px;
   text-decoration-line: underline;
+  letter-spacing: 12px; /*відстань між літерами*/
 }
 
 /* 6 - БЛОК з заднім фоном - зображенням та позиціонуванням*/
