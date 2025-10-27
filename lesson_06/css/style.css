@@ -400,9 +400,7 @@ body {
   margin: 0 auto;
 }
 
-.list-item-green,
-.list-item-gray {
-  background-image: url("../icons/Check_badge_green.svg"); /*додаю "іконку", як фонове зображення*/
+.list-check li {
   background-repeat: no-repeat; /*не повторювати*/
   margin-bottom: 15px; /*відстань між пунктами*/
   min-height: 32px; /*! необхідно вказувати мінімальну висоту іконки - для коректного 	відображення списку при додавання тексту*/
@@ -416,10 +414,13 @@ body {
   padding-top: 4px;
 }
 
+/*ВІДМІННІСТЬ іконки тільки в кольорі*/
+.list-item-green {
+  background-image: url("../icons/Check_badge_green.svg"); /*"іконкa", як фонове зображення*/
+}
+
 .list-item-gray {
-  /*ВІДМІННІСТЬ іконки тільки в кольорі*/
-  background-image: url("../icons/Check_badge_gray.svg"); /*додаю "іконку",
-	як фонове зображення*/
+  background-image: url("../icons/Check_badge_gray.svg"); /*"іконкa",як фонове зображення*/
 }
 
 /* ===== ФУРЕТ ======= */
