@@ -85,6 +85,8 @@ body {
 }
 .photo-border {
   border: 10px dashed #2402ad;
+  /*max-width: 800px;
+  width: 100%;*/
 }
 
 /* 2 - БЛОК рядковий з ЗОВНІШНЬОЮ обводкою outline */
@@ -310,8 +312,6 @@ body {
 }
 
 .homework-block-training {
-  width: 100%; /* Ширина блоку відповідає ширині батьківського блоку, тобто "main-container" */
-  min-height: 612px;
   background-image: url("../img/hero_funiture.jpg");
   background-size: cover; /*зображення покриває весь блок пропорційно*/
   background-repeat: no-repeat;
@@ -320,8 +320,7 @@ body {
 }
 
 .homework-training-container {
-  opacity: 0.8;
-  max-width: 1390px;
+  max-width: 1392px;
   margin: 0 auto;
 }
 
