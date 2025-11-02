@@ -21,7 +21,6 @@ body {
   );
   margin: 0 auto;
   text-align: center;
-  /*border: 5px solid rgb(144, 142, 142);*/
   box-shadow: 5px 5px 5px 0 #696967;
 }
 
@@ -40,7 +39,6 @@ body {
 }
 /* Контентна частина сторінки */
 .main-content {
-  /*background-color: rgb(252, 239, 224);*/
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
@@ -145,6 +143,10 @@ body {
   display: block;
   padding: 20px 0px;
 }
+
+.target-link:hover {
+  text-decoration: underline;
+}
 .block-target {
   max-width: 700px;
   background-color: burlywood; /*це початковий колір блоку*/
@@ -193,6 +195,10 @@ body {
   margin-bottom: 10px;
 }
 
+.position-code-block span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
 /* тільки для ПЕРШОГО елементу  (незалежно від типу тегу) */
 .position-code-block p:first-child {
   color: crimson;
@@ -318,8 +324,8 @@ body {
 .one-block__title {
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 34px; /*т.я біля заголовка більший відступ, то ми його переписуємо, як 
-преорітетний (і він буде головніший)*/
+  margin-bottom: 34px; /*т.я біля заголовка більший відступ, то його переписуємо, як 
+преорітетний (буде головніший)*/
   color: rgb(222, 222, 221);
 }
 .one-block__text {
@@ -332,13 +338,13 @@ body {
 }
 
 .one-block > *:last-child {
-  margin-bottom: 0; /*тут відміняємо ВЗАГАЛІ margin-bottom для ОСТАННЬОГО елемента
-	і тепер, якби блоки не мянятися самий нижній елемент буле завжди без
+  margin-bottom: 0; /*відміна ВЗАГАЛІ margin-bottom для ОСТАННЬОГО елемента
+	і якби блоки не мінялися, самий нижній елемент, буле завжди без
 	нижнього відступа*/
 }
 
 /* =============== 10 - ПСЕВДОЕЛЕМЕНТИ ================== */
-/*Можна застосовувати для ВСИХ елементів*/
+/*Застосовується для ВСИХ елементів*/
 /*Можна додавати текст, зображення, фігури: попереду та позаду елементу */
 
 .block-item {
@@ -484,11 +490,6 @@ body {
   vertical-align: middle;
 }
 
-/*В цьому блоці: надати відступи для всих пунктів, окрім останнього*/
-.list-check > *:not(:last-child) {
-  margin-bottom: 15px;
-}
-
 /*ВІДМІННІСТЬ іконки в кольорі*/
 .list-item-green::before {
   content: "";
@@ -498,6 +499,11 @@ body {
 .list-item-gray::before {
   content: "";
   background: url("../icons/check_badge_gray.svg") 0 0 no-repeat; /*Загальна запис: картинка, позиція, повторення*/
+}
+
+/*В цьому блоці: надати відступи для всих пунктів, окрім останнього*/
+.list-check > *:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 /*========== 14 - GAME  =========================*/
