@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"ПРЕ", тобто заздалегідь встанови мережеве з’єднання», 
+		 це пришвидчує завантаження шрифтів -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+			rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_07</title>
+	</head>
+
+	<body>
+
+		<!-- ===== HEADER =====  -->
+		<div class="header-wrapper">
+			<header class="header-container">
+				<h1 class="hero-title">ТЕМА: ПСЕВДОКЛАСИ та ПСЕВДОЕЛЕМЕНТИ</h1>
+			</header>
+		</div>
+
+		<!-- ===== M A I N =====  -->
+		<main>
+			<div class="main-wrapper">
+				<div class="main-content">
+					<div class="lesson_training">
+						<!-- ===== 1 - HOVER =====  -->
+						<!--- зміна стилів елементу при наведенні  -->
+						<a href="#" class="link">1 - HOVER: Посилання підсвічується при
+							наведенні
+							<br>
+							<span>ЦЕ ОКРЕМЕ СЛОВО</span> </a>
+
+						<!--=== АБЗАЦ з підсвіткою при наведенні === -->
+						<p class="paragraph"> 1 - Це абзац, в якому розповідається про переваги
+							псевдокласу "hover" і який при наведенні гарненько підсвічується зміною
+							кольору</p>
+
+						<!-- ====== 2 - ACTIVE ===== -->
+						<a href="#" class="active-link">2 - ACTIVE: Посилання підсвічується при
+							утриманні
+							мишки на ньому</a>
+
+						<!-- ====== 3 - VISITED  ===== -->
+						<!-- (тут вже були), актуально тільки для посилання а -->
+						<a href="https://google.com" class="visited-link">3 - VISITED: Посилання
+							на
+							GOOGLE</a>
+
+						<!--  ====== 4 - FOCUS ====== -->
+						<!-- Звернення на єтапі фокусування (форми) -->
+						<a href="#" class="focus-link">4 - FOCUS: Посилання фокусоване (поява
+							рамки-обведення місця фокусування)</a>
+
+						<a href="#" class="focus-visible-link">4-2 - FOCUS-visable: посилання</a>
+
+						<!-- ====== 5 - TARGET ціль ====== -->
+						<!-- Використовувати в уроці 2, для прокрутки браузера до призначегого тега -->
+
+						<div class=" target-content">
+							<a href="#some-id" class="target-link">5 - "a" link-посилання на
+								кольоровий блок 5-1</a>
+							<div id="some-id" class="block-target">5-1 - це кольоровий блок (ціль)
+								куди
+								таргет прокрутить сторінку і розмістить її так, щоб блок був показаний
+								зверху
+								сторінки</div>
+						</div>
+
+					</div>
+					<!-- ====== 6 - ПСЕВДОКЛАСИ ПОЛОЖЕННЯ В КОДІ (перший, третій, через, якийсь, n-й)  ======== -->
+					<div class="position-code-block">
+						<h3 class="subtitle-position"> 6 - Псевдокласи ПОЛОЖЕННЯ В КОДІ:
+							<br>first-child, first-of-type, last-child, last-of-type
+							<br> nth-child(n), nth-of-type(n), nth-child(even), nth-child(odd):
+						</h3>
+						<span> 0 - ПЕРШИЙ елемент в коді в загальному потоці </span>
+						<p> 1 - ПЕРШИЙ тренувальний абзац положення в коді</p>
+						<p> 2 - ДРУГИЙ тренувальний абзац положення в коді</p>
+						<p> 3 - ТРЕТІЙ тренувальний абзац положення в коді</p>
+						<p> 4 - ЧЕТВЕРТИЙ тренувальний абзац положення в коді</p>
+						<p> 5 - П'ЯТИЙ тренувальний абзац положення в коді</p>
+						<p> 6 - ШОСТИЙ тренувальний абзац положення в коді</p>
+						<p> 7 - СЬОМИЙ тренувальний абзац положення в коді</p>
+						<span> 8 - це ОСТАННІЙ елемент в потоці</span>
+					</div>
+
+					<!-- ======= 7- N O T  - англ."ні" умова "виключення" ========-->
+					<!--Застосуй стиль до всіх, крім тих, вказані в дужках -->
+					<div class="no-block">
+						<h3 class="subtitle-no-block"> 7 - Псевдокласи УМОВИ: N O T (ознака
+							"відсутності": всі "окрім")</h3>
+						<p> 1 - ПЕРШИЙ тренувальний абзац положення в коді</p>
+						<p> 2 - ДРУГИЙ тренувальний абзац положення в коді</p>
+						<p class="no-block-exc"> 3 - ТРЕТІЙ тренувальний абзац положення в
+							коді</p>
+						<p> 4 - ЧЕТВЕРТИЙ тренувальний абзац положення в коді</p>
+						<p> 5 - П'ЯТИЙ тренувальний абзац положення в коді</p>
+
+					</div>
+
+					<!-- ======== 8 - H A S  - англ. "маю" умова "наявності" =======-->
+					<div class="hes-block">
+						<h3 class="subtitle-hes-block"> 8 - Псевдокласи УМОВИ: H A S (ознака
+							"наявності": всі, де "є" вказане)</h3>
+						<p> 1 - ПЕРШИЙ тренувальний абзац положення в коді</p>
+						<p> 2 - ДРУГИЙ тренувальний абзац положення в коді</p>
+						<p class="has-block-exc"> 3 - ТРЕТІЙ тренувальний абзац положення в
+							коді</p>
+					</div>
+
+					<!--======== 9 - ! ПРАКТИКА: конструкція (алгорим) прикладу з відступамими, 
+					 незалежно від розміщення елементів-->
+
+					<div class="one-block">
+						<h2 class="one-block__title"> 9 - ПРАКТИЧНА КОНСТРУКЦІЯ - ЗАГОЛОВОК</h2>
+						<div class="one-block__text">
+							<p>Це контруція побудови відступів між елементами, незалежно від їх
+								розташування в потоці. Нижній елемент завжди матиме відсутність відступу
+								з використання псекдокласу "last-child",
+								де вказано відступ для кінцевого елементу: margin-bottom - нуль.
+							</p>
+						</div>
+						<a href="#" class="one-block__link">Посилання</a>
+					</div>
+
+					<!-- ======== 10 - ПСЕВДОЕЛЕМЕНТИ ========= -->
+					<!-- Можна застосовувати для ВСИХ елементів -->
+					<div class="block-item">
+						<h3 class="block-item-subtitle"> 10 - Додавання тексту, зображення,
+							геометричних фігур <br>
+							тільки в коді CSS: попереду - псевдоелемент "before" та позаду -
+							псевдоелемент "after"
+						</h3>
+						<span class="one-row">"Рядковий елемент"</span>
+					</div>
+
+					<!-- 11 - Приклад додавання графічного зображення з допомогою використання псевдоелементів 
+						 before та надання однакових відступів, окрім кінцевого-->
+					<h4 class="block-list-subtitle">11 - ПРИКЛАД з використанням
+						всевдоелемента
+						"до"
+						before для стилізації списків</h4>
+					<ul class=" block-list">
+						<li class="list__item">Це перший рядок в списку, в якому багато
+							тексту</li>
+						<li class="list__item">Другий коро</li>
+						<li class="list__item">Третій</li>
+						<li class="list__item">Четвертий</li>
+					</ul>
+
+					<!-- ====== 12 - Приклад з використанням псевдоелементів, opacity, transition
+					  для ефектної появи підкреслення заголовка на 80%-->
+					<h2 class="title">12 - ЗАГОЛОВОК з плавним підкресленням лінією на 80%</h2>
+				</div>
+			</div>
+
+			<!-- ======= 13 ДЗ: макет та побудова гри ======= -->
+			<div class="training-list">
+				<!-- СТИЛІЗАЦІЯ списку через ПСЕВДОЕЛЕМЕНТИ -->
+				<div class="list-container">
+					<!-- СПИСОК -->
+					<ul class="list-check">
+						<li class="list-item-green">Unlimited product updates</li>
+						<li class="list-item-green">Unlimited product</li>
+						<li class="list-item-green">Unlimited product</li>
+						<li class="list-item-gray">1GB Cloud storage</li>
+						<li class="list-item-gray">Email and community
+							<br>
+							support
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- ========== 14 - GAME  ========================= -->
+
+			<div class="section-game">
+				<h2 class="game-title">Гра з псевдокласами та псевдоелементами</h2>
+				<div class="game-container">
+					<div class="game-item">СТАРТ</div>
+					<div class="game-item block-2">2</div>
+					<div class="game-item block-3">3</div>
+					<div class="game-item block-4">4</div>
+					<div class="game-item block-5">5</div>
+					<div class="game-item block-6">6</div>
+					<div class="game-item">ФІНІШ</div>
+				</div>
+			</div>
+
+		</main>
+
+		<!-- ===== FOOTER =====  -->
+		<div class="footer-wrapper">
+			<footer class="footer-container">
+				<h2 class="title-footer">ТЕМА УРОКУ:
+					<br> "ПСЕВДОКЛАСИ ТА ПСЕВДОЕЛЕМЕНТИ"
+				</h2>
+			</footer>
+		</div>
+	</body>
+</html>
