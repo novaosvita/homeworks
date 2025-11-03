@@ -45,7 +45,7 @@ body {
 }
 .lesson_training {
   padding: 40px;
-  background-color: bisque;
+  background-color: rgb(233, 233, 233);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
   box-shadow: 5px 5px 5px 0 #696967;
@@ -107,7 +107,7 @@ body {
 /* ===== 4 - FOCUS ===== */
 /*focus - фокусування на елементі*/
 .focus-link {
-  color: rgb(3, 174, 174);
+  color: rgb(1, 108, 108);
   display: block;
   margin-bottom: 40px;
 }
@@ -150,7 +150,7 @@ body {
 .block-target {
   max-width: 700px;
   background-color: burlywood; /*це початковий колір блоку*/
-  border: 5px solid red;
+  border: 2px solid red;
   border-radius: 20px;
   font-size: 35px;
   margin: 0 auto;
@@ -174,10 +174,10 @@ body {
   background-color: cadetblue;
   border: 5px solid rgb(144, 142, 142);
   background: linear-gradient(
-    90deg,
+    180deg,
     rgba(42, 123, 155, 1) 0%,
-    rgba(87, 199, 133, 1) 50%,
-    rgb(209, 237, 83) 100%
+    rgba(209, 222, 211, 1) 100%,
+    rgba(237, 221, 83, 1) 0%
   );
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px 0 #696967;
@@ -256,7 +256,7 @@ body {
 /*========== 7 - N O T умова "виключення" ==========*/
 /* NOT стилізує всі окрім вказаних в дужках*/
 .no-block {
-  background-color: bisque;
+  background-color: rgb(217, 216, 215);
   font-weight: 700;
   padding: 40px 0px 20px 20px;
   margin-bottom: 40px;
@@ -284,7 +284,7 @@ body {
 /*Використовується, як умова для побудови конструкцій та алгоритмів*/
 
 .hes-block {
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(200, 199, 199);
   padding: 20px 0px 20px 20px;
   line-height: 1.5;
   border: 5px solid rgb(144, 142, 142);
@@ -310,7 +310,7 @@ body {
 коли в усіх рядків в списку є відступи, а у останнього немає ==== */
 .one-block {
   padding: 15px;
-  background-color: rgb(83, 139, 171);
+  background-color: rgb(144, 171, 186);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
   box-shadow: 5px 5px 5px 0 #696967;
@@ -326,7 +326,7 @@ body {
   font-weight: 700;
   margin-bottom: 34px; /*т.я біля заголовка більший відступ, то його переписуємо, як 
 преорітетний (буде головніший)*/
-  color: rgb(222, 222, 221);
+  color: rgb(4, 255, 54);
 }
 .one-block__text {
   line-height: 1.5;
@@ -381,9 +381,9 @@ body {
 
 .block-list {
   text-align: left;
-  padding: 20px;
+  padding: 20px 75px 20px;
   background-color: rgb(218, 255, 196);
-  max-width: 700px;
+  max-width: 1280px;
   margin: 0 auto;
   border: 5px solid rgb(144, 142, 142);
   margin-bottom: 40px;
@@ -427,7 +427,7 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: rgb(247, 248, 247);
-  padding: 30px 40px;
+  padding: 30px 220px;
   background-color: rgb(0, 0, 252);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
@@ -455,16 +455,17 @@ body {
   margin: 0 auto;
   background-color: bisque;
   box-shadow: 5px 5px 5px 0 #696967;
+  border: 5px solid rgb(144, 142, 142);
+  margin-bottom: 40px;
 }
 
 .list-container {
   max-width: 350px;
   background-color: #ffffff;
-  margin: 0 auto;
+  margin: 40px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 5px 5px 5px 0 #696967;
-  margin-bottom: 40px;
 }
 
 .list-check {
@@ -509,11 +510,13 @@ body {
 /*========== 14 - GAME  =========================*/
 .section-game {
   max-width: 1280px;
-  background-color: burlywood;
+  background-color: rgb(222, 222, 222);
   margin: 0 auto;
   text-align: center;
   box-shadow: 5px 5px 5px 0 #696967;
   color: #e3e3e1;
+  border: 5px solid rgb(144, 142, 142);
+  margin-bottom: 40px;
 }
 .game-title {
   font-size: 35px;
@@ -530,6 +533,7 @@ body {
   background-size: cover;
   box-shadow: 7px 7px 7px 0 #696967;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 /*вмикається невидимість блоків загальна (видимість буде лише з наведенням)*/
@@ -591,6 +595,32 @@ body {
   margin-left: 350px;
 }
 
+/* ================ НАВЕРХ ================= */
+.nav-top {
+  max-width: 1280px;
+  background-color: bisque;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0px;
+  margin-bottom: 40px;
+}
+.top-link {
+  color: #545353;
+  /*padding-top: 7px;*/
+  font-size: 30px;
+}
+.top-link:hover {
+  color: rgb(188, 85, 1);
+}
+.top-link::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  background: url("../icons/arrow-top.png") 0 0 no-repeat;
+}
 /* ================= FOOTER================ */
 .footer-wrapper {
   max-width: 1920px;
@@ -606,4 +636,5 @@ body {
 
 .title-footer {
   font-size: 14px;
+  color: #a5a5a5;
 }
