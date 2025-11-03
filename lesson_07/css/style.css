@@ -45,7 +45,7 @@ body {
 }
 .lesson_training {
   padding: 40px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(207, 207, 206);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
   box-shadow: 5px 5px 5px 0 #696967;
@@ -136,6 +136,7 @@ body {
   background-color: rgb(94, 97, 140);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
+  border-radius: 25px;
 }
 /* Посилання */
 .target-link {
@@ -173,12 +174,7 @@ body {
   padding: 15px;
   background-color: cadetblue;
   border: 5px solid rgb(144, 142, 142);
-  background: linear-gradient(
-    180deg,
-    rgba(42, 123, 155, 1) 0%,
-    rgba(209, 222, 211, 1) 100%,
-    rgba(237, 221, 83, 1) 0%
-  );
+  background-color: rgb(216, 188, 153);
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px 0 #696967;
 }
@@ -256,7 +252,7 @@ body {
 /*========== 7 - N O T умова "виключення" ==========*/
 /* NOT стилізує всі окрім вказаних в дужках*/
 .no-block {
-  background-color: rgb(217, 216, 215);
+  background-color: rgb(179, 178, 178);
   font-weight: 700;
   padding: 40px 0px 20px 20px;
   margin-bottom: 40px;
@@ -284,7 +280,7 @@ body {
 /*Використовується, як умова для побудови конструкцій та алгоритмів*/
 
 .hes-block {
-  background-color: rgb(200, 199, 199);
+  background-color: rgb(216, 188, 153);
   padding: 20px 0px 20px 20px;
   line-height: 1.5;
   border: 5px solid rgb(144, 142, 142);
@@ -310,7 +306,7 @@ body {
 коли в усіх рядків в списку є відступи, а у останнього немає ==== */
 .one-block {
   padding: 15px;
-  background-color: rgb(144, 171, 186);
+  background-color: rgb(179, 178, 178);
   margin-bottom: 40px;
   border: 5px solid rgb(144, 142, 142);
   box-shadow: 5px 5px 5px 0 #696967;
@@ -348,7 +344,7 @@ body {
 /*Можна додавати текст, зображення, фігури: попереду та позаду елементу */
 
 .block-item {
-  background-color: bisque;
+  background-color: rgb(216, 188, 153);
   padding-top: 20px;
   padding-bottom: 20px;
   border: 5px solid rgb(144, 142, 142);
@@ -382,7 +378,7 @@ body {
 .block-list {
   text-align: left;
   padding: 20px 75px 20px;
-  background-color: rgb(218, 255, 196);
+  background-color: rgb(179, 178, 178);
   max-width: 1280px;
   margin: 0 auto;
   border: 5px solid rgb(144, 142, 142);
@@ -426,12 +422,13 @@ body {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: rgb(247, 248, 247);
+  color: rgb(0, 47, 254);
+  font-size: 35px;
   padding: 30px 220px;
-  background-color: rgb(0, 0, 252);
-  margin-bottom: 40px;
+  background-color: rgb(216, 188, 153);
   border: 5px solid rgb(144, 142, 142);
   box-shadow: 5px 5px 5px 0 #696967;
+  margin-bottom: 40px;
 }
 
 .title::after {
@@ -453,7 +450,7 @@ body {
 .training-list {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: bisque;
+  background-color: rgb(179, 178, 178);
   box-shadow: 5px 5px 5px 0 #696967;
   border: 5px solid rgb(144, 142, 142);
   margin-bottom: 40px;
@@ -510,7 +507,7 @@ body {
 /*========== 14 - GAME  =========================*/
 .section-game {
   max-width: 1280px;
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(216, 188, 153);
   margin: 0 auto;
   text-align: center;
   box-shadow: 5px 5px 5px 0 #696967;
@@ -598,14 +595,14 @@ body {
 /* ================ НАВЕРХ ================= */
 .nav-top {
   max-width: 1280px;
-  background-color: bisque;
+  background-color: rgb(179, 178, 178);
   margin: 0 auto;
   text-align: center;
   padding: 20px 0px;
   margin-bottom: 40px;
 }
 .top-link {
-  color: #545353;
+  color: #545454;
   /*padding-top: 7px;*/
   font-size: 30px;
 }
