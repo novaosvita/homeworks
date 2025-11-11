@@ -1,0 +1,274 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Lora", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 25px; /*найбільша кількість використаних шрифтів в макеті*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА*/
+.wrapper-all {
+  background-color: rgb(211, 210, 210);
+  max-width: 1920px;
+}
+/* =========== HEADER ============= */
+.top-title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(0, 0, 137);
+  padding: 50px 0px;
+  letter-spacing: 10px;
+}
+
+/*===== M A I N ===== */
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.basic-know {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.basic-know-format {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(3, 17, 149);
+  text-decoration-line: underline;
+  margin-bottom: 10px;
+}
+.basic-know p {
+  font-size: 25px;
+  color: rgb(3, 14, 132);
+  line-height: 1.5;
+}
+/* ========== 1 - Блок з різними форматами та розмірами ============= */
+
+.format-photo {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.format-photo p {
+  color: rgb(49, 49, 50);
+  padding: 20px 0px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.format-photo-subtitle span {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(231, 30, 30);
+}
+
+.format-photo-img {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px 0 #696967;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* === 3 - Блок з зображеннями з різною щільністю піксклів === */
+
+.scale-photo {
+  padding-bottom: 40px;
+  text-align: center;
+}
+.scale-photo p {
+  text-align: center;
+  padding: 20px 0px;
+  line-height: 1.3;
+}
+.scale-photo p span {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(231, 30, 30);
+}
+.scale-photo-img-x {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px 0 #696967;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* 3 - Конструкція для виводу різної якості одного зображення */
+.pixel-photo {
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.pixel-photo p {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.pixel-photo-img img {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px 0 #696967;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* 4 -Конструкція для вибору відповідного зображення браузером - для певного виду дисплеїв (працює всюди) */
+
+.version-photo {
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.version-photo p {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  line-height: 1.3;
+}
+
+.version-photo-img {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: chartreuse;
+}
+.chose-picture img {
+  box-shadow: 5px 5px 5px 0 #696967;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/*  ===== 5 - ВЕКТОРНІ зображення ==== */
+
+.icons-type {
+  text-align: center;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+.icons-type-subtitle {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  line-height: 1.2;
+}
+.icons-type-img {
+  max-width: 80px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.icons-type-img:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 6 - HOMEWORK ================ */
+
+.homework {
+  background-color: rgb(234, 233, 233);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.homework-title {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 40px;
+}
+
+/* ====== 6-1 Блок зображень для особливих екранів 1х-2х-3х === */
+
+.homework-version {
+  background-color: rgb(242, 241, 239);
+}
+.homework-version p {
+  margin-bottom: 40px;
+
+  line-height: 1.3;
+}
+
+.homework-version span {
+  font-size: 20px;
+}
+
+.homework-version img {
+  border-radius: 35px;
+  max-width: 486px;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 5px 0 #696967;
+}
+
+/* =========== 6-2 Блок зображень для вибору оптимального 
+(найлегшого) зображення AVIF, WEBP (якщо не відповідає - то jpeg) */
+
+.homework-choice {
+  background-color: rgb(208, 208, 209);
+  vertical-align: top;
+}
+
+.homework-choice p {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+.choice-picture img {
+  border-radius: 35px;
+  max-width: 385px;
+
+  display: inline-block;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 5px 0 #696967;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*===== 6 - 3 Елементи дизайну design=====*/
+
+.home-work-design p {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.3;
+  color: antiquewhite;
+}
+
+.home-work-design {
+  background-color: rgb(172, 170, 170);
+  margin-bottom: 40px;
+}
+
+.home-work-design img {
+  display: block;
+  max-width: 200px;
+}
+
+/* ==== 6 - 4 Векторне зображення з макету icons-svg ===== */
+.vector-img {
+  /*margin-bottom: 40px;*/
+}
+
+.vector-img img {
+  margin-bottom: 40px;
+}
+
+.vector-img p {
+  color: rgb(72, 4, 65);
+  /*padding: 10px 0px;*/
+  margin-bottom: 30px;
+}
+
+/* ================= FOOTER================ */
+.footer-container {
+  max-width: 1280px;
+  background-color: rgb(76, 75, 75);
+  text-align: center;
+  padding: 30px 0px;
+  margin: 0 auto;
+}
+
+.title-footer {
+  font-size: 14px;
+  color: #a5a5a5;
+}

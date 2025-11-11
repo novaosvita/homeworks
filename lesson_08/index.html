@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"ПРЕ", тобто заздалегідь встанови мережеве з’єднання», 
+		 це пришвидчує завантаження шрифтів -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_08</title>
+	</head>
+
+	<body>
+		<div class="wrapper-all">
+			<!-- ===== HEADER =====  -->
+			<header>
+				<h1 class="top-title">Урок № 8 "WEB"-ГРАФІКА</h1>
+			</header>
+
+			<!-- ===== M A I N =====  -->
+			<main class="main-container">
+				<section class="lesson">
+					<div class="basic-know">
+						<h2 class="basic-know-format">ФОРМАТИ ГРАФІЧНИХ ЗОБРАЖЕНЬ: растровий та
+							векторний</h2>
+						<p>Растрові формати: jpeg, jpg, png, gif, webp, avif;
+							<br>
+							Векторний формат: svg.
+						</p>
+					</div>
+
+					<!-- 1 - Блок з різними форматами зображення -->
+					<div class="format-photo">
+						<p> 1 - В цьому блоці розміщені зображення
+							різного формату та розміру:
+							<br> стартовий формат з "Фігма" *.jpeg = <span>323KБ</span>
+							<br> і
+							<br> сучасні формати, після конвертування:
+							<br>
+							*.webp - <span>42,5КБ</span> та *.avif - <span>37,6КБ</span> </p>
+						<div class="format-photo-img"><img src="img/lesson/whittier_1-1x.jpg"
+								alt="Формат jpg"></div>
+						<div class="format-photo-img"><img src="img/lesson/whittier_1.webp"
+								alt="Формат webp"></div>
+						<div class="format-photo-img"><img src="img/lesson/whittier_1.avif"
+								alt="Формат avif"></div>
+					</div>
+
+					<!-- 2 - Блок з зображеннями з різною щільністю пікселів -->
+
+					<!-- 2.1 - Різні формати вивантаження, як заготовки для вибору браузером - не актуально )-->
+					<!--<picture>
+		<source srcset="img/whittier_2.avif" type="image/avif"> 
+		<img class="some-image" src="img/whittier_2.jpg" alt="image">
+	 </picture>-->
+
+					<div class="scale-photo">
+						<p>2 - Зображення з різною щільністю
+							пікселів на одиницю величини:
+							<br> <span>1-кратна кількість пікселів</span> (стартова)
+							<br> <span>2-кратна кількість пікселів</span> (збільшенна в 2 рази)
+							<br> <span>3-кратна кількість пікселів</span> (збільшенна в 3 рази)</p>
+						<div class="scale-photo-img-x"><img class="image-x"
+								src="img/lesson/whittier_1-1x.jpg"
+								alt="Зображення в оригінальному розмірі"></div>
+						<div class="scale-photo-img-x"><img class="image-x"
+								src="img/lesson/whittier_1-2x.jpg"
+								alt="Зображення збільшене в 2 рази"></div>
+						<div class="scale-photo-img-x"><img class="image-x"
+								src="img/lesson/whittier_1-3x.jpg"
+								alt="Зображення збільшене в 3 рази"></div>
+					</div>
+
+					<!-- 3 - Конструкція для виводу різної якості одного зображення  -->
+					<!-- часто для дисплеїв з великою роздільною здатність, як у Аррle, 
+					 (НЕ працює для браузера САФАРІ) -->
+					<div class="pixel-photo">
+						<p>3 - Конструкція, згідно якої браузер
+							обирає,
+							яке зображення підійте
+							для екранів з великою щільністю пікселів (не працює з
+							браузером Сафарі)</p>
+						<div class="pixel-photo-img">
+							<!-- тут все в одному тезі img -->
+							<img
+								srcset="img/lesson/whittier_1-2x.jpg 2x, img/lesson/whittier_1-3x.jpg 3x"
+								src="img/lesson/whittier_1-1x.jpg"
+								alt="Зображення в оригінальному розмірі">
+						</div>
+					</div>
+
+					<!-- 4 -Конструкція для вибору відповідного зображення браузером - для певного виду дисплеїв (працює всюди) -->
+					<div class="version-photo">
+						<p>4 - Конструкція, по якій браузер
+							обирає (вичисляє),
+							яке зображення підійте
+							для дисплеїв (екранів) з великою щільністю пікселів (працює з
+							браузером Сафарі) чи треба тут тype="image/avi"</p>
+						<div class="version-photo-img">
+							<!-- тут все в додатковій коробочці picture і працю в Сафарі-->
+							<picture class="chose-picture">
+								<source
+									srcset="img/lesson/whittier_1-1x.jpg 1x, 
+									img/lesson/whittier_1-2x.jpg 2x,
+									img/lesson/whittier_1-3x.jpg 3x">
+								<img src="img/lesson/whittier_1-1x.jpg"
+									alt="Зображення в оригінальному розмірі">
+							</picture>
+						</div>
+					</div>
+
+					<!-- ===== 5 - ВЕКТОРНІ зображення ==== -->
+					<div class="icons-type">
+						<h2 class="icons-type-subtitle">5 - Векторні зображення, розширення
+							SVG</h2>
+						<div class="icons-type-img"><img src="icons/bag.svg"
+								alt="Зображення сумочки для покупок"></div>
+						<div class="icons-type-img"><img src="icons/cloud-up-arrow.svg"
+								alt="М'яч для баскетболу"></div>
+						<div class="icons-type-img"><img src="icons/arrow-right.svg"
+								alt="Стрілочка вправо"></div>
+					</div>
+				</section>
+
+				<!-- ================ 6 - HOMEWORK ===================-->
+				<section class="homework">
+					<h2 class="homework-title">ДОМАШНЄ ЗАВДАННЯ:
+						<br> ВИДИ ЗОБРАЖЕНЬ та ВАРІАНТИ ПІДКЛЮЧЕННЯ</h2>
+
+					<!-- =========== 6-1 Блок зображень для особливих екранів 1х-2х-3х ====== -->
+					<div class="homework-version">
+						<p>Зображення контентне растрове (bitma / raster) конвертоване в сучасні
+							формати AVIF, WEBP
+							<br>
+							<span> Конструкція коду для вибору браузером різних зображень WEBP (1х,
+								2х, 3х), ABIF(1х, 2х, 3х)
+								<br> з урахуванням вимоги різних екранів (з різною щільністю пікселів)
+							</span>
+						</p>
+						<!-- Зображення 1 -->
+						<div class="homework-version-img">
+							<picture>
+								<source srcset="img/homework/yoga/avif/yoga_plow_1x.avif 1x, 
+									img/homework/yoga/avif/yoga_plow_2x.avif 2x, 
+									img/homework/yoga/avif/yoga_plow_3x.avif 3x"
+									type="image/avif">
+								<source srcset="img/homework/yoga/webp/yoga_plow_1x.webp 1x, 
+									img/homework/yoga/webp/yoga_plow_2x.webp 2x, 
+									img/homework/yoga/webp/yoga_plow_3x.webp 3x"
+									type="image/webp">
+								<img src="img/homework/yoga/convert_jpg/yoga_plow_1x.jpg"
+									alt="Зображення в оригінальному розмірі">
+							</picture>
+						</div>
+						<!-- Зображення 2 -->
+						<div class="homework-version-img">
+							<picture>
+								<source srcset="img/homework/yoga/avif/yoga_lotos_1x.avif 1x, 
+									img/homework/yoga/avif/yoga_lotos_2x.avif 2x, 
+									img/homework/yoga/avif/yoga_lotos_3x.avif 3x"
+									type="image/avif">
+								<source srcset="img/homework/yoga/webpyoga_lotos_1x.webp 1x, 
+									img/homework/yoga/webp/yoga_lotos_2x.webp 2x, 
+									img/homework/yoga/webp/yoga_lotos_3x.webp 3x"
+									type="image/webp">
+								<img src="img/homework/yoga/convert_jpg/yoga_lotos_1x.jpg"
+									alt="Зображення в оригінальному розмірі">
+							</picture>
+						</div>
+
+					</div>
+
+					<!-- =========== 6-2 Блок зображень для вибору оптимального 
+						 (найлегшого) зображення AVIF, WEBP (якщо не відповідає - то jpeg) ======-->
+
+					<div class="homework-choice">
+						<p>Зображення контентне растрове (bitma / raster)
+							<br>
+							<span> Конструкція коду для вибору браузером різних зображень WEBP 1х,
+								ABIF 1x, JPEG 1x
+								<br> з урахуванням вибору найлегшого зображення
+							</span>
+						</p>
+						<!--  Зображення стандартні 1x -->
+						<!-- 6-2-1 зображення -->
+						<picture class="choice-picture">
+							<source srcset="img/homework/yoga/avif/regular-practice-1x.avif"
+								type="image/avif">
+							<source srcset="img/homework/yoga/webp/regular-practice-1x.webp"
+								type="image/webp">
+							<img src="img/homework/yoga/convert_jpg/regular-practice-1x.jpg"
+								alt="Зображення в оригінальному розмірі">
+						</picture>
+
+						<!-- 6-2-2 зображення -->
+
+						<picture class="choice-picture">
+							<source srcset="img/homework/yoga/avif/yoga_beginner-1x.avif"
+								type="image/avif">
+							<source srcset="img/homework/yoga/webp/yoga_beginner-1x.webp"
+								type="image/webp">
+							<img src="img/homework/yoga/convert_jpg/yoga_beginner-1x.jpg"
+								alt="Зображення в оригінальному розмірі">
+						</picture>
+
+						<!-- 6-2-3 зображення -->
+						<picture class="choice-picture">
+							<source srcset="img/homework/yoga/avif/individual-practice-1x.avif"
+								type="image/avif">
+							<source srcset="img/homework/yoga/webp/individual-practice-1x.webp"
+								type="image/webp">
+							<img src="img/homework/yoga/convert_jpg/individual-practice-1x.jpg"
+								alt="Зображення в оригінальному розмірі">
+						</picture>
+					</div>
+
+					<!-- =========== 6-3 ЗОБРАЖЕННЯ, ЯК ДИЗАЙНЕРСЬКІ ЕЛЕМЕНТИ ======-->
+					<div class="home-work-design">
+						<p>Елемент дизайну (не контентний), зображення з прозорим фоном PNG,
+							<br> яке конвертоване в сучасний формат WEBP </p>
+						<img src="img/homework/design/lotoc_design_left.webp" alt="Квітка лотоса">
+						<!--<div class="home-work-design-empty">
+							Це елементи дизайну, зображення з прозорим фоном PNG, яке конвертоване в
+							сучасний формат WEBP </div>-->
+					</div>
+
+					<!-- ===== 6-4 Векторні зображення ======-->
+					<div class="vector-img">
+						<p>Векторне зображення (іконка) з розширенням SVG</p>
+						<img src="icons/circle-svg.svg" alt="Векторне зображення">
+					</div>
+				</section>
+			</main>
+
+			<!-- ===== FOOTER =====  -->
+			<footer class="footer-container">
+				<h3 class="title-footer">ТЕМА УРОКУ:
+					<br> "WEB-графіка. Види зображення. Типи форматів та розмірів"
+				</h3>
+			</footer>
+		</div>
+	</body>
+</html>
