@@ -2,13 +2,14 @@
 body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
   font-family: "Lora", sans-serif; /*шрифт підключений  мережевий*/
-  font-size: 25px; /*найбільша кількість використаних шрифтів в макеті*/
+  font-size: 20px; /*найбільша кількість використаних шрифтів в макеті*/
 }
 
 /* ЗАГАЛЬНА ОБГОРТКА*/
 .wrapper-all {
   background-color: rgb(211, 210, 210);
   max-width: 1920px;
+  margin: 0 auto;
 }
 /* =========== HEADER ============= */
 .top-title {
@@ -58,7 +59,8 @@ body {
   line-height: 1.2;
   margin-bottom: 30px;
 }
-.format-photo-subtitle span {
+
+.format-photo span {
   font-size: 35px;
   font-weight: 700;
   color: rgb(231, 30, 30);
@@ -72,11 +74,12 @@ body {
   border: 2px solid rgb(255, 255, 255);
 }
 
-/* === 3 - Блок з зображеннями з різною щільністю піксклів === */
+/* === 2 - Блок з зображеннями з різною щільністю піксклів === */
 
 .scale-photo {
   padding-bottom: 40px;
   text-align: center;
+  margin: 0 auto;
 }
 .scale-photo p {
   text-align: center;
@@ -84,7 +87,7 @@ body {
   line-height: 1.3;
 }
 .scale-photo p span {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 700;
   color: rgb(231, 30, 30);
 }
@@ -94,6 +97,11 @@ body {
   margin-bottom: 20px;
   box-shadow: 5px 5px 5px 0 #696967;
   border: 2px solid rgb(255, 255, 255);
+  background-color: blue;
+}
+.scale-photo-img-x img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* 3 - Конструкція для виводу різної якості одного зображення */
@@ -101,6 +109,7 @@ body {
   text-align: center;
   padding-bottom: 40px;
   margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .pixel-photo p {
@@ -111,6 +120,7 @@ body {
 
 .pixel-photo-img img {
   max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   box-shadow: 5px 5px 5px 0 #696967;
   border: 2px solid rgb(255, 255, 255);
@@ -134,7 +144,7 @@ body {
 .version-photo-img {
   max-width: 600px;
   margin: 0 auto;
-  background-color: chartreuse;
+  max-width: 100%;
 }
 .chose-picture img {
   box-shadow: 5px 5px 5px 0 #696967;
@@ -163,12 +173,11 @@ body {
   margin-bottom: 0;
 }
 
-/* ========== 6 - HOMEWORK ================ */
+/* ==========  HOMEWORK ================ */
 
 .homework {
   background-color: rgb(234, 233, 233);
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .homework-title {
@@ -178,30 +187,32 @@ body {
   margin-bottom: 40px;
 }
 
-/* ====== 6-1 Блок зображень для особливих екранів 1х-2х-3х === */
+/* ====== 6 - Блок зображень для особливих екранів 1х-2х-3х === */
 
 .homework-version {
   background-color: rgb(242, 241, 239);
 }
+
 .homework-version p {
   margin-bottom: 40px;
-
   line-height: 1.3;
 }
 
 .homework-version span {
-  font-size: 20px;
+  color: blue;
 }
 
 .homework-version img {
   border-radius: 35px;
   max-width: 486px;
+  width: 100%;
   margin-bottom: 40px;
+  border: 2px solid rgb(181, 177, 177);
   box-shadow: 5px 5px 5px 0 #696967;
 }
 
-/* =========== 6-2 Блок зображень для вибору оптимального 
-(найлегшого) зображення AVIF, WEBP (якщо не відповідає - то jpeg) */
+/* =========== 7 Блок зображень для вибору оптимального 
+(найлегшого) зображення AVIF, WEBP (якщо не підтримується - то jpeg) */
 
 .homework-choice {
   background-color: rgb(208, 208, 209);
@@ -209,23 +220,36 @@ body {
 }
 
 .homework-choice p {
-  padding-top: 20px;
+  padding-top: 40px;
   margin-bottom: 40px;
   line-height: 1.3;
 }
-.choice-picture img {
-  border-radius: 35px;
-  max-width: 385px;
+.homework-choice span {
+  color: blue;
+}
 
+.choice-picture {
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.choice-picture img {
+  border-radius: 40px;
+  max-width: 385px;
+  width: 100%;
+  margin: 0 auto;
   display: inline-block;
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px 0 #696967;
-
-  margin-left: 10px;
-  margin-right: 10px;
+  border: 2px solid rgb(244, 240, 240);
 }
 
-/*===== 6 - 3 Елементи дизайну design=====*/
+/*===== 8 Елементи дизайну design=====*/
+.home-work-design {
+  background-color: rgb(172, 170, 170);
+  margin-bottom: 40px;
+}
 
 .home-work-design p {
   padding-top: 20px;
@@ -234,28 +258,21 @@ body {
   color: antiquewhite;
 }
 
-.home-work-design {
-  background-color: rgb(172, 170, 170);
-  margin-bottom: 40px;
-}
-
 .home-work-design img {
   display: block;
   max-width: 200px;
+  width: 100%;
 }
 
-/* ==== 6 - 4 Векторне зображення з макету icons-svg ===== */
-.vector-img {
-  /*margin-bottom: 40px;*/
-}
+/* ==== 9 - Векторне зображення з макету icons-svg ===== */
 
 .vector-img img {
   margin-bottom: 40px;
+  max-width: 100px;
 }
 
 .vector-img p {
   color: rgb(72, 4, 65);
-  /*padding: 10px 0px;*/
   margin-bottom: 30px;
 }
 
