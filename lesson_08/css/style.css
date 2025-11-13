@@ -193,7 +193,8 @@ body {
 }
 
 .homework-version p {
-  margin-bottom: 40px;
+  padding-top: 20px;
+  margin-bottom: 20px;
   line-height: 1.3;
 }
 
