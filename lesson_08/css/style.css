@@ -46,8 +46,8 @@ body {
   color: rgb(3, 14, 132);
   line-height: 1.5;
 }
-/* ========== 1 - Блок з різними форматами та розмірами ============= */
 
+/* ========== 1 - Блок з різними форматами та розмірами ============= */
 .format-photo {
   text-align: center;
   padding-bottom: 40px;
@@ -126,7 +126,7 @@ body {
   border: 2px solid rgb(255, 255, 255);
 }
 
-/* 4 -Конструкція для вибору відповідного зображення браузером - для певного виду дисплеїв (працює всюди) */
+/* 4 -Конструкція для вибору відповідного зображення браузером (працює всюди) */
 
 .version-photo {
   text-align: center;
@@ -152,7 +152,6 @@ body {
 }
 
 /*  ===== 5 - ВЕКТОРНІ зображення ==== */
-
 .icons-type {
   text-align: center;
   padding-bottom: 40px;
@@ -265,7 +264,6 @@ body {
 }
 
 /* ==== 9 - Векторне зображення з макету icons-svg ===== */
-
 .vector-img img {
   margin-bottom: 40px;
   max-width: 100px;
@@ -274,6 +272,23 @@ body {
 .vector-img p {
   color: rgb(72, 4, 65);
   margin-bottom: 30px;
+}
+
+/* ================ НАВЕРХ ================= */
+.nav-top {
+  max-width: 1280px;
+  background-color: rgb(179, 178, 178);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0px;
+  margin-bottom: 40px;
+}
+.top-link {
+  color: #444343;
+  font-size: 25px;
+}
+.top-link:hover {
+  color: rgb(188, 85, 1);
 }
 
 /* ================= FOOTER================ */
