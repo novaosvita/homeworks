@@ -23,38 +23,34 @@
 			<!-- ===== HEADER =====  -->
 			<header id="top" class="header">
 				<div class="header__container">
-					<div class="header__body">
+					<!-- Логотип -->
+					<div class="header__logo">
+						<a href="#"><img src="#" alt="#"></a>
+					</div>
 
-						<!-- Логотип -->
-						<div class="header__logo">
-							<a href="#"><img src="#" alt="#"></a>
-						</div>
+					<!-- Пошук -->
+					<div class="header__search">
+						<input class="header__input" type="text"
+							placeholder="Searching for something">
+					</div>
 
-						<!-- Пошук -->
-						<div class="header__search">
-							<input class="header__input" type="text"
-								placeholder="Searching for something">
-						</div>
+					<!-- Меню (окремий блок) -->
+					<nav class="header__nav">
+						<ul class="menu">
+							<li class="menu__item"><a class="menu__link" href="#">HOME</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">SHOP</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">BLOG</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">ABOUT US</a></li>
+						</ul>
+					</nav>
 
-						<!-- Меню (окремий блок) -->
-						<nav class="header__nav">
-							<ul class="menu">
-								<li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">Blog</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">About us</a></li>
-							</ul>
-						</nav>
-
-						<!-- Посилання справа (окремий блок links) -->
-						<!-- Тут використовується В Е М - М І Х -->
-						<div class="header__links">
-							<ul class="header__link link">
-								<li class="link__item"><a href="#">Love</a></li>
-								<li class="link__item"><a href="#">Cart</a></li>
-							</ul>
-						</div>
-
+					<!-- Посилання справа (окремий блок links) -->
+					<!-- Тут використовується В Е М - М І Х -->
+					<div class="header__links">
+						<ul class="header__link link">
+							<li class="link__item"><a href="#">LOVE</a></li>
+							<li class="link__item"><a href="#">CART</a></li>
+						</ul>
 					</div>
 				</div>
 			</header>
@@ -63,47 +59,45 @@
 
 			<main>
 				<!-- 1 - секція -->
-				<!-- 1- БЛОК welcome -->
-				<section class="welcome">
+				<!-- 1- БЛОК hero -->
+				<section class="hero">
 					<!-- Обгортка -->
-					<div class="welcome__container">
+					<div class="hero__container">
 						<!-- ЗМІСТ блоку -->
-						<div class="welcome__body">
-							<div class="welcome__content">
-								<h3 class="welcome__sublilte">WELCOME TO OUR</h3>
-								<!-- Заголовок -->
-								<h1 class="welcome__title">
-									<span>FUNITURE</span>
-									<br> GALLERY
-								</h1>
-								<!-- Горизонтальна ланія -->
-								<div class="welcome__inline"></div>
-								<h3 class="welcome__sublilte">BROWSE OUR SELECTIONS</h3>
-								<div class="welcome__text">
-									<p>
-										Featuring sleek designs and innovative materials that seamlessly
-										blend form and function.
-									</p>
-								</div>
+						<div class="hero__content">
+							<h3 class="hero__sublilte">WELCOME TO OUR</h3>
+							<!-- Заголовок -->
+							<h1 class="hero__title">
+								<span>FUNITURE</span>
+								<br> GALLERY
+							</h1>
+							<!-- Горизонтальна ланія -->
+							<!-- Її можна задати через псевдоелемент в CSS -->
+							<!--<div class="hero__inline"></div>-->
+							<h3 class="hero__sublilte">BROWSE OUR SELECTIONS</h3>
+							<div class="hero__text">
+								<p>
+									Featuring sleek designs and innovative materials that seamlessly
+									blend form and function.
+								</p>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<!-- 2 - секція, БЛОК "furniture"  -->
-				<section class="furniture">
-					<div class="furniture__container">
-						<div class="furniture__cards">
-
+				<!-- 2 - секція, БЛОК "products", використовується ВЕМ-Міх -->
+				<section class="products">
+					<div class="products__container">
+						<div class="products__cards">
 							<!-- картка №1: зображення, заголовок, текст -->
-							<div class="card">
-								<div class="card__img">
+							<div class="products__card card-product">
+								<div class="card-product__img">
 									<img src="#" alt="#">
 									<img src="#" alt="#">
 								</div>
-								<div class="card__description">
-									<h3 class="card__title">Hanging light</h3>
-									<div class="card__text">
+								<div class="card-product__description">
+									<h3 class="card-product__title">HANGING LIGHT</h3>
+									<div class="card-product__text">
 										<p>
 											Upgrade your space with our modern hanging light,
 											featuring sleek lines, energy-efficient LED lighting,
@@ -115,34 +109,36 @@
 							</div>
 
 							<!-- картка №2: заголовок, текст, зображення  -->
-							<div class="card">
-								<div class="card__description">
-									<h3 class="card__title">Designed sofa</h3>
-									<div class="card__text">
+							<div class="products__card card-product products__card--big">
+								<div class="card-product__description">
+									<h3 class="card-product__title">DESIGNED SOFA</h3>
+									<div class="card-product__text">
 										<p>
-											Introducing our newest sofa, the perfect combination
-											of style and comfort.
+											Introducing our newest sofa, the perfect combination of style and
+											comfort, designed to elevate your living space and provide ultimate
+											relaxation.
 										</p>
 									</div>
-									<a class="card__link" href="#">View more</a>
+									<a class="card-product__link" href="#">View more</a>
 								</div>
-								<div class="card__img">
+								<div class="card-product__img">
 									<img src="#" alt="#">
 								</div>
 							</div>
 
 							<!-- картка №3: заголовок, текст, зображення -->
-							<div class="card">
-								<div class="card__description">
-									<h3 class="card__title">Nova chair</h3>
-									<div class="card__text">
+							<div class="products__card card-product">
+								<div class="card-product__description">
+									<h3 class="card-product__title">NOVA CHAIR</h3>
+									<div class="card-product__text">
 										<p>
-											A stylish and comfortable addition to any room.
+											A stylish and comfortable addition to any room, with its sleek design
+											and plush cushions creating the ultimate seating experience.
 										</p>
 									</div>
-									<a class="card__link" href="#">View more</a>
+									<a class="card-product__link" href="#">View more</a>
 								</div>
-								<div class="card__img">
+								<div class="card-product__img">
 									<img src="#" alt="#">
 								</div>
 							</div>
@@ -150,78 +146,77 @@
 					</div>
 				</section>
 
-				<!-- Секція третя "Хто нам довіряє"-->
+				<!-- Секція третя "Партнери, що довіряють"-->
 
-				<section class="trusted">
+				<section class="partners">
 					<!-- Обгортка -->
-					<div class="trusted__container">
-						<div class="trusted__body">
-							<h2 class="trusted__title">Trusted by</h2>
+					<div class="partners__container">
+						<div class="partners__content">
+							<h2 class="partners__title">TRUSTED BY</h2>
 
-							<div class="trusted__items">
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+							<div class="partners__items">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 
-								<div class="trusted__item">
-									<img class="trusted__image" src="#" alt="#">
+								<div class="partners__item">
+									<img class="partners__image" src="#" alt="#">
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-
-				<!-- Наверх -->
-				<div class="nav-top"><a href="#top" class="top-link">НАВЕРХ</a></div>
 			</main>
 
 			<!-- ===== FOOTER =====  -->
-			<footer class="footer-container">
-				<h3 class="title-footer">ТЕМА УРОКУ:
-					<br> "BEM - методологія, ВЕМ-міх.
-					<br> Контейнер секції та використання селектору атрибуту"
-				</h3>
-			</footer>
-		</div>
-	</body>
-</html>
+			<footer class="footer__container">
+				<div class="footer__content">
+					<h3 class="footer__title">LESSON TOPIC:
+						<br> "BEM - methodology, BEM-mix.
+						<br> Container and attribute selector usage"
+					</h3>
+					</div class="">
+				</footer>
+			</div>
+		</body>
+	</html>
