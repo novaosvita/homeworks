@@ -8,7 +8,7 @@ body {
 /* ЗАГАЛЬНА ОБГОРТКА*/
 .wrapper {
   background-color: rgb(211, 210, 210);
-  max-width: 1920px;
+  max-width: 1320px;
   margin: 0 auto;
   line-height: 1.5;
 }
@@ -24,43 +24,28 @@ body {
 
 /*===== M A I N ===== */
 /* 1 - секція */
-.welcome__container {
+.hero__container {
   background-color: burlywood;
 }
 /* 3 - секція */
-.furniture__container {
+.products__container {
   background-color: rgb(245, 239, 156);
 }
 /* 3 - секція */
-.trusted__container {
+.partners__container {
   background-color: rgb(245, 167, 139);
-}
-/* ==== НАВЕРХ ===== */
-.nav-top {
-  max-width: 1280px;
-  background-color: rgb(179, 178, 178);
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px 0px;
-}
-.top-link {
-  color: #444343;
-  font-size: 25px;
-}
-.top-link:hover {
-  color: rgb(188, 85, 1);
 }
 
 /* ================= FOOTER================ */
-.footer-container {
-  max-width: 1280px;
+.footer__container {
   background-color: rgb(76, 75, 75);
   text-align: center;
   padding: 30px 0px;
   margin: 0 auto;
 }
 
-.title-footer {
+.footer__title {
   font-size: 14px;
   color: #a5a5a5;
 }
+
