@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_10 Li</title>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<main>
+
+				<!-- ========== ДОМАШНЯ РОБОТА ============= -->
+				<div class="homework">
+					<div class="product-category">
+						<div class="product-category__container">
+							<h2 class="product-category__title">Face</h2>
+							<div class="product-category__items">
+
+								<!-- 1-е зображення -->
+								<a class="category-card" href="#"> <!-- ВСЕ зображення є посилання -->
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Cleansers</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img"> <!-- блок для зображення -->
+											<img src="img/cleanser.jpg" alt="photo of a girl in soap">
+										</div>
+									</div>
+								</a>
+
+								<!-- 2-е зображення -->
+								<a class="category-card" href="#">
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Eye Patches</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img">
+											<img src="img/patches.jpg" alt="photo of a girl smiling">
+										</div>
+									</div>
+								</a>
+
+								<!-- 3-е зображення -->
+								<a class="category-card" href="#">
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Masks</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img">
+											<img src="img/mask.jpg" alt="photo of a girl in a mask">
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- Блок для запису MORE  -->
+							<div class="product-category__wrapper-button">
+								<a class="product-category__btn" href="#">More</a>
+							</div>
+						</div>
+
+						<!-- Блок зі списком та зображенням -->
+						<div id="section-icons" class="list">
+							<ul class="list__items">
+								<li class="list__item">Unlimited product updates</li>
+								<li class="list__item">Unlimited product</li>
+								<li class="list__item">Unlimited product</li>
+								<li class="list__item list__item--grey">1GB Cloud storage</li>
+								<li class="list__item list__item--grey">Email and community support</li>
+							</ul>
+						</div>
+					</div><!-- product-category -->
+
+				</div><!-- завершення блоку homework -->
+
+			</main>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<h3 class="footer__title">
+						ТЕМА УРОКУ: <br>
+						"ПОЗИЦІОНУВАННЯ <br>
+						Позиціонування та псевдоелементи <br>
+						Обгорка Wrapper"
+					</h3>
+					<a href="#top" class="footer__button">НАВЕРХ</a>
+				</div>
+			</footer>
+
+		</div><!-- wrapper -->
+
+	</body>
+</html>

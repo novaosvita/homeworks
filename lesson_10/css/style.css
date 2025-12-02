@@ -1,0 +1,229 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Playfair Display", serif; /*шрифт підключений  мережевий*/
+  font-size: 20px; /*обраний преорітетний шрифт на сторінці*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  position: relative; /*все базування буде від Wrapper */
+  min-height: 100%;
+  overflow: clip;
+  background-color: #b9b9b9;
+}
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ============= HOMEWORK =========================== */
+.homework {
+  padding: 100px 0;
+}
+
+/* ====================== Блок з зображенням ===================== */
+
+/* ====  блок product-category====== */
+.product-category {
+  padding: 50px 0; /*верх/низ 50рх*/
+  /*margin-bottom: 77px;*/
+  font-family: "Playfair Display", serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.product-category__container {
+  padding-bottom: 66px; /*відступ внутрішній нижній*/
+  border-bottom: 1px solid #837f7f; /*нижня лінія кордонна*/
+}
+
+.product-category__title {
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.product-category__items {
+  font-size: 0; /*фантомні відступи ЛИШЕ ДЛЯ  inline та inline-block
+  Це звичайний пробіл у HTML, такий же як пробіл між словами*/
+  margin: 0 -6.2%; /*бокові відступи,змісти зображення назовні контейнера на 6.2% з кожного боку*/
+}
+
+.product-category__items:not(:last-child) {
+  margin-bottom: 77px; /*відступи для всих, окрім нижнього*/
+}
+
+.product-category__items > * {
+  font-size: 16px; /*назначається повторне значення шрифту*/
+}
+
+.category-card {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 5.53%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.category-card__inner {
+  position: relative; /*як база для дочірного блоку absolute*/
+  overflow: hidden;
+}
+
+.category-card__inner::before {
+  /*штучно створений шар (псевдоелемент),
+	 який накладається поверх  картки?
+	 як темна напівпрозора плівка, 
+	 для створення затемнення при наведенні*/
+  content: "";
+  position: absolute; /*прибирає з потоку псевдоелемент*/
+  top: 0; /*від самого лівого верхнього кута*/
+  left: 0;
+  z-index: 2; /*затемнений прошарок відстубає від нуля*/
+  width: 100%; /*прошарок на повне зображення*/
+  height: 100%; /*прошарок на повне зображення*/
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none; /*курсор проходить "повз" псевдоелемент*/
+
+  /* анімація для hover ефекту */
+  transition: background-color 0.3s;
+}
+
+.category-card__inner:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.category-card__img {
+  position: relative;
+  padding-bottom: 125.5%;
+  width: 100%;
+  height: 100%;
+}
+
+.category-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* загальні стилі для елементів */
+.category-card__title,
+.category-card__text {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  padding: 0 14px;
+}
+
+.category-card__title {
+  top: 42.3%;
+  font-size: 28px;
+}
+
+.category-card__text {
+  position: absolute;
+  bottom: 12px;
+  font-size: 17px;
+}
+/* КНОПКА ===== */
+.product-category__wrapper-button {
+  text-align: center;
+}
+
+.product-category__btn {
+  display: inline-block;
+  min-width: 134px;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.product-category__btn:hover {
+  color: #ffffff;
+  background-color: rgb(218, 134, 134);
+}
+
+/* ====================== Блок зі списком ===================== */
+/*Позиціонування для того, щоб іконки стояли поверх li
+ і не рухали його, а текст був ідеально вирівняний.*/
+.list {
+  margin: 0 auto;
+  max-width: 351px;
+  padding: 17px 40px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  color: #252b42;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71; /* 24/14 */
+  letter-spacing: 0.2px;
+}
+.list__items {
+  padding-top: 5px;
+}
+.list__item {
+  position: relative; /*базовий блок для absolute*/
+  min-height: 32px;
+  padding-left: 42px; /*зміщення тексту зліва*/
+}
+.list__item::before {
+  /*додається іконка зліва*/
+  content: "";
+  background: url("../icons/check_badge_green.svg") 0 0 / 100% no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute; /*абсолютно позиціонується всередині li, 
+  а не займає своє місце у потоці*/
+  left: 0;
+  top: -5px; /*зміщення вгору*/
+}
+.list__item--grey::before {
+  content: "";
+  background: url("../icons/check_badge_gray.svg") 0 0 / 100% no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 15px; /*відступи для всих, окрім нижнього*/
+}
+
+/* =========================================================== */
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #353535;
+}
+.footer__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(168, 168, 168);
+  line-height: 1.5;
+}
+
+.footer__button {
+  padding: 10px 10px 20px 10px;
+  /*border: 2px solid rgb(34, 34, 122);*/
+  border-radius: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px; /*відствнь між літерами*/
+}
+
+.footer__button:hover {
+  box-shadow: 3px 3px 3px rgb(34, 34, 122);
+  background-color: #b9b9b9;
+}
+
+.footer__button:active {
+  color: #000;
+  box-shadow: 2px 2px 3px #000;
+}
