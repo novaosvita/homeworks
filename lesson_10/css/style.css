@@ -5,20 +5,19 @@ body {
   font-size: 20px; /*обраний преорітетний шрифт на сторінці*/
 }
 
-/* ЗАГАЛЬНА ОБГОРТКА - ці властивості писати завжди*/
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
 .wrapper {
   position: relative; /*все базування буде від Wrapper */
   min-height: 100%;
   overflow: clip;
+  /*background-color: #b9b9b9;*/
 }
-
 /* Обмежуючий контейнер */
 [class*="__container"] {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-/*====== HEADER =======*/
+/*HEADER=======*/
 .main-title {
   background-color: #b9b9b9;
 }
@@ -31,15 +30,15 @@ body {
   letter-spacing: 3px;
 }
 
-/* ======= М Е Н Ю ===============*/
+/* ==== М Е Н Ю =====================*/
 .header {
   position: sticky;
-  top: 0; /*кординати початку старту блоку*/
+  top: 0; /*кординати початку старту блокe*/
   left: 0;
   right: 0;
   padding: 15px 0;
   background-color: aquamarine;
-  z-index: 100; /*самий високий прошарок по вісі Z*/
+  z-index: 100; /*самий високий прошорок по вісі Z*/
 }
 
 /* загальні стилі для меню */
@@ -55,7 +54,7 @@ body {
 
 /* виставляємо пункти меню в рядок */
 .menu__item {
-  position: relative; /*стартовий блок для поpиціонування дочірних елементів absolute*/
+  position: relative; /*стартовий ,лок для поpиціонування дочірних елементів absolute*/
   display: inline-block; /*меню в рядок */
 }
 
@@ -99,9 +98,8 @@ body {
   transition: opacity 0.3s, visibility 0.3s; /*плавна поява підменю*/
 }
 
-/*псевдоелемент, як "підкладки" для того, щоб при
+/*псевдоелемент "підкладки" для того щоб при
  переміщенні курсору на підменю була заповнена площа активності для курсора*/
-/* місток між рівнями*/
 .sub-menu::before {
   content: "";
   position: absolute;
@@ -109,12 +107,15 @@ body {
   left: 0;
   width: 100%;
   height: 14px;
-  /*background-color: brown; підкладка*/
+  /* background-color підкладка-мостик для підменю, щою не втачалась площинність
+  досяжності для кліку*/
+  /*background-color: rgb(190, 84, 58);*/
 }
 
-/* стилі при неведенні hover */
+/* стилі для стану hover при наведені на пункт меню змінює колір для посилання */
 .menu__item:hover .menu__link {
-  /*елемент "menu__item", на який  наведено курсор, "menu__link" - це нащадок, що потрібно стилізувати*/
+  /*елемент "menu__item", на який  наведено курсор,
+	а "menu__link" - це нащадок, що потрібно стилізувати*/
   color: rgb(14, 10, 238);
   text-decoration: underline;
 }
@@ -125,7 +126,7 @@ body {
   opacity: 1;
 }
 
-/* відступ всім пунктам, окрім останнього */
+/* відступ пунктам окрім останнього */
 .sub-menu__item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -137,14 +138,14 @@ body {
 
 /* стилі при наведенні */
 .sub-menu__link:hover {
-  margin-left: 2px; /*зміщення слова вправо на 2рх*/
-  color: rgb(14, 10, 238); /*зміна кольору при наведенні*/
+  margin-left: 2px; /*зміщення слова вправо на 3рх*/
+  color: rgb(14, 10, 238); /*зміна кольору*/
   text-decoration: underline;
 }
 
-/* ========= підменю ТРЕТЬОГО рівня ===== */
+/* ========= підменю ТРЕТЬОГО рівня===== */
 .dropdown {
-  position: absolute; /*базується від наближчого relative*/
+  position: absolute; /*базується від */
   left: 100%;
   top: -5px;
   padding: 8px;
@@ -192,7 +193,7 @@ body {
 }
 
 .dropdown__link:hover {
-  /*легенька руханка при наведенні*/
+  /*руханка при наведенні*/
   margin-left: 2px; /*текст зміщується повільно*/
   color: rgb(14, 10, 238);
   text-decoration: underline;
@@ -235,8 +236,8 @@ body {
   padding: 30px 0;
 }
 .relative__item--puprule {
-  /*position: static;це за замовчування для всих блоків*/
   background-color: #74810085;
+  /*position: static;це за замовчування для всих блоків*/
   position: relative;
   top: 20px; /*зміщення блоку по Х */
   left: 20px; /*зміщення блоку по У*/
@@ -246,22 +247,23 @@ body {
 }
 .relative__item--green {
   background-color: #358f80;
-  bottom: 20px; /*стартова точка починається з правого нижнього кута і відраховується звідтіля*/
+  bottom: 20px; /*стартова точка починається з
+                 правого нижнього кута і відраховується звідтіля*/
   right: 50px;
   position: relative;
-  /*z-index: -1;*/ /*При мінусовій позиціїї прошарок блоку заховається на задній план*/
+  /*z-index: -1;*/ /*При мінусовій позиціїї прошарок плоку заховається на задній план*/
   border: 5px solid rgb(3, 199, 173);
   padding: 30px 0;
 }
 
-/* ============== Absolute ============ */
+/* ===================Absolute ============ */
 .lessons__absolute {
   text-align: center;
   font-size: 30px;
   margin-bottom: 30px;
 }
 .absolute__items {
-  position: relative; /*базовий блок для absolute*/
+  position: relative; /*базокий блок для absolute*/
   margin: 0 auto;
   max-width: 1280px;
   height: 500px;
@@ -276,7 +278,7 @@ body {
   z-index: 6;
 }
 .absolute__block--big-yellow {
-  /*властивості блоку унікального*/
+  /*властивості блоку*/
   position: absolute;
   width: 350px;
   height: 250px;
@@ -290,6 +292,7 @@ body {
 }
 
 /* ================== Sticky ========== */
+
 .lessons__sticky {
   text-align: center;
   border: 3px solid rgb(1, 247, 42);
@@ -297,6 +300,7 @@ body {
 .sticky__items {
   position: relative;
   border: 2px solid rgb(28, 99, 40);
+  /*border-radius: 10px;*/
   text-align: center;
   overflow: auto;
   max-height: 300px;
@@ -338,7 +342,7 @@ body {
   padding: 100px 0;
 }
 /* ====================== Блок з зображенням ================== */
-/* ====  Блок product-category====== */
+/* ====  блок product-category====== */
 .product-category {
   padding: 50px 0; /*верх/низ = 50рх*/
   margin-bottom: 77px;
@@ -360,8 +364,8 @@ body {
 
 .product-category__items {
   font-size: 0; /*фантомні відступи ЛИШЕ ДЛЯ  inline та inline-block
-               Це пробіл у HTML, як пробіл між словами*/
-  margin: 0 -6.2%; /*бокові відступи, зміщення зображення назовні контейнера на 6.2% з кожного боку*/
+  Це пробіл у HTML, як пробіл між словами*/
+  margin: 0 -6.2%; /*бокові відступи,змісти зображення назовні контейнера на 6.2% з кожного боку*/
 }
 
 .product-category__items:not(:last-child) {
@@ -387,14 +391,14 @@ body {
 
 .category-card__inner::before {
   /*штучно створений шар (псевдоелемент),
-	 який накладається поверх  картки,
+	 який накладається поверх  картки?
 	 як темна напівпрозора плівка, 
-	 для створення ефектного затемнення при наведенні*/
+	 для створення затемнення при наведенні*/
   content: "";
   position: absolute; /*прибирає з потоку псевдоелемент*/
   top: 0; /*від самого лівого верхнього кута*/
   left: 0;
-  z-index: 2; /*затемнений прошарок відступає від нуля*/
+  z-index: 2; /*затемнений прошарок відстубає від нуля*/
   width: 100%; /*прошарок на повне зображення*/
   height: 100%; /*прошарок на повне зображення*/
   background-color: rgba(0, 0, 0, 0.4);
@@ -443,8 +447,7 @@ body {
   bottom: 12px;
   font-size: 17px;
 }
-
-/*================= КНОПКА ================== */
+/* КНОПКА ===== */
 .product-category__wrapper-button {
   text-align: center;
 }
@@ -462,7 +465,7 @@ body {
   background-color: rgb(218, 134, 134);
 }
 
-/* ============== Блок зі списком ============ */
+/* ====================== Блок зі списком ===================== */
 /*Позиціонування для того, щоб іконки стояли поверх li
  і не рухали його, а текст був ідеально вирівняний.*/
 .list {
@@ -509,7 +512,7 @@ body {
   margin-bottom: 15px; /*відступи для всих, окрім нижнього*/
 }
 
-/* ================== FOOTER =============================== */
+/* =========================================================== */
 
 .footer {
   text-align: center;
@@ -527,7 +530,7 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   color: #ffffff;
-  letter-spacing: 2px; /*відстань між літерами*/
+  letter-spacing: 2px; /*відствнь між літерами*/
 }
 
 .footer__button:hover {
