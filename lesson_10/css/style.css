@@ -200,7 +200,6 @@ body {
 }
 /*===== Завершення блоку МЕНЮ ======*/
 
-
 /*========= ПРАКТИЧНА РОБОТА з УРОКУ ===============*/
 .lessons {
   background-color: #e6f0d7;
@@ -224,8 +223,9 @@ body {
 }
 /* В цьому блоці додаються відступи вниз */
 .relative__block--margin {
-  margin-bottom: 40px; /
+  margin-bottom: 40px;
 }
+
 .relative__item {
   text-align: center;
   padding: 15px;
@@ -527,7 +527,7 @@ body {
 }
 
 .footer__button {
-  padding: 10px 20px; 
+  padding: 10px 20px;
   border-radius: 10px;
   color: #ffffff;
   letter-spacing: 2px; /*відствнь між літерами*/
