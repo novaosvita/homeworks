@@ -1,263 +1,540 @@
-<!DOCTYPE html>
-<html lang="uk">
-	<head>
-		<meta charset="UTF-8">
-		<!-- === Налаштування перегляду (адаптивності) ==== -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- ====== Підключення шрифтів ==== -->
-		<!-- rel означає “relationship” — тип зв’язку. 
-		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
-			rel="stylesheet">
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
-			rel="stylesheet">
-		<!-- ====== Файл  стилів ==== -->
-		<link rel="stylesheet" href="css/style.css">
-		<title>Lesson_10 Li</title>
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="main-title">
-				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ" </h1>
-			</div>
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Montserrat", serif; /*шрифт підключений  мережевий*/
+  font-size: 20px; /*обраний преорітетний шрифт на сторінці*/
+}
 
-			<!-- ==== М Е Н Ю: з додаванням 3-х вкладенностей ===================== -->
-			<header class="header">
-				<nav class="header__menu menu">
-					<ul class="menu__list">
-						<li class="menu__item menu__item--submenu">
-							<a href="#" class="menu__link">Позиціонування</a>
-							<ul class="menu__sub-menu sub-menu">
-								<li class="sub-menu__item">
-									<a href="#"
-										class="sub-menu__link">Статичне</a>
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  position: relative; /*все базування буде від Wrapper */
+  min-height: 100%;
+  overflow: clip;
+  /*background-color: #b9b9b9;*/
+}
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/*HEADER=======*/
+.main-title {
+  background-color: #b9b9b9;
+}
+.main-title__title {
+  font-family: "Montserrat", serif;
+  font-size: 40px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0; /*відступи верх/низ 30рх*/
+  letter-spacing: 3px;
+}
 
-									<!--==== початок 3-го підменю  -->
-									<ul class="sub-menu__dropdown dropdown">
-										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">Підпункт 1</a>
-										</li>
-										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">Підпункт 2</a>
-										</li>
-										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">Підпункт 3</a>
-										</li>
-									</ul>
-									<!-- ==== завершення 3-го підменю -->
-								</li>
+/* ==== М Е Н Ю =====================*/
+.header {
+  position: sticky;
+  top: 0; /*кординати початку старту блокe*/
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  background-color: aquamarine;
+  z-index: 100; /*самий високий прошорок по вісі Z*/
+}
 
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">Відносне</a></li>
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">Абсолютне</a></li>
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">Z-index</a></li>
-							</ul>
-						</li>
-						<li class="menu__item"><a href="#id-lessons"
-								class="menu__link">Практика</a></li>
-						<li class="menu__item"><a href="#section-homework"
-								class="menu__link">Домашня</a>
+/* загальні стилі для меню */
+.menu {
+  text-align: center;
+  font-weight: 500;
+}
 
-						</li>
-					</ul>
-				</nav>
-			</header>
+/* прибираємо фантомний відступ, що є властивим для inline, inline-block  */
+.menu__list {
+  font-size: 0;
+}
 
-			<main>
-				<!-- ========== ПРАКТИЧНА РОБОТА з УРОКУ ============= -->
-				<div id="id-lessons" class="lessons">
-					<div class="lessons__container">
+/* виставляємо пункти меню в рядок */
+.menu__item {
+  position: relative; /*стартовий ,лок для поpиціонування дочірних елементів absolute*/
+  display: inline-block; /*меню в рядок */
+}
 
-						<!-- 1 -ПЕРШИЙ тип позиціонування RELATIVE -->
-						<div class="lessons__relative relative">
-							<div class="relative__block relative__block--margin">
-								<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
-									<br>
-									RELATIVE</h2>
-								<div class="relative__item relative__item--brown">1-й
-									блок позиціонування
-								</div>
-								<div class="relative__item relative__item--puprule">2-й блок
-									позиціонування
-								</div>
-								<div class="relative__item relative__item--green">3-й блок
-									позиціонування
-								</div>
-							</div>
-						</div>
+.menu__item--submenu {
+  /*цей клас для конкретного пункту меню*/
+  border: 2px solid rgb(103, 115, 126);
+  border-radius: 3px;
+  padding: 0 10px;
+  box-shadow: 2px 2px 7px 0 #868685;
+}
 
-						<!-- Це БЛОК ABSOLUTE =======================-->
-						<div class="lessons__absolute absolute">
-							<div class="absolute__items">
-								<h2 id="section-absolute" class="absolute__title title">
-									ВИД ПОЗИЦІОНУВАННЯ:
-									<br>
-									ABSOLUTE
-								</h2>
-								<div class="absolute__block absolute__block--big-yellow">Absolute:
-									<br> блок, що має особливу можливість зміщуватися</div>
-							</div>
-						</div>
+/* відступ пунктам окрім останнього */
+.menu__item:not(:last-child) {
+  margin-right: 45px; /*бокові відступи*/
+}
 
-						<!--============== STICKY  ======================-->
-						<div class="lessons__sticky sticky">
-							<h2 id="section-sticky" class="sticky__title title">ВИД ПОЗИЦІОНУВАННЯ:
-								<br>FIXED та STICKY
-							</h2>
-							<div class="sticky__items">
-								<div class="sticky__block">Sticky 1</div>
-								<div class="sticky__content">
-									<p>
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-										cumque, optio ad distinctio eos id voluptates nemo dolore? Perferendis
-										delectus error quam corrupti provident quas eaque asperiores atque
-										quasi itaque.
-										Nesciunt quia quae necessitatibus, enim placeat, delectus soluta
-										voluptates, repellendus nisi eum qui totam sunt vel quo assumenda
-										praesentium maiores quam? Reprehenderit sunt provident iure. Dolor
-										incidunt quasi necessitatibus! Ullam.
-										Laborum sunt, consequatur debitis numquam molestias nam blanditiis
-										maiores dolorum et possimus dolore adipisci deserunt? Consequatur iste
-										nostrum cumque officiis tempora est, quos, voluptatum eligendi
-										excepturi animi, modi eum corporis.
-										Voluptatum totam animi doloribus molestias laudantium rem ex, minima
-										illum, ratione sit ut cupiditate repudiandae eaque quibusdam!
-										Asperiores nisi earum culpa commodi obcaecati, labore voluptates
-										molestiae, sint facilis maiores temporibus?
-										Nihil quasi tempore esse quas sequi maxime fugiat est vel possimus
-										numquam nulla quos exercitationem soluta id cum aliquam, impedit
-										explicabo. Tempore magni sunt est odio assumenda asperiores nobis rem?
-									</p>
-								</div>
+/* стилі для посилання */
+.menu__link {
+  padding: 5px 0;
+  line-height: 1.2;
+  font-size: 20px;
+}
 
-								<div class="sticky__block">Stycky 2</div>
-								<div class="sticky__content">
-									<p>
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-										cumque, optio ad distinctio eos id voluptates nemo dolore? Perferendis
-										delectus error quam corrupti provident quas eaque asperiores atque
-										quasi itaque.
-										Nesciunt quia quae necessitatibus, enim placeat, delectus soluta
-										voluptates, repellendus nisi eum qui totam sunt vel quo assumenda
-										praesentium maiores quam? Reprehenderit sunt provident iure. Dolor
-										incidunt quasi necessitatibus! Ullam.
-										Laborum sunt, consequatur debitis numquam molestias nam blanditiis
-										maiores dolorum et possimus dolore adipisci deserunt? Consequatur iste
-										nostrum cumque officiis tempora est, quos, voluptatum eligendi
-										excepturi animi, modi eum corporis.
-										Voluptatum totam animi doloribus molestias laudantium rem ex, minima
-										illum, ratione sit ut cupiditate repudiandae eaque quibusdam!
-										Asperiores nisi earum culpa commodi obcaecati, labore voluptates
-										molestiae, sint facilis maiores temporibus?
-										Nihil quasi tempore esse quas sequi maxime fugiat est vel possimus
-										numquam nulla quos exercitationem soluta id cum aliquam, impedit
-										explicabo. Tempore magni sunt est odio assumenda asperiores nobis rem?
-										Sunt, provident, molestiae temporibus ut nam quisquam cupiditate ipsa,
-										officia molestias ab atque culpa accusamus sequi ea eligendi veniam!
-										Delectus, numquam! Eum perspiciatis odio, sed a reprehenderit numquam!
-										Nam, suscipit.
-									</p>
-								</div>
-							</div>
-						</div>
-						<!--============== завернешо блоку STICKY  ==============-->
+/* позиціонування для елементу */
+.menu__sub-menu {
+  position: absolute;
+  top: 42px;
+  left: 0;
+}
 
-						<!--=========== FIXED ==================== -->
-						<div class="lessons__fixed fixed">
-							<div id="section3" class="fixed__block">
-								<h2 id="section-fixed" class="fixed__title title">
-									Блок: FIXED
-									<br> Я завжди видимий і розміщенний,
-									<br> згідно заданних координат (x, y, z)
-								</h2>
+/* стилі для блоку */
+.sub-menu {
+  min-width: 200px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+  color: rgb(44, 43, 43);
+  background-color: aquamarine;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s; /*плавна поява підменю*/
+}
 
-							</div>
-						</div>
-					</div>
-				</div>
+/*псевдоелемент "підкладки" для того щоб при
+ переміщенні курсору на підменю була заповнена площа активності для курсора*/
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  /* background-color підкладка-мостик для підменю, щою не втачалась площинність
+  досяжності для кліку*/
+  /*background-color: rgb(190, 84, 58);*/
+}
 
-				<!-- ========== ДОМАШНЯ РОБОТА ============= -->
-				<div id="section-homework" class="homework">
-					<div class="product-category">
-						<div class="product-category__container">
-							<h2 class="product-category__title">Face</h2>
-							<div class="product-category__items">
+/* стилі для стану hover при наведені на пункт меню змінює колір для посилання */
+.menu__item:hover .menu__link {
+  /*елемент "menu__item", на який  наведено курсор,
+	а "menu__link" - це нащадок, що потрібно стилізувати*/
+  color: rgb(14, 10, 238);
+  text-decoration: underline;
+}
 
-								<!-- 1-е зображення -->
-								<a class="category-card" href="#"> <!-- ВСЕ зображення є посилання -->
-									<div class="category-card__inner">
-										<h3 class="category-card__title">Cleansers</h3>
-										<div class="category-card__text">More</div>
-										<div class="category-card__img"> <!-- блок для зображення -->
-											<img src="img/cleanser.jpg" alt="photo of a girl in soap">
-										</div>
-									</div>
-								</a>
+/*підменю при наведені стає ВИДИМЕ */
+.menu__item:hover .sub-menu {
+  visibility: visible; /*видиме*/
+  opacity: 1;
+}
 
-								<!-- 2-е зображення -->
-								<a class="category-card" href="#">
-									<div class="category-card__inner">
-										<h3 class="category-card__title">Eye Patches</h3>
-										<div class="category-card__text">More</div>
-										<div class="category-card__img">
-											<img src="img/patches.jpg" alt="photo of a girl smiling">
-										</div>
-									</div>
-								</a>
+/* відступ пунктам окрім останнього */
+.sub-menu__item:not(:last-child) {
+  margin-bottom: 15px;
+}
 
-								<!-- 3-е зображення -->
-								<a class="category-card" href="#">
-									<div class="category-card__inner">
-										<h3 class="category-card__title">Masks</h3>
-										<div class="category-card__text">More</div>
-										<div class="category-card__img">
-											<img src="img/mask.jpg" alt="photo of a girl in a mask">
-										</div>
-									</div>
-								</a>
-							</div>
+.sub-menu__link {
+  /*шрифт зменшиний для меню 2-го рівня*/
+  font-size: 18px;
+}
 
-							<!-- Блок для запису MORE  -->
-							<div class="product-category__wrapper-button">
-								<a class="product-category__btn" href="#">More</a>
-							</div>
-						</div>
+/* стилі при наведенні */
+.sub-menu__link:hover {
+  margin-left: 2px; /*зміщення слова вправо на 3рх*/
+  color: rgb(14, 10, 238); /*зміна кольору*/
+  text-decoration: underline;
+}
 
-						<!-- Блок зі списком та зображенням -->
-						<div id="section-icons" class="list">
-							<ul class="list__items">
-								<li class="list__item">Unlimited product updates</li>
-								<li class="list__item">Unlimited product</li>
-								<li class="list__item">Unlimited product</li>
-								<li class="list__item list__item--grey">1GB Cloud storage</li>
-								<li class="list__item list__item--grey">Email and community
-									support</li>
-							</ul>
-						</div>
-					</div><!-- product-category -->
-				</div><!-- завершення блоку homework -->
-			</main>
+/* ========= підменю ТРЕТЬОГО рівня===== */
+.dropdown {
+  position: absolute; /*базується від */
+  left: 100%;
+  top: -5px;
+  padding: 8px;
+  color: rgb(44, 43, 43);
+  background-color: aquamarine;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 140px;
+  line-height: 1.3;
+  transition: opacity 0.3s, visibility 0.3s; /*плавна поява підменю*/
+}
 
-			<!--================== FOOTER ============= -->
-			<footer class="footer">
-				<div class="footer__container">
-					<h3 class="footer__title">
-						ТЕМА УРОКУ: <br>
-						"ПОЗИЦІОНУВАННЯ <br>
-						Позиціонування та псевдоелементи <br>
-						Обгорка Wrapper"
-					</h3>
-					<a href="#top" class="footer__button">НАВЕРХ</a>
-				</div>
-			</footer>
+/* місток між рівнями*/
+.dropdown::before {
+  content: "";
+  position: absolute;
+  left: -20px; /* місток між 2-м і 3-м рівнями */
+  top: 0;
+  width: 20px;
+  height: 100%;
+  /*background-color: brown; - підкладка*/
+}
 
-		</div><!-- фініш wrapper -->
+.dropdown__item:not(:last-child) {
+  margin-bottom: 10px;
+}
 
-	</body>
-</html>
+.sub-menu__item {
+  /*базовий блок для absolute*/
+  position: relative;
+}
+
+.sub-menu__item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__item:hover {
+  color: #204065;
+}
+
+.dropdown__link {
+  font-size: 16px;
+}
+
+.dropdown__link:hover {
+  /*руханка при наведенні*/
+  margin-left: 2px; /*текст зміщується повільно*/
+  color: rgb(14, 10, 238);
+  text-decoration: underline;
+}
+/*===== Завершення блоку МЕНЮ ======*/
+
+
+/*========= ПРАКТИЧНА РОБОТА з УРОКУ ===============*/
+.lessons {
+  background-color: #e6f0d7;
+}
+/* ===== 1 - RELATIVE ======= */
+.lessons__relative {
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 3px solid rgb(63, 221, 1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.relative__title,
+.absolute__title,
+.sticky__title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+/* В цьому блоці додаються відступи вниз */
+.relative__block--margin {
+  margin-bottom: 40px; /
+}
+.relative__item {
+  text-align: center;
+  padding: 15px;
+}
+.relative__item--brown {
+  background-color: #975a3b;
+  border: 5px solid rgb(255, 187, 2);
+  padding: 30px 0;
+}
+.relative__item--puprule {
+  background-color: #74810085;
+  /*position: static;це за замовчування для всих блоків*/
+  position: relative;
+  top: 20px; /*зміщення блоку по Х */
+  left: 20px; /*зміщення блоку по У*/
+  z-index: 2; /*виводить шар блоку вперед на 2 одиниці*/
+  border: 5px solid rgb(243, 239, 6);
+  padding: 30px 0;
+}
+.relative__item--green {
+  background-color: #358f80;
+  bottom: 20px; /*стартова точка починається з
+                 правого нижнього кута і відраховується звідтіля*/
+  right: 50px;
+  position: relative;
+  /*z-index: -1;*/ /*При мінусовій позиціїї прошарок плоку заховається на задній план*/
+  border: 5px solid rgb(3, 199, 173);
+  padding: 30px 0;
+}
+
+/* ===================Absolute ============ */
+.lessons__absolute {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.absolute__items {
+  position: relative; /*базокий блок для absolute*/
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 500px;
+  border: 3px solid rgb(63, 221, 1);
+  padding: 10px;
+}
+
+.absolute__block {
+  font-size: 25px;
+}
+.absolute__block:hover {
+  z-index: 6;
+}
+.absolute__block--big-yellow {
+  /*властивості блоку*/
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  background-color: yellow;
+  border: 1px solid rgb(148, 121, 1);
+  border-radius: 0px 50px 50px 50px;
+  top: 30%; /*координати точки початку по X*/
+  left: 10%; /*координати точки початку по Y*/
+  padding: 50px 20px;
+  line-height: 1.2;
+}
+
+/* ================== Sticky ========== */
+
+.lessons__sticky {
+  text-align: center;
+  border: 3px solid rgb(1, 247, 42);
+}
+.sticky__items {
+  position: relative;
+  border: 2px solid rgb(28, 99, 40);
+  /*border-radius: 10px;*/
+  text-align: center;
+  overflow: auto;
+  max-height: 300px;
+}
+.sticky__block {
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 5px;
+  background-color: rgb(114, 127, 134);
+  position: sticky;
+  top: 0;
+}
+
+/* ================ Fixed ==================*/
+.fixed__block {
+  /*Блок завжди на одному місці*/
+  position: fixed;
+  top: 35%; /*буде відступати зверху на % */
+  left: 30%;
+  max-width: 250px;
+  height: 150px;
+  background-color: rgb(72, 190, 126);
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 0px 50px 50px 50px;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 25px;
+  box-shadow: 4px 4px 20px 4px rgb(95, 97, 95);
+  z-index: 50;
+  opacity: 0.88;
+}
+.fixed__block:hover {
+  /*ефект при наведенні*/
+  background-color: rgb(108, 236, 4);
+}
+
+/* ============= ДОМАШНЯ РОБОТА HOMEWORK ====================== */
+.homework {
+  padding: 100px 0;
+}
+/* ====================== Блок з зображенням ================== */
+/* ====  блок product-category====== */
+.product-category {
+  padding: 50px 0; /*верх/низ = 50рх*/
+  margin-bottom: 77px;
+  font-family: "Playfair Display", serif;
+  color: #000000;
+  background-color: #e7e5e5;
+}
+
+.product-category__container {
+  padding-bottom: 66px; /*відступ внутрішній нижній*/
+  border-bottom: 1px solid #837f7f; /*нижня лінія кордонну*/
+}
+
+.product-category__title {
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.product-category__items {
+  font-size: 0; /*фантомні відступи ЛИШЕ ДЛЯ  inline та inline-block
+  Це пробіл у HTML, як пробіл між словами*/
+  margin: 0 -6.2%; /*бокові відступи,змісти зображення назовні контейнера на 6.2% з кожного боку*/
+}
+
+.product-category__items:not(:last-child) {
+  margin-bottom: 77px; /*відступи для всих, окрім нижнього*/
+}
+
+.product-category__items > * {
+  font-size: 16px; /*назначається повторне значення шрифту*/
+}
+
+.category-card {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 5.53%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.category-card__inner {
+  position: relative; /*як база для дочірного блоку absolute*/
+  overflow: hidden;
+}
+
+.category-card__inner::before {
+  /*штучно створений шар (псевдоелемент),
+	 який накладається поверх  картки?
+	 як темна напівпрозора плівка, 
+	 для створення затемнення при наведенні*/
+  content: "";
+  position: absolute; /*прибирає з потоку псевдоелемент*/
+  top: 0; /*від самого лівого верхнього кута*/
+  left: 0;
+  z-index: 2; /*затемнений прошарок відстубає від нуля*/
+  width: 100%; /*прошарок на повне зображення*/
+  height: 100%; /*прошарок на повне зображення*/
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none; /*курсор проходить "повз" псевдоелемент*/
+
+  /* анімація для hover ефекту */
+  transition: background-color 0.3s;
+}
+
+.category-card__inner:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.category-card__img {
+  position: relative;
+  padding-bottom: 125.5%;
+  width: 100%;
+  height: 100%;
+}
+
+.category-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* загальні стилі для елементів */
+.category-card__title,
+.category-card__text {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  padding: 0 14px;
+}
+
+.category-card__title {
+  top: 42.3%;
+  font-size: 28px;
+}
+
+.category-card__text {
+  position: absolute;
+  bottom: 12px;
+  font-size: 17px;
+}
+/* КНОПКА ===== */
+.product-category__wrapper-button {
+  text-align: center;
+}
+
+.product-category__btn {
+  display: inline-block;
+  min-width: 134px;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.product-category__btn:hover {
+  color: #ffffff;
+  background-color: rgb(218, 134, 134);
+}
+
+/* ====================== Блок зі списком ===================== */
+/*Позиціонування для того, щоб іконки стояли поверх li
+ і не рухали його, а текст був ідеально вирівняний.*/
+.list {
+  margin: 0 auto;
+  max-width: 351px;
+  padding: 17px 40px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  color: #252b42;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71; /* 24/14 */
+  letter-spacing: 0.2px;
+}
+.list__items {
+  padding-top: 5px;
+}
+.list__item {
+  position: relative; /*базовий блок для absolute*/
+  min-height: 32px;
+  padding-left: 42px; /*зміщення тексту зліва*/
+}
+.list__item::before {
+  /*додається іконка зліва*/
+  content: "";
+  background: url("../icons/check_badge_green.svg") 0 0 / 100% no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute; /*абсолютно позиціонується всередині li, 
+  а не займає своє місце у потоці*/
+  left: 0;
+  top: -5px; /*зміщення вгору*/
+}
+.list__item--grey::before {
+  content: "";
+  background: url("../icons/check_badge_gray.svg") 0 0 / 100% no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 15px; /*відступи для всих, окрім нижнього*/
+}
+
+/* =========================================================== */
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #353535;
+}
+.footer__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(168, 168, 168);
+  line-height: 1.5;
+}
+
+.footer__button {
+  padding: 10px 20px; 
+  border-radius: 10px;
+  color: #ffffff;
+  letter-spacing: 2px; /*відствнь між літерами*/
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  background-color: #b9b9b9;
+}
