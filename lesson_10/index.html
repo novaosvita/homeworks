@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
+			rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_10 Li</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main-title">
+				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ"</h1>
+			</div>
+
+			<!-- ==== М Е Н Ю: з додаванням 3-х рівнів вкладенностей ===================== -->
+			<header class="header">
+				<nav class="header__menu menu">
+					<!--==== початок 2-го рівня меню ===== -->
+					<ul class="menu__list">
+						<li class="menu__item menu__item--submenu">
+							<a href="#" class="menu__link">ПОЗИЦІОНУВАННЯ</a>
+							<ul class="menu__menu-sub sub-menu">
+								<li class="sub-menu__item">
+									<a href="#"
+										class="sub-menu__link">Статичне</a>
+
+									<!--==== початок 3-го рівня меню ===== -->
+									<ul class="sub-menu__dropdown dropdown">
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">Підпункт 1</a>
+										</li>
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">Підпункт 2</a>
+										</li>
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">Підпункт 3</a>
+										</li>
+									</ul>
+									<!-- ==== завершення 3-го рівня меню =====-->
+								</li>
+
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Відносне</a></li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Абсолютне</a></li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Z-index</a></li>
+							</ul>
+						</li>
+						<li class="menu__item"><a href="#section-practice"
+								class="menu__link">ПРАКТИКА</a></li>
+						<li class="menu__item"><a href="#section-homework"
+								class="menu__link">ДОМАШКА</a>
+
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<!-- ============== ПРАКТИЧНА РОБОТА з УРОКУ ==================== -->
+				<div id="section-practice" class="lessons">
+					<div class="lessons__container">
+						<!-- 1 - ПЕРШИЙ тип позиціонування RELATIVE -->
+						<div class="lessons__relative relative">
+							<div class="relative__block relative__block--margin">
+								<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
+									<br> RELATIVE</h2>
+								<div class="relative__item relative__item--brown">1-й блок: статичний
+								</div>
+								<div class="relative__item relative__item--purple">2-й блок:
+									позиціонування
+								</div>
+								<div class="relative__item relative__item--green">3-й блок:
+									позиціонування
+								</div>
+							</div>
+						</div>
+
+						<!--============= Це БЛОК ABSOLUTE =======================-->
+						<div class="lessons__absolute absolute">
+							<div class="absolute__items">
+								<h2 id="section-absolute" class="absolute__title title"> ВИД
+									ПОЗИЦІОНУВАННЯ:
+									<br> ABSOLUTE
+								</h2>
+								<div class="absolute__block">Absolute</div>
+							</div>
+						</div>
+
+						<!--============== STICKY ======================-->
+						<div class="lessons__sticky sticky">
+							<h2 id="section-sticky" class="sticky__title title">
+								FIXED and STICKY
+							</h2>
+							<div class="sticky__items">
+								<div class="sticky__block">Блок "Sticky-1"</div>
+								<div class="sticky__content">
+									<p>
+										Позиціонування в CSS — це спосіб контролю розташування елементів на
+										веб-сторінці. Воно визначає, як елементи взаємодіють один з одним і з
+										контейнером. Розуміння позиціонування є ключовим для створення
+										адаптивних і гармонійних інтерфейсів.
+
+										CSS надає п’ять основних типів позиціонування: static, relative,
+										absolute, fixed і sticky. Кожен з них має свої особливості та сценарії
+										використання.
+
+										Static (за замовчуванням)
+										Усі елементи за замовчуванням мають position: static. Це означає, що
+										вони розташовуються у звичайному потоці документа — зверху вниз,
+										згідно
+										з порядком у HTML. Властивості top, right, bottom, left для статичних
+										елементів не працюють. Цей тип позиціонування використовується майже
+										для всіх елементів за замовчуванням.
+
+										Relative (відносне позиціонування)
+										Елемент з position: relative залишається в потоці документа, але його
+										можна змістити від початкового місця за допомогою властивостей top,
+										right, bottom, left. Наприклад, top: 20px зрушить елемент вниз на 20
+										пікселів від його звичайного положення. Relative-позиціонування часто
+										використовується як контейнер для абсолютних елементів.
+									</p>
+								</div>
+
+								<div class="sticky__block">Блок "Sticky-2"</div>
+								<div class="sticky__content">
+									<p>
+										Absolute (абсолютне позиціонування)
+										Елемент з position: absolute виводиться з потоку документа. Його
+										положення визначається щодо найближчого предка з позиціонуванням
+										відмінним від static (наприклад, relative, absolute або fixed). Якщо
+										такого предка немає, елемент позиціонується відносно body.
+										Absolute-позиціонування дозволяє точно розміщувати елементи,
+										наприклад,
+										спливаючі вікна або іконки.
+
+										Fixed (фіксоване позиціонування)
+										Елемент з position: fixed прикріплюється до вікна браузера, незалежно
+										від прокрутки сторінки. Це корисно для хедерів, футерів або кнопок
+										«Вгору». Fixed-елементи не впливають на розташування інших елементів і
+										залишаються на місці при скролі.
+
+										Sticky (липке позиціонування)
+										Sticky-комбінація між relative і fixed. Елемент поводиться як
+										relative,
+										поки не досягне певної позиції під час прокрутки, після чого
+										«прилипає»
+										і веде себе як fixed. Це зручно для меню, що залишаються видимими при
+										прокручуванні, або для закріплених заголовків таблиць.
+										CSS позиціонування — це потужний інструмент для контролю розташування
+										елементів на сторінці. Окрім базових типів позиціонування, існують
+										тонкощі, які допомагають вирішувати складні завдання веб-дизайну.
+
+										Одним із основних аспектів є комбінування позиціонування та flexbox
+										або grid. Наприклад, елемент з position: absolute всередині
+										flex-контейнера може поводитися інакше, ніж в звичайному контейнері.
+										Важливо пам’ятати: абсолютне позиціонування завжди відноситься до
+										найближчого предка з позиціонуванням. Якщо цього предка немає —
+										елемент буде позиціонуватися відносно body.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--============== завершено блок STICKY =============-->
+
+						<!--============== Блок FIXED   ======================-->
+						<div class="lessons__fixed fixed">
+							<div id="section3" class="fixed__block">
+								<h2 id="section-fixed" class="fixed__title title">
+									Блок: FIXED,
+									<br> Завжди видимий
+								</h2>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ========== ДОМАШНЯ РОБОТА ============= -->
+				<div id="section-homework" class="homework">
+					<div class="product-category">
+						<div class="product-category__container">
+							<h2 class="product-category__title">Face</h2>
+							<div class="product-category__items">
+
+								<!-- 1-е зображення -->
+								<a class="category-card" href="#">
+									<!-- ВСЕ зображення є, як посилання -->
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Cleansers</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img"> <!-- блок для зображення -->
+											<img src="img/cleanser.jpg" alt="photo of a girl in soap">
+										</div>
+									</div>
+								</a>
+
+								<!-- 2-е зображення -->
+								<a class="category-card" href="#">
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Eye Patches</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img">
+											<img src="img/patches.jpg" alt="photo of a girl smiling">
+										</div>
+									</div>
+								</a>
+
+								<!-- 3-е зображення -->
+								<a class="category-card" href="#">
+									<div class="category-card__inner">
+										<h3 class="category-card__title">Masks</h3>
+										<div class="category-card__text">More</div>
+										<div class="category-card__img">
+											<img src="img/mask.jpg" alt="photo of a girl in a mask">
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- Блок для запису MORE  -->
+							<div class="product-category__wrapper-button">
+								<a class="product-category__btn" href="#">More</a>
+							</div>
+						</div>
+
+						<!-- Блок зі списком та зображенням -->
+						<div id="section-icons" class="list">
+							<ul class="list__items">
+								<li class="list__item">Unlimited product updates</li>
+								<li class="list__item">Unlimited product</li>
+								<li class="list__item">Unlimited product</li>
+								<li class="list__item list__item--grey">1GB Cloud storage</li>
+								<li class="list__item list__item--grey">Email and community
+									support</li>
+							</ul>
+						</div>
+					</div>
+				</div> <!-- завершення блоку homework -->
+			</main>
+
+			<!--==================== FOOTER =========== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<h3 class="footer__title">
+						ТЕМА УРОКУ: <br>
+						"ПОЗИЦІОНУВАННЯ
+						<br>Компоненти (частково)
+						<br>Позиціонування та псевдоелементи
+						<br>Обгортка "Wrapper"
+					</h3>
+					<a href="#top" class="footer__button">НАВЕРХ</a>
+				</div>
+			</footer>
+		</div><!-- завершення обгортки wrapper -->
+	</body>
+</html>
