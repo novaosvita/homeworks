@@ -13,9 +13,9 @@
 			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
 			rel="stylesheet">
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
 			rel="stylesheet">
-		<!-- ====== Файл  стилів ==== -->
+		<!-- ====== Файл стилів ==== -->
 		<link rel="stylesheet" href="css/style.css">
 		<title>Lesson_10 Li</title>
 	</head>
@@ -25,33 +25,32 @@
 				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ" </h1>
 			</div>
 
-			<!-- ==== М Е Н Ю: з додаванням 3-х вкладенностей ===================== -->
+			<!-- ==== М Е Н Ю: з додаванням меню 3-х вкладенностей ====== -->
 			<header class="header">
 				<nav class="header__menu menu">
-
 					<ul class="menu__list">
 						<li class="menu__item menu__item--submenu">
 							<a href="#" class="menu__link">Позиціонування</a>
-							<ul class="menu__menu-sub sub-menu">
+							<!--==== початок 2-го підменю  -->
+							<ul class="menu__sub-menu sub-menu">
 								<li class="sub-menu__item">
 									<a href="#"
-										class="sub-menu__link sub-menu__link">Статичне</a>
-
-									<!--==== початок 3-го підменю  -->
+										class="sub-menu__link">Статичне</a>
+									<!-- ==== завершення 2-го підменю ======-->
+									<!--==== початок 3-го підменю ========= -->
 									<ul class="sub-menu__dropdown dropdown">
 										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">- Підпункт 1</a>
+											<a class="dropdown__link" href="#">Підпункт 1</a>
 										</li>
 										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">- Підпункт 2</a>
+											<a class="dropdown__link" href="#">Підпункт 2</a>
 										</li>
 										<li class="dropdown__item">
-											<a class="dropdown__link" href="#">- Підпункт 3</a>
+											<a class="dropdown__link" href="#">Підпункт 3</a>
 										</li>
 									</ul>
 									<!-- ==== завершення 3-го підменю -->
 								</li>
-
 								<li class="sub-menu__item">
 									<a href="#" class="sub-menu__link">Відносне</a></li>
 								<li class="sub-menu__item">
@@ -60,23 +59,22 @@
 									<a href="#" class="sub-menu__link">Z-index</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#lesson-practice"
+						<li class="menu__item"><a href="#id-lessons"
 								class="menu__link">Практика</a></li>
 						<li class="menu__item"><a href="#section-homework"
-								class="menu__link">Домашня</a>
-
-						</li>
+								class="menu__link">Домашня</a></li>
 					</ul>
 				</nav>
 			</header>
 
+			<!--================ БЛОК M A I N ============== -->
 			<main>
 				<!-- ========== ПРАКТИЧНА РОБОТА з УРОКУ ============= -->
-				<div id="lesson-practice" class="lessons">
+				<div id="id-lessons" class="lessons">
 					<div class="lessons__container">
 
 						<!-- 1 -ПЕРШИЙ тип позиціонування RELATIVE -->
-						<div class="lesson__relative relative">
+						<div class="lessons__relative relative">
 							<div class="relative__block relative__block--margin">
 								<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
 									<br>
@@ -93,11 +91,11 @@
 							</div>
 						</div>
 
-						<!-- Це БЛОК ABSOLUTE =======================-->
-						<div class="practice__absolute absolute">
+						<!--================ БЛОК ABSOLUTE =======================-->
+						<div class="lessons__absolute absolute">
 							<div class="absolute__items">
-								<h2 id="section-absolute" class="absolute__title title">ВИД
-									ПОЗИЦІОНУВАННЯ:
+								<h2 id="section-absolute" class="absolute__title title">
+									ВИД ПОЗИЦІОНУВАННЯ:
 									<br>
 									ABSOLUTE
 								</h2>
@@ -106,10 +104,10 @@
 							</div>
 						</div>
 
-						<!--============== STICKY  ======================-->
-						<div class="practice__sticky sticky">
-							<h2 id="section-sticky" class="sticky__title title">
-								FIXED та STICKY
+						<!--============== БЛОК STICKY  ======================-->
+						<div class="lessons__sticky sticky">
+							<h2 id="section-sticky" class="sticky__title title">ВИД ПОЗИЦІОНУВАННЯ:
+								<br>FIXED та STICKY
 							</h2>
 							<div class="sticky__items">
 								<div class="sticky__block">Sticky 1</div>
@@ -167,13 +165,13 @@
 								</div>
 							</div>
 						</div>
-						<!--============== завернешо STICKY  ======================-->
+						<!--============== завершено блоку STICKY ==============-->
 
-						<!--=========== FIXED ==================== -->
-						<div class="practice__fixed fixed">
+						<!--===========  БЛОК FIXED ==================== -->
+						<div class="lessons__fixed fixed">
 							<div id="section3" class="fixed__block">
 								<h2 id="section-fixed" class="fixed__title title">
-									Блок: FIXED,
+									Блок: FIXED
 									<br> Я завжди видимий і розміщенний,
 									<br> згідно заданних координат (x, y, z)
 								</h2>
@@ -258,7 +256,7 @@
 				</div>
 			</footer>
 
-		</div><!-- wrapper -->
+		</div><!-- закриття блоку wrapper -->
 
 	</body>
 </html>
