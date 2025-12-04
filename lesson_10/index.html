@@ -25,13 +25,13 @@
 				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ" </h1>
 			</div>
 
-			<!-- ==== М Е Н Ю: з додаванням 3-х вкладенностей ===================== -->
+			<!-- ==== М Е Н Ю: з додаванням меню 3-х вкладенностей ===================== -->
 			<header class="header">
 				<nav class="header__menu menu">
 
 					<ul class="menu__list">
 						<li class="menu__item menu__item--submenu">
-							<a href="#" class="menu__link">Позиціонування</a>
+							<a href="#" class="menu__link">ПОЗИЦІОНУВАННЯ</a>
 							<ul class="menu__menu-sub sub-menu">
 								<li class="sub-menu__item">
 									<a href="#"
@@ -43,7 +43,7 @@
 											<a class="dropdown__link" href="#">Підпункт 1</a>
 										</li>
 										<li class="dropdown__item">
-											<a class="dropdown__link" href="#"> Підпункт 2</a>
+											<a class="dropdown__link" href="#">Підпункт 2</a>
 										</li>
 										<li class="dropdown__item">
 											<a class="dropdown__link" href="#">Підпункт 3</a>
@@ -60,10 +60,10 @@
 									<a href="#" class="sub-menu__link">Z-index</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#"
-								class="menu__link">Інформація</a></li>
+						<li class="menu__item"><a href="#section-practice"
+								class="menu__link">ПРАКТИКА</a></li>
 						<li class="menu__item"><a href="#section-homework"
-								class="menu__link">Домашня</a>
+								class="menu__link">ДОМАШКА</a>
 
 						</li>
 					</ul>
@@ -71,6 +71,124 @@
 			</header>
 
 			<main>
+				<!-- ============== ПРАКТИЧНА РОБОТА з УРОКУ ==================== -->
+				<div id="section-practice" class="lessons">
+					<div class="lessons__container">
+						<!-- 1 -ПЕРШИЙ тип позиціонування RELATIVE -->
+						<div class="lessons__relative relative">
+							<div class="relative__block relative__block--margin">
+								<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
+									<br> RELATIVE</h2>
+								<div class="relative__item relative__item--brown">1-й
+									блок позиціонування
+								</div>
+								<div class="relative__item relative__item--purple">2-й блок
+									позиціонування
+								</div>
+								<div class="relative__item relative__item--green">3-й блок
+									позиціонування
+								</div>
+							</div>
+						</div>
+
+						<!-- Це БЛОК ABSOLUTE =======================-->
+						<div class="lessons__absolute absolute">
+							<div class="absolute__items">
+								<h2 id="section-absolute" class="absolute__title title"> ВИД
+									ПОЗИЦІОНУВАННЯ:
+									<br> ABSOLUTE
+								</h2>
+								<div class="absolute__block">Absolute</div>
+							</div>
+						</div>
+
+						<!--============== STICKY сторонній ======================-->
+						<div class="lessons__sticky sticky">
+							<h2 id="section-sticky" class="sticky__title title">
+								FIXED and STICKY
+							</h2>
+							<div class="sticky__items">
+								<div class="sticky__block">Блок "Stycky-1"</div>
+								<div class="sticky__content">
+									<p>
+										Позиціонування в CSS — це спосіб контролю розташування елементів на
+										веб-сторінці. Воно визначає, як елементи взаємодіють один з одним і з
+										контейнером. Розуміння позиціонування є ключовим для створення
+										адаптивних і гармонійних інтерфейсів.
+
+										CSS надає п’ять основних типів позиціонування: static, relative,
+										absolute, fixed і sticky. Кожен з них має свої особливості та сценарії
+										використання.
+
+										Static (за замовчуванням)
+										Усі елементи за замовчуванням мають position: static. Це означає, що
+										вони розташовуються у звичайному потоці документа — зверху вниз,
+										згідно
+										з порядком у HTML. Властивості top, right, bottom, left для статичних
+										елементів не працюють. Цей тип позиціонування використовується майже
+										для всіх елементів за замовчуванням.
+
+										Relative (відносне позиціонування)
+										Елемент з position: relative залишається в потоці документа, але його
+										можна змістити від початкового місця за допомогою властивостей top,
+										right, bottom, left. Наприклад, top: 20px зрушить елемент вниз на 20
+										пікселів від його звичайного положення. Relative-позиціонування часто
+										використовується як контейнер для абсолютних елементів.
+									</p>
+								</div>
+
+								<div class="sticky__block">Блок "Stycky-2"</div>
+								<div class="sticky__content">
+									<p>
+										Absolute (абсолютне позиціонування)
+										Елемент з position: absolute виводиться з потоку документа. Його
+										положення визначається щодо найближчого предка з позиціонуванням
+										відмінним від static (наприклад, relative, absolute або fixed). Якщо
+										такого предка немає, елемент позиціонується відносно body.
+										Absolute-позиціонування дозволяє точно розміщувати елементи,
+										наприклад,
+										спливаючі вікна або іконки.
+
+										Fixed (фіксоване позиціонування)
+										Елемент з position: fixed прикріплюється до вікна браузера, незалежно
+										від прокрутки сторінки. Це корисно для хедерів, футерів або кнопок
+										«Вгору». Fixed-елементи не впливають на розташування інших елементів і
+										залишаються на місці при скролі.
+
+										Sticky (липке позиціонування)
+										Sticky-комбінація між relative і fixed. Елемент поводиться як
+										relative,
+										поки не досягне певної позиції під час прокрутки, після чого
+										«прилипає»
+										і веде себе як fixed. Це зручно для меню, що залишаються видимими при
+										прокручуванні, або для закріплених заголовків таблиць.
+										CSS позиціонування — це потужний інструмент для контролю розташування
+										елементів на сторінці. Окрім базових типів позиціонування, існують
+										тонкощі, які допомагають вирішувати складні завдання веб-дизайну.
+
+										Одним із основних аспектів є комбінування позиціонування та flexbox
+										або grid. Наприклад, елемент з position: absolute всередині
+										flex-контейнера може поводитися інакше, ніж в звичайному контейнері.
+										Важливо пам’ятати: абсолютне позиціонування завжди відноситься до
+										найближчого предка з позиціонуванням. Якщо цього предка немає —
+										елемент буде позиціонуватися відносно body.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--============== завернешо STICKY сторонній ======================-->
+
+						<div class="lessons__fixed fixed">
+							<div id="section3" class="fixed__block">
+								<h2 id="section-fixed" class="fixed__title title">
+									Блок: FIXED,
+									<br> Я завжди видимий, згідно заданних координат (x, y, z)
+								</h2>
+
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<!-- ========== ДОМАШНЯ РОБОТА ============= -->
 				<div id="section-homework" class="homework">
@@ -133,120 +251,17 @@
 				</div><!-- завершення блоку homework -->
 			</main>
 
-
 			<!--========================= ПРАКТИКА по уроку ================-->
-			<div class="lessons">
-				<div class="lessons__container">
-
-					<!-- 1 -ПЕРШИЙ тип позиціонування RELATIVE -->
-					<div class="lesson__relative relative">
-						<div class="relative__block relative__block--margin">
-							<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
-								RELATIVE</h2>
-							<div class="relative__item relative__item--brown">1-й
-								блок позиціонування
-							</div>
-							<div class="relative__item relative__item--purple">2-й блок
-								позиціонування
-							</div>
-							<div class="relative__item relative__item--green">3-й блок
-								позиціонування
-							</div>
-						</div>
-					</div>
-
-					<!-- Це БЛОК ABSOLUTE =======================-->
-					<div class="practice__absolute absolute">
-						<div class="absolute__items">
-							<h2 id="section-absolute" class="absolute__title title">Absolute
-							</h2>
-							<div class="absolute__block absolute__block--big-yellow">Absolute</div>
-						</div>
-					</div>
-
-					<!--============== STICKY сторонній ======================-->
-					<div class="practice__sticky sticky">
-						<h2 id="section-sticky" class="sticky__title title">
-							FIXED та Sticky
-						</h2>
-						<div class="sticky__items">
-							<div class="sticky__block">Sticky 1</div>
-							<div class="sticky__content">
-								<p>
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-									cumque, optio ad distinctio eos id voluptates nemo dolore? Perferendis
-									delectus error quam corrupti provident quas eaque asperiores atque
-									quasi itaque.
-									Nesciunt quia quae necessitatibus, enim placeat, delectus soluta
-									voluptates, repellendus nisi eum qui totam sunt vel quo assumenda
-									praesentium maiores quam? Reprehenderit sunt provident iure. Dolor
-									incidunt quasi necessitatibus! Ullam.
-									Laborum sunt, consequatur debitis numquam molestias nam blanditiis
-									maiores dolorum et possimus dolore adipisci deserunt? Consequatur iste
-									nostrum cumque officiis tempora est, quos, voluptatum eligendi
-									excepturi animi, modi eum corporis.
-									Voluptatum totam animi doloribus molestias laudantium rem ex, minima
-									illum, ratione sit ut cupiditate repudiandae eaque quibusdam!
-									Asperiores nisi earum culpa commodi obcaecati, labore voluptates
-									molestiae, sint facilis maiores temporibus?
-									Nihil quasi tempore esse quas sequi maxime fugiat est vel possimus
-									numquam nulla quos exercitationem soluta id cum aliquam, impedit
-									explicabo. Tempore magni sunt est odio assumenda asperiores nobis rem?
-								</p>
-							</div>
-
-							<div class="sticky__block">Stycky 2</div>
-							<div class="sticky__content">
-								<p>
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-									cumque, optio ad distinctio eos id voluptates nemo dolore? Perferendis
-									delectus error quam corrupti provident quas eaque asperiores atque
-									quasi itaque.
-									Nesciunt quia quae necessitatibus, enim placeat, delectus soluta
-									voluptates, repellendus nisi eum qui totam sunt vel quo assumenda
-									praesentium maiores quam? Reprehenderit sunt provident iure. Dolor
-									incidunt quasi necessitatibus! Ullam.
-									Laborum sunt, consequatur debitis numquam molestias nam blanditiis
-									maiores dolorum et possimus dolore adipisci deserunt? Consequatur iste
-									nostrum cumque officiis tempora est, quos, voluptatum eligendi
-									excepturi animi, modi eum corporis.
-									Voluptatum totam animi doloribus molestias laudantium rem ex, minima
-									illum, ratione sit ut cupiditate repudiandae eaque quibusdam!
-									Asperiores nisi earum culpa commodi obcaecati, labore voluptates
-									molestiae, sint facilis maiores temporibus?
-									Nihil quasi tempore esse quas sequi maxime fugiat est vel possimus
-									numquam nulla quos exercitationem soluta id cum aliquam, impedit
-									explicabo. Tempore magni sunt est odio assumenda asperiores nobis rem?
-									Sunt, provident, molestiae temporibus ut nam quisquam cupiditate ipsa,
-									officia molestias ab atque culpa accusamus sequi ea eligendi veniam!
-									Delectus, numquam! Eum perspiciatis odio, sed a reprehenderit numquam!
-									Nam, suscipit.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--============== завернешо STICKY сторонній ======================-->
-
-					<div class="practice__fixed fixed">
-						<div id="section3" class="fixed__block">
-							<h2 id="section-fixed" class="fixed__title title">
-								Блок: FIXED,
-								<br> Я завжди видимий, згідно заданних координат (x, y, z)
-							</h2>
-
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<!--==================== FOOTER =========== -->
 			<footer class="footer">
 				<div class="footer__container">
 					<h3 class="footer__title">
 						ТЕМА УРОКУ: <br>
-						"ПОЗИЦІОНУВАННЯ <br>
-						Позиціонування та псевдоелементи <br>
-						Обгорка Wrapper"
+						"ПОЗИЦІОНУВАННЯ
+						<br>Компоненти
+						<br> Позиціонування та псевдоелементи
+						<br>Обгорка Wrapper"
 					</h3>
 					<a href="#top" class="footer__button">НАВЕРХ</a>
 				</div>
