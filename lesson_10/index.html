@@ -22,13 +22,13 @@
 	<body>
 		<div class="wrapper">
 			<div class="main-title">
-				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ" </h1>
+				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ"</h1>
 			</div>
 
-			<!-- ==== М Е Н Ю: з додаванням меню 3-х вкладенностей ===================== -->
+			<!-- ==== М Е Н Ю: з додаванням 3-х рівнів вкладенностей ===================== -->
 			<header class="header">
 				<nav class="header__menu menu">
-
+					<!--==== початок 2-го підменю ===== -->
 					<ul class="menu__list">
 						<li class="menu__item menu__item--submenu">
 							<a href="#" class="menu__link">ПОЗИЦІОНУВАННЯ</a>
@@ -37,7 +37,7 @@
 									<a href="#"
 										class="sub-menu__link sub-menu__link">Статичне</a>
 
-									<!--==== початок 3-го підменю  -->
+									<!--==== початок 3-го підменю ===== -->
 									<ul class="sub-menu__dropdown dropdown">
 										<li class="dropdown__item">
 											<a class="dropdown__link" href="#">Підпункт 1</a>
@@ -49,7 +49,7 @@
 											<a class="dropdown__link" href="#">Підпункт 3</a>
 										</li>
 									</ul>
-									<!-- ==== завершення 3-го підменю -->
+									<!-- ==== завершення 3-го підменю =====-->
 								</li>
 
 								<li class="sub-menu__item">
@@ -74,24 +74,23 @@
 				<!-- ============== ПРАКТИЧНА РОБОТА з УРОКУ ==================== -->
 				<div id="section-practice" class="lessons">
 					<div class="lessons__container">
-						<!-- 1 -ПЕРШИЙ тип позиціонування RELATIVE -->
+						<!-- 1 - ПЕРШИЙ тип позиціонування RELATIVE -->
 						<div class="lessons__relative relative">
 							<div class="relative__block relative__block--margin">
 								<h2 id="section-relative" class="relative__title">ВИД ПОЗИЦІОНУВАННЯ:
 									<br> RELATIVE</h2>
-								<div class="relative__item relative__item--brown">1-й
-									блок позиціонування
+								<div class="relative__item relative__item--brown">1-й блок: статичний
 								</div>
-								<div class="relative__item relative__item--purple">2-й блок
+								<div class="relative__item relative__item--purple">2-й блок:
 									позиціонування
 								</div>
-								<div class="relative__item relative__item--green">3-й блок
+								<div class="relative__item relative__item--green">3-й блок:
 									позиціонування
 								</div>
 							</div>
 						</div>
 
-						<!-- Це БЛОК ABSOLUTE =======================-->
+						<!--============= Це БЛОК ABSOLUTE =======================-->
 						<div class="lessons__absolute absolute">
 							<div class="absolute__items">
 								<h2 id="section-absolute" class="absolute__title title"> ВИД
@@ -102,13 +101,13 @@
 							</div>
 						</div>
 
-						<!--============== STICKY сторонній ======================-->
+						<!--============== STICKY ======================-->
 						<div class="lessons__sticky sticky">
 							<h2 id="section-sticky" class="sticky__title title">
 								FIXED and STICKY
 							</h2>
 							<div class="sticky__items">
-								<div class="sticky__block">Блок "Stycky-1"</div>
+								<div class="sticky__block">Блок "Sticky-1"</div>
 								<div class="sticky__content">
 									<p>
 										Позиціонування в CSS — це спосіб контролю розташування елементів на
@@ -137,7 +136,7 @@
 									</p>
 								</div>
 
-								<div class="sticky__block">Блок "Stycky-2"</div>
+								<div class="sticky__block">Блок "Sticky-2"</div>
 								<div class="sticky__content">
 									<p>
 										Absolute (абсолютне позиціонування)
@@ -176,13 +175,14 @@
 								</div>
 							</div>
 						</div>
-						<!--============== завернешо STICKY сторонній ======================-->
+						<!--============== завершено блок STICKY =============-->
 
+						<!--============== Блок FIXED   ======================-->
 						<div class="lessons__fixed fixed">
 							<div id="section3" class="fixed__block">
 								<h2 id="section-fixed" class="fixed__title title">
 									Блок: FIXED,
-									<br> Я завжди видимий, згідно заданних координат (x, y, z)
+									<br> Завжди видимий
 								</h2>
 
 							</div>
@@ -198,7 +198,8 @@
 							<div class="product-category__items">
 
 								<!-- 1-е зображення -->
-								<a class="category-card" href="#"> <!-- ВСЕ зображення є посилання -->
+								<a class="category-card" href="#">
+									<!-- ВСЕ зображення є, як посилання -->
 									<div class="category-card__inner">
 										<h3 class="category-card__title">Cleansers</h3>
 										<div class="category-card__text">More</div>
@@ -247,11 +248,9 @@
 									support</li>
 							</ul>
 						</div>
-					</div><!-- product-category -->
-				</div><!-- завершення блоку homework -->
+					</div>
+				</div> <!-- завершення блоку homework -->
 			</main>
-
-			<!--========================= ПРАКТИКА по уроку ================-->
 
 			<!--==================== FOOTER =========== -->
 			<footer class="footer">
@@ -259,15 +258,13 @@
 					<h3 class="footer__title">
 						ТЕМА УРОКУ: <br>
 						"ПОЗИЦІОНУВАННЯ
-						<br>Компоненти
-						<br> Позиціонування та псевдоелементи
-						<br>Обгорка Wrapper"
+						<br>Компоненти (частово)
+						<br>Позиціонування та псевдоелементи
+						<br>Обгортка "Wrapper""
 					</h3>
 					<a href="#top" class="footer__button">НАВЕРХ</a>
 				</div>
 			</footer>
-
-		</div><!-- wrapper -->
-
+		</div><!-- завершення обгортки wrapper -->
 	</body>
 </html>
