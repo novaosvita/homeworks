@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 	<head>
 		<meta charset="UTF-8">
 		<!-- === Налаштування перегляду (адаптивності) ==== -->
@@ -12,12 +12,62 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"
 			rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+			rel="stylesheet">
 		<!-- ====== Файл  стилів ==== -->
 		<link rel="stylesheet" href="css/style.css">
 		<title>Lesson_10 Li</title>
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="main-title">
+				<h1 id="top" class="main-title__title">УРОК № 10 "ПОЗИЦІОНУВАННЯ" </h1>
+			</div>
+
+			<!-- ==== М Е Н Ю додати 3-тю вкладенність ===================== -->
+
+			<header class="header">
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--submenu">
+							<a href="#" class="menu__link">Позиціонування</a>
+							<ul class="menu__menu-sub sub-menu">
+								<li class="sub-menu__item">
+									<a href="#"
+										class="sub-menu__link sub-menu__link">Статичне</a>
+
+									<!--==== початок 3-го підменю  -->
+									<ul class="sub-menu__dropdown dropdown">
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">- Підпункт 1</a>
+										</li>
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">- Підпункт 2</a>
+										</li>
+										<li class="dropdown__item">
+											<a class="dropdown__link" href="#">- Підпункт 3</a>
+										</li>
+									</ul>
+									<!-- ==== завершення 3-го підменю -->
+								</li>
+
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Відносне</a></li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Абсолютне</a></li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Z-index</a></li>
+							</ul>
+						</li>
+						<li class="menu__item"><a href="#"
+								class="menu__link">Інформація</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Домашня</a>
+
+						</li>
+					</ul>
+				</nav>
+			</header>
 
 			<main>
 
@@ -74,7 +124,8 @@
 								<li class="list__item">Unlimited product</li>
 								<li class="list__item">Unlimited product</li>
 								<li class="list__item list__item--grey">1GB Cloud storage</li>
-								<li class="list__item list__item--grey">Email and community support</li>
+								<li class="list__item list__item--grey">Email and community
+									support</li>
 							</ul>
 						</div>
 					</div><!-- product-category -->
