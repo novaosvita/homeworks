@@ -1,9 +1,9 @@
-@import url("reset.css"); /* Файл обнулення стилів, розписаний по фунціоналу */
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
 
 body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
   font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий*/
-  font-size: 20px; /*обраний преорітетний шрифт на сторінці*/
+  font-size: 20px; /*обраний пріорітетний шрифт на сторінці*/
 }
 
 /* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
@@ -139,7 +139,7 @@ body {
 
 /* стилі при наведенні */
 .sub-menu__link:hover {
-  margin-left: 2px; /*зміщення слова вправо на 2рх*/
+  margin-left: 2px; /*зміщення пункту вправо на 2рх*/
   color: rgb(14, 10, 238); /*зміна кольору*/
   text-decoration: underline; /*підкреслення*/
 }
@@ -302,7 +302,7 @@ body {
   position: relative;
   border: 2px solid rgb(28, 99, 40);
   text-align: center;
-  overflow: auto;
+  overflow: auto; /*контейнер зі скролом,  заголовок "липне" всередині нього*/
   max-height: 300px;
 }
 .sticky__block {
@@ -383,6 +383,7 @@ body {
   padding: 0 5.53%;
   text-align: center;
   color: #ffffff;
+  vertical-align: top; /*вирівнювання карток по верхньому краю*/
 }
 
 .category-card__inner {
