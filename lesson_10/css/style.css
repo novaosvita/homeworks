@@ -11,17 +11,19 @@ body {
   position: relative; /*все базування буде від Wrapper */
   min-height: 100%;
   overflow: clip;
-  /*background-color: #b9b9b9;*/
 }
+
 /* Обмежуючий контейнер */
 [class*="__container"] {
   max-width: 1000px;
   margin: 0 auto;
 }
-/*HEADER=======*/
+/*=========== HEADER ================*/
+
 .main-title {
   background-color: #b9b9b9;
 }
+
 .main-title__title {
   font-size: 40px;
   margin: 0 auto;
@@ -30,15 +32,15 @@ body {
 }
 
 /* ==== М Е Н Ю =====================*/
-
+/*position: static; за замовчування для всих блоків*/
 .header {
   position: sticky;
-  top: 0; /*коррдинати початку старту блока*/
+  top: 0; /*координати початку старту блоку*/
   left: 0;
   right: 0;
   padding: 15px 0;
   background-color: aquamarine;
-  z-index: 100; /*самий високий прошорок по вісі Z*/
+  z-index: 100; /*самий високий прошарок по вісі Z*/
 }
 
 /* загальні стилі для меню */
@@ -54,7 +56,7 @@ body {
 
 /* виставляємо пункти меню в рядок */
 .menu__item {
-  position: relative; /*стартовий слок для поциціонування дочірних елементів absolute*/
+  position: relative; /*стартовий блок для позиціонування дочірних елементів absolute*/
   display: inline-block;
 }
 
@@ -66,7 +68,7 @@ body {
   box-shadow: 2px 2px 7px 0 #868685;
 }
 
-/* задаєм відступ пунктам окрім останнього */
+/* задаєм відступ пунктам, окрім останнього */
 .menu__item:not(:last-child) {
   margin-right: 45px; /*бокові відступи*/
 }
@@ -78,9 +80,7 @@ body {
   font-size: 20px;
 }
 
-/* позиціонування для елементу, по BEM, 
- для блоку не задають відступи та позиціонування, 
-а лише  для елементу чи модифікатору */
+/* позиціонування для елементу, по BEM */
 .menu__menu-sub {
   position: absolute;
   top: 42px;
@@ -101,7 +101,7 @@ body {
 }
 
 /*псевдоелемент "підкладки" для того щоб при
- переміщенні курсору на підменю була заповнена площа активності для курсора*/
+ переміщенні курсору на підменю була заповнена площа активності для курсору*/
 .sub-menu::before {
   content: "";
   position: absolute;
@@ -109,12 +109,11 @@ body {
   left: 0;
   width: 100%;
   height: 14px;
-  /* background-color підкладка-мостик для підменю, щою не втачалась площинність
+  /* background-color покаже підкладку-мостик для підменю, щоб не втачалась площинність
   досяжності для кліку*/
-  /*background-color: rgb(190, 84, 58);*/
 }
 
-/* стилі для стану hover при наведені на пункт меню змінює колір для посилання */
+/* стилі для стану "hover" при наведені на пункт меню */
 .menu__item:hover .menu__link {
   /*елемент "menu__item", на який  наведено курсор,
 	а "menu__link" - це нащадок, що потрібно стилізувати*/
@@ -128,7 +127,7 @@ body {
   opacity: 1;
 }
 
-/* відступ пунктам окрім останнього */
+/* відступ пунктам, окрім останнього */
 .sub-menu__item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -140,14 +139,14 @@ body {
 
 /* стилі при наведенні */
 .sub-menu__link:hover {
-  margin-left: 2px; /*зміщення слова вправо на 3рх*/
+  margin-left: 2px; /*зміщення слова вправо на 2рх*/
   color: rgb(14, 10, 238); /*зміна кольору*/
-  text-decoration: underline;
+  text-decoration: underline; /*підкреслення*/
 }
 
 /* ========= підменю ТРЕТЬОГО рівня===== */
 .dropdown {
-  position: absolute; /*базується від */
+  position: absolute; /*базується від relative найближчого*/
   left: 100%;
   top: -5px;
   padding: 8px;
@@ -161,11 +160,11 @@ body {
   transition: opacity 0.3s, visibility 0.3s; /*плавна поява блоку меню*/
 }
 
-/* місток між рівнями*/
+/* місток між 2-м і 3-м рівнями меню*/
 .dropdown::before {
   content: "";
   position: absolute;
-  left: -20px; /* місток між 2-м і 3-м рівнями */
+  left: -20px;
   top: 0;
   width: 20px;
   height: 100%;
@@ -195,8 +194,7 @@ body {
 }
 
 .dropdown__link:hover {
-  /*руханка при наведенні*/
-  margin-left: 2px; /*текст зміщується повільно*/
+  margin-left: 2px; /*текст зміщується повільно трішки вправо*/
   color: rgb(14, 10, 238);
   text-decoration: underline;
 }
@@ -204,6 +202,7 @@ body {
 /*====================== ПРАКТИЧНА РОБОТА з УРОКУ ===========================*/
 .lessons {
   background-color: #e8e9e8;
+  padding: 70px 0;
 }
 /* ===== 1 - RELATIVE ======= */
 .lessons__relative {
@@ -211,7 +210,7 @@ body {
   margin: 0 auto;
   border: 3px solid rgb(63, 221, 1);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .relative__title,
 .absolute__title,
@@ -221,38 +220,41 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   letter-spacing: 3px;
+  line-height: 1.2;
 }
+
 /* В цьому блоці додаються відступи вниз */
 .relative__block--margin {
-  margin-bottom: 40px; /*це відступ маржін, що не можна 
-  використовувати для блоку*/
+  margin-bottom: 40px; /*відступ нижній*/
 }
 .relative__item {
   text-align: center;
   padding: 15px;
 }
 .relative__item--brown {
+  /*статичний блок*/
   background-color: #975a3b;
   border: 5px solid rgb(255, 187, 2);
   padding: 30px 0;
 }
 .relative__item--purple {
-  background-color: #74810085;
-  /*position: static;це за замовчування для всих блоків*/
+  /*блок зміщений вправо*/
   position: relative;
-  top: 20px; /*зміщення блоку по Х */
-  left: 20px; /*зміщення блоку по У*/
+  background-color: #340a8385;
+  top: 10px; /*зміщення блоку по Х */
+  left: 50px; /*зміщення блоку по У*/
   z-index: 2; /*виводить шар блоку вперед на 2 одиниці*/
   border: 5px solid rgb(243, 239, 6);
   padding: 30px 0;
 }
 .relative__item--green {
+  /*блок зміщений вліво*/
   background-color: #358f80;
-  bottom: 20px; /*стартова точка починається з
+  bottom: 10px; /*стартова точка починається з
                  правого нижнього кута і відраховується звідтіля*/
   right: 50px;
   position: relative;
-  /*z-index: -1;*/ /*При мінусовій позиціїї прошарок плоку заховається на задній план*/
+  /*z-index: -1;*/ /*При мінусовій позиції прошарок блоку заховається на задній план*/
   border: 5px solid rgb(3, 199, 173);
   padding: 30px 0;
 }
@@ -260,21 +262,16 @@ body {
 /* =================== Absolute ============ */
 .lessons__absolute {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   background-color: #b9b9b9;
 }
 .absolute__items {
-  position: relative; /*базокий блок для absolute*/
+  position: relative; /*базовий блок для absolute*/
   margin: 0 auto;
-  /*max-width: 1280px;*/
-  height: 500px;
+  min-height: 500px;
   border: 3px solid rgb(63, 221, 1);
   padding: 10px;
   text-align: center;
-}
-
-.absolute__title {
-  /*padding-top: 70px;*/
 }
 
 .absolute__block:hover {
@@ -321,16 +318,16 @@ body {
 .fixed__block {
   /*Блок завжди на одному місці*/
   position: fixed;
-  top: 35%; /*буде відступати зверху на % */
-  left: 30%;
+  top: 75%; /*буде зміщенний зверху на % */
+  left: 80%; /*і зліва на %*/
   max-width: 250px;
   height: 150px;
-  background-color: rgb(72, 190, 126);
+  background-color: rgb(77, 190, 128);
   border: 3px solid rgb(63, 221, 1);
   border-radius: 0px 50px 50px 50px;
   text-align: center;
   font-size: 18px;
-  padding-top: 25px;
+  padding-top: 45px;
   box-shadow: 4px 4px 20px 4px rgb(95, 97, 95);
   z-index: 50;
   opacity: 0.85;
@@ -344,8 +341,8 @@ body {
 .homework {
   padding: 100px 0;
 }
-/* ====================== Блок з зображенням ===================== */
-/* ====  блок product-category====== */
+/* ====================== Блок з зображеннями ===================== */
+/* ====  Блок product-category  ====== */
 .product-category {
   padding: 50px 0; /*верх/низ = 50рх*/
   margin-bottom: 77px;
@@ -356,7 +353,7 @@ body {
 
 .product-category__container {
   padding-bottom: 66px; /*відступ внутрішній нижній*/
-  border-bottom: 1px solid #837f7f; /*нижня лінія кордонну*/
+  border-bottom: 1px solid #837f7f; /*нижня лінія кордону*/
 }
 
 .product-category__title {
@@ -366,9 +363,9 @@ body {
 }
 
 .product-category__items {
-  font-size: 0; /*фантомні відступи ЛИШЕ ДЛЯ  inline та inline-block
+  font-size: 0; /*фантомні відступи ЛИШЕ ДЛЯ inline та inline-block
   Це пробіл у HTML, як пробіл між словами*/
-  margin: 0 -6.2%; /*бокові відступи,змісти зображення назовні контейнера на 6.2% з кожного боку*/
+  margin: 0 -6.2%; /*бокові відступи */
 }
 
 .product-category__items:not(:last-child) {
@@ -376,7 +373,8 @@ body {
 }
 
 .product-category__items > * {
-  font-size: 16px; /*назначається повторне значення шрифту*/
+  /*ВАЖЛИВО*/
+  font-size: 16px; /*назначається повторне значення шрифту, після верхнього обнулення*/
 }
 
 .category-card {
@@ -394,7 +392,7 @@ body {
 
 .category-card__inner::before {
   /*штучно створений шар (псевдоелемент),
-	 який накладається поверх  картки?
+	 який накладається поверх картки,
 	 як темна напівпрозора плівка, 
 	 для створення затемнення при наведенні*/
   content: "";
@@ -406,9 +404,7 @@ body {
   height: 100%; /*прошарок на повне зображення*/
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none; /*курсор проходить "повз" псевдоелемент*/
-
-  /* анімація для hover ефекту */
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* анімація для hover-ефекту */
 }
 
 .category-card__inner:hover::before {
@@ -450,7 +446,8 @@ body {
   bottom: 12px;
   font-size: 17px;
 }
-/* КНОПКА ===== */
+
+/*============== КНОПКА ========== */
 .product-category__wrapper-button {
   text-align: center;
 }
@@ -469,8 +466,7 @@ body {
 }
 
 /* ====================== Блок зі списком ===================== */
-/*Позиціонування для того, щоб іконки стояли поверх li
- і не рухали його, а текст був ідеально вирівняний.*/
+/*Позиціонування в списках корисно, щоб була можливість додати динаміки*/
 .list {
   margin: 0 auto;
   max-width: 351px;
@@ -498,9 +494,9 @@ body {
   width: 32px;
   height: 32px;
   position: absolute; /*абсолютно позиціонується всередині li, 
-  а не займає своє місце у потоці*/
+  виводить з потоку*/
   left: 0;
-  top: -5px; /*зміщення вгору*/
+  top: -5px; /*зміщення */
 }
 .list__item--grey::before {
   content: "";
@@ -515,8 +511,7 @@ body {
   margin-bottom: 15px; /*відступи для всих, окрім нижнього*/
 }
 
-/* ================ФУТЕР ========================== */
-
+/* ================ ФУТЕР =====================*/
 .footer {
   text-align: center;
   padding: 30px 0;
@@ -527,10 +522,11 @@ body {
   font-weight: 500;
   color: rgb(168, 168, 168);
   line-height: 1.5;
+  padding: 20px 0;
 }
 
 .footer__button {
-  padding: 20px 10px;
+  padding: 20px 30px;
   border-radius: 10px;
   font-weight: 600;
   color: #ffffff;
