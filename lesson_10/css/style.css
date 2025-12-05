@@ -286,7 +286,7 @@ body {
   position: absolute;
   width: 350px;
   height: 250px;
-  background-color: rgb(230, 230, 103);
+  background-color: rgb(0, 110, 83);
   border: 1px solid rgb(148, 121, 1);
   border-radius: 0px 50px 50px 50px;
   top: 30%; /*координати точки початку по X*/
@@ -294,6 +294,7 @@ body {
   padding-top: 80px;
   line-height: 1.2;
   font-size: 35px;
+  box-shadow: 5px 5px 15px 0 #646464;
 }
 
 /* ================== Sticky ========== */
