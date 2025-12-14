@@ -48,6 +48,7 @@ body {
   box-shadow: 2px 2px 7px 0 #4b4b4a;
   padding: 30px 0;
   border-radius: 50px;
+  opacity: 0.95;
 }
 
 .list-section__item {
@@ -62,7 +63,8 @@ body {
   border-radius: 45px;
   text-align: center;
   box-shadow: 3px 3px 15px 0 #5e5e5d;
-  border: 3px solid rgb(156, 156, 156);
+  border: 3px solid rgb(5, 192, 145);
+  letter-spacing: 1.5px;
 }
 
 .list-section__block {
@@ -96,7 +98,7 @@ body {
 
 /* new - 1 */
 .list-section__item--translate:hover .list-section__block {
-  transform: translate(10%, 10%);
+  transform: translate(20%, 10%);
 }
 
 /*new - 2 */
@@ -171,10 +173,11 @@ body {
 /*============= ДРУГА СЕКЦІЯ - навчальний приклад ===========*/
 
 /* ============== */
-.section-practice {
+
+/*.section-practice {
   background-color: rgb(81, 233, 11);
-  min-height: 500px; /*вказати висоту, щоб був видимий блок*/
-}
+  min-height: 500px; 
+}*/
 
 /* ================ ФУТЕР =====================*/
 .footer {
