@@ -47,9 +47,10 @@ body {
   font-weight: 500;
   text-align: center;
   padding-bottom: 50px;
+  padding-top: 30px;
 }
 .section__list {
-  background-color: #02d484;
+  background-color: #02b973;
   box-shadow: 2px 2px 7px 0 #4b4b4a;
   padding: 30px 0;
   border-radius: 50px;
@@ -96,6 +97,7 @@ body {
 але для навчального зразку використовується UL - "СПИСОК" ===*/
 
 /*============ 1 - translate */
+
 /* new - 1 */
 .list-section__item--translate:hover .list-section__block {
   transform: translate(20%, 10%);
@@ -172,29 +174,191 @@ body {
 
 /*============= ДРУГА СЕКЦІЯ - навчальний приклад ===========*/
 
-/* ============== */
-
 .section-practice {
   background-color: rgb(81, 233, 11);
-  min-height: 500px;
 }
+
+.section-practice__content {
+  background-image: url("../img/levyi-i-pravyi-doroznyi-znak-na-dorozi.jpg"); /*Це зображення для фону тексту*/
+  background-size: cover; /*Покриває фоном простір блоку, може частково обрізатися*/
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  /*margin-bottom: 40px;*/
+}
+
+/* CAR */
+.car {
+  position: relative; /*базовий блок для абсолютного переміщення*/
+  width: 420px;
+  height: 270px;
+  margin-top: 250px;
+  /*margin-bottom: 50px;*/
+  margin-left: 650px;
+}
+
+.car__body {
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
+  width: 500px;
+  height: 130px;
+  background: linear-gradient(180deg, #0dbd97 0%, #005b6b 100%);
+  border-radius: 120px 100px 20px 20px;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* КРИША КУЗОВА */
+.car__roof {
+  position: absolute;
+  top: -75px;
+  left: 150px;
+  width: 300px;
+  height: 90px;
+  background: linear-gradient(180deg, #03b4b4 0%, #00876a 100%);
+  border-radius: 100px 80px 0 0;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ==== ВІКНА ===== */
+.car__window {
+  position: absolute;
+  top: -52px;
+  width: 70px;
+  height: 55px;
+  background: linear-gradient(145deg, #b0e0ff 0%, #7fc8ff 40%, #4fa0ff 100%);
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+  border: 2px solid #444;
+}
+
+.window--left {
+  /*переднє вікно*/
+  left: 43%;
+}
+
+.window--right {
+  /*заднє вікно*/
+  left: 65%;
+}
+/*===============КОЛЕСА=====================*/
+/* Основне колесо */
+.car__wheel {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, #222 40%, #000 90%);
+  border-radius: 50%;
+  bottom: 0;
+  border: 10px solid #555;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+/* Маленьке коло всередині великого кола */
+/*Псевдоелемент - це як внутрішній блок, якого немає в HTML, але його можна 
+накладати на базовий блок: спереді, по центру, або ззаді*/
+.car__wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 35%;
+  background: #999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.wheel--left {
+  left: 70px;
+}
+
+.wheel--right {
+  right: -60px;
+}
+
+/* ДВЕРІ */
+.car__door {
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  left: 200px;
+  top: 30px;
+  border: 2px solid #3a0000;
+  border-radius: 15px;
+}
+
+/* ДВЕРНА РУЧКА */
+.car__handle {
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 3px;
+  top: 45px;
+  left: 220px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ОСВІТЛЕННЯ */
+.car__light {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  top: 75px;
+}
+/* Передні фари */
+.light--front {
+  right: 0;
+  background: radial-gradient(circle, #e2dc81 0%, #bbb671 70%);
+  box-shadow: 0 0 20px 6px rgba(204, 204, 126, 0.8);
+}
+/* Залдні фари */
+.light--back {
+  left: 0;
+  background: radial-gradient(circle, #bebdbd 0%, #a7a7a7 70%);
+  box-shadow: 0 0 20px 4px rgba(202, 202, 202, 0.6);
+}
+
+/* Тінь під автомобілем */
+.car__shadow {
+  position: absolute;
+  bottom: 10px;
+  left: 60%;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(63, 63, 63, 0.5),
+    transparent 70%
+  );
+  transform: translateX(-50%);
+  filter: blur(3px);
+  z-index: 0;
+}
+/* ============== */
 
 /* ================ ФУТЕР =====================*/
 .footer {
   text-align: center;
-  padding-top: 30px;
   padding-bottom: 30px;
-  /*background-color: #6d6c6c;*/
 }
 .footer__content {
-  padding-bottom: 30px; /*відступи для внутрішнього контенту*/
+  padding-bottom: 50px; /*відступи для внутрішнього контенту*/
+}
+.footer__content--margin {
+  padding-top: 120px;
 }
 .footer__title {
   font-size: 16px;
   font-weight: 500;
   color: rgb(1, 44, 100);
   line-height: 1.5;
-  padding: 20px 0;
+  padding: 40px 0;
   letter-spacing: 1.5px; /*відстань між літерами*/
   font-weight: 700;
 }
