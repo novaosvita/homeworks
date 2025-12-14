@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_11 Li</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- ==== header ================-->
+			<header class="header">
+				<div class="header__container">
+					<div class="main-title">
+						<h1 id="top" class="main-title__title">УРОК № 11:
+							<br>
+							"ТРАНСФОРМАЦІЇ"</h1>
+					</div>
+				</div>
+			</header>
+			<!-- ==== m a i n ================-->
+			<main>
+				<div class="main__container">
+					<!-- ПЕРША СЕКЦІЯ - по темі на уроці -->
+					<section class="section">
+						<div class="section__container">
+							<!--Можна використати структуру, як окремими блоками, для навчального зразку 
+використовується "СПИСОК"-->
+
+							<div class="section__content">
+								<ul class="section__list list-section">
+									<!--1-й елемент в списку-->
+									<li class="list-section__item list-section__item--translate">
+										<div class="list-section__block">
+											ПЕРЕМІЩЕННЯ по вісям x, y
+											<br>
+											Translate (x, y)
+										</div>
+									</li>
+									<!--2-й елемент в списку-->
+									<li class="list-section__item list-section__item--scale">
+										<div class="list-section__block">
+											МАШТАБУВАННЯ (збільшення/зменшення)
+											<br>
+											Scale (x, y)
+										</div>
+									</li>
+									<!--3-й елемент в списку-->
+									<li class="list-section__item list-section__item--rotate">
+										<div class="list-section__block">
+											ПРОКРУЧУВАННЯ
+											<br>
+											Rotate (n + deg)
+										</div>
+									</li>
+									<!--4-й елемент в списку-->
+									<li class="list-section__item list-section__item--skew">
+										<div class="list-section__block">
+											НАХИЛ елементу
+											<br>
+											Skew (x + deg, y + deg)
+										</div>
+									</li>
+									<!--5-й елемент в списку-->
+									<li class="list-section__item list-section__item--groop">
+										<div class="list-section__block">
+											translate + rotate + scale
+										</div>
+									</li>
+									<!--6-й елемент в списку-->
+									<li class="list-section__item list-section__item--origin">
+										<div class="list-section__block">
+											transform-origin
+										</div>
+									</li>
+
+									<!--======================= 3 D ========================-->
+									<!-- 7 -->
+
+									<li
+										class="list-section__item list-section__item--3d list-section__item--rotate3d-all">
+										<div class="list-section__block">
+											3D-обертання навколо вісі
+										</div>
+									</li>
+									<!-- 8 -->
+									<li
+										class="list-section__item list-section__item--3d list-section__item--translate3d">
+										<div class="list-section__block">
+											3D-зміщення
+											<br>
+											transform: translate3d
+										</div>
+									</li>
+									<!-- 9 -->
+									<li
+										class="list-section__item list-section__item--3d list-section__item--scale3d">
+										<div class="list-section__block">
+											3D-маштабування
+											<br>
+											transform: scale3d
+										</div>
+									</li>
+									<!-- 10 -->
+									<li
+										class="list-section__item list-section__item--3d list-section__item--rotate3d">
+										<div class="list-section__block">
+											3D-обертання
+											<br>
+											transform: rotate3d
+										</div>
+									</li>
+									<!-- 11 -->
+									<li
+										class="list-section__item list-section__item--3d list-section__item--translate3d-group">
+										<div class="list-section__block">
+											3D-комбінування
+											<br>
+											transform: rotate3d () translate3d ()
+										</div>
+									</li>
+									<!-- 12 -->
+									<li
+										class="list-section__item list-section__item--3d list-section__item--style list-section__item--preserve-3d">
+										<div class="list-section__block">
+											Transform-style
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- ДРУГА СЕКЦІЯ - навчальний приклад -->
+					<section class="section-practice">
+						<div class="section-practice__container">
+							НОВИЙ БЛОК
+						</div>
+					</section>
+				</div>
+
+			</main>
+
+			<!--==================== FOOTER =========== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__content">
+						<h3 class="footer__title">
+							ТЕМА УРОКУ 11: <br>
+							"ТРАНСФОРМАЦІЇ"
+						</h3>
+						<a href="#top" class="footer__button">НАВЕРХ</a>
+					</div>
+				</div>
+			</footer>
+		</div><!--завершення обгортки wrapper-->
+	</body>
+</html>

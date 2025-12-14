@@ -1,0 +1,212 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
+
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 20px; /*обраний пріорітетний шрифт на сторінці*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  position: relative; /*все базування буде від Wrapper */
+  min-height: 100%;
+  overflow: clip;
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  max-width: 1280px;
+  margin-left: 50px;
+  background-color: #dfdede;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+/*=========== HEADER ================*/
+.main-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.main-title__title {
+  padding: 60px 0;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/*=========== MAIN  ================*/
+
+/*ПЕРША СЕКЦІЯ - по темі на уроці */
+
+.section {
+  padding: 30px 0;
+}
+
+.section__list {
+  background-color: #02d484;
+  box-shadow: 2px 2px 7px 0 #4b4b4a;
+  padding: 30px 0;
+  border-radius: 50px;
+}
+
+.list-section__item {
+  /*властивості кожного блоку в списку */
+  width: 350px;
+  height: 350px;
+  margin: 36px;
+  background-color: #989799;
+  display: inline-block; /*переведення блоків в рядок*/
+  position: relative; /*блок, що є базовим для позиціонування внутрішнього блоку*/
+  z-index: 0;
+  border-radius: 45px;
+  text-align: center;
+  box-shadow: 3px 3px 15px 0 #5e5e5d;
+  border: 3px solid rgb(156, 156, 156);
+}
+
+.list-section__block {
+  /*властивості підблоку, що є пунктом " блочного списку"*/
+  width: 250px;
+  height: 250px;
+  background-color: #016159;
+  background-color: #02d484;
+  position: absolute; /*незалежне позиціонування внутрішнього блоку,
+	відновно "верхнього" relative*/
+  left: 50%; /*координати зміщення*/
+  top: 50%;
+  margin-top: -125px;
+  margin-left: -125px;
+  /*зсуваємо блок назад на половину його розміру, щоб центр збігся*/
+  transition: transform 0.85s; /*період трансформації*/
+  backface-visibility: hidden; /*приховати*/
+  border-radius: 30px;
+  border: 3px solid rgb(122, 119, 119);
+  box-shadow: 2px 2px 7px 0 #5e5e5d;
+  padding-top: 100px;
+}
+
+/*=== Можна використати структуру, як окремими блоками, 
+але для навчального зразку використовується UL - "СПИСОК" ===*/
+
+/*============ 1 - translate */
+/*значення запису: для першої "дитини", при наведенні "hover", 
+необхідні відбутися зміни для блоку "list-section__block" - ПЕРЕМІЩЕННЯ по 
+заданих координатах X Y вправо та вниз*/
+
+/* new - 1 */
+.list-section__item--translate:hover .list-section__block {
+  transform: translate(10%, 10%);
+}
+
+/*new - 2 */
+.list-section__item--scale:hover .list-section__block {
+  transform: scale(1.5, 1.5);
+}
+
+/*new - 3 */
+.list-section__item--rotate:hover .list-section__block {
+  transform: rotate(-45deg);
+}
+
+/* new - 4 */
+.list-section__item--skew:hover .list-section__block {
+  transform: skewX(-45deg);
+}
+
+/* new - 5 */
+.list-section__item--groop:hover .list-section__block {
+  transform: translate(30px, 30px) rotate(70deg) scale(1.5);
+}
+
+/*  Зміна базової системи координат (по замовчуванню - центр)*/
+/* new - 6 */
+.list-section__item--origin:hover .list-section__block {
+  transform-origin: 20% 30%;
+  transform: rotate(150deg);
+}
+
+/*=========== 3 D ==========*/
+/* ===== perspective ======*/
+.list-section__item--3d {
+  perspective: 500px;
+  perspective-origin: center;
+}
+
+/*===== transform-style / зберігає 3D-глибину ======*/
+.list-section__item--preserve-3d {
+  transform-style: flat; /*flat — сплющує 3D*/
+}
+
+/* 7- new 3d */
+.list-section__item--rotate3d-all:hover .list-section__block {
+  transform: rotate3d(1, 1, 1, 50deg);
+}
+
+/* 8 - new 3d */
+.list-section__item--translate3d:hover .list-section__block {
+  transform: translate3d(30px, 40px, 30px);
+}
+
+/* 9 - new 3d */
+.list-section__item--scale3d:hover .list-section__block {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+
+/* 10 - new 3d */
+.list-section__item--rotate3d:hover .list-section__block {
+  transform: rotate3d(1, 1, 1, -65deg);
+}
+
+/* 11 - new 3d */
+.list-section__item--translate3d-group:hover .list-section__block {
+  transform: translate3d(30px, 30px, 30px) rotate3d(1, 1, 1, 80deg);
+}
+
+/* 12 - new 3d */
+.list-section__item--style:hover .list-section__block {
+  transform: rotateY(150deg);
+}
+
+/*============= ДРУГА СЕКЦІЯ - навчальний приклад ===========*/
+
+/* ============== */
+.section-practice {
+  background-color: rgb(81, 233, 11);
+  min-height: 500px; /*вказати висоту, щоб був видимий блок*/
+}
+
+/* ================ ФУТЕР =====================*/
+.footer {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*background-color: #6d6c6c;*/
+}
+.footer__content {
+  padding-bottom: 30px; /*відступи для внутрішнього контенту*/
+}
+.footer__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(1, 44, 100);
+  line-height: 1.5;
+  padding: 20px 0;
+  letter-spacing: 1.5px; /*відстань між літерами*/
+  font-weight: 700;
+}
+
+.footer__button {
+  padding: 20px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #616161;
+  letter-spacing: 2px; /*відствнь між літерами*/
+  border: 3px solid rgb(102, 101, 101);
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  background-color: #888888;
+}
