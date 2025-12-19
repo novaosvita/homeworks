@@ -12,7 +12,7 @@ body {
   min-height: 100%;
   overflow: hidden;
   background-color: #dfdede;
-  background-image: url("../img/levyi-i-pravyi-doroznyi-znak-na-dorozi.jpg");
+  background-image: url("../img/levyi-i-pravyi-doroznyi-znak-na-dorozi.avif");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -285,3 +285,4 @@ infinite — анімація повторюється нескінченно */
   z-index: 0;
 }
 /* ============================================*/
+
