@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+			rel="stylesheet">
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_11 Li</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- ==== header ================-->
+			<header class="header">
+				<div class="header__container">
+					<div class="header__main-title">
+						<h1 id="top" class="header__title title">УРОК № 12:
+							<br>
+							Анімація транспортного засобу</h1>
+						<div class="header__description">
+							<p>Все про анімації</p>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- ==== m a i n ================-->
+			<main class="main">
+				<div class="main__container">
+
+					<!-- СЕКЦІЯ - навчальний приклад ПОБУДОВИ CSS-АВТОМОБИЛЯ -->
+					<section class="section-practice">
+						<div class="section-practice__container">
+							<div class="section-practice__content">
+								<h2 class="section-practice__title title">ПРАКТИЧНЕ ЗАВДАННЯ
+								</h2>
+								<div class="section-practice__car car">
+									<!-- Кузов автомобіля -->
+									<div class="car__body">
+										<!--<div class="cloud cloud1"></div>-->
+										<!--<div class="sun sun1"></div>-->
+										<!-- Криша -->
+										<div class="car__roof"></div>
+										<!-- Вікна -->
+										<div class="car__window car__window--left"></div>
+										<div class="car__window car__window--right"></div>
+										<!-- Двері -->
+										<div class="car__door"></div>
+										<!-- Ручка дверна -->
+										<div class="car__handle"></div>
+										<!-- Освітлення (фари) -->
+										<div class="car__light car__light--front"></div>
+										<div class="car__light car__light--back"></div>
+									</div>
+									<!-- КОЛЕСА -->
+									<div class="car__wheel car__wheel--left"></div>
+									<div class="car__wheel car__wheel--right"></div>
+									<!-- тінь автомобіля зовнішня нижня  -->
+									<div class="car__shadow"></div>
+
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+		</div><!--завершення обгортки wrapper-->
+	</body>
+</html>

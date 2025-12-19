@@ -1,0 +1,318 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
+
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 20px; /*обраний пріорітетний шрифт на сторінці*/
+}
+
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  position: relative; /*все базування буде від Wrapper */
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #dfdede;
+  background-image: url("../img/levyi-i-pravyi-doroznyi-znak-na-dorozi.jpg");
+  background-size: cover;  
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  max-width: 3500px;
+  margin: 0 auto;
+}
+
+/*=========== HEADER ================*/
+.header {
+  padding-top: 50px;
+  text-align: center;
+    color: #3c3c3c;
+}
+
+.header__main-title {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+.header__title {
+}
+.title {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-top: 30px;
+}
+
+.header__description{
+	font-size: 26px;
+	letter-spacing: 3px;
+}
+/*=========== MAIN  ================*/
+
+/* ======================================================================== */
+/*=============  СЕКЦІЯ - навчальний приклад CSS-АВТОМОБІЛЬ ===========*/
+
+.section-practice {
+  text-align: center;
+}
+
+.section-practice__content {
+  /*Це зображення для фону тексту*/
+  background-size: cover; /*Покриває фоном простір блоку, може частково обрізатися*/
+  background-repeat: no-repeat;
+  border-bottom: 5px solid rgb(164, 164, 164);
+}
+
+.section-practice__title {
+  color: #3c3c3c;
+  font-size: 28px;
+}
+
+/* ======================== */
+
+/* CAR */
+.car {
+  position: relative; /*базовий блок для абсолютного переміщення*/
+  width: 420px;
+  height: 270px;
+  margin-top: 120px;
+  animation: drive 5s linear infinite, bounce 1s ease-in-out infinite;
+}
+
+/* =============== рух авто зліва на право===  */
+@keyframes drive {
+  0% {
+    /* Починаємо далеко праворуч (наприклад, 100% ширини екрана) */
+    left: 110%;
+  }
+  100% {
+    /* Закінчуємо далеко ліворуч (мінус ширина машини, щоб вона зникла) */
+    left: -600px;
+  }
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* ================ КУЗОВ ================ */
+.car__body {
+  position: absolute; /*relative на wrapper*/
+  left: 20px;
+  bottom: 60px;
+  width: 500px;
+  height: 130px;
+  background: linear-gradient(180deg, #0dbd97 0%, #005b6b 100%);
+  border-radius: 120px 100px 20px 20px;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* КРИША КУЗОВА */
+.car__roof {
+  position: absolute;
+  top: -75px;
+  left: 150px;
+  width: 300px;
+  height: 90px;
+  background: linear-gradient(180deg, #03b4b4 0%, #00876a 100%);
+  border-radius: 100px 80px 0 0;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ==== ВІКНА ===== */
+.car__window {
+  position: absolute;
+  top: -52px;
+  width: 70px;
+  height: 55px;
+  background: linear-gradient(145deg, #b0e0ff 0%, #7fc8ff 40%, #4fa0ff 100%);
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+  border: 2px solid #444;
+}
+
+.car__window--left {
+  /*переднє вікно*/
+  left: 43%;
+}
+
+.car__window--right {
+  /*заднє вікно*/
+  left: 65%;
+}
+/*=============== КОЛЕСА =====================*/
+/* Основне колесо */
+.car__wheel {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, #222 40%, #000 90%);
+  border-radius: 50%;
+  bottom: 0;
+  border: 10px solid #555;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 3;
+  animation: spin 0.4s linear infinite;
+  border: 4px dashed #fff; /* Пунктир, щоб бачити рух */
+}
+
+/* Маленьке коло всередині великого кола через */
+/*Псевдоелемент - це як внутрішній блок, якого немає в HTML, але його можна 
+накладати на базовий блок: спереді, по центру, або ззаді*/
+.car__wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 35%;
+  background: #999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+
+  border: 3px dashed #fff; /* Пунктир, щоб бачити рух */
+}
+
+.car__wheel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 3px;
+  background: #ccc;
+  transform-origin: left center;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.car__wheel--left {
+  left: 70px;
+}
+
+.car__wheel--right {
+  right: -60px;
+}
+
+/* ДВЕРІ */
+.car__door {
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  left: 200px;
+  top: 30px;
+  border: 2px solid #3a0000;
+  border-radius: 15px;
+}
+
+/* ДВЕРНА РУЧКА */
+.car__handle {
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 3px;
+  top: 45px;
+  left: 220px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ОСВІТЛЕННЯ */
+.car__light {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  top: 75px;
+}
+
+/* Передні фари */
+.car__light--front {
+  right: 0;
+  background: radial-gradient(circle, #e2dc81 0%, #bbb671 70%);
+  box-shadow: 0 0 20px 6px rgba(204, 204, 126, 0.8);
+}
+/* Задні фари */
+.car__light--back {
+  left: 0;
+  background: radial-gradient(circle, #bebdbd 0%, #a7a7a7 70%);
+  box-shadow: 0 0 20px 4px rgba(202, 202, 202, 0.6);
+}
+
+/* Тінь під автомобілем */
+.car__shadow {
+  position: absolute;
+  bottom: 10px;
+  left: 60%;
+  width: 100%;
+  height: 30px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(63, 63, 63, 0.5),
+    transparent 70%
+  );
+  transform: translateX(-50%);
+  filter: blur(3px);
+  z-index: 0;
+}
+/* ============================================*/
+
+/* ================ ФУТЕР =====================*/
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footer__content {
+  padding-bottom: 50px; /*відступи для внутрішнього контенту*/
+  background-color: #686767;
+}
+.footer__content--margin {
+  padding-top: 40px;
+}
+.footer__title {
+  font-size: 16px;
+  /*font-weight: 500;*/
+  color: rgb(201, 200, 200);
+  line-height: 1.5;
+  padding: 10px 0;
+  letter-spacing: 2px; /*відстань між літерами*/
+  font-weight: 700;
+}
+
+.footer__button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #d4d4d4;
+  letter-spacing: 3px; /*відствнь між літерами*/
+  border: 3px solid rgb(102, 101, 101);
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  background-color: #888888;
+}
+
+/* ====================================================================== */
