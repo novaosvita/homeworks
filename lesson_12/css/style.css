@@ -53,7 +53,7 @@ body {
 /*=== навчальний приклад CSS-анімації ==*/
 
 .section-practice {
-  text-align: center;=
+  text-align: center;
 }
 
 .section-practice__content {
@@ -211,12 +211,14 @@ infinite — анімація повторюється нескінченно */
 }
 
 /* ======================= */
-.car__wheel--left { /*переднє колесо*/
+.car__wheel--left {
+  /*переднє колесо*/
   left: 70px;
 }
 
-.car__wheel--right { /*заднє колесо*/
-   right: 10px;
+.car__wheel--right {
+  /*заднє колесо*/
+  right: 10px;
 }
 
 /* ДВЕРІ */
