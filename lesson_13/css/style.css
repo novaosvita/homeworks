@@ -1,0 +1,201 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css);
+
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Montserrat", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  display: flex; /*Const - на всю обгортку*/
+  flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+  position: relative; /* базування буде від Wrapper */
+  min-height: 100%;
+  overflow: clip;
+  /*font-family: Lato, sans-serif;*/
+}
+.wrapper > main {
+  flex-grow: 1; /*"Const" буде розтігуватися максимально
+	по висоту на величину екрану*/
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1392px;
+  /*background-color: rgb(94, 97, 96);*/
+  /*border: 3px solid red;*/
+}
+
+/*=========== HEADER ================*/
+.header {
+  padding-top: 50px;
+  text-align: center;
+  color: #333333;
+}
+.header__container {
+  background-color: #f7f7f5;
+}
+.header__main-title {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+.title {
+  /*font-size: 40px;*/
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header__description {
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+/*=========== MAIN ==================*/
+
+/* ======== section featured-products ====== */
+.featured-products,
+.why-choose-us {
+  padding: 82px 15px; /*Спільні стилі для двох секцій*/
+}
+.featured-products__title,
+.why-choose-us__title {
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  line-height: 125%; /* 40px/32px */
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  text-align: center;
+}
+/*  */
+.list-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 72px;
+}
+
+.list-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 36px;
+}
+
+.list-products__card {
+  flex: 0 1 440px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.list-products__image {
+  /*background-color: aqua;*/
+  /* додати властивості для блоку */
+}
+.list-products__content {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.list-products__title {
+  font-family: "Lato", sans-serif;
+  line-height: 125%; /* 20px/16 */
+  text-transform: uppercase;
+}
+
+.list-products__title:not(:last-child) {
+  /*відступ лише для фінішного елемента*/
+  margin-bottom: 12px;
+}
+
+.list-products__stars:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.list-products__price p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  line-height: 140%; /* 28px/20 */
+}
+/* ========================= */
+
+.why-choose-us__title--margin-bottom {
+  margin-bottom: 72px;
+}
+.list-features {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 68px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.list-features__item {
+  flex: 0 1 348px;
+}
+
+/*.list-features__image {
+	
+}*/
+
+.list-features__image:not(:last-child) {
+  margin-bottom: 24px;
+}
+.list-features__label {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  line-height: 125%; /* 20px/16 */
+  text-transform: uppercase;
+}
+.list-features__label:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.list-features__text p {
+  color: #7e7f7c;
+  line-height: 125%; /* 20px/16px */
+}
+
+/* ============== ФУТЕР ==============*/
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footer__content {
+  padding-bottom: 50px; /*відступи для внутрішнього контенту*/
+  background-color: #686767;
+}
+.footer__content--margin {
+  padding-top: 40px;
+}
+.footer__title {
+  /*font-size: 16px;*/
+  color: rgb(201, 200, 200);
+  line-height: 1.5;
+  padding: 10px 0;
+  letter-spacing: 2px; /*відстань між літерами*/
+  font-weight: 700;
+}
+
+.footer__button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #d4d4d4;
+  letter-spacing: 3px; /*відствнь між літерами*/
+  border: 3px solid rgb(102, 101, 101);
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  background-color: #888888;
+}
