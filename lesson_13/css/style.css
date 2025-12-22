@@ -15,20 +15,17 @@ body {
   position: relative; /* базування буде від Wrapper */
   min-height: 100%;
   overflow: clip;
-  /*font-family: Lato, sans-serif;*/
+  
 }
 .wrapper > main {
-  flex-grow: 1; /*"Const" буде розтігуватися максимально
-	по висоту на величину екрану*/
+  flex-grow: 1; /*"Const" для всих сторінок */
 }
 
 /* Обмежуючий контейнер */
 [class*="__container"] {
   margin: 0 auto;
   max-width: 1392px;
-  /*background-color: rgb(94, 97, 96);*/
-  /*border: 3px solid red;*/
-}
+  }
 
 /*=========== HEADER ================*/
 .header {
@@ -45,8 +42,7 @@ body {
 }
 
 .title {
-  /*font-size: 40px;*/
-  letter-spacing: 3px;
+   letter-spacing: 3px;
   font-weight: 700;
   line-height: 1.2;
   padding-top: 30px;
@@ -70,35 +66,29 @@ body {
   font-size: 32px;
   font-family: "Lato", sans-serif;
   font-weight: 800;
-  line-height: 125%; /* 40px/32px */
+  line-height: 1.25; /* 40px/32px */
   text-transform: uppercase;
   margin-bottom: 36px;
   text-align: center;
 }
 /*  */
 .list-tabs {
-  display: flex;
+  display: flex; /*гнучкий контейнер з флекс-елементами*/
   justify-content: center;
-  gap: 48px;
+  gap: 48px; /*відступи*/
   margin-bottom: 72px;
 }
 
 .list-products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px 36px;
+  display: flex;  /*гнучкий контейнер з флекс-елементами*/
+  flex-wrap: wrap; /*можливість перенесення*/
+  gap: 72px 36px; /*горизонтальні - вертикальні відступи*/
 }
 
 .list-products__card {
-  flex: 0 1 440px;
-  transform: scale(1);
-  transition: all 0.5s;
+  flex: 0 1 440px; /*елементи не збільшуються, зменшуються і мають базовий розмір*/
 }
 
-.list-products__image {
-  /*background-color: aqua;*/
-  /* додати властивості для блоку */
-}
 .list-products__content {
   padding-top: 32px;
   text-align: center;
@@ -106,7 +96,7 @@ body {
 
 .list-products__title {
   font-family: "Lato", sans-serif;
-  line-height: 125%; /* 20px/16 */
+  line-height: 1.25; /* 20px/16 */
   text-transform: uppercase;
 }
 
@@ -123,16 +113,16 @@ body {
   font-size: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 800;
-  line-height: 140%; /* 28px/20 */
+  line-height: 1.4; /* 28px/20 */
 }
-/* ========================= */
+/* ======== why-choose ================= */
 
 .why-choose-us__title--margin-bottom {
   margin-bottom: 72px;
 }
 .list-features {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  /*гнучкий контейнер з флекс-елементами*/
+  flex-wrap: wrap; /*перенесення на інший рядок*/
   text-align: center;
   gap: 68px;
   max-width: 1180px;
@@ -142,17 +132,13 @@ body {
   flex: 0 1 348px;
 }
 
-/*.list-features__image {
-	
-}*/
-
 .list-features__image:not(:last-child) {
   margin-bottom: 24px;
 }
 .list-features__label {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  line-height: 125%; /* 20px/16 */
+  line-height: 1.25; /* 20px/16 */
   text-transform: uppercase;
 }
 .list-features__label:not(:last-child) {
@@ -161,7 +147,7 @@ body {
 
 .list-features__text p {
   color: #7e7f7c;
-  line-height: 125%; /* 20px/16px */
+  line-height: 1.25; /* 20px/16px */
 }
 
 /* ============== ФУТЕР ==============*/
@@ -177,7 +163,6 @@ body {
   padding-top: 40px;
 }
 .footer__title {
-  /*font-size: 16px;*/
   color: rgb(201, 200, 200);
   line-height: 1.5;
   padding: 10px 0;
@@ -190,7 +175,7 @@ body {
   border-radius: 30px;
   font-weight: 500;
   color: #d4d4d4;
-  letter-spacing: 3px; /*відствнь між літерами*/
+  letter-spacing: 3px; /*відстань між літерами*/
   border: 3px solid rgb(102, 101, 101);
 }
 
