@@ -1,0 +1,229 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css);
+
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Lato", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+  display: flex; /*Const - на всю обгортку*/
+  flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+  position: relative; /* базування буде від Wrapper */
+  min-height: 100%;
+  overflow: clip;
+}
+.wrapper > main {
+  flex-grow: 1; /*"Const" для всих сторінок */
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1422px;
+  padding: 0 15px;
+}
+
+/*=========== HEADER ================*/
+.header {
+  padding-top: 50px;
+  text-align: center;
+  color: #333333;
+}
+.header__container {
+  background-color: #f7f7f5;
+}
+.header__main-title {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+.title {
+  letter-spacing: 3px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header__description {
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+/*=========== MAIN ==================*/
+
+.register__header {
+  padding: 82px 0;
+  text-align: center;
+}
+.register__title {
+  margin-bottom: 36px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25; /* 40/32 */
+  text-transform: uppercase;
+}
+.register__subtitle {
+  color: #7e7f7c;
+  font-weight: 700;
+  line-height: 1.25; /* 20/16 */
+}
+.register__body {
+  padding: 82px 0;
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+}
+
+/* ================================= */
+
+.form-block {
+  flex-basis: 712px;
+}
+.form-block__title {
+  margin-bottom: 36px;
+}
+.form-block__subtitle {
+  font-weight: 500;
+  line-height: 1.25; /* 20/16 */
+  color: #7e7f7c;
+  margin-bottom: 72px;
+}
+.form-block__link {
+  font-weight: 700;
+  line-height: 1.25; /* 20/16 */
+  color: #2f302c;
+}
+.form-block__link:hover {
+  text-decoration: underline;
+}
+.form-block__form {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.form-block__body {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.form-block__row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+.form-block__name,
+.form-block__email,
+.form-block__password,
+.form-block__password-reset {
+  flex-basis: 336px;
+  max-width: 100%;
+}
+.form-block__phone {
+  max-width: 100%;
+}
+.form-block__input:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.form-block__input {
+  padding: 12px 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+.form-block__button {
+  max-width: 336px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25; /* 20/16 */
+  color: #fff;
+  background-color: #2f302c;
+  transition-duration: 0.3s;
+}
+.form-block__button:hover {
+  background-color: #585858;
+}
+.form-block__button:active {
+  background-color: #2f302c;
+}
+
+/* ============================================= */
+
+.offer-block {
+  min-height: 496px;
+  padding: 60px 80px;
+  position: relative;
+  overflow: hidden;
+  flex-basis: 600px;
+  background-color: #f6f6f6;
+}
+.offer-block__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer-block__info {
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+}
+.offer-block__badge {
+  padding: 4px 8px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.25; /* 20/16 */
+  text-transform: uppercase;
+  background-color: #ce0000;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+/* =========================================================== */
+
+/* ============== ФУТЕР ==============*/
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footer__content {
+  padding-bottom: 50px; /*відступи для внутрішнього контенту*/
+  background-color: #686767;
+}
+.footer__content--margin {
+  padding-top: 40px;
+}
+.footer__title {
+  color: rgb(201, 200, 200);
+  line-height: 1.5;
+  padding: 10px 0;
+  letter-spacing: 2px; /*відстань між літерами*/
+  font-weight: 700;
+}
+
+.footer__button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #d4d4d4;
+  letter-spacing: 3px; /*відстань між літерами*/
+  border: 3px solid rgb(102, 101, 101);
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  background-color: #888888;
+}
