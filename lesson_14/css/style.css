@@ -31,11 +31,10 @@ body {
 .header {
   padding-top: 50px;
   text-align: center;
-  color: #333333;
+  color: #272727;
+  background-color: #cecece;
 }
-.header__container {
-  background-color: #f7f7f5;
-}
+
 .header__main-title {
   font-size: 30px;
   padding-bottom: 50px;
@@ -57,34 +56,39 @@ body {
 /*=========== MAIN ==================*/
 
 .register__header {
-  padding: 82px 0;
+  /*Шапка блоку*/
+  padding: 82px 0; /*верхні та нижні відступи, як в макеті*/
   text-align: center;
 }
 .register__title {
-  margin-bottom: 36px;
+  margin-bottom: 36px; /*нижній відступ під заголовком*/
 }
 .title {
+  /*стилі заголовка*/
   font-size: 32px;
   font-weight: 800;
   line-height: 1.25; /* 40/32 */
   text-transform: uppercase;
 }
 .register__subtitle {
+  /*підзаголовок*/
   color: #7e7f7c;
   font-weight: 700;
   line-height: 1.25; /* 20/16 */
 }
+/* Стилі блоку реєстрації */
 .register__body {
-  padding: 82px 0;
-  display: flex;
-  gap: 80px;
+  /*гнучкий блок флекс*/
+  display: flex; /*гнучкий контейнер*/
+  padding: 82px 0; /*верхній відступ*/
+  gap: 80px; /*внутрішні вдступи між елементами*/
   justify-content: space-between;
 }
 
 /* ================================= */
-
+/*Стилі для форми реєстрації*/
 .form-block {
-  flex-basis: 712px;
+  flex-basis: 712px; /*стартова ширина*/
 }
 .form-block__title {
   margin-bottom: 36px;
@@ -95,47 +99,57 @@ body {
   color: #7e7f7c;
   margin-bottom: 72px;
 }
+/* посилання */
 .form-block__link {
   font-weight: 700;
   line-height: 1.25; /* 20/16 */
   color: #2f302c;
 }
+/* підкреслення посилання прии наведенні */
 .form-block__link:hover {
   text-decoration: underline;
 }
+
 .form-block__form {
   display: flex;
   flex-direction: column;
   gap: 72px;
 }
+/* Блок складається з двох блоків */
 .form-block__body {
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
+  display: flex; /*гнучка властивість*/
+  gap: 40px; /*внутрішні відступи міє дочічними елементами*/
+  flex-direction: column; /*колонки*/
 }
+/* колонки сладаються з рядків */
 .form-block__row {
   display: flex;
   gap: 40px;
   justify-content: space-between;
 }
+/* Стиля для схожих елементів */
 .form-block__name,
 .form-block__email,
 .form-block__password,
 .form-block__password-reset {
-  flex-basis: 336px;
-  max-width: 100%;
+  flex-basis: 336px; /*стартова ширина елементів*/
+  max-width: 100%; /*займає всю ширину батьківського блоку*/
 }
+
 .form-block__phone {
   max-width: 100%;
 }
+/* Фокусування на полі введення даних */
 .form-block__input:focus {
-  outline: none;
-  border-bottom: 1px solid #000;
+  outline: none; /*вимкнення обводки для поля введення*/
+  border-bottom: 1px solid #000; /*нижнє пікреслення поля введення даних*/
 }
+
 .form-block__input {
   padding: 12px 0;
   border-bottom: 1px solid #d4d4d4;
 }
+/* Стиля для кнопки */
 .form-block__button {
   max-width: 336px;
   padding: 12px;
@@ -146,23 +160,25 @@ body {
   background-color: #2f302c;
   transition-duration: 0.3s;
 }
+/* Стилі кнопки при наведенні */
 .form-block__button:hover {
   background-color: #585858;
 }
+/* Стиль кнопки при активації */
 .form-block__button:active {
   background-color: #2f302c;
 }
 
-/* ============================================= */
-
+/* =========== БЛОК ПРОПОЗИЦІЇ ================= */
 .offer-block {
+  position: relative; /*Стартовий блок для позиціонування доцірних елементів*/
   min-height: 496px;
   padding: 60px 80px;
-  position: relative;
   overflow: hidden;
-  flex-basis: 600px;
+  flex-basis: 600px; /*стартова ширина*/
   background-color: #f6f6f6;
 }
+/* Стилі для зображення */
 .offer-block__image {
   position: absolute;
   top: 0;
@@ -171,15 +187,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.offer-block__info {
-  position: relative;
-  height: 100%;
 
-  display: flex;
+.offer-block__info {
+  display: flex; /*гнучкий блок*/
+  position: relative; /*позиціонування*/
+  height: 100%;
   flex-direction: column;
   justify-content: end;
   align-items: flex-start;
 }
+/* блок "HOT" */
 .offer-block__badge {
   padding: 4px 8px;
   color: #fff;
@@ -191,39 +208,40 @@ body {
   margin-bottom: 24px;
 }
 
-/* =========================================================== */
+/* =================================== */
 
 /* ============== ФУТЕР ==============*/
 .footer {
   text-align: center;
   padding-bottom: 20px;
-}
-.footer__content {
-  padding-bottom: 50px; /*відступи для внутрішнього контенту*/
   background-color: #686767;
 }
+.footer__content {
+  padding-bottom: 20px; /*відступи для внутрішнього контенту*/
+}
 .footer__content--margin {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .footer__title {
   color: rgb(201, 200, 200);
   line-height: 1.5;
   padding: 10px 0;
   letter-spacing: 2px; /*відстань між літерами*/
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .footer__button {
-  padding: 15px 30px;
+  padding: 10px 40px;
   border-radius: 30px;
-  font-weight: 500;
+  font-weight: 700;
   color: #d4d4d4;
   letter-spacing: 3px; /*відстань між літерами*/
-  border: 3px solid rgb(102, 101, 101);
+  border: 2px solid rgb(114, 114, 114);
 }
 
 .footer__button:hover {
   /*При наведенні*/
-  box-shadow: 3px 3px 3px rgb(220, 220, 233);
+  box-shadow: 3px 3px 5px rgb(220, 220, 233);
   background-color: #888888;
 }
