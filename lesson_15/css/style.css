@@ -1,0 +1,345 @@
+@import url("reset.css"); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css); /*файл додатковиш шрифтів, автономних, що зберігаються в папці*/
+
+body {
+  /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+  font-family: "Lato", sans-serif; /*шрифт підключений  мережевий*/
+  font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
+  line-height: 1.25;
+  color: #2f302c;
+  background-color: #fff;
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
+.wrapper {
+  position: relative; /* базування буде від Wrapper */
+  display: flex; /*Const - на всю обгортку*/
+  flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+  min-height: 100%;
+  overflow: clip;
+}
+/*=== Властивість для блоку main, що входить до обгортики wrapper*/
+.wrapper > main {
+  flex-grow: 1; /*"Const" для всих блоків "MAIM" на сторінці,
+   "1"-тобто завжди зростає на весь в*юпорт */
+}
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1422px; /*1392+15+15=1422*/
+  padding-left: 15px; /*відступи безпеки*/
+  padding-right: 15px; /*відступи безпеки*/
+  /*background-color: rgb(110, 154, 65);*/
+}
+
+/*=========== HEADER ================*/
+.header {
+  padding-top: 60px; /*відступи верх/низ*/
+  padding-bottom: 60px;
+  font-weight: 700;
+  text-transform: uppercase; /*більшість літер - великі*/
+}
+.header__wrapper {
+  display: flex; /*застосовуємо модуль флекс для розподілення простору*/
+  flex-wrap: wrap; /*при зменшенні сторінки елементи переміщаються на інший рядок,
+   коли простору їм буде не достатньо*/
+  justify-content: space-between; /*Перший елемент «прилипає» до початку ряду, останній — до кінця, 
+ простір між елементами рівномірно розподіляється*/
+  align-items: center;
+  column-gap: 80px;
+  row-gap: 30px;
+}
+
+.header__menu {
+  margin-right: auto; /*вільний простір розтягується справа
+   і штовхає інші елементи*/
+}
+
+/* АДАПТИВ */
+/* Медіа-запити до розмірів пристроїв, згвдно умов, що вказана в дужках,
+якщо умова виконуються вступають в дію НОВІ css-властивості*/
+
+@media (width <=1440px) {
+  /*УМОВА <=1440*/
+  .header__search {
+    margin-right: auto; /*вільний простір розтягується справа
+   і штовхає інші елементи*/
+  }
+  .header__menu {
+    margin-right: 0; /*зникає відступ справа*/
+  }
+}
+
+@media (width <=1200px) {
+  /*при умові ширини в*юпорта 1200рх,
+	відступи зменшаться*/
+  .header {
+    padding-top: 30px; /*відступи верх/низ*/
+    padding-bottom: 30px;
+  }
+
+  .header__menu {
+    margin-right: 0; /*відступи справа = нулю*/
+  }
+}
+/* ====================================== */
+
+/*============= 1- Блок  LOGO ============*/
+.logo {
+  flex: 0 0 200px; /*це елемент гнучкої конструкціх флекс, розміри стабільні*/
+}
+.logo__img {
+  width: 100%; /*займає простір батьківського блоку*/
+  height: 42px; /*висота 42 рх*/
+  object-fit: contain;
+}
+/* ==================== */
+
+/*===== 2 - Блок SEARCH ======*/
+.search {
+  flex: 0 0 264px; /*це елемент гнучкої конструкціх флекс, розміри стабільні*/
+  border-bottom: 1px solid #d4d4d4; /*підкреслення*/
+  max-width: 300px; /*це обмежує рядок для запису пошуку*/
+}
+
+.search__label {
+  /*елемент форми*/
+  display: flex; /*внутрішній флекс-блок*/
+  align-items: center;
+  column-gap: 12px; /*відстань між елементами*/
+}
+
+.search__icon {
+  /*рощзміри пошукової іконки*/
+  width: 20px;
+  height: 20px;
+}
+
+.search__input {
+  /*стилі рядка для вводу пошуку*/
+  height: 44px;
+  outline: none; /*не пвиділяється рядок*/
+}
+
+.search__input::placeholder {
+  /*показує підказку*/
+  font-size: 16px;
+  font-weight: 500;
+  color: #7e7f7c;
+}
+
+@media (width <=1200px) {
+  /*умова брекпоінту, якщо ширина в*юпорта менше або = 1200рх,
+	спрацює запит на зміну відображення на екрані*/
+  .search {
+    flex-grow: 1; /* займає весь доступний простір*/
+  }
+}
+/* ====================== */
+
+/*======== 3 - Блок MENU ====== */
+.menu__list {
+  display: flex; /*це елемент гнучкої конструкціх флекс*/
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 44px;
+}
+
+.menu__item {
+  position: relative; /* базовий блок для позиціонування*/
+}
+
+.menu__link {
+  transition: all 0.3s; /*тривалість плавного переходу 0,3сек*/
+}
+
+.menu__link:hover {
+  opacity: 0.5; /*зміна прозорості при наведенні*/
+}
+
+.menu__link--arrow::after {
+  /* додає стрілочку вниз, ніби меню має підменю*/
+  content: "";
+  position: absolute; /*позиціонується*/
+  width: 20px;
+  height: 20px;
+  background-image: url("../icons/chevron-down.svg");
+  background-repeat: no-repeat;
+}
+/* ==================== */
+
+/*===== 4 Блок ACTIONS ===== */
+
+.actions__list {
+  display: flex; /*це елемент гнучкої конструкціх флекс*/
+  align-items: center;
+  column-gap: 44px;
+}
+
+.actions__link {
+  display: flex; /*внутрішній гнучкий блок*/
+  align-items: center;
+  column-gap: 4px;
+  transition: all 0.3s; /*тривалість плавного переходу 0,3сек*/
+}
+
+.actions__link:hover {
+  /*перехід прозорості при наведенні*/
+  opacity: 0.5;
+}
+
+/*=========== MAIN ==================*/
+
+/*=========== секція HERO ==================*/
+.hero {
+  position: relative; /*стартовий блок для позиціонування елементів в середині*/
+  padding-top: 114px;
+  padding-bottom: 110px;
+  color: #2f302c;
+  background: url("../img/hero_image.avif") center / cover no-repeat;
+  z-index: 1; /*по вісі z - виступає на передній план*/
+}
+
+.hero__content {
+  max-width: 650px;
+  margin-left: auto; /*Автоматично заповнює вільний простір зліва*/
+}
+
+.hero__content > * {
+  /*=== >*  - стосується всих прямих дочірних елементів */
+  margin-bottom: 20px;
+}
+
+.hero__content > *:last-child {
+  /*вибирає останній елемент серед дочірніх*/
+  margin-bottom: 0;
+}
+
+.hero__title {
+  /*ЗАГОЛОВОК*/
+  position: relative;
+  margin-bottom: 52px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+/*Підзаголовок*/
+.hero__subtitle p {
+  /*властивості для параграфу, що розміщений в діві*/
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -16px;
+  left: 10px;
+  width: 47.38%;
+  height: 1px;
+  background-color: #2f302c;
+}
+
+.hero__title-span {
+  font-weight: 700;
+}
+
+.hero__text p {
+  /*властивості для параграфу, що розміщений в верхньому діві*/
+  max-width: 374px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #7e7f7c;
+}
+/*======= АДАПТИВНІСТЬ =======*/
+@media (width <=768px) {
+  /*при зменшенному екрані в 768 рх, 
+	будуть змінені властивості*/
+  .hero {
+    padding-block: 50px;
+    background-position: left center;
+    color: #fff;
+  }
+
+  .hero__content {
+    margin-left: 0;
+  }
+
+  .hero__title::after {
+    background-color: #fff;
+  }
+
+  .hero__text p {
+    color: #fff;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+@media (width <=580px) {
+  .hero__title {
+    font-size: 60px;
+  }
+}
+
+@media (width <=375px) {
+  .hero__title {
+    font-size: 50px;
+  }
+
+  .hero__subtitle p {
+    font-size: 16px;
+  }
+}
+/* =================================== */
+
+/* ============== ФУТЕР ==============*/
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: #686767;
+}
+.footer__content {
+  padding-bottom: 20px; /*відступи для внутрішнього контенту*/
+}
+.footer__content--margin {
+  padding-top: 30px;
+}
+.footer__title {
+  color: rgb(201, 200, 200);
+  line-height: 1.5;
+  padding: 10px 0;
+  letter-spacing: 2px; /*відстань між літерами*/
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.footer__button {
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  color: #d4d4d4;
+  letter-spacing: 3px; /*відстань між літерами*/
+  border: 2px solid rgb(114, 114, 114);
+}
+
+.footer__button:hover {
+  /*При наведенні*/
+  box-shadow: 3px 3px 5px rgb(220, 220, 233);
+  background-color: #888888;
+}
