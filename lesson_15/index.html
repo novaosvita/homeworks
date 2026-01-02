@@ -7,19 +7,19 @@
 		<!-- ====== Підключення шрифтів ==== -->
 		<!-- rel означає “relationship” — тип зв’язку. 
 		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
-		<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!-- Шрифт LATO -->
+		<!-- 1 - Шрифт LATO -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
 			rel="stylesheet">
-		<!-- шрифт Montserrat -->
+		<!-- 2 - шрифт Montserrat -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
 			rel="stylesheet">
-		<!-- ====== Файл  стилів ==== -->
+		<!--  Файл  стилів  -->
 		<link rel="stylesheet" href="css/style.css">
+		<!-- ================================================== -->
 		<title>Lesson_15 Li</title>
 	</head>
 	<body>
@@ -41,13 +41,8 @@
 								class="search__form"
 								role="search"
 								action="#">
-								<label
-									class="search__label"
-									for="search-input">
-									<img
-										class="search__icon"
-										src="icons/search.svg"
-										alt
+								<label class="search__label" for="search-input">
+									<img class="search__icon" src="icons/search.svg" alt
 										aria-hidden="true">
 									<input
 										class="search__input"
@@ -61,30 +56,22 @@
 						<nav class="header__menu menu">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a
-										class="menu__link"
-										href="#">
+									<a class="menu__link" href="#">
 										Home
 									</a>
 								</li>
 								<li class="menu__item">
-									<a
-										class="menu__link menu__link--arrow"
-										href="#">
+									<a class="menu__link menu__link--arrow" href="#">
 										Shop
 									</a>
 								</li>
 								<li class="menu__item">
-									<a
-										class="menu__link"
-										href="#">
+									<a class="menu__link" href="#">
 										Blog
 									</a>
 								</li>
 								<li class="menu__item">
-									<a
-										class="menu__link"
-										href="#">
+									<a class="menu__link" href="#">
 										About us
 									</a>
 								</li>
@@ -94,9 +81,7 @@
 						<div class="header__actions actions">
 							<ul class="actions__list">
 								<li class="actions__item">
-									<a
-										class="actions__link"
-										href="#">
+									<a class="actions__link" href="#">
 										<img
 											class="actions__icon"
 											src="icons/heart.svg"
@@ -105,9 +90,7 @@
 									</a>
 								</li>
 								<li class="actions__item">
-									<a
-										class="actions__link"
-										href="#">
+									<a class="actions__link" href="#">
 										<img
 											class="actions__icon"
 											src="icons/shopping_bag.svg"
@@ -121,7 +104,7 @@
 				</div>
 			</header>
 
-			<!-- ==== m a i n ================-->
+			<!-- ==== M A I N ================-->
 			<main class="main">
 				<section class="hero">
 					<div class="hero__container">
@@ -133,7 +116,7 @@
 							</div>
 							<!-- ЗАГОЛОВОК -->
 							<h1 class="hero__title">
-								Funiture <span class="hero__title-span">gallery</span>
+								Funiture <span class="hero__accent">gallery</span>
 							</h1>
 							<!-- ПІДЗАГОЛОВОК -->
 							<div class="hero__subtitle">
@@ -151,116 +134,8 @@
 						</div>
 					</div>
 				</section>
-
-				<!--<section class="register">
-					<div class="register__container">
-						<div class="register__header">
-							<h2 class="register__title">
-								Register to furnitur
-							</h2>
-							<div class="register__text">
-								<p>
-									Get monthly voucher with just one click!
-								</p>
-							</div>
-						</div>
-						<div class="register__content">
-							<div class="register__wrapper">
-								<form
-									class="register__form form-register"
-									action="#"
-									method="post">
-									<div class="form-register__header">
-										<h3 class="form-register__title">
-											Your information
-										</h3>
-										<div class="form-register__text">
-											<p>
-												You already have an account?
-											</p>
-											<a
-												class="form-register__link"
-												href="#">
-												Sign in here
-											</a>
-										</div>
-									</div>
-									<div class="form-register__fields">
-										<div class="form-register__row">
-											<div class="form-register__field">
-												<input
-													class="form-register__input"
-													type="text"
-													id="name"
-													name="name"
-													placeholder="Your name"
-													required>
-											</div>
-											<div class="form-register__field">
-												<input
-													class="form-register__input"
-													type="email"
-													id="email"
-													name="email"
-													placeholder="E-mail"
-													required>
-											</div>
-										</div>
-										<div class="form-register__field">
-											<input
-												class="form-register__input"
-												type="tel"
-												id="phone"
-												name="phone"
-												placeholder="Phone number">
-										</div>
-										<div class="form-register__row">
-											<div class="form-register__field">
-												<input
-													class="form-register__input"
-													type="password"
-													id="password"
-													name="password"
-													placeholder="Password"
-													required>
-											</div>
-											<div class="form-register__field">
-												<input
-													class="form-register__input"
-													type="password"
-													id="reset-password"
-													name="reset-password"
-													placeholder="Reset Password"
-													required>
-											</div>
-										</div>
-									</div>
-									<button
-										class="form-register__button button"
-										type="submit">
-										Create an account
-									</button>
-								</form>
-								<div class="register__banner discount">
-									<img
-										class="discount__img"
-										src="imgs/lamp.png"
-										alt="Hanging gold lamps">
-									<div class="discount__info">
-										<div class="discount__badge badge">
-											Hot
-										</div>
-										<h3 class="discount__title">
-											Discount 25% for new member
-										</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>-->
 			</main>
-			<!-- ====================== -->
+			<!-- ====================================== -->
 
 			<!--==================== FOOTER =========== -->
 			<footer class="footer">
