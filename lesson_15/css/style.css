@@ -13,9 +13,9 @@ body {
 
 /* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
 .wrapper {
-  position: relative; /* базування буде від Wrapper */
-  display: flex; /*Const - на всю обгортку*/
-  flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+  position: relative; /* позиціонування від Wrapper */
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   overflow: clip;
 }
@@ -36,6 +36,11 @@ body {
 
 /*=========== HEADER ================*/
 .header {
+  /*position: sticky; /ВАРІАНТ: стилі для липкого хедеру/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;*/
   padding-top: 60px; /*відступи верх/низ*/
   padding-bottom: 60px;
   font-weight: 700;
@@ -112,7 +117,7 @@ body {
 }
 
 .search__icon {
-  /*рощзміри пошукової іконки*/
+  /*розміри пошукової іконки*/
   width: 20px;
   height: 20px;
 }
@@ -121,10 +126,11 @@ body {
   /*стилі рядка для вводу пошуку*/
   height: 44px;
   outline: none; /*не пвиділяється рядок*/
+  background: transparent; /*прозорий фон, білий по замовч. */
 }
 
 .search__input::placeholder {
-  /*показує підказку*/
+  /*=  placeholder показує підказку =*/
   font-size: 16px;
   font-weight: 500;
   color: #7e7f7c;
@@ -191,7 +197,7 @@ body {
   opacity: 0.5;
 }
 
-/*=========== MAIN ==================*/
+/*=========== M A I N ==================*/
 
 /*=========== секція HERO ==================*/
 .hero {
@@ -218,6 +224,15 @@ body {
   margin-bottom: 0;
 }
 
+/*Підзаголовок*/
+.hero__subtitle p {
+  /*властивості для параграфу, що розміщений в діві*/
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .hero__title {
   /*ЗАГОЛОВОК*/
   position: relative;
@@ -226,14 +241,6 @@ body {
   font-size: 96px;
   font-weight: 800;
   line-height: 1;
-  text-transform: uppercase;
-}
-/*Підзаголовок*/
-.hero__subtitle p {
-  /*властивості для параграфу, що розміщений в діві*/
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.4;
   text-transform: uppercase;
 }
 
@@ -248,7 +255,7 @@ body {
   background-color: #2f302c;
 }
 
-.hero__title-span {
+.hero__accent {
   font-weight: 700;
 }
 
@@ -259,14 +266,20 @@ body {
   line-height: 1.25;
   color: #7e7f7c;
 }
+/*властивість додаткова на випадок додатковго абзацу*/
+.hero__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 /*======= АДАПТИВНІСТЬ =======*/
 @media (width <=768px) {
   /*при зменшенному екрані в 768 рх, 
 	будуть змінені властивості*/
   .hero {
-    padding-block: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-position: left center;
-    color: #fff;
+    color: #000000; /*зміна кольору шрифтв при меншому екрані*/
   }
 
   .hero__content {
@@ -274,32 +287,32 @@ body {
   }
 
   .hero__title::after {
-    background-color: #fff;
+    background-color: #1f1f1f;
   }
 
   .hero__text p {
-    color: #fff;
+    color: #4a4a4a;
   }
 
   .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(106, 106, 106, 0.5); /*маска*/
     z-index: -1;
   }
 }
 
+/* АДАПТИВ для заголовка, підзаголовка */
 @media (width <=580px) {
   .hero__title {
-    font-size: 60px;
+    font-size: 55px;
   }
 }
 
 @media (width <=375px) {
   .hero__title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .hero__subtitle p {
