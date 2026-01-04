@@ -22,7 +22,7 @@ body {
 /*=== Властивість для блоку main, що входить до обгортики wrapper*/
 .wrapper > main {
 	flex-grow: 1; /*"Const" для всих блоків "MAIM" на сторінці,
-   "1"-тобто завжди зростає на весь в*юпорт */
+   "1"-тобто, завжди зростає на всю вільну висоту в*юпорта */
 }
 
 /* Обмежуючий контейнер */
@@ -31,216 +31,179 @@ body {
 	max-width: 1422px; /*1392+15+15=1422*/
 	padding-left: 15px; /*відступи безпеки*/
 	padding-right: 15px; /*відступи безпеки*/
-	
 }
 
-/*=========== HEADER ================*/
+/*======== Хедер ========================*/
 .header {
-	font-weight: 700;
-	text-transform: uppercase;
-	/* додано нове */
-	position: sticky;
+	position: sticky; /* "липкий" хедер */
 	top: 0;
 	z-index: 100;
 	background-color: #fff;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-	
-
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08);
+	font-weight: 700;
+	text-transform: uppercase;
 }
-
 .header__container {
-	min-height: 164px;
+	display: flex; /*гнучкий блок*/
+	column-gap: 80px; /*відступ мі*/
+	min-height: 164px; /*мінімальна висота*/
 	padding-block: 5px;
-	display: flex;
 	align-items: center;
-	column-gap: 80px;
 }
-
 .header__search {
-	flex-basis: 264px;
+	flex-basis: 264px; /*для блоку задаємо стартову ширину*/
 }
-
 .header__menu {
-	flex-grow: 1;
+	flex-grow: 1; /*меню може займати весь вільний простір*/
+}
+.header__burger {
+	display: none; /*бургер не показувати*/
 }
 
-.header__burger {
-	display: none;
-}
-/*====== А Д А П Т И В хедера =============*/
-/* Медіа-запити до пристроїв, згідно умов, що вказана в дужках,
-якщо умова виконуються вступають в дію НОВІ css-властивості*/
+/* Медіа-запити до зміни стилів*/
 @media (width <=1442px) {
 	.header__container {
-		min-height: 120px;
+		min-height: 120px; /*контейнер зменшує свою висоту*/
 		column-gap: 25px;
 	}
 }
-
 @media (width <=1200px) {
 	.header__search {
 		flex-basis: 190px;
 	}
 }
-
 @media (width <=992px) {
 	.header__container {
-		min-height: 100px;
+		min-height: 100px; /*контейнер зменшує свою висоту*/
 	}
 }
 
 @media (width < 768px) {
+	/*МОБІЛЬНА версія*/
 	.header__container {
-		min-height: 70px;
+		min-height: 70px; /*контейнер зменшує свою висоту*/
 	}
-
 	.header__search {
-		flex-grow: 1;
+		flex-grow: 1; /*кнопка пошуку стає більшою і займає весь простір*/
 	}
-
 	.header__burger {
-		display: block;
+		display: block; /*кнопка бургеру стає видима*/
 	}
-
 	.header__logo,
 	.header__search,
 	.header__actions,
 	.header__burger {
 		position: relative;
-		z-index: 6;
+		z-index: 6; /*кнопки меню виходять на передній план*/
+	}
+}
+@media (width < 480px) {
+	.header__container {
+		column-gap: 15px; /*зменшується відстань між елементами*/
 	}
 }
 
-@media (width < 480px) {
-	.header__container {
-		column-gap: 15px;
-	}
-}
-/*============= 1- Блок  LOGO ============*/
+/*============= Логотип ============*/
 .logo__img {
 	width: 200px;
 	max-width: none;
 }
+
 /* Адаптив для логотипу */
 @media (width <=992px) {
 	.logo {
 		width: 37px;
-		flex-shrink: 0;
+		flex-shrink: 0; /*заборона на збільшення*/
 		overflow: hidden;
 	}
 }
-
 @media (width < 480px) {
 	.logo {
-		width: 28px;
+		width: 28px; /*логотип зменшується*/
 	}
-
 	.logo__img {
 		width: 154px;
 	}
 }
 
-/*========== 2 - Блок SEARCH ============*/
-
+/* ==== Форма пошуку ==================*/
 .search {
 	display: flex;
 	column-gap: 12px;
 	border-bottom: 1px solid #d4d4d4;
 }
-
 .search__button {
-	min-width: 20px;
+	min-width: 20px; /*ширина кнопки*/
 	background: url('../icons/search.svg') center no-repeat;
 }
-/* КНОПКА */
-.button {
-	padding-inline: 20px;
-	padding-block: 12px;
-	font-weight: 500;
-	max-width: 336px;
-	color: #fff;
-	background-color: #2f302c;
-	transition: all 0.3s;
-}
-
-.button:hover {
-	opacity: 0.9;
-}
-
-.button:active {
-	transform: scale(0.95);
-}
-
 .search__input {
-	height: 43px;
-	background-color: transparent;
+	height: 43px; /*висота рядка для пошуку*/
+	background-color: transparent; /*прозорість фону*/
 }
-
 .search__input::placeholder {
+	/*стилі підказки*/
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	color: #7e7f7c;
 }
-/* Адаптив для пошукового блоку */
+
+/* Запити для зміни стилів */
 @media (width < 480px) {
 	.search {
 		column-gap: 5px;
 	}
 }
-
 @media (width < 375px) {
 	.search {
+		/*блок форми*/
 		border: 1px solid #d4d4d4;
-		border-radius: 5px;
-		overflow: hidden;
+		/*border-radius: 2px;*/
+		overflow: hidden; /*все зайве приховати*/
 	}
-
 	.search__button {
-		display: none;
+		/*іконка пошуку*/
+		display: none; /*не показувати*/
 	}
-
 	.search__input {
+		/*поле вводу пошука*/
 		height: 33px;
 		padding-left: 8px;
 		font-size: 14px;
 		font-weight: 400;
 	}
-
 	.search__input::placeholder {
 		font-size: 13px;
 	}
 }
-/*=============== 3 - Блок MENU ============= */
+/* ==== Навігаційне меню ============== */
 .menu__list {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	column-gap: 44px;
-	row-gap: 10px;
+	align-items: center; /*центруються по вертикалі*/
+	column-gap: 44px; /*горизонтальні відступи*/
+	row-gap: 10px; /*вертикальні відступи*/
 }
-
 .menu__link {
 	transition: all 0.3s;
 }
-
 .menu__link:hover {
-	opacity: 0.5;
+	opacity: 0.5; /*при наведення стають напівпрозорі*/
 }
 
+/* Запити для зміни стилів */
 @media (width <=1442px) {
 	.menu__list {
 		justify-content: center;
 		column-gap: 25px;
 	}
 }
-
 @media (width <=992px) {
 	.menu__list {
 		column-gap: 20px;
 	}
 }
-
+/*Запити для МОБІЛЬНОЇ версії*/
 @media (width < 768px) {
 	.menu {
 		position: fixed;
@@ -248,13 +211,12 @@ body {
 		left: 100%;
 		width: 100%;
 		height: 100%;
-		background-color: #f6f6f6;
+		background-color: #f6f6f6; /*фон полотна для збільшенного меню*/
 		z-index: 5;
 		overflow: auto;
 		transition: all 0.3s;
 		padding: 120px 15px 30px 15px;
 	}
-
 	.menu::before {
 		content: '';
 		position: fixed;
@@ -270,23 +232,70 @@ body {
 	[data-menu-open] .menu::before {
 		left: 0;
 	}
-
 	.menu__list {
 		flex-direction: column;
 		row-gap: 30px;
 	}
-
 	.menu__link {
 		font-size: 28px;
 	}
 }
-/*=== 3-1 МЕНЮ_БУРГЕР ================= */
+
+/* ==== Кнопки дії ====================== */
+.actions__list {
+	display: flex;
+	align-items: center;
+	column-gap: 44px;
+}
+.actions__link {
+	display: block;
+	padding-left: 24px;
+	transition: all 0.3s;
+}
+.actions__link--love {
+	background: url('../icons/heart.svg') left no-repeat;
+}
+.actions__link--cart {
+	background: url('../icons/cart.svg') left no-repeat;
+}
+.actions__link:hover {
+	opacity: 0.5;
+}
+
+/* Запити для зміни стилів */
+@media (width <=1442px) {
+	.actions__list {
+		column-gap: 25px;
+	}
+}
+@media (width <=992px) {
+	.actions__list {
+		column-gap: 20px;
+	}
+}
+@media (width < 768px) {
+	/*МОБІЛЬНА версія*/
+	.actions__link {
+		width: 25px;
+		aspect-ratio: 1; /*співідношення сторін*/
+		padding-left: 0;
+		font-size: 0;
+		background-size: contain;
+	}
+}
+@media (width < 480px) {
+	.actions__link {
+		width: 21px;
+		column-gap: 15px;
+	}
+}
+
+/* ==== Бургер ========================== */
 .burger {
 	position: relative;
 	width: 30px;
 	height: 18px;
 }
-
 .burger span,
 .burger::before,
 .burger::after {
@@ -298,16 +307,13 @@ body {
 	background-color: #2f302c;
 	transition: all 0.3s;
 }
-
 .burger::before {
 	top: 0;
 }
-
 .burger::after {
 	bottom: 0;
 }
-
-.burger span {
+burger span {
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -317,13 +323,11 @@ body {
 	[data-menu-open] .burger span {
 		width: 0;
 	}
-
 	[data-menu-open] .burger::before {
 		rotate: -45deg;
 		translate: 0 -50%;
 		top: 50%;
 	}
-
 	[data-menu-open] .burger::after {
 		rotate: 45deg;
 		bottom: 50%;
@@ -331,61 +335,10 @@ body {
 	}
 }
 
-/*=== 4 Блок ACTIONS ================= */
-.actions__list {
-	display: flex;
-	align-items: center;
-	column-gap: 44px;
-}
-
-.actions__link {
-	display: block;
-	padding-left: 24px;
-	transition: all 0.3s;
-}
-
-.actions__link--love {
-	background: url('../icons/heart.svg') left no-repeat;
-}
-
-.actions__link--cart {
-	background: url('../icons/cart.svg') left no-repeat;
-}
-
-.actions__link:hover {
-	opacity: 0.5;
-}
-
-@media (width <=1442px) {
-	.actions__list {
-		column-gap: 25px;
-	}
-}
-
-@media (width <=992px) {
-	.actions__list {
-		column-gap: 20px;
-	}
-}
-
-@media (width < 768px) {
-	.actions__link {
-		width: 25px;
-		aspect-ratio: 1;
-		padding-left: 0;
-		font-size: 0;
-		background-size: contain;
-	}
-}
-
-@media (width < 480px) {
-	.actions__link {
-		width: 21px;
-		column-gap: 15px;
-	}
-}
-
 /*==================== M A I N ==================*/
+main {
+	height: 2000px;
+}
 .hero {
 	position: relative; /*стартовий блок для позиціонування елементів в середині*/
 	padding-top: 114px;
@@ -394,17 +347,14 @@ body {
 	background: url('../img/hero_image.avif') center / cover no-repeat;
 	z-index: 1; /*по вісі z - виступає на передній план*/
 }
-
 .hero__content {
 	max-width: 650px;
-	margin-left: auto; /*Автоматично заповнює вільний простір зліва*/
+	margin-left: auto; /*Автоматично заповнює вільний простір зліва на право*/
 }
-
 .hero__content > * {
 	/*===   ">*"  - стосується всих прямих дочірних елементів */
 	margin-bottom: 20px;
 }
-
 .hero__content > *:last-child {
 	/*вибирає останній елемент серед дочірніх*/
 	margin-bottom: 0;
@@ -418,19 +368,18 @@ body {
 	line-height: 1.4;
 	text-transform: uppercase;
 }
-
 .hero__title {
 	/*ЗАГОЛОВОК*/
 	position: relative;
-	margin-bottom: 52px;
 	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 52px;
 	font-size: 96px;
 	font-weight: 800;
 	line-height: 1;
 	text-transform: uppercase;
 }
-
 .hero__title::after {
+	/*лінія підкреслення*/
 	content: '';
 	position: absolute;
 	display: block;
@@ -440,26 +389,23 @@ body {
 	height: 1px;
 	background-color: #2f302c;
 }
-
 .hero__accent {
 	font-weight: 700;
 }
-
 .hero__text p {
-	/*властивості для параграфу, що розміщений в верхньому діві*/
+	/*властивості для параграфу р*/
 	max-width: 374px;
 	font-weight: 500;
 	line-height: 1.25;
 	color: #7e7f7c;
 }
-/*властивість додаткова на випадок додатковго абзацу*/
+/*властивість на випадок додаткового абзацу*/
 .hero__text p:not(:last-child) {
 	margin-bottom: 10px;
 }
 
-/*============== А Д А П Т И В ======================*/
-/*при зменшенному екрані в 768 рх, 
-будуть змінені властивості головного зображення те тексту*/
+/*============== ЗАПИТИ для зміни стилів ======================*/
+/*при екрані в 768рх, зміненяться стилі головного зображення та тексту*/
 @media (width <=768px) {
 	.hero {
 		padding-top: 50px;
@@ -467,19 +413,15 @@ body {
 		background-position: left center;
 		color: #1d1d1d; /*зміна кольору шрифтів при меншому екрані*/
 	}
-
 	.hero__content {
-		margin-left: 0;
+		margin-left: 10px;
 	}
-
 	.hero__title::after {
 		background-color: #1f1f1f;
 	}
-
 	.hero__text p {
 		color: #4a4a4a;
 	}
-
 	.hero::after {
 		content: '';
 		position: absolute;
@@ -492,19 +434,17 @@ body {
 		z-index: -1;
 	}
 }
-/*============== А Д А П Т И В ======================*/
+/*========= Запити для зміни стилів ===============*/
 /* для заголовка та підзаголовка */
 @media (width <=580px) {
 	.hero__title {
 		font-size: 55px;
 	}
 }
-
 @media (width <=375px) {
 	.hero__title {
 		font-size: 40px;
 	}
-
 	.hero__subtitle p {
 		font-size: 16px;
 	}
