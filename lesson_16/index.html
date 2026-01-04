@@ -7,7 +7,7 @@
 		<!-- ====== Підключення шрифтів ==== -->
 		<!-- rel означає “relationship” — "тип зв’язку". 
 		 "preconnect" каже браузеру: "pre-", тобто заздалегідь -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- 2 - шрифт Montserrat -->
 		<link
@@ -15,18 +15,18 @@
 			rel="stylesheet">
 		<!--  Файл  стилів  -->
 		<link rel="stylesheet" href="css/style.css">
-		<!-- ================================================== -->
+		<!-- ========================================= -->
 		<title>Lesson_16 Li</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<!-- ==== header ================-->
+			<!-- ======== Хедер ========================-->
 			<header class="header">
 				<div class="header__container">
 					<div class="header__logo logo">
 						<img class="logo__img" src="icons/logo.svg" alt="Logo Furnitur">
 					</div>
-
+					<!-- ==== Форма пошуку ==================-->
 					<form class="header__search search" role="search" action="#">
 						<button class="search__button" type="submit"></button>
 						<input
@@ -35,7 +35,7 @@
 							name="search"
 							placeholder="Search something">
 					</form>
-
+					<!-- ==== Навігаційне меню ==============-->
 					<nav class="header__menu menu">
 						<div class="menu__body">
 							<ul class="menu__list">
@@ -46,7 +46,7 @@
 							</ul>
 						</div>
 					</nav>
-
+					<!-- ==== Кнопки дії ======================-->
 					<div class="header__actions actions">
 						<ul class="actions__list">
 							<li class="actions__item">
@@ -57,7 +57,7 @@
 							</li>
 						</ul>
 					</div>
-					<!-- БУРГЕР -->
+					<!-- ==== Бургер ==========================-->
 					<div class="header__burger">
 						<button class="burger" type="button">
 							<span></span>
