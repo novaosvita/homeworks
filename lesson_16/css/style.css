@@ -408,7 +408,7 @@ burger span {
 		padding-top: 50px;
 		padding-bottom: 50px;
 		background-position: left center;
-		color: #1d1d1d; /*зміна кольору шрифтів при меншому екрані*/
+		color: #1f1f1f; /*зміна кольору шрифтів при меншому екрані*/
 	}
 	.hero__content {
 		margin-left: 10px;
@@ -422,12 +422,12 @@ burger span {
 	.hero::after {
 		content: '';
 		position: absolute;
-		/*inset: 0; - коротко, притиснуто до 4-х країв блоку*/
+		/*inset: 0; - коротка запис: притиснуто до 4-х країв блоку*/
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(106, 106, 106, 0.5); /*маска*/
+		background-color: rgba(148, 147, 147, 0.5); /*Маска*/
 		z-index: -1;
 	}
 }
