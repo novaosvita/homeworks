@@ -158,7 +158,6 @@ body {
 	.search {
 		/*блок форми*/
 		border: 1px solid #d4d4d4;
-		/*border-radius: 2px;*/
 		overflow: hidden; /*все зайве приховати*/
 	}
 	.search__button {
@@ -341,17 +340,32 @@ burger span {
 	padding-top: 114px;
 	padding-bottom: 110px;
 	color: #2f302c;
-	background: url('../img/hero_image.avif') center / cover no-repeat;
-	z-index: 1; /*по вісі z - виступає на передній план*/
+}
+
+.hero__container {
+	position: relative; /*для активації z-index*/
+	z-index: 3; /*текст на передній план*/
+}
+/* Головне зображення */
+.hero__banner {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	z-index: 1;
 }
 .hero__content {
 	max-width: 650px;
-	margin-left: auto; /*Автоматично заповнює вільний простір зліва на право*/
+	margin-left: auto; /*заповнює вільний простір зліва на право*/
 }
+
 .hero__content > * {
 	/*===   ">*"  - стосується всих прямих дочірних елементів */
 	margin-bottom: 20px;
 }
+
 .hero__content > *:last-child {
 	/*вибирає останній елемент серед дочірніх*/
 	margin-bottom: 0;
@@ -401,14 +415,18 @@ burger span {
 	margin-bottom: 10px;
 }
 
-/*============== ЗАПИТИ для зміни стилів ======================*/
+/*============== ЗАПИТИ для зміни стилів 768 ======================*/
 /*при екрані в 768рх, зміняться стилі головного зображення та тексту*/
 @media (width <=768px) {
 	.hero {
 		padding-top: 50px;
 		padding-bottom: 50px;
-		background-position: left center;
-		color: #1f1f1f; /*зміна кольору шрифтів при меншому екрані*/
+		color: #181818; /*зміна кольору шрифтів при меншому екрані*/
+	}
+
+	.hero__banner {
+		/*зміщення фокусу зображення на моб. версіях*/
+		object-position: 25% center;
 	}
 	.hero__content {
 		margin-left: 10px;
@@ -420,6 +438,7 @@ burger span {
 		color: #4a4a4a;
 	}
 	.hero::after {
+		/*Додається маска на головне зображення для моб. версії*/
 		content: '';
 		position: absolute;
 		/*inset: 0; - коротка запис: притиснуто до 4-х країв блоку*/
@@ -427,12 +446,13 @@ burger span {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(148, 147, 147, 0.5); /*Маска*/
-		z-index: -1;
+		background-color: rgba(91, 125, 148, 0.5); /*Маска*/
+		z-index: 2; /*прошарок для маски*/
 	}
 }
 
-/*========= Запити для зміни стилів ===============*/
+/*========= Запити для зміни стилів  580 ===============*/
+
 @media (width <=580px) {
 	.hero__title {
 		font-size: 55px;
