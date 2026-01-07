@@ -356,6 +356,7 @@ burger span {
 	object-fit: cover;
 	z-index: 1;
 }
+
 .hero__content {
 	max-width: 650px;
 	margin-left: auto; /*заповнює вільний простір зліва на право*/
@@ -427,6 +428,9 @@ burger span {
 	.hero__banner {
 		/*зміщення фокусу зображення вліво на моб. версіях*/
 		object-position: 25% center;
+		/* blur */
+		filter: blur(2px);
+		/*transform: scale(0.8);*/
 	}
 	.hero__content {
 		margin-left: 10px;
@@ -435,10 +439,10 @@ burger span {
 		background-color: #1f1f1f;
 	}
 	.hero__text p {
-		color: #4a4a4a;
+		color: #3a3a3a;
 	}
 	.hero::after {
-		/*Додається маска на головне зображення для моб. версії*/
+		/*Додається МАСКА на головне зображення для моб. версії*/
 		content: '';
 		position: absolute;
 		/*inset: 0; - коротка запис: притиснуто до 4-х країв блоку*/
@@ -446,8 +450,10 @@ burger span {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(91, 125, 148, 0.5); /*Маска*/
+		/* фон */
 		z-index: 2; /*прошарок для маски*/
+		opacity: 0.5;
+		background-color: rgba(129, 129, 129, 0.2);
 	}
 }
 
