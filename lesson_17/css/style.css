@@ -37,7 +37,7 @@ h2 {
 }
 
 /* ВАРІАНТ ГНУЧКОЇ СТОРІНКИ - ЧЕРЕЗ МОДУЛЬ GRID */
-/* Області розподілення простору */
+/* Для практики */
 /*.header {
 	grid-area: header;
 }
@@ -122,6 +122,12 @@ h2 {
 	position: absolute;
 }
 
+.card-categories__image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 /* ПЕРША КАРТКА з двома зображеннями */
 .categories__card:nth-child(1) {
 	display: flex;
@@ -143,7 +149,6 @@ h2 {
 
 /* ДРУГИЙ блок кртки*/
 .categories__card:nth-child(2) {
-	/*стилі для другого елементу в блоці*/
 	grid-column: span 2; /*займає ширину двох колонок*/
 	text-align: center;
 	background-color: #e6efea;
@@ -151,8 +156,6 @@ h2 {
 .categories__card:nth-child(2) .card-categories__image {
 	bottom: 50px;
 	top: auto;
-	left: 75px;
-	right: 75px;
 }
 
 .categories__card:nth-child(2) .card-categories__desc {
@@ -220,7 +223,6 @@ h2 {
 }
 
 /* ================= Секція trusted =============== */
-
 .trusted {
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -239,7 +241,6 @@ h2 {
 .trusted__item {
 	height: 170px;
 	margin: 0 auto;
-	/*background-color: #be3c3c;*/
 }
 /* МЕДІА_запити для адаптивності */
 @media (width < 480px) {
@@ -253,7 +254,7 @@ h2 {
 	}
 }
 
-/* ================= Секція featured ============== */
+/* ================= Секція FEATURED PRODUCTS ============== */
 .featured {
 	padding: 82px 0;
 }
@@ -270,6 +271,20 @@ h2 {
 	margin-bottom: 72px;
 }
 
+/* Медіазапити для меню */
+@media (max-width: 768px) {
+	.featured__list {
+		gap: 24px;
+		margin-bottom: 48px;
+	}
+}
+
+@media (max-width: 360px) {
+	.featured__list {
+		gap: 12px;
+		margin-bottom: 32px;
+	}
+}
 .list-featured__link {
 	font-weight: 700;
 	display: block;
@@ -278,6 +293,7 @@ h2 {
 	padding-bottom: 10px;
 	text-transform: uppercase;
 }
+
 .list-featured__link::after {
 	content: '';
 	position: absolute;
@@ -292,13 +308,13 @@ h2 {
 .list-featured__item:hover .list-featured__link::after {
 	width: 100%;
 }
-/* Змінено ширини картки з 400 на 350 */
+
 .featured__cards {
 	display: grid;
 	/*ця властивість забезпечує гнучкість,
 	БЕЗ МЕДІА-ЗАПИТІВ*/
 	/* auto-fill - НАДАЄ АДАПТИВНІСТЬ */
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 	grid-auto-rows: 1fr;
 	justify-items: center;
 	gap: 36px;
@@ -329,10 +345,6 @@ h2 {
 	color: #2f302c;
 }
 
-.card-featured__link-title:hover {
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12); /*тінь для зміни фону карточки*/
-}
-
 .rating-card-featured {
 	display: flex;
 	align-items: center;
@@ -360,14 +372,16 @@ h2 {
 	display: grid;
 	/*ця властивість забезпечує гнучкість,
 	БЕЗ МЕДІА-ЗАПИТІВ, 	auto-fill - НАДАЄ АДАПТИВНІСТЬ */
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-auto-rows: 1fr;
 	justify-items: center;
 	gap: 68px;
 }
 
 .advantage__item {
-	max-width: 400px; /*картки виглядають охайніше і текст не "розбігається"*/
+	/*картки виглядають охайніше і текст не "розбігається"*/
+	max-width: 400px;
+	width: 100%;
 }
 
 .item-advantage__image {
@@ -400,7 +414,7 @@ h2 {
 	background-color: #686767;
 }
 .footer__content {
-	padding-bottom: 20px; /*відступи для внутрішнього контенту*/
+	padding-bottom: 20px;
 }
 .footer__content p {
 	color: #d4d4d4;
