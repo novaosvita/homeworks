@@ -1,0 +1,435 @@
+@import url('reset.css'); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css); /*файл додатковиш шрифтів, автономних, що зберігаються в папці*/
+
+body {
+	/*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+	font-family: 'Lato', sans-serif; /*шрифт підключений  мережевий*/
+	/*font-size: 16px; обраний приорітетний шрифт на сторінці*/
+	line-height: 1.25;
+	background-color: #fff;
+	font-weight: 500;
+	color: #7e7f7c;
+}
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	color: #2f302c;
+	line-height: 1.04167;
+}
+h2 {
+	font-weight: 800;
+	font-size: 32px;
+	color: #2f302c;
+}
+h3 {
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: clip;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* ВАРІАНТ ГНУЧКОЇ СТОРІНКИ - ЧЕРЕЗ МОДУЛЬ GRID */
+/* Області розподілення простору */
+/*.header {
+	grid-area: header;
+}
+.main {
+	grid-area: main;
+}
+.footer {
+	grid-area: footer;
+}*/
+
+/*.wrapper {
+	display: grid;
+	grid-template-columns: 0.3fr 1fr 0.3fr;
+	grid-template-rows: auto 1fr auto;
+
+	grid-template-areas:
+		'header header header'
+		'main main main'
+		'footer footer footer';
+}*/
+
+/* Обмежуючий контейнер */
+[class*='__container'] {
+	margin: 0 auto;
+	max-width: 1422px; /*1392+15+15=1422*/
+	padding-left: 15px; /*відступи безпеки*/
+	padding-right: 15px; /*відступи безпеки*/
+}
+
+/*=========== HEADER ================*/
+.header {
+	padding-top: 50px;
+	text-align: center;
+	color: #272727;
+	background-color: #cecece;
+}
+
+.header__main-title {
+	font-size: 30px;
+	padding-bottom: 50px;
+}
+
+.title {
+	letter-spacing: 3px;
+	font-weight: 700;
+	line-height: 1.2;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.header__description {
+	font-size: 22px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+/* ==================== M A I N ==================*/
+/* ================= Section Categories ==========*/
+
+.categories {
+	padding-top: 82px;
+	padding-bottom: 82px;
+}
+/* Додаткові стилі для контейнера */
+.categories__container {
+	display: grid;
+	/*стилі для гнучкого адаптивного блоку auto-fill minmax*/
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 36px;
+}
+.categories__card {
+	position: relative;
+	background-color: #f7f7f7;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 40px;
+	padding-right: 40px;
+	min-height: 590px;
+	overflow: hidden;
+}
+.card-categories__image {
+	position: absolute;
+}
+
+/* ПЕРША КАРТКА з двома зображеннями */
+.categories__card:nth-child(1) {
+	display: flex; 
+	align-items: end;
+}
+/* для двох зображень*/
+.categories__card:nth-child(1) .card-categories__image:nth-child(1) {
+	top: 0;
+	right: 90px;
+}
+.categories__card:nth-child(1) .card-categories__image:nth-child(2) {
+	bottom: 0;
+	right: 58px;
+}
+.card-categories:nth-child(1) .card-categories__image {
+	bottom: auto;
+	top: 0;
+}
+
+/* ДРУГИЙ блок кртки*/
+.categories__card:nth-child(2) {
+	/*стилі для другого елементу в блоці*/
+	grid-column: span 2; /*займає ширину двох колонок*/
+	text-align: center;
+	background-color: #e6efea;
+}
+.categories__card:nth-child(2) .card-categories__image {
+	bottom: 50px;
+	top: auto;
+	left: 75px;
+	right: 75px;
+}
+
+.categories__card:nth-child(2) .card-categories__desc {
+	max-width: 310px;
+	margin: 0 auto;
+}
+
+
+/* 3-й блок картки */
+.categories__card:nth-child(3) .card-categories__image {
+	top: auto;
+	bottom: 0;
+	right: 0;
+}
+
+/* відступи нижні, окрім нижнього */
+.categories__card .card-categories__content > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+.card-categories__title {
+	color: #2f302c;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 1.4;
+}
+.card-categories__link {
+	position: relative;
+	padding-right: 20px;
+}
+.card-categories__link::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-bottom: 2px solid #7e7f7c;
+	border-right: 2px solid #7e7f7c;
+	transform: rotate(-45deg) translateY(-50%);/*центрування по горизонталі */
+	top: 50%;
+	right: 0;
+}
+
+/* МЕДІА_запити для адаптивності */
+@media (width <= 1422px) {
+	.categories {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+
+@media (width <= 1280px) {
+	.categories__container {
+		grid-template-columns: repeat(3, 321px); /*повторення колонок: 3 рази по 321рх*/
+		justify-content: space-between;
+		gap: 20px;
+	}
+	.categories__card:nth-child(2) {
+		grid-column: span 1;
+	}
+}
+
+@media (width <= 992px) {
+	.categories__container {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		justify-content: space-around;
+	}
+}
+
+/* ================= Секція trusted =============== */
+
+.trusted {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.trusted__title {
+	text-align: center;
+	margin-bottom: 72px;
+}
+.trusted__items {
+	display: grid;
+	gap: 74px;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	justify-content: center;
+	/*align-items: center*/
+}
+.trusted__item {
+	height: 170px;
+}
+/* МЕДІА_запити для адаптивності */
+@media (width < 480px) {
+	.trusted__item:nth-child(7),
+	.trusted__item:nth-child(8),
+	.trusted__item:nth-child(9),
+	.trusted__item:nth-child(10),
+	.trusted__item:nth-child(11),
+	.trusted__item:nth-child(12) {
+		display: none; /*не показувати*/
+	}
+}
+
+/* ================= Секція  featured ============== */
+
+.featured {
+	padding: 82px 0;
+}
+
+.featured__title {
+	text-align: center;
+	margin-bottom: 36px;
+}
+
+.featured__list {
+	display: flex;
+	justify-content: center;
+	gap: 0 48px;
+	margin-bottom: 72px;
+}
+
+.list-featured__link {
+	font-weight: 700;
+	display: block;
+	color: #2f302c;
+	position: relative;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+.list-featured__link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 0;
+	background-color: #2f302c;
+	transition: all 0.3s;
+}
+
+.list-featured__item:hover .list-featured__link::after {
+	width: 100%;
+}
+/* Змінено ширини картки з 400 на 350 */
+.featured__cards {
+	display: grid;
+	/*ця властивість забезпечує гнучкість,
+	БЕЗ МЕДІА-ЗАПИТІВ*/
+	/* auto-fill - НАДАЄ АДАПТИВНІСТЬ */
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-auto-rows: 1fr;
+	justify-items: center;
+	gap: 36px;
+}
+
+.card-featured__image {
+	margin-bottom: 32px;
+	width: 100%;
+	transition: all 0.3s;
+}
+.card-featured__image:hover {
+	scale: 1.05;
+}
+.card-featured__body {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.card-featured__body > *:not(:last-child) {
+	margin-bottom: 12px;
+}
+
+.card-featured__title {
+	flex-grow: 1;
+	transition: all 0.5s;
+	font-weight: 500;
+	color: #2f302c;
+}
+
+.card-featured__link-title:hover {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12); /*тінь для зміни фону карточки*/
+}
+
+.rating-card-featured {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 6px;
+}
+
+.card-featured__price p {
+	font-weight: 800;
+	font-size: 20px;
+	color: #2f302c;
+	line-height: 1.4;
+}
+
+/* ================== Секція advantage ======== */
+.advantage {
+	padding: 82px 0;
+}
+
+.advantage__title {
+	text-align: center;
+	margin-bottom: 72px;
+}
+.advantage__items {
+	display: grid;
+	/*ця властивість забезпечує гнучкість,
+	БЕЗ МЕДІА-ЗАПИТІВ, auto-fill - НАДАЄ АДАПТИВНІСТЬ */
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-auto-rows: 1fr;
+	justify-items: center;
+	gap: 68px;
+}
+
+.advantage__item {
+	max-width: 400px; /*картки виглядають охайніше і текст не "розбігається"*/
+}
+
+.item-advantage__image {
+	margin-bottom: 24px;
+	text-align: center;
+}
+.item-advantage__body {
+	text-align: center;
+}
+.item-advantage__body > *:not(:last-child) {
+	margin-bottom: 24px;
+}
+.item-advantage__title {
+	font-weight: 700;
+	color: #2f302c;
+	font-size: 16px;
+	line-height: 1.25;
+}
+.item-advantage__desc p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.25;
+	color: #7e7f7c;
+}
+section-products
+/* ================== ФУТЕР =====================*/
+.footer {
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: #686767;
+}
+.footer__content {
+	padding-bottom: 20px; /*відступи для внутрішнього контенту*/
+}
+.footer__content p {
+	color: #d4d4d4;
+	line-height: 1.5;
+	padding: 10px 0;
+	letter-spacing: 2px; /*відстань між літерами*/
+	font-weight: 500;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.footer__content--margin {
+	padding-top: 30px;
+}
+
+.footer__button {
+	padding: 10px 40px;
+	border-radius: 30px;
+	font-weight: 700;
+	color: #d4d4d4;
+	letter-spacing: 3px; /*відстань між літерами*/
+	border: 2px solid rgb(114, 114, 114);
+}
+
+.footer__button:hover {
+	/*стилі при наведенні на кнопку*/
+	box-shadow: 3px 3px 5px rgb(145, 145, 146);
+	background-color: #b8b9b9;
+}
