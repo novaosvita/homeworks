@@ -14,7 +14,7 @@ body {
 h1 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
-	font-size: 50px;
+	font-size: 35px;
 	color: #2f302c;
 	line-height: 1.04167;
 }
@@ -22,8 +22,6 @@ h2 {
 	font-weight: 800;
 	font-size: 32px;
 	color: #2f302c;
-}
-h3 {
 }
 
 /* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
@@ -89,14 +87,14 @@ h3 {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-
+/* як варіант - прибрати */
 .header__description {
 	font-size: 22px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 }
 
-/* ==================== M A I N ==================*/
+/* ================= M A I N =====================*/
 /* ================= Section Categories ==========*/
 
 .categories {
@@ -126,7 +124,7 @@ h3 {
 
 /* ПЕРША КАРТКА з двома зображеннями */
 .categories__card:nth-child(1) {
-	display: flex; 
+	display: flex;
 	align-items: end;
 }
 /* для двох зображень*/
@@ -162,7 +160,6 @@ h3 {
 	margin: 0 auto;
 }
 
-
 /* 3-й блок картки */
 .categories__card:nth-child(3) .card-categories__image {
 	top: auto;
@@ -191,7 +188,7 @@ h3 {
 	height: 6px;
 	border-bottom: 2px solid #7e7f7c;
 	border-right: 2px solid #7e7f7c;
-	transform: rotate(-45deg) translateY(-50%);/*центрування по горизонталі */
+	transform: rotate(-45deg) translateY(-50%); /*центрування по горизонталі */
 	top: 50%;
 	right: 0;
 }
@@ -238,10 +235,11 @@ h3 {
 	gap: 74px;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	justify-content: center;
-	/*align-items: center*/
 }
 .trusted__item {
 	height: 170px;
+	margin: 0 auto;
+	/*background-color: #be3c3c;*/
 }
 /* МЕДІА_запити для адаптивності */
 @media (width < 480px) {
@@ -255,8 +253,7 @@ h3 {
 	}
 }
 
-/* ================= Секція  featured ============== */
-
+/* ================= Секція featured ============== */
 .featured {
 	padding: 82px 0;
 }
@@ -265,7 +262,7 @@ h3 {
 	text-align: center;
 	margin-bottom: 36px;
 }
-
+/* верхній блок меню */
 .featured__list {
 	display: flex;
 	justify-content: center;
@@ -362,7 +359,7 @@ h3 {
 .advantage__items {
 	display: grid;
 	/*ця властивість забезпечує гнучкість,
-	БЕЗ МЕДІА-ЗАПИТІВ, auto-fill - НАДАЄ АДАПТИВНІСТЬ */
+	БЕЗ МЕДІА-ЗАПИТІВ, 	auto-fill - НАДАЄ АДАПТИВНІСТЬ */
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	grid-auto-rows: 1fr;
 	justify-items: center;
@@ -395,7 +392,7 @@ h3 {
 	line-height: 1.25;
 	color: #7e7f7c;
 }
-section-products
+
 /* ================== ФУТЕР =====================*/
 .footer {
 	text-align: center;
