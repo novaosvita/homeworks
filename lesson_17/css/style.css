@@ -278,11 +278,13 @@ h2 {
 		margin-bottom: 48px;
 	}
 }
-
+/* перенос меню на малих екранах */
 @media (max-width: 360px) {
 	.featured__list {
 		gap: 12px;
 		margin-bottom: 32px;
+		flex-wrap: wrap;
+		row-gap: 12px;
 	}
 }
 .list-featured__link {
