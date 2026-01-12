@@ -87,13 +87,6 @@ h2 {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-/* як варіант - прибрати */
-.header__description {
-	font-size: 22px;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-}
-
 /* ================= M A I N =====================*/
 /* ================= Section Categories ==========*/
 
@@ -124,8 +117,7 @@ h2 {
 
 .card-categories__image img {
 	max-width: 100%;
-	height: auto;
-	display: block;
+	
 }
 
 /* ПЕРША КАРТКА з двома зображеннями */
@@ -139,7 +131,7 @@ h2 {
 	right: 90px;
 }
 .categories__card:nth-child(1) .card-categories__image:nth-child(2) {
-	bottom: 0;
+	top: 0;
 	right: 58px;
 }
 .card-categories:nth-child(1) .card-categories__image {
