@@ -117,6 +117,7 @@ h2 {
 
 .card-categories__image img {
 	max-width: 100%;
+	height: auto;
 	
 }
 
