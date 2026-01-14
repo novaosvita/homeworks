@@ -1,0 +1,733 @@
+@import url('reset.css'); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css); /*файл додатковиш шрифтів, автономних, що зберігаються в папці*/
+
+body {
+	/*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+	/*font-family: 'Lato', sans-serif; шрифт підключений  мережевий*/
+	font-family: 'Montserrat', sans-serif;
+	color: #343434;
+	/*font-size: 16px; обраний приорітетний шрифт на сторінці*/
+}
+
+/*h3{
+			font-weight: 400;
+		}*/
+/* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: clip;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* Обмежуючий контейнер */
+[class*='__container'] {
+	margin: 0 auto;
+	max-width: 1230px; /*1200+15+15=1230*/
+	padding-left: 15px; /*відступи безпеки*/
+	padding-right: 15px; /*відступи безпеки*/
+}
+
+/* ========= */
+.flower-decor-ridht {
+	position: absolute;
+	top: -17px;
+	right: -180px;
+	z-index: -1;
+}
+/* =========== */
+
+/*=========== HEADER ================*/
+.header {
+	color: #343434;
+	margin-bottom: 70px;
+}
+.header__container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 108px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	justify-content: space-between;
+	/*background-color: #ba936f;*/
+}
+
+.header__logo {
+	z-index: 4;
+}
+
+.header__menu {
+}
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 118px;
+}
+.menu__list {
+	display: flex;
+	gap: 61px;
+}
+.menu__item {
+	transition: color 0.2s;
+}
+.menu__item:hover {
+	color: #e48b37;
+}
+.menu__link {
+}
+
+.sing-up-btn {
+	background-color: #ba936f;
+	padding: 10px 47px;
+	font-size: 17px;
+	color: #ffffff;
+	font-weight: 500;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+}
+.sing-up-btn:hover {
+	background-color: #e48b37;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);
+}
+.icon-menu {
+	display: none;
+}
+
+.footer {
+	background-color: #2f302c;
+	text-align: center;
+	color: #fff;
+}
+.footer__container {
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer__container p {
+	align-items: center;
+}
+
+@media (width<1200px) {
+	.header__container {
+		min-height: 80px;
+	}
+	.menu {
+		gap: 80px;
+	}
+	.menu__list {
+		gap: 25px;
+	}
+}
+@media (width<1000px) {
+	.sing-up-btn {
+		padding: 10px 20px;
+	}
+}
+@media (width<900px) {
+	.menu {
+		gap: 20px;
+	}
+}
+@media (max-width: 768px) {
+	.header {
+		margin-bottom: 30px;
+	}
+
+	.icon-menu {
+		display: block;
+		width: 30px;
+		height: 18px;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 4;
+	}
+	.icon-menu span,
+	.icon-menu::before,
+	.icon-menu::after {
+		content: '';
+		height: 2px;
+		width: 30px;
+		position: absolute;
+		right: 0;
+		transition: all 0.3s;
+		background-color: #2f302c;
+	}
+	.icon-menu::before {
+		top: 0;
+	}
+	.icon-menu::after {
+		bottom: 0;
+	}
+	.icon-menu span {
+		top: 50%;
+		translate: 0 -50%;
+	}
+	.menu {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+
+		background-color: #f6f6f6;
+		z-index: 1;
+		overflow: auto;
+		transition: left 0.3s;
+		padding: 150px 15px 30px 15px;
+		flex-direction: column;
+		gap: 80px;
+
+		background-image: url('../img/decor-1.png');
+		background-repeat: no-repeat;
+		background-size: 200px 600px;
+		background-position: right center;
+	}
+	.menu::before {
+		content: '';
+		position: fixed;
+		width: 100%;
+		height: 80px;
+		top: 0;
+		left: 100%;
+
+		transition: left 0.3s;
+
+		background-color: #fff;
+		z-index: 0;
+	}
+	.menu__list {
+		row-gap: 40px;
+		flex-direction: column;
+		font-size: 35px;
+		align-items: center;
+	}
+	.sing-up-btn {
+		padding: 10px 47px;
+	}
+	[data-menu-open] {
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	[data-menu-open] .icon-menu span {
+		width: 0;
+	}
+	[data-menu-open] .icon-menu::before {
+		rotate: -45deg;
+		transform: translate(0, -50%);
+		top: 50%;
+	}
+	[data-menu-open] .icon-menu::after {
+		rotate: 45deg;
+		transform: translate(0, 50%);
+		bottom: 50%;
+	}
+	[data-menu-open] .menu,
+	[data-menu-open] .menu::before {
+		left: 0;
+	}
+}
+
+/* ================= M A I N =====================*/
+/* ПЕРШИЙ БЛОК yoga-info*/
+.yoga-info {
+	margin-bottom: 136px;
+}
+
+.yoga-info__container {
+	display: flex;
+	gap: 138px;
+	flex-direction: column;
+	position: relative;
+	border: 2px solid red;
+}
+.flower-left {
+	position: absolute;
+	top: 220px;
+	left: -180px;
+	z-index: -1;
+}
+.yoga-info__card {
+	display: flex;
+	gap: 27px;
+}
+.card-info {
+}
+.card-info__text {
+	max-width: 687px;
+	padding-top: 71px;
+	padding-bottom: 57px;
+	min-width: 300px;
+	flex-shrink: 1;
+}
+.card-info__title {
+	font-size: 50px;
+	margin-bottom: 70px;
+	font-weight: 400;
+}
+.title {
+	font-family: 'Lora', serif;
+	color: #ba936f;
+	text-transform: uppercase;
+}
+.card-info__description {
+	font-size: 19px;
+	max-width: 638px;
+	margin-bottom: 96px;
+	line-height: 1.421;
+}
+
+.card-info__link {
+	padding-left: 60px;
+	position: relative;
+	transition: transform 0.2s;
+	display: inline-block;
+}
+.card-info__link:hover {
+	transform: scale(1.1);
+	color: #ba936f;
+}
+.card-info__link::before {
+	content: '';
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	background: url('../icons/circle.svg') left no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.card-info__link img {
+	padding-left: 6px;
+}
+.card-info__img {
+	max-width: 486px;
+	aspect-ratio: 486 / 647;
+	flex-shrink: 1;
+	overflow: hidden;
+	border-radius: 24px;
+	min-width: 370px;
+}
+.card-info__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.card-info-reverse {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 40px;
+}
+.card-info-reverse__text {
+	max-width: 560px;
+	padding-top: 63px;
+	padding-bottom: 43px;
+}
+.card-info-reverse__title {
+	margin-bottom: 55px;
+	font-size: 35px;
+	font-weight: 400;
+}
+.card-info-reverse__description {
+	margin-bottom: 58px;
+	font-size: 19px;
+	line-height: 1.421;
+}
+.card-info-reverse__description p:nth-child(1) {
+	padding-bottom: 46px;
+}
+.card-info-reverse__description p:nth-child(2) {
+	margin-bottom: 5px;
+}
+.card-info-reverse__description a {
+	color: #ba936f;
+	transition: transform 0.2s;
+	display: inline-block;
+}
+.card-info-reverse__description a:hover {
+	color: #e48b37;
+	transform: scale(1.1);
+}
+.card-info-reverse__link {
+	padding: 12px 47px;
+	background-color: #ba936f;
+	border-radius: 12px;
+	color: #ffffff;
+	transition: all 0.2s ease;
+	font-size: 17px;
+	font-weight: 500;
+	display: inline-block;
+}
+.card-info-reverse__link:hover {
+	background-color: #e48b37;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);
+}
+.card-info-reverse__img {
+	flex-shrink: 1;
+	overflow: hidden;
+	border-radius: 24px;
+	max-width: 600px;
+	min-width: 370px;
+	aspect-ratio: 600 / 602;
+}
+
+.card-info-reverse__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+	.yoga-info__container {
+		gap: 100px;
+	}
+	.card-info__text {
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
+	.card-info__title {
+		font-size: 40px;
+		margin-bottom: 50px;
+	}
+	.card-info-reverse__text {
+		max-width: 560px;
+		padding-top: 10px;
+		padding-bottom: 43px;
+	}
+	.card-info-reverse__title {
+		margin-bottom: 35px;
+	}
+}
+@media (max-width: 768px) {
+	.yoga-info {
+		margin-bottom: 70px;
+	}
+	.yoga-info__card {
+		display: flex;
+		gap: 20px;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.card-info__img {
+		max-width: 600px;
+		aspect-ratio: 600 / 647;
+		width: 100%;
+		min-width: 290px;
+	}
+	.card-info-reverse__img {
+		min-width: 290px;
+	}
+	.card-info__text {
+		max-width: 560px;
+	}
+}
+/*===== ДРУГИЙ БЛОК LESSONS =====*/
+
+.lessons {
+	margin-bottom: 138px;
+}
+.lessons__container {
+	position: relative;
+	border: 2px solid rgb(3, 141, 9);
+}
+.flower-3 {
+	position: absolute;
+	top: -322px;
+	right: -160px;
+	z-index: -1;
+}
+.lessons__header {
+	margin-bottom: 64px;
+	max-width: 839px;
+}
+.lessons__title {
+	font-size: 35px;
+	margin-bottom: 32px;
+}
+.lessons__description {
+	font-size: 17px;
+	line-height: 1.6;
+}
+.lessons__cards {
+	display: flex;
+	gap: 41px;
+	flex-wrap: wrap;
+}
+
+.card-lessons {
+	flex: 0 0 auto;
+	min-width: 300px;
+	max-width: none;
+}
+.card-lessons__img {
+	margin-bottom: 14px;
+	max-width: 100%;
+	display: block;
+	border-radius: 32px;
+	overflow: hidden;
+	position: relative;
+}
+
+.card-lessons__img::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+	opacity: 0;
+	transition: all 0.3s;
+}
+.card-lessons__img:hover::before {
+	opacity: 0.6;
+}
+.lessons__card:nth-of-type(1) .card-lessons__img {
+	aspect-ratio: 385 / 477;
+}
+
+.lessons__card:nth-of-type(2) .card-lessons__img {
+	aspect-ratio: 1 / 1;
+}
+
+.lessons__card:nth-of-type(3) .card-lessons__img {
+	aspect-ratio: 362 / 477;
+}
+.card-lessons__img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.card-lessons__title {
+	text-transform: capitalize;
+	padding-left: 15px;
+	position: relative;
+	transition: all 0.3s;
+	transform-origin: center;
+	display: inline-block;
+	font-weight: 400;
+}
+.card-lessons:hover .card-lessons__title {
+	color: #e48b37;
+	transform: scale(1.1);
+}
+
+@media (max-width: 1230px) {
+	.lessons__cards {
+		gap: 20px;
+		justify-content: center;
+	}
+	.lessons__card {
+		flex: 1 1 233px;
+		max-width: 350px;
+		min-height: 300px;
+		min-width: 200px;
+	}
+
+	.lessons__card:nth-of-type(3) .card-lessons__img {
+		aspect-ratio: 385 / 477;
+	}
+}
+
+@media (max-width: 768px) {
+	.lessons {
+		margin-bottom: 70px;
+	}
+	.lessons__header {
+		max-width: 560px;
+		margin: 0 auto 70px;
+	}
+	.lessons__description {
+		font-size: 17px;
+		line-height: 1.6;
+	}
+	.lessons__card:nth-of-type(2) {
+		order: 10;
+	}
+
+	.card-lessons__title {
+		text-align: center;
+		padding-left: 0;
+	}
+	@media (max-width: 515px) {
+		.lessons__card {
+			max-width: 360px;
+		}
+		.lessons__card:nth-of-type(2) {
+			order: 0;
+		}
+	}
+}
+
+/*============== ТРЕТIЙ БЛОК schedule =============*/
+
+.schedule {
+	margin-bottom: 70px;
+}
+.schedule__container {
+	position: relative;
+	border: 2px solid rgb(0, 17, 255);
+}
+.flower-decor-4 {
+	position: absolute;
+	top: -130px;
+	left: -190px;
+}
+.schedule__header {
+	margin-bottom: 41px;
+}
+.schedule__title {
+	font-size: 35px;
+	max-width: 515px;
+	line-height: 1.3;
+	margin-bottom: 16px;
+	color: #cccccc;
+}
+.title {
+}
+.schedule__description {
+	max-width: 840px;
+	font-size: 17px;
+	line-height: 1.6;
+}
+.schedule__content {
+	display: flex;
+	gap: 33px;
+}
+.schedule__wrapper-table {
+	max-width: 660px;
+	width: 100%;
+}
+.schedule__table {
+	border-collapse: collapse;
+	max-width: 660px;
+	width: 100%;
+	margin: 70px 0;
+}
+.schedule__table tr {
+	border-bottom: 1px solid #ba936f;
+}
+.schedule__table tr:first-child {
+	border-top: 1px solid #ba936f;
+}
+.schedule__table td {
+	padding: 18px 0;
+	text-transform: uppercase;
+	line-height: 1.4;
+	position: relative;
+}
+.schedule__table td a {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 1px;
+	transition: all 0.3s;
+}
+.schedule__table td a:hover {
+	color: #ba936f;
+}
+/*.icon-arrow-up {
+}*/
+.schedule__img {
+	max-width: 503px;
+	aspect-ratio: 503 / 602;
+	min-width: 350px;
+}
+.schedule__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+	.schedule__table {
+		margin: 40px 0;
+	}
+}
+@media (max-width: 1120px) {
+	.schedule__table {
+		margin: 0px 0;
+	}
+}
+@media (max-width: 950px) {
+	.schedule__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.schedule__table {
+		display: table;
+	}
+	.schedule__table td {
+		padding: 18px 0;
+	}
+	.schedule__wrapper-table {
+		overflow-x: auto;
+		margin-right: -15px;
+		margin-left: -15px;
+		width: calc(100% + 30px);
+	}
+	.schedule__table td {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.schedule__img {
+		max-width: 703px;
+		width: 100%;
+	}
+}
+@media (max-width: 700px) {
+	.schedule__table {
+		min-width: 660px;
+		width: 100%;
+	}
+	.schedule__img {
+		min-width: 290px;
+	}
+}
+
+/* ================== ФУТЕР =====================*/
+.footer {
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: #686767;
+}
+.footer__content {
+	padding-bottom: 20px;
+}
+.footer__content p {
+	color: #d4d4d4;
+	line-height: 1.5;
+	padding: 10px 0;
+	letter-spacing: 2px; /*відстань між літерами*/
+	font-weight: 500;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.footer__content--margin {
+	padding-top: 30px;
+}
+
+.footer__button {
+	padding: 10px 40px;
+	border-radius: 30px;
+	font-weight: 700;
+	color: #d4d4d4;
+	letter-spacing: 3px; /*відстань між літерами*/
+	border: 2px solid rgb(114, 114, 114);
+}
+
+.footer__button:hover {
+	/*стилі при наведенні на кнопку*/
+	box-shadow: 3px 3px 5px rgb(145, 145, 146);
+	background-color: #b8b9b9;
+}
