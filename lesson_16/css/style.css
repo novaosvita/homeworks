@@ -88,6 +88,7 @@ body {
 	}
 	.header__burger {
 		display: block; /*кнопка бургеру стає видима*/
+		margin-top: 4px; /* або скільки треба для опускання */
 	}
 	.header__logo,
 	.header__search,
@@ -202,6 +203,7 @@ body {
 		column-gap: 20px;
 	}
 }
+
 /*Запити для МОБІЛЬНОЇ версії*/
 @media (width < 768px) {
 	.menu {
@@ -312,7 +314,7 @@ body {
 .burger::after {
 	bottom: 0;
 }
-burger span {
+.burger span {
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -333,7 +335,11 @@ burger span {
 		translate: 0 50%;
 	}
 }
+/* властивість для приховування при скролі */
 
+[data-menu-open] body {
+	overflow: hidden;
+}
 /*==================== M A I N ==================*/
 .hero {
 	position: relative; /*стартовий блок для позиціонування елементів в середині*/
@@ -478,6 +484,7 @@ burger span {
 	text-align: center;
 	padding-bottom: 20px;
 	background-color: #686767;
+	min-height: 500px; /*тільки для прикладу наявності скролу_далі прибрати*/
 }
 .footer__content {
 	padding-bottom: 20px; /*відступи для внутрішнього контенту*/
