@@ -13,6 +13,7 @@ body {
 /*h3{
 			font-weight: 400;
 		}*/
+
 /* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
 .wrapper {
 	position: relative;
@@ -21,6 +22,7 @@ body {
 	min-height: 100%;
 	overflow: clip;
 }
+
 .wrapper > main {
 	flex-grow: 1;
 }
@@ -33,20 +35,80 @@ body {
 	padding-right: 15px; /*відступи безпеки*/
 }
 
-/* ========= */
-.flower-decor-ridht {
+/* ============== стилі декорування FLOWER ============== */
+.flower-left,
+.flower-right,
+.flower-up,
+.flower-down {
 	position: absolute;
-	top: -17px;
-	right: -180px;
+	top: 0;
+	width: 232px;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
 	z-index: -1;
+	pointer-events: none;
 }
-/* =========== */
+
+.flower-left {
+	left: 0;
+	top: -1100px;
+	background-image: url(../img/design/lotoc_design_left.webp);
+	background-position: left center;
+}
+
+.flower-right {
+	right: 0;
+	top: -150px;
+	background-image: url(../img/design/lotoc_design_right.webp);
+	background-position: right center;
+}
+
+.flower-up {
+	top: -1550px;
+	right: 0;
+	background-image: url(../img/design/lotoc_design_right.webp);
+	background-position: right center;
+}
+
+.flower-down {
+	top: 850px;
+	left: 0;
+	background-image: url(../img/design/lotoc_design_left.webp);
+	background-position: left center;
+}
+
+/* === АДАПТИВ ====== */
+
+@media (max-width: 768px) {
+	.flower-left,
+	.flower-right {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.flower-left,
+	.flower-right {
+		width: 100px;
+	}
+
+	.flower-left {
+		left: -50px;
+	}
+
+	.flower-right {
+		right: -50px;
+	}
+}
+/* =============== */
 
 /*=========== HEADER ================*/
 .header {
 	color: #343434;
 	margin-bottom: 70px;
 }
+
 .header__container {
 	position: relative;
 	display: flex;
@@ -55,15 +117,22 @@ body {
 	padding-bottom: 5px;
 	padding-top: 5px;
 	justify-content: space-between;
-	/*background-color: #ba936f;*/
+}
+
+/* ==== */
+.header__container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #fff;
+	z-index: 100;
 }
 
 .header__logo {
 	z-index: 4;
 }
 
-.header__menu {
-}
 .menu {
 	display: flex;
 	align-items: center;
@@ -78,8 +147,6 @@ body {
 }
 .menu__item:hover {
 	color: #e48b37;
-}
-.menu__link {
 }
 
 .sing-up-btn {
@@ -247,20 +314,13 @@ body {
 	gap: 138px;
 	flex-direction: column;
 	position: relative;
-	border: 2px solid red;
 }
-.flower-left {
-	position: absolute;
-	top: 220px;
-	left: -180px;
-	z-index: -1;
-}
+
 .yoga-info__card {
 	display: flex;
 	gap: 27px;
 }
-.card-info {
-}
+
 .card-info__text {
 	max-width: 687px;
 	padding-top: 71px;
@@ -269,7 +329,7 @@ body {
 	flex-shrink: 1;
 }
 .card-info__title {
-	font-size: 50px;
+	font-size: 50px; /*розмір шрифта згідно макету*/
 	margin-bottom: 70px;
 	font-weight: 400;
 }
@@ -314,6 +374,7 @@ body {
 	overflow: hidden;
 	border-radius: 24px;
 	min-width: 370px;
+	border-radius: 33px;
 }
 .card-info__img img {
 	width: 100%;
@@ -377,6 +438,7 @@ body {
 	max-width: 600px;
 	min-width: 370px;
 	aspect-ratio: 600 / 602;
+	border-radius: 33px; /*заокруглення для зображення*/
 }
 
 .card-info-reverse__img img {
@@ -406,6 +468,7 @@ body {
 		margin-bottom: 35px;
 	}
 }
+/* ========= АДАПТИВ ======== */
 @media (max-width: 768px) {
 	.yoga-info {
 		margin-bottom: 70px;
@@ -436,14 +499,8 @@ body {
 }
 .lessons__container {
 	position: relative;
-	border: 2px solid rgb(3, 141, 9);
 }
-.flower-3 {
-	position: absolute;
-	top: -322px;
-	right: -160px;
-	z-index: -1;
-}
+
 .lessons__header {
 	margin-bottom: 64px;
 	max-width: 839px;
@@ -474,6 +531,8 @@ body {
 	border-radius: 32px;
 	overflow: hidden;
 	position: relative;
+	border-radius: 33px; /*заокруглення для зображення*/
+
 }
 
 .card-lessons__img::before {
@@ -489,7 +548,8 @@ body {
 }
 .card-lessons__img:hover::before {
 	opacity: 0.6;
-}
+	}
+
 .lessons__card:nth-of-type(1) .card-lessons__img {
 	aspect-ratio: 385 / 477;
 }
@@ -567,15 +627,14 @@ body {
 		}
 	}
 }
-
-/*============== ТРЕТIЙ БЛОК schedule =============*/
+/*  ============ ТАБЛИЦЯ ========================== */
+/*============== ТРЕТIЙ БЛОК ГРАФІК уроків (schedule) =============*/
 
 .schedule {
 	margin-bottom: 70px;
 }
 .schedule__container {
 	position: relative;
-	border: 2px solid rgb(0, 17, 255);
 }
 .flower-decor-4 {
 	position: absolute;
@@ -592,8 +651,7 @@ body {
 	margin-bottom: 16px;
 	color: #cccccc;
 }
-.title {
-}
+
 .schedule__description {
 	max-width: 840px;
 	font-size: 17px;
@@ -634,19 +692,19 @@ body {
 .schedule__table td a:hover {
 	color: #ba936f;
 }
-/*.icon-arrow-up {
-}*/
+
 .schedule__img {
 	max-width: 503px;
 	aspect-ratio: 503 / 602;
 	min-width: 350px;
+	border-radius: 33px; /*заокруглення кутів зображення*/
 }
 .schedule__img img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-
+/* АДАПТИВ */
 @media (max-width: 1200px) {
 	.schedule__table {
 		margin: 40px 0;
@@ -694,7 +752,7 @@ body {
 	}
 }
 
-/* ================== ФУТЕР =====================*/
+/* ================== ФУТЕР ==================*/
 .footer {
 	text-align: center;
 	padding-bottom: 20px;
