@@ -252,10 +252,6 @@ body {
 		flex-direction: column;
 		gap: 80px;
 
-		background-image: url('../img/decor-1.png');
-		background-repeat: no-repeat;
-		background-size: 200px 600px;
-		background-position: right center;
 	}
 	.menu::before {
 		content: '';
