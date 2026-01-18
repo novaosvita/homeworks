@@ -10,6 +10,7 @@ body {
 	/*font-size: 16px; обраний приорітетний шрифт на сторінці*/
 }
 
+
 /* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
 .wrapper {
 	position: relative;
@@ -79,13 +80,6 @@ body {
 @media (max-width: 768px) {
 	.flower-left,
 	.flower-right {
-		display: none;
-	}
-}
-
-@media (max-width: 768px) {
-	.flower-left,
-	.flower-right {
 		width: 100px;
 	}
 
@@ -106,7 +100,12 @@ body {
 }
 
 .header__container {
-	position: relative;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #fff;
+	z-index: 100;
 	display: flex;
 	align-items: center;
 	min-height: 108px;
@@ -114,17 +113,7 @@ body {
 	padding-top: 5px;
 	justify-content: space-between;
 }
-
 /* ==== */
-.header__container {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	background-color: #fff;
-	z-index: 100;
-}
-
 .header__logo {
 	z-index: 4;
 }
@@ -163,20 +152,6 @@ body {
 	display: none;
 }
 
-.footer {
-	background-color: #2f302c;
-	text-align: center;
-	color: #fff;
-}
-.footer__container {
-	min-height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.footer__container p {
-	align-items: center;
-}
 /*=== Адаптив ===*/
 @media (width<1200px) {
 	.header__container {
@@ -203,6 +178,7 @@ body {
 	.header {
 		margin-bottom: 30px;
 	}
+
 
 	.icon-menu {
 		display: block;
@@ -247,6 +223,7 @@ body {
 		padding: 150px 15px 30px 15px;
 		flex-direction: column;
 		gap: 80px;
+
 	}
 	.menu::before {
 		content: '';
@@ -275,7 +252,7 @@ body {
 		overflow: hidden;
 		height: 100vh;
 	}
-	/*==== Анімація іконки бургера (перетворення на "X") ===*/
+/*==== Анімація іконки бургера (перетворення на "X") ===*/
 	[data-menu-open] .icon-menu span {
 		width: 0;
 	}
@@ -524,6 +501,7 @@ body {
 	overflow: hidden;
 	position: relative;
 	border-radius: 33px; /*заокруглення для зображення*/
+
 }
 
 .card-lessons__img::before {
@@ -539,7 +517,7 @@ body {
 }
 .card-lessons__img:hover::before {
 	opacity: 0.6;
-}
+	}
 
 .lessons__card:nth-of-type(1) .card-lessons__img {
 	aspect-ratio: 385 / 477;
