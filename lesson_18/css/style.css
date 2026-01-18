@@ -10,10 +10,6 @@ body {
 	/*font-size: 16px; обраний приорітетний шрифт на сторінці*/
 }
 
-/*h3{
-			font-weight: 400;
-		}*/
-
 /* ЗАГАЛЬНА ОБГОРТКА_ !ЗАВЖДИ ці властивості писати */
 .wrapper {
 	position: relative;
@@ -35,7 +31,7 @@ body {
 	padding-right: 15px; /*відступи безпеки*/
 }
 
-/* ============== стилі декорування FLOWER ============== */
+/* ========== стилі декорування FLOWER ========= */
 .flower-left,
 .flower-right,
 .flower-up,
@@ -208,7 +204,6 @@ body {
 		margin-bottom: 30px;
 	}
 
-
 	.icon-menu {
 		display: block;
 		width: 30px;
@@ -252,7 +247,6 @@ body {
 		padding: 150px 15px 30px 15px;
 		flex-direction: column;
 		gap: 80px;
-
 	}
 	.menu::before {
 		content: '';
@@ -281,7 +275,7 @@ body {
 		overflow: hidden;
 		height: 100vh;
 	}
-/*==== Анімація іконки бургера (перетворення на "X") ===*/
+	/*==== Анімація іконки бургера (перетворення на "X") ===*/
 	[data-menu-open] .icon-menu span {
 		width: 0;
 	}
@@ -530,7 +524,6 @@ body {
 	overflow: hidden;
 	position: relative;
 	border-radius: 33px; /*заокруглення для зображення*/
-
 }
 
 .card-lessons__img::before {
@@ -546,7 +539,7 @@ body {
 }
 .card-lessons__img:hover::before {
 	opacity: 0.6;
-	}
+}
 
 .lessons__card:nth-of-type(1) .card-lessons__img {
 	aspect-ratio: 385 / 477;
