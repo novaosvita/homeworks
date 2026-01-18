@@ -181,7 +181,7 @@ body {
 .footer__container p {
 	align-items: center;
 }
-
+/*=== Адаптив ===*/
 @media (width<1200px) {
 	.header__container {
 		min-height: 80px;
@@ -207,6 +207,7 @@ body {
 	.header {
 		margin-bottom: 30px;
 	}
+
 
 	.icon-menu {
 		display: block;
@@ -275,11 +276,12 @@ body {
 	.sing-up-btn {
 		padding: 10px 47px;
 	}
+	/*===== Блокування прокрутки фону =====*/
 	[data-menu-open] {
 		overflow: hidden;
 		height: 100vh;
 	}
-
+/*==== Анімація іконки бургера (перетворення на "X") ===*/
 	[data-menu-open] .icon-menu span {
 		width: 0;
 	}
@@ -299,7 +301,7 @@ body {
 	}
 }
 
-/* ================= M A I N =====================*/
+/* ================= M A I N ================*/
 /* ПЕРШИЙ БЛОК yoga-info*/
 .yoga-info {
 	margin-bottom: 136px;
