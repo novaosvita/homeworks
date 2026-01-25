@@ -325,11 +325,12 @@ section[id] {
 	max-width: 28.125rem;
 	display: flex;
 	flex-direction: column;
-
 	gap: 2.1875rem;
 }
+
 .about-body__title {
 	font-size: 1.875rem;
+	font-weight: 400;
 }
 .about-body__text {
 	line-height: 1.31;
