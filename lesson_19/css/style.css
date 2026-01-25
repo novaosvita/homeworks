@@ -12,6 +12,7 @@ html {
 body {
 	font-family: 'Playfair', serif;
 	color: #000000;
+	/*font-weight: 400;*/
 }
 main {
 	flex: 1;
@@ -101,9 +102,9 @@ section[id] {
 }
 /* зміни при наведенні - збільшення */
 .menu__item:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
-/* вимкнено */
+/* вимкнено показ*/
 .icon-menu {
 	display: none;
 }
@@ -436,7 +437,7 @@ section[id] {
 	flex-direction: column;
 	gap: 1.375rem;
 	text-align: center;
-	line-height: 1.31;
+	line-height: 1.25;
 }
 .menu-cosmetics__item {
 	position: relative;
@@ -474,9 +475,11 @@ section[id] {
 	min-width: 11.25rem;
 	display: flex;
 	gap: 1rem;
+	/*font-weight: 400;*/
 }
 .cosmetics-block__card:hover .card-cosmetics__title {
 	color: #5a4e4e;
+	
 }
 
 .card-cosmetics__img {
@@ -507,8 +510,10 @@ section[id] {
 }
 .card-cosmetics__title {
 	font-size: 1.25rem;
-	line-height: 1.35;
+	line-height: 1.25;
 	transition: all 0.3s;
+	/*color: #656565;*/
+	font-weight: 400;
 }
 
 /*==== АДАПТИВНІСЬ блоку ==== */
