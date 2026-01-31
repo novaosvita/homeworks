@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 		<!-- === Налаштування перегляду (адаптивності) ==== -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- ====== Підключення шрифтів ==== -->
 		<!-- rel означає “relationship” — "тип зв’язку". 
 		 "preconnect" каже браузеру: "pre-", тобто заздалегідь -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<!-- 2 - шрифт Montserrat -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-			rel="stylesheet">
+			rel="stylesheet"
+		/>
 		<!--  Файл стилів  -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- ФАВІКОН -->
+		<!-- запис для формату .ico підтримується усіма браузерами -->
+		<link rel="shortcut icon" href="favicon.ico" sizes="32x32" type="image/x-icon" />
+		<!-- запис для формату .svg підтримується сучасними браузерами -->
+		<!--<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">-->
 		<!-- ========================================= -->
 		<title>Lesson_17 Li</title>
 	</head>
@@ -32,51 +38,55 @@
 			<!-- ==== M A I N ================-->
 			<main class="main">
 				<!--==========Секція categories ==========-->
-				<section class="categories">
-					<div class="categories__container">
-						<div class="categories__card card-categories">
-							<div class="card-categories__image">
-								<img src="img/small-lamp.png" alt="small-lamp">
+				<section class="promo-products">
+					<div class="promo-products__container">
+						<div class="promo-card promo-card--reverse">
+							<div class="promo-card__body">
+								<h2 class="promo-card__title">HANGING LIGHT</h2>
+								<div class="promo-card__text">
+									<p>
+										Upgrade your space with our modern hanging light, featuring sleek lines,
+										energy-efficient LED lighting, and adjustable height.
+									</p>
+								</div>
+								<a href="#" class="promo-card__link"> <span>View more</span></a>
 							</div>
-							<div class="card-categories__image">
-								<img src="img/big-lamp.png" alt="big-lamp">
-							</div>
-							<div class="card-categories__content">
-								<h3 class="card-categories__title">HANGING LIGHT</h3>
-								<p class="card-categories__desc">
-									Upgrade your space with our modern hanging light, featuring sleek
-									lines,
-									energy-efficient LED lighting, and adjustable height.
-								</p>
-								<a href="#" class="card-categories__link">View more</a>
-							</div>
-						</div>
-						<div class="categories__card card-categories">
-							<div class="card-categories__content">
-								<h3 class="card-categories__title">DESIGNED SOFA</h3>
-								<p class="card-categories__desc">
-									Introducing our newest sofa, the perfect combination of style and
-									comfort,
-									designed to elevate your living space and provide ultimate relaxation.
-								</p>
-								<a href="#" class="card-categories__link">View more</a>
-							</div>
-							<div class="card-categories__image">
-								<img src="img/designed-sofa.png" alt="designed-sofa">
+
+							<div class="promo-card__media">
+								<img src="img/big-small-lamp.png" alt="Image" />
 							</div>
 						</div>
-						<div class="categories__card card-categories">
-							<div class="card-categories__content">
-								<h3 class="card-categories__title">HANGING LIGHT</h3>
-								<p class="card-categories__desc">
-									Introducing our newest sofa, the perfect combination of style and
-									comfort,
-									designed to elevate your living space and provide ultimate relaxation.
-								</p>
-								<a href="#" class="card-categories__link">View more</a>
+
+						<div class="promo-card promo-card--big promo-card--accent">
+							<div class="promo-card__body">
+								<h2 class="promo-card__title">DESIGNED SOFA</h2>
+								<div class="promo-card__text">
+									<p>
+										Introducing our newest sofa, the perfect combination of style and comfort,
+										designed to elevate your living space and provide ultimate relaxation.
+									</p>
+								</div>
+								<a href="#" class="promo-card__link"><span>View more</span></a>
 							</div>
-							<div class="card-categories__image">
-								<img src="img/nova-chair.png" alt="nova-chair">
+
+							<div class="promo-card__media">
+								<img src="img/designed-sofa.png" alt="Image" />
+							</div>
+						</div>
+
+						<div class="promo-card">
+							<div class="promo-card__body">
+								<h2 class="promo-card__title">NOVA CHAIR</h2>
+								<div class="promo-card__text">
+									<p>
+										a stylish and comfortable addition to any room, with its sleek design and plush
+										cushions creating the ultimate seating experience.
+									</p>
+								</div>
+								<a href="#" class="promo-card__link"><span>View more</span></a>
+							</div>
+							<div class="promo-card__media">
+								<img src="img/nova-chair.png" alt="Image" />
 							</div>
 						</div>
 					</div>
@@ -88,54 +98,48 @@
 						<!-- Блок Список Партнерів -->
 						<ul class="trusted__items">
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/aspen-online.png"
-									alt="Aspen online logo">
+								<img class="trusted__image" src="icons/aspen-online.png" alt="Aspen online logo" />
 							</li>
 							<li class="trusted__item">
 								<img
 									class="trusted__image"
 									src="icons/cropand-highlight.png"
-									alt="Crop and highlight logo">
+									alt="Crop and highlight logo"
+								/>
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/brand-logo.png" alt="N logo">
+								<img class="trusted__image" src="icons/brand-logo.png" alt="N logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/miiissy.png"
-									alt="Miiissy logo">
+								<img class="trusted__image" src="icons/miiissy.png" alt="Miiissy logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/peppermint.png"
-									alt="Peppermint logo">
+								<img class="trusted__image" src="icons/peppermint.png" alt="Peppermint logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/pixie-labs.png"
-									alt="Pixie labs logo">
+								<img class="trusted__image" src="icons/pixie-labs.png" alt="Pixie labs logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/brand-logo.png" alt="N logo">
+								<img class="trusted__image" src="icons/brand-logo.png" alt="N logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/pixie-labs.png"
-									alt="Pixie labs logo">
+								<img class="trusted__image" src="icons/pixie-labs.png" alt="Pixie labs logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/peppermint.png"
-									alt="Peppermint logo">
+								<img class="trusted__image" src="icons/peppermint.png" alt="Peppermint logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/miiissy.png"
-									alt="Miiissy logo">
+								<img class="trusted__image" src="icons/miiissy.png" alt="Miiissy logo" />
 							</li>
 							<li class="trusted__item">
-								<img class="trusted__image" src="icons/aspen-online.png"
-									alt="Aspen online logo">
+								<img class="trusted__image" src="icons/aspen-online.png" alt="Aspen online logo" />
 							</li>
 							<li class="trusted__item">
 								<img
 									class="trusted__image"
 									src="icons/cropand-highlight.png"
-									alt="Crop and highlight logo">
+									alt="Crop and highlight logo"
+								/>
 							</li>
 						</ul>
 					</div>
@@ -164,36 +168,33 @@
 									<img
 										src="img/featured/urban-lux-high-chair.png"
 										alt="chair"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
-										<a href="#" class="card-featured__link-title"> URBAN LUX HIGH CHAIR
-										</a>
+										<a href="#" class="card-featured__link-title"> URBAN LUX HIGH CHAIR </a>
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
-									<div class="card-featured__price">$2668.15</div>
+									<div class="card-featured__price">
+										<p>$2668.15</p>
+									</div>
 								</div>
 							</div>
 							<div class="featured__card card-featured">
@@ -201,33 +202,28 @@
 									<img
 										src="img/featured/modern-black-hanging-light.png"
 										alt="chandelier"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
-										<a href="#" class="card-featured__link-title"> MORDERN BLACK HANGING
-											LIGHT </a>
+										<a href="#" class="card-featured__link-title"> MORDERN BLACK HANGING LIGHT </a>
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
 									<div class="card-featured__price">
@@ -240,7 +236,8 @@
 									<img
 										src="img/featured/metro-fusion-table.png"
 										alt="table"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
@@ -248,24 +245,19 @@
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
 									<div class="card-featured__price">
@@ -278,7 +270,8 @@
 									<img
 										src="img/featured/lumin-desk-lamp.png"
 										alt="lamp"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
@@ -286,24 +279,19 @@
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
 									<div class="card-featured__price">
@@ -316,33 +304,28 @@
 									<img
 										src="img/featured/timeless-edge-hanging-clock.png"
 										alt="watch"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
-										<a href="#" class="card-featured__link-title"> TIMELESS EDGE HANGING
-											CLOCK </a>
+										<a href="#" class="card-featured__link-title"> TIMELESS EDGE HANGING CLOCK </a>
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
 									<div class="card-featured__price">
@@ -355,33 +338,28 @@
 									<img
 										src="img/featured/zenith-pendant-light.png"
 										alt="lampwhite"
-										class="card-featured__image">
+										class="card-featured__image"
+									/>
 								</a>
 								<div class="card-featured__body">
 									<h3 class="card-featured__title">
-										<a href="#" class="card-featured__link-title"> ZENITH PENDANT LIGHT
-										</a>
+										<a href="#" class="card-featured__link-title"> ZENITH PENDANT LIGHT </a>
 									</h3>
 									<ul class="card-featured__rating rating-card-featured">
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 										<li class="rating-card-featured__item">
-											<img src="icons/star.svg" alt="star"
-												class="rating-card-featured__image">
+											<img src="icons/star.svg" alt="star" class="rating-card-featured__image" />
 										</li>
 									</ul>
 									<div class="card-featured__price">
@@ -399,16 +377,18 @@
 						<div class="advantage__items">
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/planet-earth.svg" alt="plane">
+									<img
+										class="item-advantage__img"
+										src="icons/choose/planet-earth.svg"
+										alt="plane"
+									/>
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">GLOBAL DELIVERY</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Experience Hassle-Free Shipping and Seamless Global Connectivity with
-											Our
-											Trustworthy and Efficient Delivery Service, Bringing the World to
-											Your
+											Experience Hassle-Free Shipping and Seamless Global Connectivity with Our
+											Trustworthy and Efficient Delivery Service, Bringing the World to Your
 											Fingertips!
 										</p>
 									</div>
@@ -416,16 +396,14 @@
 							</div>
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/package-box.svg" alt="box">
+									<img class="item-advantage__img" src="icons/choose/package-box.svg" alt="box" />
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">FREE SHIPPING</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Shop to Your Heart's Content Without Worrying About Shipping Costs:
-											Our Free
-											Shipping Service Delivers Your Purchases with a Smile, Straight to
-											Your
+											Shop to Your Heart's Content Without Worrying About Shipping Costs: Our Free
+											Shipping Service Delivers Your Purchases with a Smile, Straight to Your
 											Doorstep!
 										</p>
 									</div>
@@ -433,14 +411,13 @@
 							</div>
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/phone.svg" alt="phone">
+									<img class="item-advantage__img" src="icons/choose/phone.svg" alt="phone" />
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">24/7 SUPPORTING</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Shop with Confidence Anytime, Anywhere: Our Free Shipping Service
-											Comes with
+											Shop with Confidence Anytime, Anywhere: Our Free Shipping Service Comes with
 											24/7 Support to Ensure Your Packages Arrive Safely and On Time!
 										</p>
 									</div>
@@ -448,16 +425,19 @@
 							</div>
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/email.svg" alt="email">
+									<img class="item-advantage__img" src="icons/choose/email.svg" alt="email" />
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">DAILY EMAIL</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Stay Up-to-Date with Your Deliveries: Enjoy the Convenience of Daily
-											Email
-											Updates with Our Free Shipping Service, Making Your Online Shopping
-											Experience
+											Stay Up-to-Date with Your Deliveries: Enjoy the Convenience of Daily Email
+											Updates with Our Free Shipping Service, Making Your Online Shopping Experience
+											Even More Enjoyable!
+										</p>
+										<p>
+											Stay Up-to-Date with Your Deliveries: Enjoy the Convenience of Daily Email
+											Updates with Our Free Shipping Service, Making Your Online Shopping Experience
 											Even More Enjoyable!
 										</p>
 									</div>
@@ -465,16 +445,18 @@
 							</div>
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/credit-card.svg" alt="credit-card">
+									<img
+										class="item-advantage__img"
+										src="icons/choose/credit-card.svg"
+										alt="credit-card"
+									/>
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">EASY PAYMENT</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Shop and Pay with Ease: Our Free Shipping Service Not Only Delivers
-											Your
-											Packages for Free, but Also Offers Easy Payment Options, Making Your
-											Shopping
+											Shop and Pay with Ease: Our Free Shipping Service Not Only Delivers Your
+											Packages for Free, but Also Offers Easy Payment Options, Making Your Shopping
 											Experience a Breeze!
 										</p>
 									</div>
@@ -482,16 +464,14 @@
 							</div>
 							<div class="advantage__item item-advantage">
 								<div class="item-advantage__image">
-									<img src="icons/choose/badge.svg" alt="plane">
+									<img class="item-advantage__img" src="icons/choose/badge.svg" alt="plane" />
 								</div>
 								<div class="item-advantage__body">
 									<h3 class="item-advantage__title">GLOBAL DELIVERY</h3>
 									<div class="item-advantage__desc">
 										<p>
-											Experience Hassle-Free Shipping and Seamless Global Connectivity with
-											Our
-											Trustworthy and Efficient Delivery Service, Bringing the World to
-											Your
+											Experience Hassle-Free Shipping and Seamless Global Connectivity with Our
+											Trustworthy and Efficient Delivery Service, Bringing the World to Your
 											Fingertips!
 										</p>
 									</div>
@@ -505,8 +485,9 @@
 			<footer class="footer">
 				<div class="footer__container">
 					<div class="footer__content footer__content--margin">
-						<p>LESSON № 17: "G R I D"
-							<br> Двовимірна сітка для розміщення елементів та побудови макета
+						<p>
+							LESSON № 17: "G R I D" <br />
+							Двовимірна сітка для розміщення елементів та побудови макета
 						</p>
 						<a href="#top" class="footer__button">TOP</a>
 					</div>
