@@ -89,130 +89,260 @@ h2 {
 }
 /* ================= M A I N =====================*/
 /* ================= Section Categories ==========*/
+/* ================= Секція як приклад від МЕНТОРА ==========*/
+/*  стилі для секції */
+.promo-products {
+	padding: 50px 0px; /*відступи для блоку*/
+}
 
-.categories {
-	padding-top: 82px;
-	padding-bottom: 82px;
+.promo-products__container {
+	display: grid; /*адаптивна сітка*/
+	grid-auto-rows: 1fr;
+	gap: 20px;
 }
-/* Додаткові стилі для контейнера */
-.categories__container {
-	display: grid;
-	/*стилі для гнучкого адаптивного блоку auto-fill minmax*/
-	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	gap: 36px;
+
+@media (width >= 1422px) {
+	.promo-products__container {
+		gap: 36px;
+	}
 }
-.categories__card {
+
+@media (width >= 1120px) {
+	.promo-products__container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (width < 1120px) and (width >= 640px) {
+	.promo-products__container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/*======================================================*/
+/*  стилі для карток */
+.promo-card {
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 32px 22px 0;
+	grid-column: span 1;
+
 	background-color: #f7f7f7;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
-	min-height: 590px;
 	overflow: hidden;
 }
-.card-categories__image {
-	position: absolute;
+
+@media (width >= 1120px) {
+	.promo-card {
+		min-height: 584px;
+		padding: 48px 32px 0;
+	}
 }
 
-.card-categories__image img {
-	max-width: 100%;
-	height: auto;
-	
-}
-
-/* ПЕРША КАРТКА з двома зображеннями */
-.categories__card:nth-child(1) {
-	display: flex;
-	align-items: end;
-}
-/* для двох зображень*/
-.categories__card:nth-child(1) .card-categories__image:nth-child(1) {
-	top: 0;
-	right: 90px;
-}
-.categories__card:nth-child(1) .card-categories__image:nth-child(2) {
-	top: 0;
-	right: 58px;
-}
-.card-categories:nth-child(1) .card-categories__image {
-	bottom: auto;
-	top: 0;
-}
-
-/* ДРУГИЙ блок кртки*/
-.categories__card:nth-child(2) {
-	grid-column: span 2; /*займає ширину двох колонок*/
-	text-align: center;
+/*  модифікації для картки */
+.promo-card--accent {
 	background-color: #e6efea;
 }
-.categories__card:nth-child(2) .card-categories__image {
-	bottom: 50px;
-	top: auto;
+
+.promo-card--reverse {
+	flex-direction: column-reverse;
+	padding-top: 0px;
+	padding-bottom: 64px;
 }
 
-.categories__card:nth-child(2) .card-categories__desc {
+.promo-card--big {
+	padding-bottom: 32px;
+}
+
+@media (width >= 640px) {
+	.promo-card--big {
+		grid-column: span 2;
+	}
+}
+
+@media (width >= 1120px) {
+	.promo-card--big {
+		padding-bottom: 50px;
+	}
+}
+
+@media (width < 1120px) and (width >= 640px) {
+	.promo-card:nth-child(3n + 1) {
+		order: 1;
+	}
+
+	.promo-card:nth-child(3n + 3) {
+		order: 2;
+	}
+
+	.promo-card--big {
+		grid-column: 1 / -1;
+	}
+
+	.promo-card--big:nth-child(3n + 2) {
+		order: 3;
+	}
+}
+/*======================================================*/
+
+/*  стилі для медіа-контенту картки */
+.promo-card__media {
+	transform: translateX(22px);
+
+	width: 100%;
+	max-width: 263px;
+	align-self: flex-end;
+}
+
+@media (width >= 1120px) {
+	.promo-card__media {
+		transform: translateX(32px);
+	}
+}
+
+/*  модифікації */
+.promo-card--reverse .promo-card__media {
+	transform: none;
+
+	max-width: 209px;
+	aspect-ratio: 209 / 194;
+}
+
+.promo-card--big .promo-card__media {
+	transform: none;
+	max-width: 529px;
+	width: 100%;
+
+	align-self: center;
+}
+/*==== стилі для картинки ===*/
+.promo-card__media img {
+	width: 100%;
+	aspect-ratio: 263/250;
+
+	object-fit: contain;
+}
+
+/*  модифікації */
+.promo-card--big .promo-card__media img {
+	aspect-ratio: 529 / 218;
+}
+/*======================================================*/
+
+/*  Стилі для тіла контенту картки */
+.promo-card__body {
+	position: relative;
+	z-index: 3;
+	/* флекси */
+	flex-grow: 1;
+	/*стилізація*/
+	color: #7e7f7c;
+	line-height: 1.25;
+}
+
+/*  модифікації */
+.promo-card--reverse .promo-card__body {
+	flex-grow: 0;
+}
+
+.promo-card--big .promo-card__body {
+	text-align: center;
 	max-width: 310px;
-	margin: 0 auto;
+	margin-inline: auto;
 }
 
-/* 3-й блок картки */
-.categories__card:nth-child(3) .card-categories__image {
-	top: auto;
-	bottom: 0;
-	right: 0;
+.promo-card__body > *:not(:last-child) {
+	margin-bottom: 24px;
 }
+/*======================================================*/
 
-/* відступи нижні, окрім нижнього */
-.categories__card .card-categories__content > *:not(:last-child) {
-	margin-bottom: 20px;
-}
-.card-categories__title {
-	color: #2f302c;
-	font-weight: 800;
+/* внутрішні елементи */
+.promo-card__title {
 	font-size: 20px;
+	font-weight: 700;
 	line-height: 1.4;
+	text-transform: uppercase;
+	color: #2f302c;
 }
-.card-categories__link {
+/*додатковий стиль для відстіпів,  в разі додавання абзацу <p>*/
+.promo-card__text p:not(:last-child) {
+	margin-bottom: 10px;
+}
+/*======================================================*/
+
+/*  стилі для посилання */
+.promo-card__link {
 	position: relative;
 	padding-right: 20px;
+	outline: none;
+	transition: color 0.3s ease;
 }
-.card-categories__link::after {
+
+.promo-card__link::after {
 	content: '';
 	position: absolute;
-	width: 6px;
-	height: 6px;
-	border-bottom: 2px solid #7e7f7c;
-	border-right: 2px solid #7e7f7c;
-	transform: rotate(-45deg) translateY(-50%); /*центрування по горизонталі */
-	top: 50%;
+	top: 4px;
 	right: 0;
+	width: 16px;
+	height: 16px;
+	/* додавання стрілочки */
+	background: url(../icons/arrow_right.svg) center / contain no-repeat;
+	/* динаміка */
+	transition: transform 0.3s ease;
 }
 
-/* МЕДІА_запити для адаптивності */
-@media (width <= 1422px) {
-	.categories {
-		padding-top: 70px;
-		padding-bottom: 70px;
+.promo-card__link span {
+	position: relative;
+	display: inline-block; /*в блочно-рядковий тег*/
+}
+
+.promo-card__link span::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	/* ліня при нведенні */
+	width: 100%;
+	height: 1px;
+	/* стилізація */
+	background-color: #3f5656;
+	transform-origin: bottom right;
+	pointer-events: none;
+	/* динаміка */
+	transition: transform 0.3s ease;
+}
+
+/*  стилі для ховера */
+@media (any-hover: hover), (pointer: fine) {
+	.promo-card__link:hover {
+		color: #000000;
+	}
+
+	.promo-card__link:hover:after {
+		transform: translateX(30%);
+	}
+
+	.promo-card__link:hover span::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
 	}
 }
 
-@media (width <= 1280px) {
-	.categories__container {
-		grid-template-columns: repeat(3, 321px); /*повторення колонок: 3 рази по 321рх*/
-		justify-content: space-between;
-		gap: 20px;
-	}
-	.categories__card:nth-child(2) {
-		grid-column: span 1;
-	}
+/*  стилі для фокусу при навігації за допомогою tab */
+.promo-card__link:focus-visible {
+	color: #3f5656;
 }
 
-@media (width <= 992px) {
-	.categories__container {
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-		justify-content: space-around;
-	}
+.promo-card__link:focus-visible:after {
+	transform: translateX(30%);
+}
+
+.promo-card__link:focus-visible span::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /* ================= Секція trusted =============== */
@@ -235,15 +365,17 @@ h2 {
 	height: 170px;
 	margin: 0 auto;
 }
-/* МЕДІА_запити для адаптивності */
+/* МЕДІА_запити для адаптивності, не показувати частину зображення  */
+/* Ментори радятя не приховувати, а 
+Не треба прибирати частину логотипів, це вони в макеті зараз повторююьться, але цілком ймовірно, 
+що потім їх замінять на справжні і тоді виходить,
+ що половини партнерів просто не буде.
+ Якщо хочете залишити усі одразу видимі, 
+то тоді їм треба зменшити розмір та зменшиит gap між ними.*/
 @media (width < 480px) {
-	.trusted__item:nth-child(7),
-	.trusted__item:nth-child(8),
-	.trusted__item:nth-child(9),
-	.trusted__item:nth-child(10),
-	.trusted__item:nth-child(11),
-	.trusted__item:nth-child(12) {
-		display: none; /*не показувати*/
+	/*або запис max-width:480px*/
+	.trusted__items {
+		gap: 50px; /*при зменшенні екрану , зменшуюються відступи*/
 	}
 }
 
@@ -289,7 +421,7 @@ h2 {
 	text-transform: uppercase;
 }
 
-.list-featured__link::after {
+.list-featured__link:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -297,6 +429,13 @@ h2 {
 	height: 2px;
 	width: 0;
 	background-color: #2f302c;
+	transition: all 0.3s;
+}
+
+.list-featured__link:hover {
+	content: '';
+
+	color: #787879;
 	transition: all 0.3s;
 }
 
@@ -309,7 +448,9 @@ h2 {
 	/*ця властивість забезпечує гнучкість,
 	БЕЗ МЕДІА-ЗАПИТІВ*/
 	/* auto-fill - НАДАЄ АДАПТИВНІСТЬ */
-	grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+	/* Тут ми додаємо функцію min(330px, 100%), що означає - доки в тебе є місце роби картку шириною 330px, але як тільки місця
+	 не буде вистачати - роби так, щоб вона займала всі 100% доступного простору (скрін 6.1) */
+	grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
 	grid-auto-rows: 1fr;
 	justify-items: center;
 	gap: 36px;
@@ -339,6 +480,12 @@ h2 {
 	font-weight: 500;
 	color: #2f302c;
 }
+/* Додаткові стилі при наведення на заголовок */
+.card-featured__title:hover {
+	scale: 1.05;
+	color: #040404;
+	font-weight: 700;
+}
 
 .rating-card-featured {
 	display: flex;
@@ -367,8 +514,11 @@ h2 {
 	display: grid;
 	/*ця властивість забезпечує гнучкість,
 	БЕЗ МЕДІА-ЗАПИТІВ, 	auto-fill - НАДАЄ АДАПТИВНІСТЬ */
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-auto-rows: 1fr;
+	/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+	/* порада від Насті */
+	grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+	/*grid-auto-rows: 1fr; Ця властивість для рівномірного збільшення іншого рядка, якщо в одному з них додається. 
+	Тут не використовується*/
 	justify-items: center;
 	gap: 68px;
 }
@@ -377,16 +527,29 @@ h2 {
 	/*картки виглядають охайніше і текст не "розбігається"*/
 	max-width: 400px;
 	width: 100%;
+	background-color: aqua;
 }
-
+/* стилі зображення */
 .item-advantage__image {
 	margin-bottom: 24px;
 	text-align: center;
 }
+
+.item-advantage__img {
+	/*Зображенням треба вказати розміри, 
+	щоб у випадку їх зміни нічого не зламалось.*/
+	max-width: 100%;
+	width: 60px;
+	height: 60px;
+	aspect-ratio: 1;
+	/*vertical-align: middle; розміщення по середині*/
+}
+
 .item-advantage__body {
 	text-align: center;
 }
 .item-advantage__body > *:not(:last-child) {
+	/*властивість для останнього елемента в списку*/
 	margin-bottom: 24px;
 }
 .item-advantage__title {
@@ -401,7 +564,10 @@ h2 {
 	line-height: 1.25;
 	color: #7e7f7c;
 }
-
+/*для додавання виступів знизу в разі додавання абзацу <p>*/
+.item-advantage__desc p:not(:last-child) {
+	margin-bottom: 10px;
+}
 /* ================== ФУТЕР =====================*/
 .footer {
 	text-align: center;
