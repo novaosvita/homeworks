@@ -15,6 +15,10 @@
 			rel="stylesheet">
 		<!--  Файл стилів  -->
 		<link rel="stylesheet" href="css/style.css">
+		<!-- ФАВІКОН -->
+		<!-- запис для формату .ico підтримується усіма браузерами -->
+		<link rel="shortcut icon" href="favicon.ico" sizes="32x32"
+			type="image/x-icon">
 		<!-- ========================================= -->
 		<script src="js/script.js" defer></script>
 		<title>Lesson_18 Li</title>
@@ -63,9 +67,14 @@
 								</a>
 							</li>
 						</ul>
-						<a href="#" class="sing-up-btn">Sing Up</a>
 					</nav>
-					<button class="icon-menu"><span></span></button>
+					<a href="#" class="sing-up-button">Sing Up</a>
+					<!-- Заготовка блоку для меню-бургер -->
+					<button type="button" aria-label="Toggle menu" class="icon-menu">
+						<span></span>
+					</button>
+					<!--aria-label="Toggle menu" = “Озвучується ця кнопка як ‘Відкрити меню’,
+				 хоча на екрані нічого не написано”.-->
 				</div>
 			</header>
 
@@ -198,49 +207,90 @@
 												<img class="icon-arrow-up" src="icons/right-arrow.svg"
 													alt="up right arrow">
 											</a></td>
-										<td><time datetime="15:30">7:30 PM - 8:45 PM</time></td>
+										<!-- нов -->
+										<td>
+											<time datetime="19:30">7:30 PM</time>
+											–
+											<time datetime="20:45">8:45 PM</time>
+										</td>
 									</tr>
 									<tr>
 										<td>Tuesday</td>
 										<td><a href="#">Hot PowerFlow vinyasa
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="20:20">8:20 AM - 9:20 AM</time></td>
+
+										<td>
+											<time datetime="20:20">8:20 PM</time>
+											–
+											<time datetime="21:20">9:20 PM</time>
+										</td>
+
 									</tr>
 									<tr>
 										<td>Wednesday</td>
 										<td><a href="#">Warm mindful flow
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="16:15">4:15 PM - 5:45 PM</time></td>
+
+										<td>
+											<time datetime="16:15">4:15 PM</time>
+											–
+											<time datetime="17:45">5:45 PM</time>
+										</td>
+
 									</tr>
 									<tr>
 										<td>Thursday</td>
 										<td><a href="#">Kundalini yoga
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="15:30">3:30 PM - 4:45 PM</time></td>
+
+										<td>
+											<time datetime="15:30">3:30 PM</time>
+											–
+											<time datetime="16:45">4:45 PM</time>
+										</td>
+
 									</tr>
 									<tr>
 										<td>Friday</td>
 										<td><a href="#">Warm yin yoga
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="14:00">2:00 PM - 3:15 PM</time></td>
+
+										<td>
+											<time datetime="14:00">2:00 PM</time>
+											–
+											<time datetime="15:15">3:15 PM</time>
+										</td>
+
 									</tr>
 									<tr>
 										<td>Saturday</td>
 										<td><a href="#">jzt dance and yoga
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="10:00">10:00 AM - 11:45 AM</time></td>
+
+										<td>
+											<time datetime="10:00">10:00 AM</time>
+											–
+											<time datetime="11:45">11:45 AM</time>
+										</td>
+
 									</tr>
 									<tr>
 										<td>Sunday</td>
 										<td><a href="#">Hanta yoga
 												<img src="icons/right-arrow.svg" alt="up right arrow">
 											</a></td>
-										<td><time datetime="18:30">6:30 PM - 7:30 PM</time></td>
+
+										<td>
+											<time datetime="18:30">6:30 PM</time>
+											–
+											<time datetime="19:30">7:30 PM</time>
+										</td>
+
 									</tr>
 								</table>
 								<!-- ============ Завершення блоку ТАБЛИЦІ ======= -->
@@ -266,7 +316,5 @@
 			</footer>
 		</div>
 		<!--завершення обгортки wrapper-->
-
 	</body>
-
 </html>
