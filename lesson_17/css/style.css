@@ -527,8 +527,7 @@ h2 {
 	/*картки виглядають охайніше і текст не "розбігається"*/
 	max-width: 400px;
 	width: 100%;
-	background-color: aqua;
-}
+	}
 /* стилі зображення */
 .item-advantage__image {
 	margin-bottom: 24px;
