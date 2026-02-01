@@ -1,0 +1,28 @@
+@import url('reset.css'); /* Файл обнулення стилів, розписаний по функціоналу */
+/* Локальне підключення шрифтів */
+@import url(fonts.css);
+
+body {
+	/*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+	font-family: 'Lato', sans-serif; /*шрифт підключений  мережевий*/
+	font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
+}
+
+/* ЗАГАЛЬНА ОБГОРТКА_ ці властивості писати завжди*/
+.wrapper {
+	display: flex; /*Const - на всю обгортку*/
+	flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+	position: relative; /* базування буде від Wrapper */
+	min-height: 100%;
+	overflow: clip;
+}
+.wrapper > main {
+	flex-grow: 1; /*"Const" для всих сторінок */
+}
+
+/* Обмежуючий контейнер */
+[class*='__container'] {
+	margin: 0 auto;
+	max-width: 1422px;
+	padding: 0 15px;
+}

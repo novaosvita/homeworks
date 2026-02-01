@@ -1,0 +1,35 @@
+/* ============== ФУТЕР ==============*/
+.footer {
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: #686767;
+}
+.footer__content {
+	padding-bottom: 20px; /*відступи для внутрішнього контенту*/
+}
+.footer__content--margin {
+	padding-top: 30px;
+}
+.footer__title {
+	color: rgb(201, 200, 200);
+	line-height: 1.5;
+	padding: 10px 0;
+	letter-spacing: 2px; /*відстань між літерами*/
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.footer__button {
+	padding: 10px 40px;
+	border-radius: 30px;
+	font-weight: 700;
+	color: #d4d4d4;
+	letter-spacing: 3px; /*відстань між літерами*/
+	border: 2px solid rgb(114, 114, 114);
+}
+
+.footer__button:hover {
+	/*При наведенні*/
+	box-shadow: 3px 3px 5px rgb(220, 220, 233);
+	background-color: #888888;
+}
