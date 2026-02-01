@@ -1,24 +1,24 @@
 /* Скидання стилів */
-@use 'reset.scss'; /* use - значить "використовуй"*/
+@use 'reset.scss'; // use - значить "використовуй"*/
 
 @use 'fonts.scss';
 
 //стиль зміних - lowerCamelCase
-/* Локальне підключення шрифтів */ /* Підключення шрифтів */ /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); */ /* @import url("https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"); */ /* Основні стилі */ /* Значення за замовченням  */
+/// Локальне підключення шрифтів */ /* Підключення шрифтів */ /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); */ /* @import url("https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"); */ /* Основні стилі */ /* Значення за замовченням  */
 body {
 	/*шрифти за замовчуванням - найбільш застосовані на сторінці*/
 	font-family: 'Lato', sans-serif; /*шрифт підключений  мережевий*/
 	font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
 }
 .wrapper {
-	display: flex; /*Const - на всю обгортку*/
-	flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
-	position: relative; /* базування буде від Wrapper */
+	display: flex; //Const - на всю обгортку*/
+	flex-direction: column; //Const  - вибудовуємо в колонку херер - майн - футер*/
+	position: relative; // базування буде від Wrapper */
 	min-height: 100%;
 	overflow: clip;
 }
 .wrapper > main {
-	flex-grow: 1; /*"Const" для всих сторінок */
+	flex-grow: 1; //"Const" для всих сторінок */
 }
 
 //[class*='--margin'] {
@@ -28,7 +28,7 @@ body {
 [class*='__container'] {
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
-	max-width: 87.5rem; /*згідно макету*/
+	max-width: 87.5rem; //згідно макету*/
 	margin: 0 auto;
 }
 //хедер
@@ -91,51 +91,51 @@ body {
 	// .register__header
 
 	&__header {
-		/*Шапка блоку*/
-		padding: 5.125rem 0; /*верхні та нижні відступи, як в макеті*/
+		//Шапка блоку*/
+		padding: 5.125rem 0; //верхні та нижні відступи, як в макеті*/
 		text-align: center;
 	}
 
 	// .register__title
 	&__title {
-		margin-bottom: 2.25rem; /*нижній відступ під заголовком*/
+		margin-bottom: 2.25rem; //нижній відступ під заголовком*/
 	}
 
 	// .register__subtitle
 
 	&__subtitle {
-		/*підзаголовок*/
+		//підзаголовок*/
 		color: #7e7f7c;
 		font-weight: 700;
-		line-height: 1.25; /* 20/16 */
+		line-height: 1.25; // 20/16 */
 	}
 
 	// .register__body
 
 	&__body {
-		/*гнучкий блок флекс*/
-		display: flex; /*гнучкий контейнер*/
-		padding: 5.125rem 0; /*верхній відступ*/
-		gap: 80px; /*внутрішні вдступи між елементами*/
+		//гнучкий блок флекс*/
+		display: flex; //гнучкий контейнер*/
+		padding: 5.125rem 0; //верхній відступ*/
+		gap: 80px; //внутрішні вдступи між елементами*/
 		justify-content: space-between;
 		@media (max-width: 48em) {
-			flex-direction: column-reverse; /*перебудовується в зворотному напрямку*/
+			flex-direction: column-reverse; //перебудовується в зворотному напрямку*/
 			gap: 3.75em;
 		}
 	}
 }
 .title {
-	/*стилі заголовка*/
+	//стилі заголовка*/
 	font-size: 2rem;
 	font-weight: 800;
-	line-height: 1.25; /* 40/32 */
+	line-height: 1.25; // 40/32 */
 	text-transform: uppercase;
 }
 
-/*====== Стилі для форми реєстрації =====*/
+//====== Стилі для форми реєстрації =====*/
 .form-block {
 	// .form-block__title
-	flex-basis: 44.5rem; /*стартова ширина*/
+	flex-basis: 44.5rem; //стартова ширина*/
 	&__title {
 		margin-bottom: 2.25rem;
 	}
@@ -144,7 +144,7 @@ body {
 
 	&__subtitle {
 		font-weight: 500;
-		line-height: 1.25; /* 20/16 */
+		line-height: 1.25; // 20/16 */
 		color: #7e7f7c;
 		margin-bottom: 4.5rem;
 	}
@@ -153,10 +153,10 @@ body {
 
 	&__link {
 		font-weight: 700;
-		line-height: 1.25; /* 20/16 */
+		line-height: 1.25; //20/16 */
 		color: #2f302c;
 	}
-	/* підкреслення посилання прии наведенні */
+	// підкреслення посилання прии наведенні */
 	&__link:hover {
 		text-decoration: underline;
 	}
@@ -168,13 +168,13 @@ body {
 		flex-direction: column;
 		gap: 72px;
 	}
-	/*===== Блок складається з двох блоків ======*/
+	//===== Блок складається з двох блоків ======*/
 	// .form-block__body
 
 	&__body {
-		display: flex; /*гнучка властивість*/
-		gap: 2.5rem; /*внутрішні відступи міє дочічними елементами*/
-		flex-direction: column; /*колонки*/
+		display: flex; //гнучка властивість*/
+		gap: 2.5rem; //внутрішні відступи міє дочічними елементами*/
+		flex-direction: column; //колонки*/
 	}
 
 	// .form-block__row
@@ -185,12 +185,12 @@ body {
 		justify-content: space-between;
 	}
 
-	/* Стиля для схожих елементів */
+	// Стиля для схожих елементів */
 	&__name,
 	&__email,
 	&__password,
 	&__password-reset {
-		flex-basis: 21rem; /*стартова ширина елементів*/
+		flex-basis: 21rem; /*1стартова ширина елементів*/
 		max-width: 100%; /*займає всю ширину батьківського блоку*/
 	}
 
@@ -199,7 +199,7 @@ body {
 	&__name {
 		max-width: 100%;
 	}
-	/* Фокусування на полі введення даних */
+	// Фокусування на полі введення даних */
 	// .form-block__input
 
 	&__input {
@@ -245,24 +245,24 @@ body {
 		background-color: #2f302c;
 		transition-duration: 0.3s;
 	}
-	/* Стилі кнопки при наведенні */
-	/* Стилі кнопки при наведенні */
+	// Стилі кнопки при наведенні */
+	// Стилі кнопки при наведенні */
 	&__button:hover {
 		background-color: #585858;
 	}
-	/* Стиль кнопки при активації */
+	// Стиль кнопки при активації */
 	&__button:active {
 		background-color: #2f302c;
 	}
 }
 
-/* =========== БЛОК ПРОПОЗИЦІЇ ================= */
+// =========== БЛОК ПРОПОЗИЦІЇ ================= */
 .offer-block {
-	position: relative; /*Стартовий блок для позиціонування доцірних елементів*/
+	position: relative; //Стартовий блок для позиціонування доцірних елементів*/
 	min-height: 31rem;
 	padding: 3.75rem 5rem;
 	overflow: hidden;
-	flex-basis: 37.5rem; /*стартова ширина*/
+	flex-basis: 37.5rem; //стартова ширина*/
 	background-color: #f6f6f6;
 	// .offer-block__image
 
@@ -278,8 +278,8 @@ body {
 	// .offer-block__info
 
 	&__info {
-		display: flex; /*гнучкий блок*/
-		position: relative; /*позиціонування*/
+		display: flex; //гнучкий блок*/
+		position: relative; //позиціонування*/
 		height: 100%;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -319,7 +319,7 @@ body {
 	// .footer__content
 
 	&__content {
-		padding-bottom: 1.25rem; /*відступи для внутрішнього контенту*/
+		padding-bottom: 1.25rem; //відступи для внутрішнього контенту*/
 	}
 
 	// .footer__content--margin
@@ -333,7 +333,7 @@ body {
 		color: rgb(201, 200, 200);
 		line-height: 1.5;
 		padding: 0.625rem 0;
-		letter-spacing: 2px; /*відстань між літерами*/
+		letter-spacing: 2px; //відстань між літерами*/
 		font-weight: 500;
 		margin-bottom: 1.25rem;
 	}
@@ -344,7 +344,7 @@ body {
 		border-radius: 1.875rem;
 		font-weight: 700;
 		color: #d4d4d4;
-		letter-spacing: 0.1875rem; /*відстань між літерами*/
+		letter-spacing: 0.1875rem; //відстань між літерами*/
 		border: 0.125rem solid rgb(114, 114, 114);
 	}
 	&__button:hover {
