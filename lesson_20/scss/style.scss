@@ -1,0 +1,416 @@
+/* Скидання стилів */
+@use 'reset.scss'; /* use - значить "використовуй"*/
+
+@use 'fonts.scss';
+
+//стиль зміних - lowerCamelCase
+/* Локальне підключення шрифтів */ /* Підключення шрифтів */ /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); */ /* @import url("https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"); */ /* Основні стилі */ /* Значення за замовченням  */
+body {
+	/*шрифти за замовчуванням - найбільш застосовані на сторінці*/
+	font-family: 'Lato', sans-serif; /*шрифт підключений  мережевий*/
+	font-size: 16px; /*обраний пріорітетний шрифт на сторінці*/
+}
+.wrapper {
+	display: flex; /*Const - на всю обгортку*/
+	flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
+	position: relative; /* базування буде від Wrapper */
+	min-height: 100%;
+	overflow: clip;
+}
+.wrapper > main {
+	flex-grow: 1; /*"Const" для всих сторінок */
+}
+
+//[class*='--margin'] {
+//	margin-bottom: 50px;
+//}
+
+[class*='__container'] {
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	max-width: 87.5rem; /*згідно макету*/
+	margin: 0 auto;
+}
+//хедер
+.header {
+	padding-top: 3.125rem;
+	text-align: center;
+	color: #272727;
+	background-color: #cecece;
+	// .header__container
+
+	&__container {
+	}
+
+	// .header__main-title
+	&__main-title {
+		font-size: 1.875rem;
+		padding-bottom: 3.125rem;
+	}
+
+	// .header__title
+	&__title {
+		letter-spacing: 0.1875rem;
+		font-weight: 700;
+		line-height: 1.2;
+		padding-top: 1.875rem;
+		padding-bottom: 1.875rem;
+	}
+
+	// .header__description
+	&__description {
+		font-size: 1.375rem;
+		letter-spacing: 0.1875rem;
+		text-transform: uppercase;
+	}
+	&__list {
+		font-size: 1.125rem;
+		text-align: center;
+		text-transform: none;
+		padding-left: 3.125rem;
+	}
+}
+//.title {
+//	letter-spacing: 0.1875rem;
+//	font-weight: 700;
+//	line-height: 1.2;
+//	padding-top: 1.875rem;
+//	padding-bottom: 1.875rem;
+//}
+
+//======  M A I N
+
+.page {
+}
+.register {
+	// .register__container
+
+	&__container {
+	}
+
+	// .register__header
+
+	&__header {
+		/*Шапка блоку*/
+		padding: 5.125rem 0; /*верхні та нижні відступи, як в макеті*/
+		text-align: center;
+	}
+
+	// .register__title
+	&__title {
+		margin-bottom: 2.25rem; /*нижній відступ під заголовком*/
+	}
+
+	// .register__subtitle
+
+	&__subtitle {
+		/*підзаголовок*/
+		color: #7e7f7c;
+		font-weight: 700;
+		line-height: 1.25; /* 20/16 */
+	}
+
+	// .register__body
+
+	&__body {
+		/*гнучкий блок флекс*/
+		display: flex; /*гнучкий контейнер*/
+		padding: 5.125rem 0; /*верхній відступ*/
+		gap: 80px; /*внутрішні вдступи між елементами*/
+		justify-content: space-between;
+		@media (max-width: 48em) {
+			flex-direction: column-reverse; /*перебудовується в зворотному напрямку*/
+			gap: 3.75em;
+		}
+	}
+}
+.title {
+	/*стилі заголовка*/
+	font-size: 2rem;
+	font-weight: 800;
+	line-height: 1.25; /* 40/32 */
+	text-transform: uppercase;
+}
+
+/*====== Стилі для форми реєстрації =====*/
+.form-block {
+	// .form-block__title
+	flex-basis: 44.5rem; /*стартова ширина*/
+	&__title {
+		margin-bottom: 2.25rem;
+	}
+
+	// .form-block__subtitle
+
+	&__subtitle {
+		font-weight: 500;
+		line-height: 1.25; /* 20/16 */
+		color: #7e7f7c;
+		margin-bottom: 4.5rem;
+	}
+
+	// .form-block__link
+
+	&__link {
+		font-weight: 700;
+		line-height: 1.25; /* 20/16 */
+		color: #2f302c;
+	}
+	/* підкреслення посилання прии наведенні */
+	&__link:hover {
+		text-decoration: underline;
+	}
+
+	// .form-block__form
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 72px;
+	}
+	/*===== Блок складається з двох блоків ======*/
+	// .form-block__body
+
+	&__body {
+		display: flex; /*гнучка властивість*/
+		gap: 2.5rem; /*внутрішні відступи міє дочічними елементами*/
+		flex-direction: column; /*колонки*/
+	}
+
+	// .form-block__row
+
+	&__row {
+		display: flex;
+		gap: 2.5rem;
+		justify-content: space-between;
+	}
+
+	/* Стиля для схожих елементів */
+	&__name,
+	&__email,
+	&__password,
+	&__password-reset {
+		flex-basis: 21rem; /*стартова ширина елементів*/
+		max-width: 100%; /*займає всю ширину батьківського блоку*/
+	}
+
+	// .form-block__name
+
+	&__name {
+		max-width: 100%;
+	}
+	/* Фокусування на полі введення даних */
+	// .form-block__input
+
+	&__input {
+		padding: 0.75rem 0;
+		border-bottom: 0.0625rem solid #d4d4d4;
+	}
+
+	&__input:focus {
+		padding: 0.75rem 0;
+		border-bottom: 1px solid #d4d4d4;
+	}
+
+	// .form-block__email
+
+	&__email {
+	}
+
+	// .form-block__phone
+
+	&__phone {
+	}
+
+	// .form-block__password
+
+	&__password {
+	}
+
+	// .form-block__password-reset
+
+	&__password-reset {
+	}
+
+	/*=== Стилі для кнопки ===*/
+	// .form-block__button
+
+	&__button {
+		max-width: 21rem;
+		padding: 0.75rem;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.25; /* 20/16 */
+		color: #fff;
+		background-color: #2f302c;
+		transition-duration: 0.3s;
+	}
+	/* Стилі кнопки при наведенні */
+	/* Стилі кнопки при наведенні */
+	&__button:hover {
+		background-color: #585858;
+	}
+	/* Стиль кнопки при активації */
+	&__button:active {
+		background-color: #2f302c;
+	}
+}
+
+/* =========== БЛОК ПРОПОЗИЦІЇ ================= */
+.offer-block {
+	position: relative; /*Стартовий блок для позиціонування доцірних елементів*/
+	min-height: 31rem;
+	padding: 3.75rem 5rem;
+	overflow: hidden;
+	flex-basis: 37.5rem; /*стартова ширина*/
+	background-color: #f6f6f6;
+	// .offer-block__image
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// .offer-block__info
+
+	&__info {
+		display: flex; /*гнучкий блок*/
+		position: relative; /*позиціонування*/
+		height: 100%;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	// .offer-block__badge
+
+	&__badge {
+		padding: 0.25rem 0.5rem;
+		color: #fff;
+		font-weight: 700;
+		line-height: 1.25; /* 20/16 */
+		text-transform: uppercase;
+		background-color: #ce0000;
+		border-radius: 0.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	// .offer-block__title
+
+	&__title {
+		//розібратися які сюди треба данні
+	}
+}
+
+/* ============== ФУТЕР ==============*/
+.footer {
+	text-align: center;
+	padding-bottom: 1.25rem;
+	background-color: #686767;
+
+	// .footer__container
+	&__container {
+	}
+
+	// .footer__content
+
+	&__content {
+		padding-bottom: 1.25rem; /*відступи для внутрішнього контенту*/
+	}
+
+	// .footer__content--margin
+
+	&__content--margin {
+		padding-top: 1.875rem;
+	}
+
+	// .footer__title
+	&__title {
+		color: rgb(201, 200, 200);
+		line-height: 1.5;
+		padding: 0.625rem 0;
+		letter-spacing: 2px; /*відстань між літерами*/
+		font-weight: 500;
+		margin-bottom: 1.25rem;
+	}
+
+	// .footer__button
+	&__button {
+		padding: 0.625rem 2.5rem;
+		border-radius: 1.875rem;
+		font-weight: 700;
+		color: #d4d4d4;
+		letter-spacing: 0.1875rem; /*відстань між літерами*/
+		border: 0.125rem solid rgb(114, 114, 114);
+	}
+	&__button:hover {
+		/*При наведенні*/
+		box-shadow: 0.1875rem 0.1875rem 0.3125rem rgb(220, 220, 233);
+		background-color: #888888;
+	}
+}
+// ===== ЗАМІТКИ з УРОКУ: =========
+// ============ ЗМІННІ =======================
+//стиль змііних - lowerCamelCase
+
+// Глобально
+// $mainColor: green;
+// body {
+// 	$mainColor: #000;
+// 	color: $mainColor;
+// }
+// .block {
+// 	color: $mainColor;
+// }
+
+//===== ШАБЛОНИ ======
+// Супер сила №4
+// @extend, шаблони %
+// Перевикористання коду, використання шаблону коду
+
+// CSS
+// .button,
+// .page__button {
+// 	padding: 10px 20px;
+// 	font-size: 20px;
+// 	background-color: green;
+// }
+
+// SCSS
+// .button {
+// 	padding: 10px 20px;
+// 	font-size: 20px;
+// 	background-color: green;
+// }
+
+// .page__button {
+// 	@extend .button;
+// 	padding: 20px;
+// }
+
+// ============= MIXIN ======
+// Супер сила №5
+// @mixin та @include
+// Міксіни
+
+// Назва міксіну:
+// 1) Англійська мова
+// 2) стиль lowerCamelCase
+// 3) Адекватно відображати що містить міксін
+
+// @mixin box($width: 100px, $height: 500px, $bgColor: green, $borderColor: red) {
+// 	width: $width;
+// 	height: $height;
+// 	background-color: $bgColor;
+// 	border: 1px solid $borderColor;
+// }
+// .block {
+// 	@include box(800px, 100px, red, black);
+// }
+// .text {
+// 	@include box(200px, 800px, blue, black);
+// }

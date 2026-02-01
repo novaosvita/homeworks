@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<!-- === Налаштування перегляду (адаптивності) ==== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ====== Підключення шрифтів ==== -->
+		<!-- rel означає “relationship” — тип зв’язку. 
+		 "preconnect" каже браузеру: «"pre-", тобто заздалегідь -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- ФАВІКОН -->
+		<!-- запис для формату .ico підтримується усіма браузерами -->
+		<link rel="shortcut icon" href="favicon.ico" sizes="32x32"
+			type="image/x-icon">
+		<!-- ========================================= -->
+		<!-- ====== Файл  стилів ==== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson_20 Li</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- ==== header ================-->
+			<header class="header">
+				<div class="header__container">
+					<div class="header__main-title">
+						<h1 id="top" class="header__title title">LESSON № 20: ПРЕПРОЦЕСОР
+							SCSS</h1>
+						<div class="header__description">
+							<p>Практична робота по застосуванню препроцесора SCCS </p>
+							<p>Тут я використовую переваги SCSS:</p>
+							<ul class="header__list">
+
+								<li>1. Вкладенність по BEM;</li>
+								<li>2. Media-запит: виконання в тому ж селекторі (це зручно);</li>
+							</ul>
+							<br>
+
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- ==== m a i n ================-->
+			<main class="page">
+				<div class="register">
+					<!-- Контйнер блоку з відступами -->
+					<div class="register__container">
+						<!-- Шапка блоку -->
+						<div class="register__header">
+							<!-- Заголовок -->
+							<h2 class="register__title title">
+								REGISTER TO FURNITUR
+							</h2>
+							<span class="register__subtitle">
+								GET MONTHLY VOUCHER WITH JUST ONE CLICK!
+							</span>
+						</div>
+						<!-- Блок реєстрації -->
+						<div class="register__body">
+							<div class="form-block">
+								<h2 class="form-block__title title">
+									YOUR INFORMATION
+								</h2>
+								<div class="form-block__subtitle">You already have an account?
+									<a href="#" class="form-block__link">Sign in here</a>
+								</div>
+								<!--============ ФОРМА реєстрації ==================-->
+								<form action="#" class="form-block__form">
+									<div class="form-block__body">
+										<div class="form-block__row">
+											<div class="form-block__name">
+												<!-- Введення данних імені -->
+												<input required name="form[]" placeholder="Your name" type="text"
+													class="form-block__input">
+											</div>
+											<!-- Введення імейлу  -->
+											<div class="form-block__email">
+												<input required name="form[]" placeholder="E-mail" type="email"
+													class="form-block__input">
+											</div>
+										</div>
+										<!-- Введення номеру телефону -->
+										<div class="form-block__phone">
+											<input required name="form[]" placeholder="Phone number" type="tel"
+												class="form-block__input">
+										</div>
+										<!--  Введення паролю -->
+										<div class="form-block__row">
+											<div class="form-block__password">
+												<input required name="form[]" placeholder="Password" type="password"
+													class="form-block__input">
+											</div>
+											<!-- підтвердження паролю -->
+											<div class="form-block__password-reset">
+												<input required name="form[]" placeholder="Reset Password"
+													type="password" class="form-block__input">
+											</div>
+										</div>
+									</div>
+									<!-- Кнопка створення акаунту -->
+									<button class="form-block__button" type="submit">
+										Create an account
+									</button>
+								</form>
+							</div>
+							<!-- БЛОК ПРОПОЗИЦІЇ -->
+							<div class="offer-block">
+								<img src="img/lights.avif"
+									alt="Hanging lamps with gold shades"
+									class="offer-block__image">
+								<div class="offer-block__info">
+									<!-- Елемент акції -->
+									<div class="offer-block__badge">
+										HOT
+									</div>
+									<!-- Підзаголовок пропозиції -->
+									<h2 class="offer-block__title title">
+										DISCOUNT <br> 25% FOR <br> NEW <br> MEMBER
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- ====================== -->
+
+			<!--==================== FOOTER =========== -->
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__content footer__content--margin">
+						<h2 class="footer__title">
+							LESSON № 20: "ПРЕПРОЦЕСОР SCCS"
+						</h2>
+						<a href="#top" class="footer__button">TOP</a>
+					</div>
+				</div>
+			</footer>
+		</div><!--завершення обгортки wrapper-->
+	</body>
+</html>
