@@ -352,7 +352,14 @@ body {
 		box-shadow: 0.1875rem 0.1875rem 0.3125rem rgb(220, 220, 233);
 		background-color: #888888;
 	}
+	/*додаткова запис розробника*/
+	&__container--avtor {
+		font-size: 0.625rem;
+		color: rgb(226, 224, 224);
+		letter-spacing: 0.3125rem;
+	}
 }
+
 // ===== ЗАМІТКИ з УРОКУ: =========
 // ============ ЗМІННІ =======================
 //стиль змііних - lowerCamelCase
