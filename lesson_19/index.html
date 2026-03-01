@@ -11,6 +11,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!--  Файл стилів  -->
 		<link rel="stylesheet" href="css/style.css">
+		<!-- ФАВІКОН -->
+		<!-- запис для формату .ico підтримується усіма браузерами -->
+		<link rel="shortcut icon" href="favicon.ico" sizes="32x32"
+			type="image/x-icon">
+		<!-- ========================================= -->
 		<!-- ========================================= -->
 		<script src="js/script.js" defer></script>
 		<title>Lesson_19 Li</title>
@@ -29,7 +34,7 @@
 					<nav class="header__menu menu">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<!--# - без прокрутки  -->
+								<!--# - без прокрутки, бо це домашня сторінка  -->
 								<a href="#">Home</a>
 							</li>
 							<li class="menu__item">
@@ -37,9 +42,18 @@
 								<a href="#about">About Us</a>
 							</li>
 							<li class="menu__item">
-								<!--#info прокрутка сторінки до цього розділу  -->
-								<a href="#info">Cosmetics Info</a>
+								<!--#blogs прокрутка сторінки до цього розділу  -->
+								<a href="#blogs">Blogs</a>
 							</li>
+							<li class="menu__item">
+								<!--#info прокрутка сторінки до цього розділу  -->
+								<a href="#cosmetic-info">Cosmetics Info</a>
+							</li>
+							<li class="menu__item">
+								<!--немає розділу поки що  -->
+								<a href="#contact">Contact</a>
+							</li>
+
 						</ul>
 					</nav>
 					<button class="icon-menu"><span></span></button>
@@ -124,49 +138,65 @@
 									</li>
 								</ul>
 							</div>
+							<!--БЛОК з карточками-->
 							<div class="cosmetics-block__cards">
+								<!--Карточка окремо-->
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/serum.avif" alt="serum">
+									<a href="#" class="card-cosmetics__link">
+										<div class="card-cosmetics__img">
+											<img src="img/products/serum.avif" alt="serum">
+										</div>
+										<h3 class="card-cosmetics__title">Cosrx AC Collection Blemish Spot
+											Clearing Serum</h3>
 									</a>
-									<h3 class="card-cosmetics__title">Cosrx AC Collection Blemish Spot
-										Clearing Serum</h3>
 								</article>
+
+								<!--друга карточка-->
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/emulsion.avif" alt="emulsion">
+									<a href="#" class="card-cosmetics__link">
+										<div class="card-cosmetics__img">
+											<img src="img/products/emulsion.avif" alt="emulsion"></div>
+										<h3 class="card-cosmetics__title">CHI Luxury Black Seed Oil Dry
+											Oil</h3>
 									</a>
-									<h3 class="card-cosmetics__title">CHI Luxury Black Seed Oil Dry
-										Oil</h3>
 								</article>
+
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/cream.avif" alt="cream">
+									<a href="#" class="card-cosmetics__link">
+										<div class="card-cosmetics__img">
+											<img src="img/products/cream.avif" alt="cream"></div>
+										<h3 class="card-cosmetics__title">Heimish Bulgarian Rose Satin
+											Cream</h3>
 									</a>
-									<h3 class="card-cosmetics__title">Heimish Bulgarian Rose Satin
-										Cream</h3>
 								</article>
+
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/serum-la-roche.avif" alt="serum-la-roche">
+									<a href="#" class="card-cosmetics__link">
+										<div class="card-cosmetics__img">
+											<img src="img/products/serum-la-roche.avif"
+												alt="serum-la-roche"></div>
+										<h3 class="card-cosmetics__title">La Roche-Posay Hyalu B5 Serum</h3>
 									</a>
-									<h3 class="card-cosmetics__title">La Roche-Posay Hyalu B5 Serum</h3>
 								</article>
+
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/cream-lancome.avif" alt="cream-lancome">
-									</a>
+									<a href="#" class="card-cosmetics__link">
+									<div class="card-cosmetics__img">	
+										<img src="img/products/cream-lancome.avif" alt="cream-lancome"></div>								
 									<h3 class="card-cosmetics__title">Lancome Genifique Youth Activating
 										Day Cream
 									</h3>
+										</a>
 								</article>
+
 								<article class="cosmetics-block__card card-cosmetics">
-									<a href="#" class="card-cosmetics__img">
-										<img src="img/products/mask.avif" alt="mask">
-									</a>
+									<a href="#" class="card-cosmetics__link">
+										<div class="card-cosmetics__img">
+											<img src="img/products/mask.avif" alt="mask"></div>									
 									<h3 class="card-cosmetics__title">Dermalogica Daily Skin Health
 										Charcoal Rescue Masque
 									</h3>
+									</a>
 								</article>
 							</div>
 						</div>
@@ -186,6 +216,8 @@
 						</p>
 						<a href="#top" class="footer__button">TOP</a>
 					</div>
+					
+					<p class="footer__container footer__container--avtor">Developer Lila Lomaka</p>
 				</div>
 			</footer>
 		</div>
