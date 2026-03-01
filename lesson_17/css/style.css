@@ -527,7 +527,7 @@ h2 {
 	/*картки виглядають охайніше і текст не "розбігається"*/
 	max-width: 400px;
 	width: 100%;
-	}
+}
 /* стилі зображення */
 .item-advantage__image {
 	margin-bottom: 24px;
@@ -603,4 +603,9 @@ h2 {
 	/*стилі при наведенні на кнопку*/
 	box-shadow: 3px 3px 5px rgb(145, 145, 146);
 	background-color: #b8b9b9;
+}
+.footer__container--avtor {
+	font-size: 0.625rem;
+	color: rgb(226, 224, 224);
+	letter-spacing: 0.3125rem;
 }
