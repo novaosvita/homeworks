@@ -76,7 +76,6 @@ input[type=radio] {
   cursor: pointer;
 }
 
-/* use - значить "використовуй"*/
 /* Локальне підключення шрифтів */
 @font-face {
   font-family: "Lato";
@@ -100,7 +99,6 @@ input[type=radio] {
   font-display: swap; /*поведінка браузера - швидше показує текст
 (не чекає завантаження) */
 }
-/* Локальне підключення шрифтів */ /* Підключення шрифтів */ /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); */ /* @import url("https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap"); */ /* Основні стилі */ /* Значення за замовченням  */
 body {
   /*шрифти за замовчуванням - найбільш застосовані на сторінці*/
   font-family: "Lato", sans-serif; /*шрифт підключений  мережевий*/
@@ -110,12 +108,12 @@ body {
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /*Const - на всю обгортку*/
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; /* Const  - вибудовуємо в колонку херер - майн - футер*/
-  position: relative; /* базування буде від Wrapper */
+          flex-direction: column;
+  position: relative;
   min-height: 100%;
   overflow: clip;
 }
@@ -123,13 +121,13 @@ body {
 .wrapper > main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; /*"Const" для всих сторінок */
+          flex-grow: 1;
 }
 
 [class*=__container] {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  max-width: 87.5rem; /*згідно макету*/
+  max-width: 87.5rem;
   margin: 0 auto;
 }
 
@@ -163,26 +161,23 @@ body {
 }
 
 .register__header {
-  /*Шапка блоку*/
-  padding: 5.125rem 0; /*верхні та нижні відступи, як в макеті*/
+  padding: 5.125rem 0;
   text-align: center;
 }
 .register__title {
-  margin-bottom: 2.25rem; /*нижній відступ під заголовком*/
+  margin-bottom: 2.25rem;
 }
 .register__subtitle {
-  /*підзаголовок*/
   color: #7e7f7c;
   font-weight: 700;
-  line-height: 1.25; /* 20/16 */
+  line-height: 1.25;
 }
 .register__body {
-  /*гнучкий блок флекс*/
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /*гнучкий контейнер*/
-  padding: 5.125rem 0; /*верхній відступ*/
-  gap: 80px; /*внутрішні вдступи між елементами*/
+  display: flex;
+  padding: 5.125rem 0;
+  gap: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -192,44 +187,34 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse; /*перебудовується в зворотному напрямку*/
+            flex-direction: column-reverse;
     gap: 3.75em;
   }
 }
 
 .title {
-  /*стилі заголовка*/
   font-size: 2rem;
   font-weight: 800;
-  line-height: 1.25; /* 40/32 */
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
-/*====== Стилі для форми реєстрації =====*/
 .form-block {
   -ms-flex-preferred-size: 44.5rem;
-      flex-basis: 44.5rem; /*стартова ширина*/
-  /* підкреслення посилання прии наведенні */
-  /*===== Блок складається з двох блоків ======*/
-  /* Стиля для схожих елементів */
-  /* Фокусування на полі введення даних */
-  /*=== Стилі для кнопки ===*/
-  /* Стилі кнопки при наведенні */
-  /* Стилі кнопки при наведенні */
-  /* Стиль кнопки при активації */
+      flex-basis: 44.5rem;
 }
 .form-block__title {
   margin-bottom: 2.25rem;
 }
 .form-block__subtitle {
   font-weight: 500;
-  line-height: 1.25; /* 20/16 */
+  line-height: 1.25;
   color: #7e7f7c;
   margin-bottom: 4.5rem;
 }
 .form-block__link {
   font-weight: 700;
-  line-height: 1.25; /* 20/16 */
+  line-height: 1.25;
   color: #2f302c;
 }
 .form-block__link:hover {
@@ -248,12 +233,12 @@ body {
 .form-block__body {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /*гнучка властивість*/
-  gap: 2.5rem; /*внутрішні відступи міє дочічними елементами*/
+  display: flex;
+  gap: 2.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; /*колонки*/
+          flex-direction: column;
 }
 .form-block__row {
   display: -webkit-box;
@@ -266,7 +251,7 @@ body {
 }
 .form-block__name, .form-block__email, .form-block__password, .form-block__password-reset {
   -ms-flex-preferred-size: 21rem;
-      flex-basis: 21rem; /*стартова ширина елементів*/
+      flex-basis: 21rem; /*1стартова ширина елементів*/
   max-width: 100%; /*займає всю ширину батьківського блоку*/
 }
 .form-block__name {
@@ -279,6 +264,9 @@ body {
 .form-block__input:focus {
   padding: 0.75rem 0;
   border-bottom: 1px solid #d4d4d4;
+}
+.form-block {
+  /*=== Стилі для кнопки ===*/
 }
 .form-block__button {
   max-width: 21rem;
@@ -298,14 +286,13 @@ body {
   background-color: #2f302c;
 }
 
-/* =========== БЛОК ПРОПОЗИЦІЇ ================= */
 .offer-block {
-  position: relative; /*Стартовий блок для позиціонування доцірних елементів*/
+  position: relative;
   min-height: 31rem;
   padding: 3.75rem 5rem;
   overflow: hidden;
   -ms-flex-preferred-size: 37.5rem;
-      flex-basis: 37.5rem; /*стартова ширина*/
+      flex-basis: 37.5rem;
   background-color: #f6f6f6;
 }
 .offer-block__image {
@@ -320,8 +307,8 @@ body {
 .offer-block__info {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /*гнучкий блок*/
-  position: relative; /*позиціонування*/
+  display: flex;
+  position: relative;
   height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -351,7 +338,7 @@ body {
   background-color: #686767;
 }
 .footer__content {
-  padding-bottom: 1.25rem; /*відступи для внутрішнього контенту*/
+  padding-bottom: 1.25rem;
 }
 .footer__content--margin {
   padding-top: 1.875rem;
@@ -360,7 +347,7 @@ body {
   color: rgb(201, 200, 200);
   line-height: 1.5;
   padding: 0.625rem 0;
-  letter-spacing: 2px; /*відстань між літерами*/
+  letter-spacing: 2px;
   font-weight: 500;
   margin-bottom: 1.25rem;
 }
@@ -369,7 +356,7 @@ body {
   border-radius: 1.875rem;
   font-weight: 700;
   color: #d4d4d4;
-  letter-spacing: 0.1875rem; /*відстань між літерами*/
+  letter-spacing: 0.1875rem;
   border: 0.125rem solid rgb(114, 114, 114);
 }
 .footer__button:hover {
@@ -377,4 +364,12 @@ body {
   -webkit-box-shadow: 0.1875rem 0.1875rem 0.3125rem rgb(220, 220, 233);
           box-shadow: 0.1875rem 0.1875rem 0.3125rem rgb(220, 220, 233);
   background-color: #888888;
+}
+.footer {
+  /*додаткова запис розробника*/
+}
+.footer__container--avtor {
+  font-size: 0.625rem;
+  color: rgb(226, 224, 224);
+  letter-spacing: 0.3125rem;
 }
